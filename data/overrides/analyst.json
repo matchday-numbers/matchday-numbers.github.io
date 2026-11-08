@@ -1811,244 +1811,241 @@
    "written_at": "2026-11-08T08:15:06Z"
   },
   "401876412": {
-   "overall": "Angers are 15th, only one point above the relegation zone, and have won once since September. They have not taken a point off a top-half side this season. Nice are eighth and in form, with four wins in their last five league games, including a 5-2 win over Rennes. Angers are without striker Amine El Ouazzani, and one preview says Oumar Pona is also likely out. For Nice, Axel Witsel is a doubt.",
+   "overall": "Angers (15th) have gone four league games without a win and sit just above the relegation places, while Nice have won their last two and scored 12 in their last six. Angers are without striker Amine El Ouazzani and midfielder Bané Diatta. Nice are missing Ali Abdi, still working back to fitness, along with Mendy and Bombito. Stéphane Gilli's Angers usually sit in a compact 4-1-4-1, against a Nice side that likes the ball.",
    "goals": {
     "lean": "higher",
     "call": "Over 2.5 goals",
-    "text": "The numbers say 2.3 goals. Nice have scored 12 in their last six, and Angers have conceded nine at home and five from set pieces, tied for the second-most in the league. Nice, led by top scorer Elye Wahi, look able to score enough on their own to push this game higher than the model."
+    "text": "The numbers say 2.3 goals. Nice's attack (Wahi, Amoura and Diop in the expected front three) has been scoring freely, and Angers lose more of their thin attacking threat without El Ouazzani. Angers have also conceded from set pieces more than most, so we lean a little above the site."
    },
    "corners": {
     "lean": "same",
     "call": "Around 10 corners",
-    "text": "The numbers say 9.8 corners. Nice dominate possession and should pin Angers back, but the model already allows for that, so we stay close to it."
+    "text": "The numbers say 9.8 corners. Nice should have most of the ball against a deep Angers block, which the model already expects, and nothing in the news shifts that."
    },
    "cards": {
     "lean": "same",
     "call": "Around 4 cards",
-    "text": "The numbers say 3.8 cards. Geoffrey Kubler is the referee, and there are no suspensions or disciplinary issues in the news, so we keep the model's number."
+    "text": "The numbers say 3.8 cards. Geoffrey Kubler referees, and we found no suspensions or bad blood between these sides, so we stay with the site."
    },
    "shots": {
     "lean": "same",
     "call": "Around 26 shots",
-    "text": "The numbers say 25.8 shots. Nice's possession game should push their share up, and losing El Ouazzani takes something away from Angers, so the total probably lands near the model's figure."
+    "text": "The numbers say 25.8 shots. Nice's possession pushes their share up while Angers lose some threat without El Ouazzani, so the total should land near the site's figure."
    },
    "shots_on_target": {
     "lean": "higher",
     "call": "Over 9.5 shots on target",
-    "text": "The numbers say 9.3 shots on target. Nice are creating good chances (13 goals in their last six games across all competitions) against an Angers defence that has struggled at home, so we lean slightly higher."
+    "text": "The numbers say 9.3 shots on target. Nice are creating good chances and Angers have been easy to hit at home, so we lean slightly higher."
    },
    "sources": [
-    "https://www.sportsmole.co.uk/football/angers/preview/angers-vs-nice-prediction-team-news-lineups_608545.html",
-    "https://www.sportsmole.co.uk/football/ligue-1/angers-vs-nice_game_261939.html"
+    "https://www.kickfootball.fr/ligue-1/angers-nice-les-compositions-probables-heure-et-chaine-de-diffusion-203617",
+    "https://www.sportsmole.co.uk/football/angers/preview/angers-vs-nice-prediction-team-news-lineups_608545.html"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401879240": {
-   "overall": "United are 17th with seven points and one league win in nine. Michael Carrick is under heavy pressure, although Wednesday's 3-2 Champions League comeback against Roma bought him some time. Villa are unbeaten in five league games but lost 3-0 at Barcelona in midweek, and Unai Emery is reportedly close to a new contract. United are without Lisandro Martinez (suspended), Shaw, Ugarte, Baleba and Sesko. Villa are missing Matty Cash (suspended), Onana and Ruggeri, and Wan-Bissaka needs a late fitness test.",
+   "overall": "United are in the bottom four and Michael Carrick is under heavy pressure, although Wednesday's 3-2 Champions League comeback against Roma was their first win since mid-September. Villa are unbeaten in the league since mid-September but lost 3-0 at Barcelona in midweek. United are without Lisandro Martínez (suspended), Shaw, Baleba, Ugarte, Sesko and probably Rashford; Villa are missing Matty Cash (suspended), Onana and Ruggeri, with Wan-Bissaka a late fitness check.",
    "goals": {
     "lean": "higher",
     "call": "Over 2.5 goals",
-    "text": "The numbers say 2.9 goals. United are one of only two sides without a league clean sheet and have conceded 15, and they have no natural left-back with Shaw out and Dorgu doubtful. Villa have made seven errors leading to goals this season, the joint-most in the league, and Nicolas Jackson has five league goals. Both defences look shaky, so we lean higher."
+    "text": "The numbers say 2.9 goals. Both defences have been leaky (United have conceded 15 in nine league games and have no clean sheet, Villa have made the joint-most errors leading to goals), and both lose a first-choice defender to suspension. Nicolas Jackson is in form for Villa, so we lean higher."
    },
    "corners": {
     "lean": "same",
     "call": "Around 10 corners",
-    "text": "The numbers say 10.1 corners. United should have more of the ball at home while Villa counter, and that matches the model, so we stay with it."
+    "text": "The numbers say 10.1 corners. United should have more of the ball at home while Villa look to counter, which is what the model already expects."
    },
    "cards": {
     "lean": "same",
     "call": "Around 6 cards",
-    "text": "The numbers say 5.9 cards, already high. Chris Kavanagh referees a high-pressure game, and both teams have recent suspensions (Martinez was sent off against Chelsea, and Cash reached five yellows). That supports the high figure rather than pushing it further up."
+    "text": "The numbers say 5.9 cards, already high. It is a tense game for a struggling home side and both teams have had recent suspensions, which supports the figure. The site lists Chris Kavanagh as referee, while one preview names Anthony Taylor, so we do not lean on the referee."
    },
    "shots": {
     "lean": "lower",
     "call": "Under 28.5 shots",
-    "text": "The numbers say 28.1 shots, with 17.4 for United. United have scored only five league goals in their last six and are without striker Sesko, while Rashford is a doubt. Their high home total looks optimistic, so we lean slightly lower."
+    "text": "The numbers say 28.2 shots, 17.4 of them for United. United have scored only five league goals in their last six and are without Sesko and probably Rashford, so their high home total looks optimistic."
    },
    "shots_on_target": {
     "lean": "same",
     "call": "Around 9-10 shots on target",
-    "text": "The numbers say 9.6 shots on target. United's weaker attack is balanced by two error-prone defences, so we stay close to the model."
+    "text": "The numbers say 9.6 shots on target. United's weaker attack is balanced by two error-prone defences, so we stay close to the site."
    },
    "sources": [
+    "https://www.si.com/soccer/man-utd-aston-villa-preview-predictions-lineups-11-8-26",
     "https://www.sportsmole.co.uk/football/man-utd/sack-race/preview/man-utd-vs-aston-villa-prediction-team-news-lineups_608638.html",
     "https://theanalyst.com/articles/man-utd-vs-aston-villa-prediction-premier-league-preview-11-2026"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401884741": {
-   "overall": "Freiburg played Thursday night and beat Trabzonspor 1-0 in the Conference League, so Julian Schuster may rotate, with Scherhant, Treu, Beste and Suzuki possible starters. Union Berlin, now coached by Mauro Lustrinelli, have scored only three goals in their last five games and one German report calls them relegation-threatened. Midfielder Aljoscha Kemlein is out with a shoulder injury (he is not on the site's list), while striker Andrej Ilic could return from a long layoff after a single week of training.",
+   "overall": "Freiburg are third and could go top with a fourth straight win, but they played in the Conference League on Thursday (1-0 v Trabzonspor) and Julian Schuster may rotate. Mauro Lustrinelli's Union are 16th and have not won in four league games; they are without Uduokhai (last game of his ban), Nsoki, Skov, Markgraf and midfielder Kemlein, while striker Andrej Ilic is only a doubt after a long layoff.",
    "goals": {
     "lean": "lower",
     "call": "Under 3.5 goals",
-    "text": "The numbers say 2.9 goals. Union have barely scored lately (three in five, and only two real chances in the 1-1 with Köln), and Lustrinelli has warned not to expect much from Ilic after a week of training. Freiburg won 1-0 on Thursday with Schuster himself saying they were not clinical enough, and some rotation is likely. Freiburg winning comfortably is possible, but the total looks more likely to fall short of 2.9."
+    "text": "The numbers say 2.9 goals. Union's attack has been very blunt (one league win in five, few chances created) and Ilic is short of fitness, while Freiburg were wasteful on Thursday. A Freiburg win looks likely, but more probably by a modest score than in a high-scoring game."
    },
    "corners": {
     "lean": "same",
     "call": "Around 9 corners",
-    "text": "The numbers say 8.9 corners. Freiburg should have most of the ball against a low-scoring Union, and Grifo's set pieces gave them their winner on Thursday. Tired legs after the European trip work the other way, so nothing pulls clearly from the site's figure."
+    "text": "The numbers say 8.9 corners. Freiburg should dominate the ball and get set pieces against Union's back three, but tired legs after the European trip work the other way, so we stay with the site."
    },
    "cards": {
     "lean": "same",
     "call": "Around 4-5 cards",
-    "text": "The numbers say 4.5 cards. Union are fighting near the bottom and are without the suspended Felix Uduokhai, so a scrappy, defensive away display is likely. We found nothing specific about Sascha Stegemann this season, so we stay close to the site's number."
+    "text": "The numbers say 4.5 cards. Union in a relegation fight tend to defend physically, which supports the figure, but we found nothing on Sascha Stegemann's recent games to move it either way."
    },
    "shots": {
     "lean": "lower",
     "call": "Under 26.5 shots",
-    "text": "The numbers say 26.2 shots. Union's attack has been very blunt, creating just two real chances last weekend, and Kemlein's absence takes energy out of midfield. With Freiburg possibly rotating three days after a European away game, the shot total could come in a little lower."
+    "text": "The numbers say 26.2 shots. Union have barely threatened lately and lose Kemlein's energy in midfield, and Freiburg may rotate three days after a European game. A slightly lower total looks more likely."
    },
    "shots_on_target": {
     "lean": "lower",
     "call": "Under 8.5 shots on target",
-    "text": "The numbers say 8.4 shots on target. Union's lack of chances and Ilic being far from match-fit point to a low away share, and Freiburg were wasteful on Thursday. A slightly lower figure looks more likely."
+    "text": "The numbers say 8.4 shots on target. Union's low chance creation and Ilic's lack of fitness point to a small away share, so we lean a little lower."
    },
    "sources": [
+    "https://www.sportsmole.co.uk/football/freiburg/preview/freiburg-vs-union-berlin-prediction-team-news-lineups_608640.html",
     "https://www.schwarzwaelder-bote.de/sport/sc-freiburg/nach-sieg-gegen-salah-und-co-sehr-sehr-wichtig-sc-freiburg-in-der-conference-league-auf-kurs-79669921.html",
-    "https://www.bundesliga.com/de/bundesliga/news/europa-league-conference-league-stimmen-4-spieltag-sc-freiburg-tsg-hoffenheim-39895",
     "https://www.wnoz.de/nachrichten/baden-wuerttemberg-und-hessen/torjaeger-ilic-vor-rueckkehr-beim-1.-fc-union-berlin-1166652.html"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401874808": {
-   "overall": "Como arrive in outstanding form after a 9-1 Champions League win at Lens, having also scored four each against Leipzig and Manchester United in Europe. Inter lost the Milan derby, then beat Feyenoord in the Champions League midweek, and want a win before the international break. Two Italian previews leave Lautaro Martinez out of Inter's likely XI, with Pio Esposito and Thuram up front and Bastoni back from a European suspension; Cesc Fabregas looks set to pick his strongest Como side.",
+   "overall": "Como arrive in outstanding form after a 9-1 Champions League win at Lens, while Inter lost the Milan derby before beating Feyenoord in midweek and want a win before the international break. Lautaro Martínez and Luis Henrique are out for Inter, with Thuram and Pio Esposito expected up front and Bastoni back. Cesc Fabregas is without Kean, Diao, Addai, Jesús Rodríguez and Chalobah but otherwise picks his strongest side.",
    "goals": {
     "lean": "higher",
     "call": "Over 2.5 goals",
-    "text": "The numbers say 3.0 goals. Como have been scoring heavily (22 in their last six by the site's own count, including the 9-1 in Lens), and Fabregas says they will come to San Siro to play their own game rather than sit deep. Inter, without Lautaro but with Thuram and Esposito, need a response after the derby, so an open game with a few goals seems more likely than a tight one."
+    "text": "The numbers say 3.0 goals. Como have been scoring heavily and Fabregas says they will play their own game at San Siro rather than sit deep, while Inter need a response after the derby. Lautaro's absence takes something off Inter, but an open game seems more likely than a tight one."
    },
    "corners": {
     "lean": "same",
     "call": "Around 9-10 corners",
-    "text": "The numbers say 9.4 corners. Both sides attack down the wings, with Dimarco and Spence pushing on for Inter and Da Cunha and Baturina wide for Como. Como keeping the ball more than most visitors could even out the corner count, so we stay near the site's number."
+    "text": "The numbers say 9.4 corners. Inter's wing-backs Dimarco and Spence push on, but Como keep the ball better than most visitors, which can cut Inter's corner count, so we stay with the site."
    },
    "cards": {
     "lean": "same",
     "call": "Around 3 cards",
-    "text": "The numbers say 3.0 cards. Both teams want to play football and Fabregas called it a physically and mentally demanding game, but nothing in the news points to a bad-tempered match. We found nothing specific on Daniele Chiffi, so we stay with the low card count."
+    "text": "The numbers say 3.0 cards. Both teams want to play football and nothing in the news points to a bad-tempered match, so we keep the low figure."
    },
    "shots": {
     "lean": "higher",
     "call": "Over 26.5 shots",
-    "text": "The numbers say 27.7 shots. Como's attack is in red-hot form, Inter will be pushing to bounce back from the derby, and both line up with two attacking wing-backs or full-backs. That points to plenty of shooting from both ends, so the total could come in above the site's figure."
+    "text": "The numbers say 27.7 shots. Como's attack (Douvikas, Nico Paz, Da Cunha) is in red-hot form and Inter will push hard at home, so plenty of shooting at both ends looks likely."
    },
    "shots_on_target": {
     "lean": "higher",
     "call": "Over 9.5 shots on target",
-    "text": "The numbers say 9.6 shots on target. Como are creating and finishing chances at a rare rate (Douvikas, Nico Paz and Da Cunha all in form), and Inter's front two should test Butez often at home. We lean slightly above the site's number."
+    "text": "The numbers say 9.6 shots on target. Como are creating and finishing chances at a rare rate and Thuram and Esposito should test Butez, so we lean slightly above the site."
    },
    "sources": [
-    "https://www.fcinter1908.it/partite/probabili-formazioni/inter-como-probabile-formazione-conferma-spence-riecco-gli-inglesi-due-ballottaggi-per-chivu/",
-    "https://www.sosfanta.com/squadra/inter/da-zielinski-spence-dimarco-e-pio-esposito-a-da-cunha-e-baturina-le-probabili-formazioni-di-inter-como/",
+    "https://sport.sky.it/calcio/serie-a/partite/2026/giornata-11/inter-como/formazioni",
     "https://www.fcinter1908.it/news/interviste/fabregas-storia-pensiamo-inter-como/",
     "https://www.thescore.com/seri/news/3645258/como-equal-ucl-record-with-historic-9-1-win-over-lens"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401882807": {
-   "overall": "Villarreal (9th, 12 points) are reeling after losing their last two home games, 0-1 to Espanyol and 0-6 to PSG in the Champions League on Tuesday. Getafe (13th, 12 points) beat Sevilla 3-1 but lost 0-1 at Brighton in the Conference League on Thursday, so they have had less rest. Villarreal are also without Alassane Diatta, who has had hamstring surgery and faces months out, plus Gerard Moreno, Foyth and Akhomach; Getafe have Dani Carvajal back for the league, while Uche and Juanmi are out.",
+   "overall": "Iñigo Pérez's Villarreal (9th) have lost their last two home games, 0-1 to Espanyol and 0-6 to PSG in the Champions League. José Bordalás's Getafe (13th) beat Sevilla 3-1 but lost 0-1 at Brighton in the Conference League on Thursday, so they have had a day less rest. Villarreal are without Alassane Diatta, with Gerard Moreno, Foyth and Akhomach doubts; Getafe get Carvajal and Enes Ünal back but are missing Uche, with Juanmi a doubt.",
    "goals": {
     "lean": "lower",
     "call": "Under 2.5 goals",
-    "text": "The numbers say 2.2 goals. José Bordalás's Getafe are built to make games scrappy and stop the opponent playing, and a Villarreal side short of confidence after the 0-6 and missing Gerard Moreno may struggle to break them down. A low-scoring game looks the most likely outcome."
+    "text": "The numbers say 2.2 goals. Getafe have scored only eight league goals, joint-fewest in the division, and Bordalás's side is built to break games up. A Villarreal team short of confidence and possibly without Gerard Moreno may struggle to open them up, so a low-scoring game is most likely."
    },
    "corners": {
     "lean": "same",
     "call": "Around 9-10 corners",
-    "text": "The numbers say 9.6 corners. Villarreal should have plenty of the ball against a deep Getafe block, which usually brings corners, but Getafe's long-ball style means few corners at the other end. Nothing in the news moves us away from the site's figure."
+    "text": "The numbers say 9.6 corners. Villarreal should have plenty of the ball against a deep block, which brings corners, but Getafe's direct style produces few at the other end. Nothing in the news moves us from the site."
    },
    "cards": {
     "lean": "higher",
     "call": "Over 5.5 cards",
-    "text": "The numbers say 6.1 cards. Getafe under Bordalás are among the most fouling, card-heavy sides in Spain, and they play three days after a European away game, which tends to mean late challenges. Gudelj and Terrats are one booking from a ban, which may make them a little careful, but a frustrated home side against Getafe's tactics points to plenty of yellows."
+    "text": "The numbers say 5.6 cards. Getafe under Bordalás are among the most fouling sides in Spain and they play three days after a European away game, while a frustrated home side adds to that. We lean slightly higher."
    },
    "shots": {
     "lean": "lower",
     "call": "Under 25.5 shots",
-    "text": "The numbers say 25.7 shots. Getafe's games tend to be broken up by fouls and stoppages, and they rarely commit numbers forward. With Villarreal missing Gerard Moreno and Akhomach, the total looks more likely to come in a bit below the site's number."
+    "text": "The numbers say 25.8 shots. Getafe's games are broken up by fouls and stoppages and they rarely commit numbers forward, so the total looks more likely to come in a little below the site."
    },
    "shots_on_target": {
     "lean": "lower",
     "call": "Under 7.5 shots on target",
-    "text": "The numbers say 7.9 shots on target. Getafe are hard to get clean shots against when they sit deep, and their own attack (Satriano and Enes Ünal) relies on few, direct chances. A low count of shots on target fits this matchup."
+    "text": "The numbers say 7.9 shots on target. Getafe are hard to get clean shots against when they sit deep, and their own attack relies on few, direct chances, so we lean lower."
    },
    "sources": [
+    "https://www.sportsmole.co.uk/football/villarreal/preview/villarreal-vs-getafe-prediction-team-news-lineups_608631.html",
     "https://www.futbolfantasy.com/laliga/noticias/154254-alineaciones-probables-y-previa-fantasy-del-villarreal-getafe",
-    "https://www.soccernews.com/villarreal-0-6-paris-saint-germain-fabian-scores-twice-as-clinical-champions-make-history/407552/",
-    "https://crhoy.com/deportes/psg-aplasta-al-villarreal-con-goleada-de-0-6-en-champions/"
+    "https://www.soccernews.com/villarreal-0-6-paris-saint-germain-fabian-scores-twice-as-clinical-champions-make-history/407552/"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401882815": {
-   "overall": "Celta (12th) lost 1-2 at home to Union Saint-Gilloise in the Europa League on Thursday, so they have had less rest than Levante (18th). Claudio Giráldez has been criticised and is without Starfelt, Álvaro Núñez, El-Abdellaoui, Miguel Román and Borja Iglesias. Levante's Luis Castro has only Manu Sánchez definitely out, with Bardeli fit for limited minutes. Spanish football is also mourning Tenerife's Jesús de Miguel; the players' union (AFE) asked for this round to be postponed, but so far only Granada-Tenerife has been called off.",
+   "overall": "Celta (12th) lost 3-0 at Rayo last weekend and 1-2 at home to Union Saint-Gilloise in the Europa League on Thursday, so Claudio Giráldez is under some pressure. He said he will use the same available players as on Thursday, with Borja Iglesias, Miguel Román, Starfelt, Álvaro Núñez and El-Abdellaoui still out. Levante are in the bottom three for the first time since matchday 1 and only Manu Sánchez is definitely missing.",
    "goals": {
     "lean": "same",
     "call": "Around 2-3 goals",
-    "text": "The numbers say 2.6 goals. Celta are without their main striker Borja Iglesias and are tired after Thursday, which lowers their threat. Levante's defence has been leaky, though, and Levante won both of the last two meetings at Balaídos (2-1 and 3-2). These factors roughly cancel out."
+    "text": "The numbers say 2.6 goals. Celta without Borja Iglesias and with tired legs lose some threat, but Levante's defence has been leaky and they won 3-2 at Balaídos last season. These roughly cancel out."
    },
    "corners": {
     "lean": "same",
     "call": "Around 8 corners",
-    "text": "The numbers say 8.2 corners. Celta usually have most of the ball at home, but a tired, rotated side and the loss of creative midfielder Miguel Román may cut their pressure. We found nothing that clearly moves this figure."
+    "text": "The numbers say 8.2 corners. Celta usually have most of the ball at home, but a tired side without creative midfielder Miguel Román may produce less pressure. Nothing clearly moves the figure."
    },
    "cards": {
     "lean": "same",
     "call": "Around 3-4 cards",
-    "text": "The numbers say 3.8 cards. Levante are in the bottom three and will need to fight, while Celta are under pressure, but neither side has a suspension problem and no referee had been named when we looked. We stay with the site's number."
+    "text": "The numbers say 3.3 cards. Levante need points and Giráldez calls them an awkward, well-organised side, but neither team has a suspension problem, so we stay with the site."
    },
    "shots": {
     "lean": "lower",
     "call": "Under 26.5 shots",
-    "text": "The numbers say 26.5 shots. Celta played a full Europa League game on Thursday and are missing Borja Iglesias and Miguel Román, two of their main attacking outlets, and Giráldez is expected to rotate. That points to slightly fewer shots than the site expects."
+    "text": "The numbers say 26.4 shots. Celta played a full European game on Thursday and are missing two of their main attacking outlets, and Giráldez expects Levante to defend in numbers at times. That points to slightly fewer shots."
    },
    "shots_on_target": {
     "lean": "lower",
     "call": "Under 8.5 shots on target",
-    "text": "The numbers say 8.5 shots on target. Without Borja Iglesias, Celta's final-third quality drops, and Levante's Thiago Fernández is creating chances but has yet to score this season. We lean a little under the site's number."
+    "text": "The numbers say 8.5 shots on target. Without Borja Iglesias, Celta's finishing quality drops, and they looked toothless at Rayo, so we lean a little lower."
    },
    "sources": [
-    "https://www.futbolfantasy.com/partidos/22534-celta-levante",
-    "https://www.jornadaperfecta.com/blog/luis-castro-previa-celta-levante-j12-26-27/",
-    "https://minutonoventa.com/celta-giraldez-bajas-union-saint-gilloise/",
-    "https://www.mundiario.com/deportes/celta-paga-errores-vuelve-caer-balaidos/20261105230043451235.html",
-    "https://www.libertaddigital.com/deportes/futbol/2026-11-05/el-celta-se-complica-mucho-la-vida-en-la-europa-league-el-dia-que-menos-lo-merece-1-2-7487460/",
-    "https://alicanteplaza.es/alicanteplaza/deportesalicante/por-ahora-solo-se-suspende-el-granada-cf-cd-tenerife"
+    "https://www.jornadaperfecta.com/blog/giraldez-previa-celta-levante-j12-26-27/",
+    "https://www.comuniate.com/noticias/38857/celta-levante-previa-alineaciones-probables-y-consejos-fantasy-jornada-12-de-laliga",
+    "https://www.futbolfantasy.com/partidos/22534-celta-levante"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401885394": {
-   "overall": "FC Porto have won all ten league games (30 points, five clear of Benfica) and beat Napoli 4-1 in the Champions League this week. Francesco Farioli gets winger Oskar Pietuszewski back from a thigh injury, while William Gomes is doubtful and Smalling and Vasco Sousa are still out. Vitória are 13th with 9 points, just two clear of the relegation zone.",
+   "overall": "Porto have won all ten league games and beat Napoli 4-1 in the Champions League this week. Francesco Farioli confirmed winger Oskar Pietuszewski is back in the squad and William Gomes will miss the game; Smalling and Vasco Sousa are still out. Farioli praised Tiago Margarido's Vitória (13th) as a passing side with fast forwards that creates many chances, singling out Tony Strata.",
    "goals": {
     "lean": "same",
     "call": "Around 2-3 goals",
-    "text": "The numbers say 2.3 goals. Porto are in irresistible form and Pietuszewski's return adds a threat out wide, but Vitória have been tight at the back recently (only five conceded in their last six by the site's count) and Guimarães is a tough away ground. These point in opposite directions, so we stay close to the site."
+    "text": "The numbers say 2.3 goals. Porto are in irresistible form, but Vitória have been tight at the back recently and Farioli himself called Guimarães one of the hardest away trips. These point in opposite directions, so we stay close to the site."
    },
    "corners": {
     "lean": "higher",
     "call": "Over 9.5 corners",
-    "text": "The numbers say 9.5 corners, split almost evenly. A Porto side this dominant, with Pietuszewski back to take on full-backs, should pin a struggling Vitória back for long spells, which tends to bring Porto corners. We lean slightly above the site's total."
+    "text": "The numbers say 9.5 corners, split almost evenly. A dominant Porto with Pietuszewski back to take on full-backs should pin Vitória back for spells, which tends to bring Porto corners, so we lean slightly higher."
    },
    "cards": {
     "lean": "same",
     "call": "Around 5-6 cards",
-    "text": "The numbers say 5.4 cards. Vitória against Porto is usually a heated fixture, and a home side near the bottom will need to stop Porto's wingers. Referee David Silva has been named, but we found nothing about his style this season, so we stay with the site's number."
+    "text": "The numbers say 5.4 cards. This is usually a heated fixture and Vitória will need to stop Porto's wingers, but we found nothing on referee David Silva this season, so we stay with the site."
    },
    "shots": {
     "lean": "same",
     "call": "Around 25-26 shots",
-    "text": "The numbers say 25.7 shots. Porto should take more shots than the near-even split the site suggests, but Vitória are likely to sit deeper and shoot less. The total probably ends up close to the site's figure."
+    "text": "The numbers say 25.7 shots. Porto should take more than the near-even split suggests, while Vitória, who Farioli says create a lot, still have the pace to reply. The total probably lands near the site."
    },
    "shots_on_target": {
     "lean": "same",
     "call": "Around 8 shots on target",
-    "text": "The numbers say 7.9 shots on target. Porto's attack is sharp after the 4-1 against Napoli, but Vitória's recent defensive record argues against a big number. We have no strong reason to move from the site."
+    "text": "The numbers say 7.9 shots on target. Farioli stressed that Porto must be more precise in the box, and Vitória's recent defensive record argues against a big number, so we stay with the site."
    },
    "sources": [
-    "https://www.noticiasaominuto.com/desporto/3079830/farioli-recebe-reforco-de-peso-para-o-vitoria-sc-fc-porto",
+    "https://www.fcporto.pt/pt/noticias/20261107-pt-os-jogos-fora-sao-todos-dificeis-ainda-mais-em-guimaraes",
     "https://maisfutebol.iol.pt/fc-porto/liga/fc-porto-pietuszweski-recupera-e-esta-apto-para-a-visita-a-guimaraes",
     "https://www.abola.pt/noticias/fc-porto-excelentes-noticias-para-farioli-2026110609121575202"
    ],
-   "written_at": "2026-11-07T12:17:32Z"
+   "written_at": "2026-11-08T12:11:01Z"
   },
   "401884742": {
    "overall": "Hoffenheim (13th, 9 points) host Schalke (17th, 6 points), who are the Bundesliga's lowest scorers with four goals, have failed to score in their last four games and have gone six competitive matches without a win. Hoffenheim drew 1-1 with Crystal Palace in the Europa League on Thursday and have a long injury list (Hajdari, Hranáč, Gendrey, Conté, De Cat, Wimmer out; Coufal and Hložek face fitness checks). Schalke get Robin Gosens and Soufiane El-Faouzi back, but Wöber, Bachmann, Schallenberg, Gantenbein and Sylla are still missing.",
