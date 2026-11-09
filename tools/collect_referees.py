@@ -2,6 +2,8 @@
 
   python tools/collect_referees.py --probe
   python tools/collect_referees.py 2025-07-01 2026-07-01     writes data/history/referees_<from>_<to>.json
+  python tools/collect_referees.py 2025-07-01 2026-07-01 --leagues segunda-division:140,super-lig:71 --tag new
+      only those leagues (key:FotMob id); writes data/history/referees_<from>_<to>_<tag>.json
 """
 import json
 import os
@@ -54,7 +56,18 @@ def main():
         json.dump(rep, open("probe/referees.json", "w"), indent=1)
         print(json.dumps(rep, indent=1))
         return
-    start, end = date.fromisoformat(sys.argv[1]), date.fromisoformat(sys.argv[2])
+    args = sys.argv[1:]
+    tag = ""
+    if "--leagues" in args:
+        i = args.index("--leagues")
+        IDS.clear()
+        IDS.update({int(x.split(":")[1]): x.split(":")[0] for x in args[i + 1].split(",")})
+        del args[i:i + 2]
+    if "--tag" in args:
+        i = args.index("--tag")
+        tag = "_" + args[i + 1]
+        del args[i:i + 2]
+    start, end = date.fromisoformat(args[0]), date.fromisoformat(args[1])
     out, d = [], start
     while d < min(end, date.today()):
         for m in day_matches(d):
@@ -64,7 +77,7 @@ def main():
         d += timedelta(days=1)
         if d.day == 1:
             print(d, len(out), flush=True)
-    path = f"data/history/referees_{start.isoformat()}_{end.isoformat()}.json"
+    path = f"data/history/referees_{start.isoformat()}_{end.isoformat()}{tag}.json"
     json.dump(out, open(path, "w"), separators=(",", ":"))
     print(f"{len(out)} matches, {sum(1 for m in out if m.get('referee'))} with a referee -> {path}")
 
