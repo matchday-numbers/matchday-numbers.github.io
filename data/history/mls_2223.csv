@@ -1,0 +1,535 @@
+Div,Date,Time,HomeTeam,AwayTeam,FTHG,FTAG,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,Referee
+USA,01/07/2022,00:00,Red Bull New York,Atlanta United,2,1,16,8,3,4,7,13,7,2,3,3,0,0,Alex Chilowicz
+USA,02/07/2022,23:30,Toronto FC,Seattle Sounders FC,0,2,13,11,6,4,9,16,6,3,1,4,0,0,Silviu Petrescu
+USA,03/07/2022,02:00,Vancouver Whitecaps,Los Angeles FC,1,0,11,7,2,0,14,12,12,0,2,2,0,0,Guido Gonzalez
+USA,03/07/2022,21:00,New York City FC,Atlanta United,2,2,13,13,3,8,14,7,6,3,4,2,0,0,Rosendo Mendoza
+USA,03/07/2022,23:30,Columbus Crew,Philadelphia Union,0,0,16,4,5,2,8,23,6,5,5,2,0,0,Nima Saghafi
+USA,03/07/2022,23:30,New England Revolution,FC Cincinnati,2,2,17,12,7,3,7,13,3,4,1,2,0,0,Jon Freemon
+USA,04/07/2022,00:00,Minnesota United,Real Salt Lake,3,2,18,12,7,4,7,9,5,7,1,3,0,0,Ramy Touchan
+USA,04/07/2022,00:00,Sporting Kansas City,Red Bull New York,0,1,16,7,4,2,10,20,9,1,1,3,0,1,Marcos de Oliveira
+USA,04/07/2022,00:30,Houston Dynamo FC,Charlotte FC,1,2,11,14,3,4,5,10,5,5,2,3,0,0,Jair Marrufo
+USA,04/07/2022,00:30,Nashville SC,Portland Timbers,2,2,13,16,9,5,8,13,1,6,1,2,0,0,Armando Villarreal
+USA,04/07/2022,01:00,San Jose Earthquakes,Chicago Fire FC,2,1,22,18,8,6,11,17,4,5,3,2,0,0,Víctor Rivas
+USA,04/07/2022,23:00,Orlando City,DC United,3,5,18,9,7,6,11,14,9,2,1,1,0,0,Allen Chapman
+USA,05/07/2022,01:00,Colorado Rapids,Austin FC,2,3,15,9,2,5,8,13,4,2,0,2,0,1,Joe Dickerson
+USA,05/07/2022,01:00,FC Dallas,Inter Miami CF,1,1,11,15,5,6,7,6,6,9,0,1,0,0,Alex Chilowicz
+USA,05/07/2022,02:30,LA Galaxy,CF Montréal,4,0,14,11,4,3,9,13,4,7,1,2,0,0,Timothy Ford
+USA,08/07/2022,23:45,Philadelphia Union,DC United,7,0,24,11,12,3,7,10,2,8,0,2,0,0,Ted Unkel
+USA,09/07/2022,02:10,Los Angeles FC,LA Galaxy,3,2,11,15,5,6,13,12,4,6,1,4,0,0,Armando Villarreal
+USA,09/07/2022,02:40,Vancouver Whitecaps,Minnesota United,1,3,10,14,2,5,8,8,7,8,0,1,0,0,Alex Chilowicz
+USA,09/07/2022,17:00,New York City FC,New England Revolution,4,2,22,10,11,6,10,10,10,2,2,1,0,1,Timothy Ford
+USA,09/07/2022,20:30,Seattle Sounders FC,Portland Timbers,0,3,16,11,3,8,12,10,8,0,2,4,1,0,Chris Penso
+USA,09/07/2022,23:00,Atlanta United,Austin FC,0,3,19,10,4,4,10,14,9,0,1,1,0,0,Jair Marrufo
+USA,09/07/2022,23:30,CF Montréal,Sporting Kansas City,1,2,16,6,5,3,12,16,12,1,1,3,0,0,Ismir Pekmic
+USA,09/07/2022,23:30,Charlotte FC,Nashville SC,4,1,13,19,6,7,9,12,3,10,0,3,0,0,Joe Dickerson
+USA,09/07/2022,23:30,Toronto FC,San Jose Earthquakes,2,2,16,9,6,3,15,13,7,3,1,1,0,0,Fotis Bazakos
+USA,09/07/2022,23:40,FC Cincinnati,Red Bull New York,1,1,10,8,4,3,11,9,0,4,2,3,2,0,Rosendo Mendoza
+USA,10/07/2022,00:00,Orlando City,Inter Miami CF,1,0,8,10,1,1,12,19,2,6,1,1,0,0,Nima Saghafi
+USA,10/07/2022,00:10,Chicago Fire FC,Columbus Crew,2,3,13,9,5,4,19,16,2,1,5,3,1,0,Ramy Touchan
+USA,10/07/2022,00:40,Houston Dynamo FC,FC Dallas,2,2,19,13,8,6,11,10,8,2,3,4,0,1,Jon Freemon
+USA,10/07/2022,02:00,Real Salt Lake,Colorado Rapids,2,2,14,15,2,4,8,11,2,6,4,3,0,0,Lukasz Szpala
+USA,13/07/2022,01:00,Austin FC,Houston Dynamo FC,3,1,16,8,6,3,8,6,5,1,1,3,0,0,Chris Penso
+USA,13/07/2022,23:30,Atlanta United,Real Salt Lake,2,1,14,10,7,4,11,7,5,4,1,2,0,0,Drew Fischer
+USA,14/07/2022,00:00,Chicago Fire FC,Toronto FC,2,0,12,5,6,2,18,10,2,5,2,4,0,0,Lukasz Szpala
+USA,14/07/2022,00:00,DC United,Columbus Crew,2,2,19,6,5,3,8,10,6,1,2,2,0,0,Rosendo Mendoza
+USA,14/07/2022,00:00,FC Cincinnati,Vancouver Whitecaps,2,2,15,11,7,4,11,6,7,4,2,2,0,0,Pierre Luce Lauziere
+USA,14/07/2022,00:00,Inter Miami CF,Philadelphia Union,1,2,12,11,3,5,15,18,4,9,3,1,0,0,Marcos de Oliveira
+USA,14/07/2022,00:00,Minnesota United,Sporting Kansas City,1,1,10,12,3,5,10,3,5,3,3,1,0,0,Guido Gonzalez
+USA,14/07/2022,00:30,Nashville SC,Seattle Sounders FC,1,0,12,9,5,2,11,14,7,2,2,0,0,0,Rubiel Vazquez
+USA,14/07/2022,01:00,Colorado Rapids,Orlando City,1,1,19,12,7,4,17,7,5,4,5,3,0,0,Fotis Bazakos
+USA,14/07/2022,01:00,FC Dallas,New York City FC,0,1,12,4,1,1,13,11,7,1,2,2,0,0,Víctor Rivas
+USA,14/07/2022,02:00,LA Galaxy,San Jose Earthquakes,2,3,25,11,8,4,13,4,11,8,1,2,0,0,Allen Chapman
+USA,16/07/2022,23:30,CF Montréal,Toronto FC,1,0,19,7,5,4,10,10,9,7,1,1,1,0,Ted Unkel
+USA,16/07/2022,23:30,Philadelphia Union,New England Revolution,2,1,20,18,6,7,5,8,9,6,1,0,0,0,Rubiel Vazquez
+USA,17/07/2022,00:00,Chicago Fire FC,Seattle Sounders FC,1,0,9,15,5,2,11,9,6,10,0,1,0,0,Pierre Luce Lauziere
+USA,17/07/2022,00:00,Inter Miami CF,Charlotte FC,3,2,15,4,7,3,13,12,7,4,2,5,0,0,Jon Freemon
+USA,17/07/2022,00:00,Minnesota United,DC United,2,0,17,5,6,0,3,8,6,4,0,1,0,0,Jair Marrufo
+USA,17/07/2022,01:00,Colorado Rapids,LA Galaxy,2,0,10,18,5,2,12,12,5,6,2,4,0,0,Guido Gonzalez
+USA,17/07/2022,01:00,FC Dallas,Austin FC,1,1,16,10,5,4,5,9,8,4,1,1,0,0,Armando Villarreal
+USA,17/07/2022,19:00,Atlanta United,Orlando City,1,1,18,3,4,1,8,12,10,2,3,4,0,0,Víctor Rivas
+USA,17/07/2022,21:00,Red Bull New York,New York City FC,0,1,14,19,4,9,19,11,8,0,3,3,0,0,Chris Penso
+USA,17/07/2022,23:30,Columbus Crew,FC Cincinnati,2,0,17,9,4,2,8,17,9,3,1,2,0,0,Marcos de Oliveira
+USA,18/07/2022,00:30,Nashville SC,Los Angeles FC,1,2,13,13,3,5,12,10,4,2,3,2,0,0,Drew Fischer
+USA,18/07/2022,01:30,Real Salt Lake,Sporting Kansas City,3,0,19,6,10,1,13,8,5,4,3,2,0,1,Joe Dickerson
+USA,18/07/2022,01:30,San Jose Earthquakes,Houston Dynamo FC,1,2,16,13,6,4,6,12,8,7,1,3,0,0,Timothy Ford
+USA,18/07/2022,02:30,Portland Timbers,Vancouver Whitecaps,1,1,17,14,5,7,10,15,7,2,3,2,0,0,Ramy Touchan
+USA,23/07/2022,23:00,New York City FC,Inter Miami CF,2,0,18,11,6,4,8,7,4,3,1,1,0,0,Allen Chapman
+USA,23/07/2022,23:30,Columbus Crew,New England Revolution,0,0,17,5,7,2,14,13,5,3,0,3,0,0,Silviu Petrescu
+USA,23/07/2022,23:30,FC Cincinnati,Nashville SC,1,1,16,8,4,3,10,5,8,3,1,2,0,0,Chris Penso
+USA,23/07/2022,23:30,Orlando City,Philadelphia Union,0,1,12,9,1,1,10,12,2,5,3,2,0,0,Alex Chilowicz
+USA,23/07/2022,23:30,Toronto FC,Charlotte FC,4,0,14,10,4,5,8,13,5,8,1,0,0,1,Filip Dujic
+USA,24/07/2022,00:00,DC United,CF Montréal,1,2,13,10,5,3,19,7,6,4,3,2,0,0,Rubiel Vazquez
+USA,24/07/2022,00:30,Houston Dynamo FC,Minnesota United,1,2,22,9,4,3,7,5,13,1,2,0,0,0,Nima Saghafi
+USA,24/07/2022,00:30,Sporting Kansas City,Los Angeles FC,0,2,11,13,3,5,11,15,7,6,0,3,0,0,Lukasz Szpala
+USA,24/07/2022,02:00,Real Salt Lake,FC Dallas,0,1,25,7,5,2,6,13,7,2,4,5,0,0,Matthew Rowell Conger
+USA,24/07/2022,02:00,Seattle Sounders FC,Colorado Rapids,2,1,17,8,7,3,4,18,3,11,0,5,1,0,Rosendo Mendoza
+USA,24/07/2022,02:00,Vancouver Whitecaps,Chicago Fire FC,1,3,8,16,3,4,13,9,3,4,2,0,0,0,Joe Dickerson
+USA,24/07/2022,02:30,Portland Timbers,San Jose Earthquakes,2,1,19,11,5,7,18,15,3,9,4,3,0,0,Jon Freemon
+USA,25/07/2022,00:00,Austin FC,Red Bull New York,3,4,14,13,6,8,13,16,8,1,2,3,0,0,Guido Gonzalez
+USA,25/07/2022,01:30,LA Galaxy,Atlanta United,2,0,10,12,6,3,15,16,2,3,2,4,0,0,Marcos de Oliveira
+USA,30/07/2022,03:00,Los Angeles FC,Seattle Sounders FC,2,1,19,11,8,0,16,10,8,4,1,2,0,0,Joe Dickerson
+USA,30/07/2022,19:00,Minnesota United,Portland Timbers,4,4,13,17,6,7,17,16,5,3,5,4,0,0,Víctor Rivas
+USA,30/07/2022,21:00,Chicago Fire FC,Atlanta United,0,0,15,13,3,2,7,18,7,8,2,2,0,0,Timothy Ford
+USA,30/07/2022,23:30,CF Montréal,New York City FC,0,0,13,2,1,0,14,6,8,2,2,0,0,0,Ramy Touchan
+USA,30/07/2022,23:30,Philadelphia Union,Houston Dynamo FC,6,0,16,11,8,1,11,13,5,4,1,3,0,0,Kevin Stott
+USA,31/07/2022,00:00,Inter Miami CF,FC Cincinnati,4,4,14,15,7,7,11,11,5,7,1,2,0,0,Tori Penso
+USA,31/07/2022,00:00,Nashville SC,Vancouver Whitecaps,1,1,18,21,3,6,5,12,7,7,1,4,0,0,Marcos de Oliveira
+USA,31/07/2022,00:00,New England Revolution,Toronto FC,0,0,13,14,2,3,12,10,3,9,0,0,0,0,Ismir Pekmic
+USA,31/07/2022,00:30,Sporting Kansas City,Austin FC,0,2,11,9,4,3,12,12,6,1,1,3,1,0,Fotis Bazakos
+USA,31/07/2022,01:00,FC Dallas,LA Galaxy,1,0,15,10,7,3,14,12,4,4,3,4,0,0,Pierre Luce Lauziere
+USA,31/07/2022,02:00,San Jose Earthquakes,Real Salt Lake,2,2,14,12,4,6,11,17,5,2,3,4,1,0,Nima Saghafi
+USA,31/07/2022,21:00,DC United,Orlando City,2,1,8,15,4,4,11,9,4,3,1,2,0,0,Armando Villarreal
+USA,02/08/2022,23:30,Red Bull New York,Colorado Rapids,4,5,17,13,6,8,13,15,4,3,0,4,0,0,Drew Fischer
+USA,03/08/2022,02:00,Seattle Sounders FC,FC Dallas,1,0,11,15,4,3,8,14,3,7,1,1,0,0,
+USA,03/08/2022,23:00,Charlotte FC,DC United,3,0,16,9,8,1,10,10,4,4,0,1,0,0,Guido Gonzalez
+USA,03/08/2022,23:30,Columbus Crew,CF Montréal,1,2,9,10,3,4,7,10,2,8,1,1,0,0,Lukasz Szpala
+USA,04/08/2022,02:30,Portland Timbers,Nashville SC,1,1,17,14,3,5,6,13,4,5,1,3,0,0,Silviu Petrescu
+USA,04/08/2022,02:30,San Jose Earthquakes,Inter Miami CF,0,1,22,11,5,6,3,13,13,7,0,1,0,0,Mark Allatin
+USA,06/08/2022,02:30,Vancouver Whitecaps,Houston Dynamo FC,2,1,13,9,4,4,7,11,5,5,2,1,0,0,Fotis Bazakos
+USA,06/08/2022,19:00,Atlanta United,Seattle Sounders FC,2,1,10,14,5,4,9,11,7,7,1,2,0,0,Armando Villarreal
+USA,06/08/2022,23:00,Charlotte FC,Chicago Fire FC,2,3,12,14,5,8,20,19,3,3,2,3,0,0,Nima Saghafi
+USA,06/08/2022,23:30,CF Montréal,Inter Miami CF,2,2,13,8,5,4,9,8,6,4,1,0,0,0,Kevin Stott
+USA,06/08/2022,23:30,Columbus Crew,New York City FC,3,2,16,13,6,5,10,11,4,4,2,4,0,0,Rubiel Vazquez
+USA,06/08/2022,23:30,DC United,Red Bull New York,0,0,4,13,2,1,13,17,4,4,1,1,0,0,Pierre Luce Lauziere
+USA,06/08/2022,23:30,FC Cincinnati,Philadelphia Union,3,1,13,15,7,2,10,10,3,7,3,0,0,0,Drew Fischer
+USA,06/08/2022,23:30,Orlando City,New England Revolution,0,3,18,11,3,5,10,8,4,3,3,0,0,0,Ramy Touchan
+USA,07/08/2022,00:00,Nashville SC,Toronto FC,3,4,21,10,6,8,11,5,6,2,3,2,0,0,Allen Chapman
+USA,07/08/2022,00:30,Sporting Kansas City,LA Galaxy,4,2,16,6,9,3,9,12,5,3,1,3,0,0,Michael Radchuk
+USA,07/08/2022,01:00,Austin FC,San Jose Earthquakes,3,3,16,12,6,5,7,11,6,5,2,2,0,0,Lukasz Szpala
+USA,07/08/2022,01:00,Colorado Rapids,Minnesota United,4,3,18,14,9,7,9,9,6,3,1,3,0,0,Ismir Pekmic
+USA,07/08/2022,02:00,Real Salt Lake,Los Angeles FC,1,4,16,14,3,8,10,9,7,2,0,2,0,0,Víctor Rivas
+USA,07/08/2022,02:30,Portland Timbers,FC Dallas,1,1,16,7,5,2,10,10,3,4,2,2,0,0,Ted Unkel
+USA,13/08/2022,22:00,Red Bull New York,Orlando City,0,1,15,2,1,1,12,8,4,4,2,1,0,0,
+USA,13/08/2022,23:30,FC Cincinnati,Atlanta United,2,2,16,19,8,6,16,12,6,9,3,1,0,0,Fotis Bazakos
+USA,13/08/2022,23:30,New England Revolution,DC United,1,0,20,13,7,3,11,15,2,6,0,2,0,0,Malik Badawi
+USA,13/08/2022,23:30,Philadelphia Union,Chicago Fire FC,4,1,17,13,7,7,21,8,5,6,3,3,0,0,Ismail Elfath
+USA,13/08/2022,23:30,Toronto FC,Portland Timbers,3,1,23,3,12,2,11,19,4,1,4,0,0,0,Nima Saghafi
+USA,14/08/2022,00:00,Inter Miami CF,New York City FC,3,2,11,17,6,5,14,12,0,10,3,4,0,0,Drew Fischer
+USA,14/08/2022,01:00,Austin FC,Sporting Kansas City,4,3,14,14,9,7,8,9,5,2,2,2,0,0,Pierre Luce Lauziere
+USA,14/08/2022,01:00,Colorado Rapids,Columbus Crew,1,1,12,14,3,5,14,13,3,6,4,3,0,0,Jon Freemon
+USA,14/08/2022,01:00,FC Dallas,San Jose Earthquakes,4,1,10,10,6,2,11,7,2,7,2,1,0,0,Víctor Rivas
+USA,14/08/2022,01:00,Houston Dynamo FC,CF Montréal,2,3,7,15,4,7,13,14,5,4,2,3,0,0,Guido Gonzalez
+USA,14/08/2022,02:00,LA Galaxy,Vancouver Whitecaps,5,2,13,11,7,4,12,13,3,5,4,1,0,1,Silviu Petrescu
+USA,14/08/2022,02:30,Los Angeles FC,Charlotte FC,5,0,25,8,9,2,13,9,8,4,0,1,0,0,Chris Penso
+USA,15/08/2022,01:00,Nashville SC,Minnesota United,1,2,21,10,8,4,10,14,7,2,1,3,0,0,Alex Chilowicz
+USA,15/08/2022,02:00,Seattle Sounders FC,Real Salt Lake,1,2,16,8,3,4,7,10,7,0,2,2,0,0,Timothy Ford
+USA,17/08/2022,02:30,Los Angeles FC,DC United,1,0,19,12,5,3,12,17,8,5,1,4,0,1,Ramy Touchan
+USA,17/08/2022,23:30,Atlanta United,Red Bull New York,1,2,12,13,5,5,11,15,5,6,1,3,0,0,Ted Unkel
+USA,17/08/2022,23:30,Toronto FC,New England Revolution,2,2,19,6,7,4,7,6,17,0,2,2,0,0,Fotis Bazakos
+USA,18/08/2022,00:00,New York City FC,Charlotte FC,1,3,14,6,6,5,12,16,4,2,0,2,0,0,Jon Freemon
+USA,18/08/2022,01:00,FC Dallas,Philadelphia Union,1,0,13,10,5,3,12,15,2,7,2,2,0,0,Nima Saghafi
+USA,18/08/2022,02:00,Vancouver Whitecaps,Colorado Rapids,2,1,8,15,3,4,14,11,4,2,0,1,0,0,Filip Dujic
+USA,20/08/2022,02:00,LA Galaxy,Seattle Sounders FC,3,3,11,16,4,6,10,12,6,5,2,3,0,0,Víctor Rivas
+USA,20/08/2022,22:00,Red Bull New York,FC Cincinnati,1,1,14,3,3,2,15,13,3,1,1,2,0,0,
+USA,20/08/2022,23:30,CF Montréal,New England Revolution,4,0,18,11,7,2,7,7,7,5,1,2,0,0,Chris Penso
+USA,20/08/2022,23:30,DC United,Philadelphia Union,0,6,14,22,2,12,8,9,7,2,0,0,0,0,Ted Unkel
+USA,21/08/2022,00:00,Inter Miami CF,Toronto FC,2,1,8,16,4,4,15,8,2,6,0,1,0,0,Pierre Luce Lauziere
+USA,21/08/2022,00:00,Minnesota United,Austin FC,2,1,15,13,6,2,9,9,3,6,0,1,0,0,Allen Chapman
+USA,21/08/2022,01:00,Colorado Rapids,Houston Dynamo FC,1,1,9,9,4,3,14,13,8,3,2,2,1,0,Marcos de Oliveira
+USA,21/08/2022,02:00,Real Salt Lake,Vancouver Whitecaps,1,1,13,14,4,4,6,10,6,7,1,2,0,0,Ismir Pekmic
+USA,21/08/2022,02:00,San Jose Earthquakes,Los Angeles FC,2,1,10,12,5,1,14,14,11,5,4,4,0,1,Michael Radchuk
+USA,21/08/2022,21:30,Columbus Crew,Atlanta United,2,2,12,24,8,10,9,19,4,10,3,2,0,0,Joe Dickerson
+USA,21/08/2022,22:00,Chicago Fire FC,New York City FC,0,2,10,8,0,5,13,11,6,4,3,1,0,0,Rosendo Mendoza
+USA,21/08/2022,23:00,Charlotte FC,Orlando City,1,2,9,13,3,7,17,9,2,5,2,4,0,0,Lukasz Szpala
+USA,21/08/2022,23:30,Sporting Kansas City,Portland Timbers,4,1,18,13,9,5,8,9,2,1,1,2,0,0,Armando Villarreal
+USA,22/08/2022,00:30,Nashville SC,FC Dallas,4,0,18,4,8,0,10,6,5,1,0,3,0,0,Kevin Stott
+USA,27/08/2022,00:00,Austin FC,Los Angeles FC,4,1,11,15,9,5,10,10,3,4,2,3,0,0,Alex Chilowicz
+USA,27/08/2022,02:00,Portland Timbers,Seattle Sounders FC,2,1,17,9,6,2,17,15,7,6,3,2,0,0,Ismail Elfath
+USA,27/08/2022,19:30,Minnesota United,Houston Dynamo FC,2,1,9,9,2,3,9,9,7,5,1,3,0,0,Rosendo Mendoza
+USA,27/08/2022,23:00,Charlotte FC,Toronto FC,0,2,19,11,4,3,15,11,7,3,1,0,0,0,Timothy Ford
+USA,27/08/2022,23:00,Red Bull New York,Inter Miami CF,3,1,20,11,8,5,16,8,2,5,2,1,1,1,Fotis Bazakos
+USA,27/08/2022,23:30,FC Cincinnati,Columbus Crew,2,2,15,11,7,3,16,10,2,3,1,1,0,0,Kevin Stott
+USA,27/08/2022,23:30,Philadelphia Union,Colorado Rapids,6,0,26,6,14,2,11,15,3,6,0,2,0,1,Allen Chapman
+USA,28/08/2022,00:00,Chicago Fire FC,CF Montréal,0,2,12,10,4,6,15,13,6,5,2,3,0,1,Michael Radchuk
+USA,28/08/2022,00:30,Sporting Kansas City,San Jose Earthquakes,1,0,18,11,8,4,15,14,4,2,3,2,0,0,Guido Gonzalez
+USA,28/08/2022,01:00,FC Dallas,Real Salt Lake,1,1,13,16,3,6,8,13,4,4,1,2,0,0,Ramy Touchan
+USA,28/08/2022,02:00,Vancouver Whitecaps,Nashville SC,0,3,12,10,0,5,16,16,2,2,2,3,1,0,Jon Freemon
+USA,28/08/2022,20:00,Atlanta United,DC United,3,2,25,10,9,3,12,10,8,4,1,0,0,0,Nima Saghafi
+USA,28/08/2022,23:30,Orlando City,New York City FC,2,1,17,5,5,1,13,11,7,0,1,3,0,0,Chris Penso
+USA,29/08/2022,00:00,New England Revolution,LA Galaxy,1,2,19,7,7,5,10,13,3,1,1,3,0,0,Lukasz Szpala
+USA,31/08/2022,23:00,Philadelphia Union,Atlanta United,4,1,22,18,8,5,12,16,4,6,4,2,0,0,Lukasz Szpala
+USA,31/08/2022,23:30,CF Montréal,Red Bull New York,0,1,10,9,1,4,10,11,5,5,1,2,0,0,Víctor Rivas
+USA,31/08/2022,23:30,Columbus Crew,Inter Miami CF,1,0,14,4,3,1,13,13,4,2,2,2,0,0,Armando Villarreal
+USA,31/08/2022,23:30,New England Revolution,Chicago Fire FC,0,0,14,10,5,2,14,12,6,3,1,2,0,0,Marcos de Oliveira
+USA,31/08/2022,23:30,Orlando City,Seattle Sounders FC,3,2,22,8,9,3,13,12,9,3,2,2,0,0,Alex Chilowicz
+USA,31/08/2022,23:30,Toronto FC,LA Galaxy,2,2,13,12,2,5,7,13,4,4,1,2,0,0,Ted Unkel
+USA,01/09/2022,00:00,New York City FC,DC United,1,2,10,6,3,5,10,19,4,3,3,3,0,0,Ismir Pekmic
+USA,01/09/2022,00:30,Houston Dynamo FC,Los Angeles FC,2,1,10,19,3,8,8,10,3,10,1,2,1,0,Matthew Rowell Conger
+USA,01/09/2022,00:30,Nashville SC,Colorado Rapids,4,1,17,10,10,2,12,13,1,5,3,2,0,0,Mark Allatin
+USA,01/09/2022,01:00,Austin FC,Portland Timbers,1,2,26,14,5,6,7,11,15,4,3,2,0,0,Chris Penso
+USA,01/09/2022,01:30,Real Salt Lake,Minnesota United,3,0,12,4,7,0,10,12,3,1,2,1,0,0,Drew Fischer
+USA,03/09/2022,19:30,Minnesota United,FC Dallas,0,3,15,10,2,3,14,8,8,2,2,2,1,0,Ismail Elfath
+USA,03/09/2022,21:30,Columbus Crew,Chicago Fire FC,0,0,25,6,9,1,11,13,10,0,1,2,0,0,Ismir Pekmic
+USA,03/09/2022,23:00,Red Bull New York,Philadelphia Union,0,2,8,5,3,3,12,17,3,0,0,4,1,0,Timothy Ford
+USA,03/09/2022,23:30,FC Cincinnati,Charlotte FC,2,0,14,14,5,2,14,19,7,10,2,3,0,0,Michael Radchuk
+USA,04/09/2022,00:30,Nashville SC,Austin FC,3,0,15,10,6,5,12,21,8,6,1,3,0,1,Nima Saghafi
+USA,04/09/2022,21:30,Portland Timbers,Atlanta United,2,1,14,10,4,2,10,12,6,6,1,0,0,0,Jon Freemon
+USA,04/09/2022,23:30,DC United,Colorado Rapids,0,0,16,13,4,3,12,11,7,6,1,3,0,0,Tori Penso
+USA,04/09/2022,23:30,Toronto FC,CF Montréal,3,4,11,9,4,6,17,17,3,4,3,3,0,0,Allen Chapman
+USA,05/09/2022,00:00,LA Galaxy,Sporting Kansas City,2,2,11,15,5,5,11,15,2,1,1,1,0,0,Ramy Touchan
+USA,05/09/2022,00:00,New England Revolution,New York City FC,3,0,8,17,6,7,9,7,6,5,1,0,0,0,Guido Gonzalez
+USA,05/09/2022,01:00,Seattle Sounders FC,Houston Dynamo FC,2,1,20,4,4,3,6,15,10,5,2,1,0,0,Silviu Petrescu
+USA,05/09/2022,01:30,San Jose Earthquakes,Vancouver Whitecaps,2,0,9,15,5,6,9,11,3,9,2,3,0,0,Rosendo Mendoza
+USA,05/09/2022,02:30,Los Angeles FC,Real Salt Lake,2,0,20,8,7,5,14,10,9,6,3,1,0,0,Lukasz Szpala
+USA,08/09/2022,00:00,New York City FC,FC Cincinnati,1,1,22,4,8,1,9,12,10,2,3,1,1,0,Ted Unkel
+USA,09/09/2022,23:30,CF Montréal,Columbus Crew,2,2,22,11,10,5,9,9,5,5,2,0,0,1,Lukasz Szpala
+USA,10/09/2022,17:00,Charlotte FC,New York City FC,1,0,8,12,1,1,12,14,6,3,3,3,1,0,Víctor Rivas
+USA,10/09/2022,19:30,Nashville SC,LA Galaxy,1,1,10,22,2,8,16,12,3,5,4,5,1,0,Chris Penso
+USA,10/09/2022,22:00,Red Bull New York,New England Revolution,2,1,12,4,5,1,14,7,8,2,1,1,0,0,Alex Chilowicz
+USA,10/09/2022,23:30,Atlanta United,Toronto FC,4,2,27,8,10,2,14,13,12,4,4,3,0,0,Rosendo Mendoza
+USA,10/09/2022,23:30,FC Cincinnati,San Jose Earthquakes,6,0,20,9,10,5,14,11,4,3,2,2,0,0,Ismir Pekmic
+USA,10/09/2022,23:30,Philadelphia Union,Orlando City,5,1,18,9,11,2,13,10,2,1,1,1,0,0,Armando Villarreal
+USA,11/09/2022,00:00,Chicago Fire FC,Inter Miami CF,3,1,12,7,4,3,7,10,7,2,2,1,0,0,Matthew Rowell Conger
+USA,11/09/2022,00:00,Seattle Sounders FC,Austin FC,3,0,5,10,4,1,8,12,4,1,2,1,0,0,Marcos de Oliveira
+USA,11/09/2022,00:30,FC Dallas,Los Angeles FC,2,1,13,9,8,2,12,16,6,2,0,3,0,1,Jon Freemon
+USA,11/09/2022,00:30,Houston Dynamo FC,Sporting Kansas City,0,0,11,20,3,6,13,8,5,5,2,2,1,0,Tori Penso
+USA,11/09/2022,01:30,Colorado Rapids,Vancouver Whitecaps,3,1,24,15,5,4,10,15,7,4,0,2,0,0,Kevin Stott
+USA,11/09/2022,01:30,Real Salt Lake,DC United,0,0,16,8,8,3,11,12,10,3,2,3,0,0,Kevin Broadley
+USA,11/09/2022,02:00,Portland Timbers,Minnesota United,1,0,11,21,1,5,14,11,6,5,2,1,0,0,Guido Gonzalez
+USA,13/09/2022,23:30,CF Montréal,Chicago Fire FC,3,2,11,6,5,3,16,14,5,1,3,4,0,0,Ted Unkel
+USA,14/09/2022,00:00,Inter Miami CF,Columbus Crew,2,1,11,13,6,3,16,12,6,7,1,1,0,0,Jon Freemon
+USA,14/09/2022,00:00,Minnesota United,Los Angeles FC,1,1,12,10,2,3,16,15,10,8,2,1,0,0,Timothy Ford
+USA,14/09/2022,00:30,Houston Dynamo FC,New England Revolution,3,1,20,15,11,5,11,10,4,4,2,2,0,0,Ismail Elfath
+USA,14/09/2022,00:30,Sporting Kansas City,DC United,3,0,17,7,5,2,4,20,12,2,1,3,0,0,Rosendo Mendoza
+USA,14/09/2022,22:00,Orlando City,Atlanta United,0,1,20,10,3,5,10,16,4,4,1,3,0,0,
+USA,15/09/2022,01:15,Austin FC,Real Salt Lake,3,0,14,17,3,6,10,15,3,10,0,0,0,0,Joe Dickerson
+USA,15/09/2022,02:00,Colorado Rapids,San Jose Earthquakes,2,1,13,15,3,3,7,13,8,6,1,2,0,0,Pierre Luce Lauziere
+USA,15/09/2022,02:00,Vancouver Whitecaps,LA Galaxy,3,0,11,12,6,2,7,9,3,9,4,1,0,0,Fotis Bazakos
+USA,17/09/2022,17:00,New York City FC,Red Bull New York,2,0,5,9,3,1,8,19,6,5,3,4,0,0,Allen Chapman
+USA,17/09/2022,19:30,Atlanta United,Philadelphia Union,0,0,16,5,6,0,13,17,9,2,2,3,0,0,Guido Gonzalez
+USA,17/09/2022,23:30,New England Revolution,CF Montréal,0,1,10,18,3,3,15,6,4,14,0,2,0,0,Rosendo Mendoza
+USA,17/09/2022,23:30,Orlando City,Toronto FC,4,0,18,11,7,3,11,16,4,4,1,3,0,0,Nima Saghafi
+USA,18/09/2022,00:00,Chicago Fire FC,Charlotte FC,2,3,14,14,4,6,23,13,4,4,2,4,0,0,Tori Penso
+USA,18/09/2022,00:30,Sporting Kansas City,Minnesota United,4,1,14,7,8,2,9,12,5,4,1,1,0,0,Marcos de Oliveira
+USA,18/09/2022,01:00,Austin FC,Nashville SC,1,1,9,14,3,1,9,8,5,3,0,0,0,0,Lukasz Szpala
+USA,18/09/2022,01:30,Real Salt Lake,FC Cincinnati,1,2,18,8,8,3,6,12,6,4,1,1,0,0,Chris Penso
+USA,18/09/2022,02:00,Vancouver Whitecaps,Seattle Sounders FC,2,1,11,15,5,4,11,11,4,9,1,2,0,0,Ramy Touchan
+USA,18/09/2022,02:30,LA Galaxy,Colorado Rapids,4,1,20,15,12,6,12,15,3,8,1,5,1,0,Joe Dickerson
+USA,18/09/2022,02:30,San Jose Earthquakes,FC Dallas,1,1,19,9,3,3,13,18,5,5,1,4,0,1,Drew Fischer
+USA,18/09/2022,17:00,Columbus Crew,Portland Timbers,1,1,15,9,4,3,7,21,3,8,3,4,0,0,Víctor Rivas
+USA,18/09/2022,21:00,DC United,Inter Miami CF,2,3,17,8,5,5,11,9,5,5,2,3,0,0,Ismail Elfath
+USA,19/09/2022,02:30,Los Angeles FC,Houston Dynamo FC,3,1,19,10,7,1,15,14,4,7,0,1,0,0,Kevin Stott
+USA,25/09/2022,02:00,San Jose Earthquakes,LA Galaxy,2,3,13,11,3,4,13,9,4,6,3,3,0,0,
+USA,28/09/2022,02:00,Seattle Sounders FC,FC Cincinnati,1,1,9,11,4,2,12,19,4,2,2,2,1,0,Rubiel Vazquez
+USA,30/09/2022,23:30,Toronto FC,Inter Miami CF,0,1,11,14,3,5,6,15,3,3,3,2,0,0,Silviu Petrescu
+USA,01/10/2022,17:30,New England Revolution,Atlanta United,2,1,16,19,5,4,8,9,5,6,2,2,0,0,Armando Villarreal
+USA,01/10/2022,19:30,Colorado Rapids,FC Dallas,1,0,12,11,6,2,14,5,3,4,2,1,1,0,Chris Penso
+USA,01/10/2022,21:30,Charlotte FC,Philadelphia Union,4,0,10,12,4,1,19,18,6,5,1,1,0,1,Jon Freemon
+USA,01/10/2022,23:30,CF Montréal,DC United,1,0,12,6,3,3,,,2,3,,,,,Ramy Touchan
+USA,01/10/2022,23:30,Columbus Crew,Red Bull New York,2,1,9,10,4,3,12,22,4,4,2,2,0,0,Marcos de Oliveira
+USA,01/10/2022,23:30,FC Cincinnati,Chicago Fire FC,2,3,18,12,4,6,11,13,7,5,2,3,1,0,Lukasz Szpala
+USA,02/10/2022,02:00,San Jose Earthquakes,Minnesota United,2,0,18,16,6,2,11,9,7,6,4,3,0,0,Nima Saghafi
+USA,02/10/2022,02:00,Vancouver Whitecaps,Austin FC,2,0,8,13,6,5,11,12,2,4,2,4,0,0,Timothy Ford
+USA,02/10/2022,02:30,LA Galaxy,Real Salt Lake,1,1,16,11,8,5,11,13,2,3,2,1,0,0,Kevin Stott
+USA,02/10/2022,17:00,New York City FC,Orlando City,2,1,13,13,5,1,10,19,4,7,2,2,0,0,Joe Dickerson
+USA,02/10/2022,19:00,Portland Timbers,Los Angeles FC,1,2,14,9,7,8,15,14,6,5,2,2,0,0,Ismail Elfath
+USA,02/10/2022,21:00,Sporting Kansas City,Seattle Sounders FC,1,0,16,10,11,1,7,13,5,3,1,2,0,0,Ted Unkel
+USA,03/10/2022,00:30,Nashville SC,Houston Dynamo FC,1,2,21,9,3,3,8,8,12,3,1,0,0,1,Guido Gonzalez
+USA,05/10/2022,23:00,Charlotte FC,Columbus Crew,2,2,15,17,7,8,12,9,5,2,1,4,0,0,Matthew Rowell Conger
+USA,06/10/2022,00:00,Inter Miami CF,Orlando City,4,1,6,16,4,1,10,12,1,8,0,2,0,0,Víctor Rivas
+USA,09/10/2022,18:30,Atlanta United,New York City FC,1,2,12,15,4,4,10,13,5,4,3,4,0,0,Chris Penso
+USA,09/10/2022,18:30,Chicago Fire FC,New England Revolution,1,1,14,12,5,5,17,11,8,0,2,2,0,0,Michael Radchuk
+USA,09/10/2022,18:30,DC United,FC Cincinnati,2,5,9,14,5,8,5,11,5,1,1,2,0,0,Timothy Ford
+USA,09/10/2022,18:30,Inter Miami CF,CF Montréal,1,3,12,10,3,6,11,8,2,1,2,2,0,0,Joe Dickerson
+USA,09/10/2022,18:30,Orlando City,Columbus Crew,2,1,8,13,4,6,18,13,3,7,6,3,0,0,Alex Chilowicz
+USA,09/10/2022,18:30,Philadelphia Union,Toronto FC,4,0,18,6,9,1,16,13,4,4,0,3,0,0,Lukasz Szpala
+USA,09/10/2022,18:30,Red Bull New York,Charlotte FC,2,0,12,9,8,6,16,12,4,8,2,1,0,0,Rubiel Vazquez
+USA,09/10/2022,21:00,Austin FC,Colorado Rapids,1,1,9,17,4,5,12,10,4,6,0,3,0,0,Pierre Luce Lauziere
+USA,09/10/2022,21:00,FC Dallas,Sporting Kansas City,2,1,16,19,8,7,11,8,7,8,2,2,0,0,Víctor Rivas
+USA,09/10/2022,21:00,Houston Dynamo FC,LA Galaxy,1,3,6,21,4,7,13,7,1,8,2,2,0,0,Drew Fischer
+USA,09/10/2022,21:00,Los Angeles FC,Nashville SC,0,1,30,12,14,2,12,13,10,2,0,3,0,0,Ted Unkel
+USA,09/10/2022,21:00,Minnesota United,Vancouver Whitecaps,2,0,16,11,5,7,10,5,4,5,1,1,0,0,Allen Chapman
+USA,09/10/2022,21:00,Real Salt Lake,Portland Timbers,3,1,18,9,4,3,12,7,8,2,1,2,0,0,Armando Villarreal
+USA,09/10/2022,21:00,Seattle Sounders FC,San Jose Earthquakes,2,2,16,12,6,4,14,11,4,1,1,1,0,0,Marcos de Oliveira
+USA,15/10/2022,16:00,Red Bull New York,FC Cincinnati,1,2,16,12,7,6,12,16,6,7,1,4,0,0,Alex Chilowicz
+USA,15/10/2022,19:00,LA Galaxy,Nashville SC,1,0,7,9,4,5,19,13,1,5,2,2,0,0,Armando Villarreal
+USA,16/10/2022,19:00,Austin FC,Real Salt Lake,2,2,38,11,11,4,11,11,14,2,2,2,0,1,Víctor Rivas
+USA,17/10/2022,00:00,CF Montréal,Orlando City,2,0,11,5,2,0,16,12,2,1,2,4,0,0,Ismail Elfath
+USA,17/10/2022,23:00,New York City FC,Inter Miami CF,3,0,27,12,9,4,11,12,8,6,1,3,0,0,Rubiel Vazquez
+USA,18/10/2022,01:30,FC Dallas,Minnesota United,1,1,19,7,9,3,16,19,6,5,1,2,0,0,Ted Unkel
+USA,21/10/2022,00:00,Philadelphia Union,FC Cincinnati,1,0,16,15,6,5,12,11,4,8,3,2,0,0,Timothy Ford
+USA,21/10/2022,02:00,Los Angeles FC,LA Galaxy,3,2,14,11,5,4,18,11,7,2,3,2,0,0,
+USA,23/10/2022,17:00,CF Montréal,New York City FC,1,3,18,5,8,4,10,13,7,0,3,3,0,0,Drew Fischer
+USA,24/10/2022,00:00,Austin FC,FC Dallas,2,1,18,9,6,5,12,13,11,3,2,2,0,0,Joe Dickerson
+USA,30/10/2022,19:00,Los Angeles FC,Austin FC,3,0,22,7,10,1,17,12,11,5,1,3,0,0,Armando Villarreal
+USA,31/10/2022,00:00,Philadelphia Union,New York City FC,3,1,10,13,6,4,19,9,3,3,2,0,0,0,Allen Chapman
+USA,05/11/2022,20:00,Los Angeles FC,Philadelphia Union,3,3,16,17,8,3,15,26,4,5,2,2,1,0,Ismail Elfath
+USA,25/02/2023,21:30,Nashville SC,New York City FC,2,0,9,9,4,2,14,13,8,3,1,4,0,0,
+USA,26/02/2023,00:30,Atlanta United,San Jose Earthquakes,2,1,20,10,5,4,14,14,8,3,2,2,0,0,Jon Freemon
+USA,26/02/2023,00:30,Charlotte FC,New England Revolution,0,1,15,15,4,5,15,11,8,6,1,1,0,0,Rubiel Vazquez
+USA,26/02/2023,00:30,DC United,Toronto FC,3,2,10,7,5,4,18,8,3,2,2,2,0,0,Ted Unkel
+USA,26/02/2023,00:30,FC Cincinnati,Houston Dynamo FC,2,1,14,19,5,7,13,10,0,7,1,2,0,0,Chris Penso
+USA,26/02/2023,00:30,Inter Miami CF,CF Montréal,2,0,18,14,7,6,12,12,4,4,0,1,0,0,Drew Fischer
+USA,26/02/2023,00:30,Orlando City,Red Bull New York,1,0,6,14,1,4,16,18,4,3,4,3,0,0,Guido Gonzalez
+USA,26/02/2023,00:30,Philadelphia Union,Columbus Crew,4,1,14,7,5,2,12,15,2,2,1,5,0,0,Lukasz Szpala
+USA,26/02/2023,01:30,Austin FC,St. Louis City,2,3,13,18,2,9,7,9,8,8,0,1,0,0,Allen Chapman
+USA,26/02/2023,01:30,FC Dallas,Minnesota United,0,1,11,8,1,4,17,13,9,0,1,2,0,0,Ramy Touchan
+USA,26/02/2023,03:30,Vancouver Whitecaps,Real Salt Lake,1,2,18,11,7,7,10,3,10,6,0,1,0,0,Ismir Pekmic
+USA,27/02/2023,01:00,Seattle Sounders FC,Colorado Rapids,4,0,15,10,9,2,9,15,6,5,0,1,0,0,Alex Chilowicz
+USA,28/02/2023,03:00,Portland Timbers,Sporting Kansas City,1,0,7,12,4,4,12,9,3,11,3,1,0,0,Timothy Ford
+USA,04/03/2023,21:30,Los Angeles FC,Portland Timbers,3,2,15,10,5,6,20,14,6,5,3,2,0,0,Joe Dickerson
+USA,05/03/2023,00:30,Atlanta United,Toronto FC,1,1,16,4,6,3,15,9,9,0,2,0,0,0,Nima Saghafi
+USA,05/03/2023,00:30,Columbus Crew,DC United,2,0,12,15,4,3,17,16,1,7,1,2,0,0,Marcos de Oliveira
+USA,05/03/2023,00:30,Inter Miami CF,Philadelphia Union,2,0,10,11,2,4,14,17,6,5,1,3,0,0,Chris Penso
+USA,05/03/2023,00:30,New England Revolution,Houston Dynamo FC,3,0,11,8,5,4,15,14,3,3,2,4,0,0,Fotis Bazakos
+USA,05/03/2023,00:30,Orlando City,FC Cincinnati,0,0,7,11,1,4,13,15,4,1,1,1,0,0,Ismail Elfath
+USA,05/03/2023,00:30,Red Bull New York,Nashville SC,0,0,8,5,3,0,13,12,3,5,0,4,0,0,Pierre Luce Lauziere
+USA,05/03/2023,01:30,Austin FC,CF Montréal,1,0,14,9,5,2,9,14,5,7,1,2,0,0,Lukasz Szpala
+USA,05/03/2023,01:30,Chicago Fire FC,New York City FC,1,1,9,10,1,3,15,19,6,4,1,2,0,0,Filip Dujic
+USA,05/03/2023,01:30,FC Dallas,LA Galaxy,3,1,11,13,4,6,10,7,2,7,4,3,0,0,Timothy Ford
+USA,05/03/2023,01:30,St. Louis City,Charlotte FC,3,1,11,6,5,3,15,15,4,3,3,5,0,0,Ted Unkel
+USA,05/03/2023,02:30,Colorado Rapids,Sporting Kansas City,0,0,13,16,4,11,9,10,0,7,2,1,0,0,Allen Chapman
+USA,05/03/2023,03:30,San Jose Earthquakes,Vancouver Whitecaps,2,1,20,7,6,2,8,10,12,6,2,4,0,0,Mark Allatin
+USA,05/03/2023,03:30,Seattle Sounders FC,Real Salt Lake,2,0,19,7,8,2,12,9,4,5,2,1,0,0,Víctor Rivas
+USA,11/03/2023,17:00,Charlotte FC,Atlanta United,0,3,12,13,3,5,14,15,5,4,1,4,0,0,
+USA,11/03/2023,22:00,Vancouver Whitecaps,FC Dallas,1,1,10,11,4,2,14,7,7,6,2,2,0,0,Marcos de Oliveira
+USA,12/03/2023,00:30,DC United,Orlando City,1,1,16,9,5,4,9,14,5,2,2,1,0,0,Jon Freemon
+USA,12/03/2023,00:30,FC Cincinnati,Seattle Sounders FC,1,0,9,12,2,1,16,12,5,3,2,2,1,0,Joe Dickerson
+USA,12/03/2023,00:30,New York City FC,Inter Miami CF,1,0,13,6,7,3,12,15,2,2,4,4,0,0,Lukasz Szpala
+USA,12/03/2023,00:30,Philadelphia Union,Chicago Fire FC,1,0,14,12,3,2,19,10,6,2,5,2,0,2,Guido Gonzalez
+USA,12/03/2023,00:30,Toronto FC,Columbus Crew,1,1,7,17,3,4,13,17,1,9,2,2,0,0,Ismir Pekmic
+USA,12/03/2023,01:30,Minnesota United,Red Bull New York,1,1,11,15,2,4,11,12,6,5,1,3,0,0,Chris Penso
+USA,12/03/2023,01:30,Nashville SC,CF Montréal,2,0,12,8,4,0,12,8,9,5,1,1,0,0,Rubiel Vazquez
+USA,12/03/2023,01:30,Sporting Kansas City,LA Galaxy,0,0,30,8,11,2,9,8,9,4,0,0,0,0,Armando Villarreal
+USA,12/03/2023,02:30,Real Salt Lake,Austin FC,1,2,17,11,6,5,5,9,8,3,1,0,0,0,Alex Chilowicz
+USA,12/03/2023,03:30,Portland Timbers,St. Louis City,1,2,12,10,3,5,20,17,6,6,3,2,0,0,Víctor Rivas
+USA,12/03/2023,03:30,San Jose Earthquakes,Colorado Rapids,1,0,13,6,4,0,9,12,5,3,0,2,1,0,Ramy Touchan
+USA,13/03/2023,02:30,Los Angeles FC,New England Revolution,4,0,18,4,12,1,13,6,8,5,0,1,0,0,Allen Chapman
+USA,18/03/2023,20:00,Seattle Sounders FC,Los Angeles FC,0,0,11,10,4,3,15,13,7,4,4,4,0,0,Ismail Elfath
+USA,18/03/2023,23:30,Atlanta United,Portland Timbers,5,1,18,8,8,3,20,11,3,3,1,4,0,0,Ted Unkel
+USA,18/03/2023,23:30,CF Montréal,Philadelphia Union,3,2,15,11,4,7,14,15,8,3,4,2,0,1,Nima Saghafi
+USA,18/03/2023,23:30,New England Revolution,Nashville SC,1,0,10,16,5,3,9,12,3,8,1,2,0,0,Jon Freemon
+USA,18/03/2023,23:30,New York City FC,DC United,3,2,10,9,6,4,13,13,5,5,2,3,0,0,Mark Allatin
+USA,18/03/2023,23:30,Orlando City,Charlotte FC,1,2,19,8,7,4,6,17,5,3,0,6,0,0,Armando Villarreal
+USA,18/03/2023,23:30,Red Bull New York,Columbus Crew,2,1,15,5,4,3,12,12,6,2,2,3,0,0,Timothy Ford
+USA,18/03/2023,23:30,Toronto FC,Inter Miami CF,2,0,12,9,6,3,9,14,5,4,2,1,0,0,Alex Chilowicz
+USA,19/03/2023,00:30,Chicago Fire FC,FC Cincinnati,3,3,14,14,4,8,18,11,8,6,5,1,0,0,Fotis Bazakos
+USA,19/03/2023,00:30,FC Dallas,Sporting Kansas City,2,1,12,11,3,3,9,10,7,4,2,1,0,0,Pierre Luce Lauziere
+USA,19/03/2023,00:30,Houston Dynamo FC,Austin FC,2,0,15,13,7,5,14,12,7,4,2,3,0,0,Drew Fischer
+USA,19/03/2023,00:30,St. Louis City,San Jose Earthquakes,3,0,20,13,8,2,17,8,8,5,1,5,0,0,Rosendo Mendoza
+USA,19/03/2023,01:30,Colorado Rapids,Minnesota United,1,2,12,11,3,2,16,9,3,3,3,2,0,0,
+USA,19/03/2023,02:30,LA Galaxy,Vancouver Whitecaps,1,1,20,12,6,2,13,15,13,4,2,4,0,0,
+USA,25/03/2023,20:30,Portland Timbers,LA Galaxy,0,0,10,17,1,4,16,13,2,5,3,5,0,0,Chris Penso
+USA,25/03/2023,23:30,Charlotte FC,Red Bull New York,1,1,6,9,1,6,16,21,4,1,3,4,0,0,Marcos de Oliveira
+USA,25/03/2023,23:30,Columbus Crew,Atlanta United,6,1,15,2,6,1,15,11,8,2,1,2,0,0,Ramy Touchan
+USA,25/03/2023,23:30,DC United,New England Revolution,1,2,14,16,7,5,11,13,8,4,1,1,0,0,Filip Dujic
+USA,25/03/2023,23:30,Inter Miami CF,Chicago Fire FC,2,3,11,17,7,5,14,10,4,4,2,1,0,0,Tori Penso
+USA,25/03/2023,23:30,Philadelphia Union,Orlando City,1,2,26,12,6,4,6,9,7,4,2,2,0,0,Allen Chapman
+USA,26/03/2023,00:30,Austin FC,Colorado Rapids,1,1,8,17,3,8,8,15,3,12,2,4,0,0,Ted Unkel
+USA,26/03/2023,00:30,Houston Dynamo FC,New York City FC,1,0,9,5,2,1,15,15,1,5,2,4,0,0,Guido Gonzalez
+USA,26/03/2023,00:30,Minnesota United,Vancouver Whitecaps,1,1,8,23,2,5,8,10,2,10,4,3,0,0,Rosendo Mendoza
+USA,26/03/2023,00:30,Nashville SC,FC Cincinnati,0,1,17,15,3,7,11,18,3,2,2,4,0,0,Ismir Pekmic
+USA,26/03/2023,00:35,Sporting Kansas City,Seattle Sounders FC,1,4,7,13,3,7,10,9,3,3,0,0,1,0,Alex Chilowicz
+USA,26/03/2023,01:30,Real Salt Lake,St. Louis City,0,4,19,14,8,8,8,20,9,4,3,2,0,0,Mark Allatin
+USA,26/03/2023,02:30,Los Angeles FC,FC Dallas,2,1,21,7,6,3,12,16,7,0,2,4,0,1,Lukasz Szpala
+USA,26/03/2023,02:30,San Jose Earthquakes,Toronto FC,0,0,14,15,2,2,10,10,6,3,1,1,0,0,Fotis Bazakos
+USA,01/04/2023,23:30,Atlanta United,Red Bull New York,1,0,8,15,4,2,15,15,3,5,4,6,0,0,Alex Chilowicz
+USA,01/04/2023,23:30,Columbus Crew,Real Salt Lake,4,0,18,8,6,5,13,10,4,2,1,2,0,0,Rubiel Vazquez
+USA,01/04/2023,23:30,FC Cincinnati,Inter Miami CF,1,0,11,10,4,3,12,15,4,4,3,2,0,0,Nima Saghafi
+USA,01/04/2023,23:30,LA Galaxy,Seattle Sounders FC,1,2,28,9,8,3,8,14,13,2,2,3,0,0,Allen Chapman
+USA,01/04/2023,23:30,New England Revolution,New York City FC,1,1,12,14,3,3,10,12,4,9,0,2,0,0,Ismail Elfath
+USA,01/04/2023,23:30,Orlando City,Nashville SC,0,2,18,7,6,3,14,11,10,2,2,3,0,0,Chris Penso
+USA,01/04/2023,23:30,Philadelphia Union,Sporting Kansas City,0,0,17,13,4,4,13,11,3,8,3,2,0,0,Víctor Rivas
+USA,01/04/2023,23:30,Toronto FC,Charlotte FC,2,2,10,13,5,4,13,18,10,7,3,2,0,0,Ramy Touchan
+USA,02/04/2023,00:30,Chicago Fire FC,DC United,0,0,11,9,2,3,15,17,9,3,0,2,0,0,Pierre Luce Lauziere
+USA,02/04/2023,00:30,FC Dallas,Portland Timbers,1,1,17,6,6,2,15,13,11,2,4,0,0,0,Armando Villarreal
+USA,02/04/2023,00:30,St. Louis City,Minnesota United,0,1,16,10,3,1,15,11,4,4,3,2,0,0,Jon Freemon
+USA,02/04/2023,01:30,Colorado Rapids,Los Angeles FC,0,0,14,11,4,2,8,10,10,3,1,1,0,0,Drew Fischer
+USA,02/04/2023,02:30,San Jose Earthquakes,Houston Dynamo FC,2,1,13,6,3,3,14,17,5,2,3,2,0,0,Tori Penso
+USA,02/04/2023,02:30,Vancouver Whitecaps,CF Montréal,5,0,29,3,9,0,7,9,6,1,1,3,0,1,Timothy Ford
+USA,08/04/2023,23:30,DC United,Columbus Crew,0,2,14,13,5,5,16,13,2,4,3,2,0,0,Rosendo Mendoza
+USA,08/04/2023,23:30,FC Cincinnati,Philadelphia Union,1,0,8,10,2,4,8,14,1,4,1,2,0,0,Ted Unkel
+USA,08/04/2023,23:30,Inter Miami CF,FC Dallas,0,1,12,16,3,8,8,12,5,2,1,4,0,0,Filip Dujic
+USA,08/04/2023,23:30,Los Angeles FC,Austin FC,3,0,26,9,6,4,10,7,10,3,0,1,0,0,Víctor Rivas
+USA,08/04/2023,23:30,New England Revolution,CF Montréal,4,0,19,9,9,3,7,14,6,2,0,4,0,0,Tori Penso
+USA,08/04/2023,23:30,New York City FC,Atlanta United,1,1,14,9,4,3,17,11,4,5,3,1,0,1,Drew Fischer
+USA,08/04/2023,23:30,Red Bull New York,San Jose Earthquakes,1,1,15,10,5,3,13,13,5,4,2,3,0,0,Ismir Pekmic
+USA,09/04/2023,00:30,Chicago Fire FC,Minnesota United,2,1,14,10,2,6,9,4,4,5,1,0,0,0,Timothy Ford
+USA,09/04/2023,00:30,Houston Dynamo FC,LA Galaxy,3,0,13,16,3,3,10,7,9,6,2,2,1,2,Alex Chilowicz
+USA,09/04/2023,00:30,Nashville SC,Toronto FC,0,0,8,10,3,3,14,9,2,5,2,2,0,0,Guido Gonzalez
+USA,09/04/2023,00:30,Sporting Kansas City,Colorado Rapids,0,1,18,8,2,2,8,17,8,4,2,4,0,0,Joe Dickerson
+USA,09/04/2023,01:30,Real Salt Lake,Charlotte FC,3,1,18,13,10,6,7,5,3,5,3,3,0,0,Fotis Bazakos
+USA,09/04/2023,02:30,Seattle Sounders FC,St. Louis City,3,0,12,9,6,2,6,10,8,3,1,2,0,0,Rubiel Vazquez
+USA,09/04/2023,02:30,Vancouver Whitecaps,Portland Timbers,1,0,13,2,9,0,19,14,12,1,3,3,0,0,Nima Saghafi
+USA,15/04/2023,23:30,CF Montréal,DC United,0,1,11,7,2,2,15,14,3,3,3,2,0,0,Joe Dickerson
+USA,15/04/2023,23:30,Charlotte FC,Colorado Rapids,2,2,17,13,3,6,9,8,5,4,1,5,0,0,Guido Gonzalez
+USA,15/04/2023,23:30,Columbus Crew,New England Revolution,1,1,21,16,7,8,11,7,5,5,2,1,0,1,Chris Penso
+USA,15/04/2023,23:30,New York City FC,Nashville SC,2,1,14,15,6,6,10,8,3,7,2,0,0,0,Allen Chapman
+USA,15/04/2023,23:30,Red Bull New York,Houston Dynamo FC,1,1,18,3,7,2,18,16,10,0,2,2,0,0,Ramy Touchan
+USA,15/04/2023,23:30,Toronto FC,Atlanta United,2,2,11,10,4,5,4,11,7,3,2,1,0,0,Ted Unkel
+USA,16/04/2023,00:30,Austin FC,Vancouver Whitecaps,0,0,17,13,7,4,9,14,6,2,2,2,0,0,Mark Allatin
+USA,16/04/2023,00:30,Chicago Fire FC,Philadelphia Union,2,2,12,16,2,4,8,12,4,2,2,1,0,0,Ismail Elfath
+USA,16/04/2023,00:30,FC Dallas,Real Salt Lake,2,1,4,15,2,5,6,16,1,3,2,2,0,0,Sergii Boiko
+USA,16/04/2023,00:30,Minnesota United,Orlando City,1,2,17,12,4,2,9,9,8,6,1,0,0,0,Pierre Luce Lauziere
+USA,16/04/2023,00:30,St. Louis City,FC Cincinnati,5,1,17,11,7,5,26,14,3,5,2,2,0,0,Lukasz Szpala
+USA,16/04/2023,02:30,Portland Timbers,Seattle Sounders FC,4,1,17,15,8,5,11,6,3,7,1,2,0,0,Drew Fischer
+USA,16/04/2023,02:30,San Jose Earthquakes,Sporting Kansas City,3,0,10,9,6,3,10,10,4,3,2,1,0,1,Timothy Ford
+USA,16/04/2023,20:30,LA Galaxy,Los Angeles FC,2,3,14,18,5,9,13,15,9,8,3,4,0,0,Armando Villarreal
+USA,22/04/2023,23:30,CF Montréal,Red Bull New York,2,0,7,15,6,4,16,12,3,5,2,3,1,0,Rubiel Vazquez
+USA,22/04/2023,23:30,Charlotte FC,Columbus Crew,1,0,11,10,4,3,13,9,3,3,1,1,0,0,Jon Freemon
+USA,22/04/2023,23:30,FC Cincinnati,Portland Timbers,2,1,13,14,6,4,11,12,4,8,3,4,0,0,Allen Chapman
+USA,22/04/2023,23:30,New England Revolution,Sporting Kansas City,2,1,16,8,9,3,4,12,3,1,0,2,0,1,Nima Saghafi
+USA,22/04/2023,23:30,New York City FC,FC Dallas,3,1,21,16,6,8,9,15,3,6,1,3,0,0,Fotis Bazakos
+USA,22/04/2023,23:30,Orlando City,DC United,1,3,13,9,5,5,14,21,9,3,3,4,0,0,Lukasz Szpala
+USA,22/04/2023,23:30,Philadelphia Union,Toronto FC,4,2,18,10,7,5,12,7,6,7,1,1,0,0,Alex Chilowicz
+USA,23/04/2023,00:30,Houston Dynamo FC,Inter Miami CF,1,0,11,20,3,5,11,8,4,8,0,1,0,0,Rosendo Mendoza
+USA,23/04/2023,00:30,Nashville SC,Los Angeles FC,1,1,8,19,3,6,6,9,6,5,0,3,0,0,Ted Unkel
+USA,23/04/2023,01:30,Colorado Rapids,St. Louis City,1,1,21,9,13,4,8,14,4,5,2,3,0,0,Marcos de Oliveira
+USA,23/04/2023,01:30,Real Salt Lake,San Jose Earthquakes,3,1,13,10,6,4,13,7,3,1,1,0,0,0,Filip Dujic
+USA,23/04/2023,02:30,LA Galaxy,Austin FC,2,0,18,11,8,2,16,15,12,2,4,3,0,0,Chris Penso
+USA,23/04/2023,02:30,Seattle Sounders FC,Minnesota United,1,0,15,9,3,4,3,10,9,3,1,2,0,0,Armando Villarreal
+USA,23/04/2023,20:30,Atlanta United,Chicago Fire FC,2,1,9,13,4,5,7,12,4,5,1,4,0,0,Víctor Rivas
+USA,29/04/2023,17:30,Nashville SC,Atlanta United,3,1,11,17,4,2,11,12,3,7,1,3,0,0,Joe Dickerson
+USA,29/04/2023,23:30,Columbus Crew,Inter Miami CF,1,2,20,8,8,5,9,10,10,5,1,3,0,0,Pierre Luce Lauziere
+USA,29/04/2023,23:30,DC United,Charlotte FC,3,0,13,7,4,1,16,15,2,5,2,2,0,0,Ismir Pekmic
+USA,29/04/2023,23:30,New England Revolution,FC Cincinnati,1,1,13,10,5,5,11,15,3,8,1,3,0,0,Alex Chilowicz
+USA,29/04/2023,23:30,Orlando City,LA Galaxy,2,0,14,15,6,3,14,14,4,6,0,3,0,0,Jon Freemon
+USA,29/04/2023,23:30,Toronto FC,New York City FC,1,0,11,5,6,1,11,8,2,4,3,1,0,0,Armando Villarreal
+USA,30/04/2023,00:30,Austin FC,San Jose Earthquakes,2,2,16,11,4,3,9,11,9,12,2,2,0,0,Guido Gonzalez
+USA,30/04/2023,00:30,Chicago Fire FC,Red Bull New York,1,1,8,14,4,4,15,15,0,5,5,2,0,0,Chris Penso
+USA,30/04/2023,00:30,Sporting Kansas City,CF Montréal,0,2,13,10,6,4,13,12,5,6,3,3,0,0,Ramy Touchan
+USA,30/04/2023,00:30,St. Louis City,Portland Timbers,1,2,7,15,1,7,11,12,2,1,1,2,0,0,Ismail Elfath
+USA,30/04/2023,01:30,Real Salt Lake,Seattle Sounders FC,0,0,15,12,3,1,15,7,7,2,4,3,1,0,Nima Saghafi
+USA,30/04/2023,02:30,Vancouver Whitecaps,Colorado Rapids,0,0,21,7,5,2,11,9,13,1,1,0,0,0,Tori Penso
+USA,01/05/2023,01:00,Minnesota United,FC Dallas,0,0,17,7,5,2,8,7,6,3,2,1,0,0,Allen Chapman
+USA,06/05/2023,23:30,CF Montréal,Orlando City,2,0,7,13,3,2,19,14,4,5,2,5,0,0,Marcos de Oliveira
+USA,06/05/2023,23:30,Charlotte FC,New York City FC,3,2,11,10,3,6,9,14,7,7,3,2,0,0,Chris Penso
+USA,06/05/2023,23:30,FC Cincinnati,DC United,2,1,11,13,4,5,12,15,6,6,5,3,0,0,Guido Gonzalez
+USA,06/05/2023,23:30,Inter Miami CF,Atlanta United,2,1,9,17,3,5,9,13,3,7,3,2,1,0,Armando Villarreal
+USA,06/05/2023,23:30,Red Bull New York,Philadelphia Union,0,1,17,3,3,2,23,18,3,2,2,2,0,0,Joe Dickerson
+USA,06/05/2023,23:30,San Jose Earthquakes,Los Angeles FC,2,1,9,17,3,7,13,10,4,5,0,2,0,0,Rubiel Vazquez
+USA,06/05/2023,23:30,Toronto FC,New England Revolution,0,2,20,10,5,6,6,6,5,4,3,0,0,0,Fotis Bazakos
+USA,07/05/2023,00:30,Houston Dynamo FC,Real Salt Lake,0,0,16,13,4,5,8,12,4,9,2,2,0,0,Lukasz Szpala
+USA,07/05/2023,00:30,Nashville SC,Chicago Fire FC,3,0,30,5,11,3,10,15,10,2,3,4,0,0,Mark Allatin
+USA,07/05/2023,02:30,LA Galaxy,Colorado Rapids,1,3,21,10,7,5,11,8,6,1,2,3,0,0,Ramy Touchan
+USA,07/05/2023,02:30,Portland Timbers,Austin FC,2,2,9,11,3,4,18,15,5,3,3,0,0,0,Jon Freemon
+USA,07/05/2023,02:30,Vancouver Whitecaps,Minnesota United,3,2,17,11,7,5,8,9,8,5,0,0,0,0,Filip Dujic
+USA,07/05/2023,20:30,Seattle Sounders FC,Sporting Kansas City,1,2,11,11,3,5,15,7,5,8,2,3,0,0,Víctor Rivas
+USA,13/05/2023,17:00,Chicago Fire FC,St. Louis City,1,0,9,9,6,2,13,15,5,3,2,2,0,1,Filip Dujic
+USA,13/05/2023,23:30,Atlanta United,Charlotte FC,1,3,11,6,2,4,10,17,6,3,2,3,1,0,Lukasz Szpala
+USA,13/05/2023,23:30,CF Montréal,Toronto FC,2,0,14,2,6,0,19,8,8,5,4,0,0,1,Chris Penso
+USA,13/05/2023,23:30,Columbus Crew,Orlando City,2,2,22,10,7,3,15,8,6,5,4,2,0,0,Drew Fischer
+USA,13/05/2023,23:30,DC United,Nashville SC,1,1,9,6,1,2,16,18,4,2,2,2,0,0,Nima Saghafi
+USA,13/05/2023,23:30,Inter Miami CF,New England Revolution,2,1,7,8,4,2,16,9,2,6,4,2,1,0,Ismir Pekmic
+USA,13/05/2023,23:30,Red Bull New York,New York City FC,1,0,8,6,4,1,14,9,3,4,4,1,0,0,Ted Unkel
+USA,14/05/2023,00:30,Austin FC,FC Dallas,0,1,7,13,1,3,10,16,2,5,2,4,1,0,Ismail Elfath
+USA,14/05/2023,00:30,Houston Dynamo FC,Seattle Sounders FC,0,1,3,12,0,2,12,8,1,5,1,2,2,0,Rubiel Vazquez
+USA,14/05/2023,00:30,Sporting Kansas City,Minnesota United,3,0,9,6,4,3,11,14,5,3,1,2,0,0,Alex Chilowicz
+USA,14/05/2023,01:30,Colorado Rapids,Philadelphia Union,1,2,11,10,5,2,8,9,6,6,5,4,1,1,Víctor Rivas
+USA,14/05/2023,01:30,Real Salt Lake,Los Angeles FC,0,3,20,15,5,4,6,11,6,2,2,1,0,0,Pierre Luce Lauziere
+USA,14/05/2023,02:30,Portland Timbers,Vancouver Whitecaps,3,1,13,8,7,4,14,11,4,7,1,1,0,0,Guido Gonzalez
+USA,15/05/2023,01:30,LA Galaxy,San Jose Earthquakes,2,1,18,8,5,3,11,15,4,2,3,4,0,0,Joe Dickerson
+USA,17/05/2023,23:30,Atlanta United,Colorado Rapids,4,0,27,6,10,3,8,9,7,2,1,2,0,0,Fotis Bazakos
+USA,17/05/2023,23:30,Charlotte FC,Chicago Fire FC,2,1,5,5,3,3,10,14,8,2,5,4,0,0,Tori Penso
+USA,17/05/2023,23:30,Columbus Crew,LA Galaxy,2,0,10,9,3,2,11,11,1,6,1,2,0,0,Ted Unkel
+USA,17/05/2023,23:30,FC Cincinnati,CF Montréal,3,0,14,10,5,5,11,12,5,2,1,0,0,0,Mark Allatin
+USA,17/05/2023,23:30,Orlando City,New York City FC,1,1,10,14,4,6,15,10,5,3,2,1,0,0,Sergii Boiko
+USA,17/05/2023,23:30,Philadelphia Union,DC United,0,0,16,11,2,3,11,12,4,4,2,2,0,0,Pierre Luce Lauziere
+USA,17/05/2023,23:30,Toronto FC,Red Bull New York,0,0,12,12,3,3,15,17,6,1,0,3,0,0,Guido Gonzalez
+USA,18/05/2023,00:30,FC Dallas,Vancouver Whitecaps,2,1,15,7,3,4,9,12,5,2,1,1,0,0,Jon Freemon
+USA,18/05/2023,00:30,Minnesota United,Houston Dynamo FC,1,0,12,12,5,4,10,10,4,8,3,1,0,0,Marcos de Oliveira
+USA,18/05/2023,00:30,Nashville SC,Inter Miami CF,2,1,15,11,5,4,11,14,6,4,0,3,0,0,Alex Chilowicz
+USA,18/05/2023,01:30,Real Salt Lake,Portland Timbers,0,0,17,10,4,4,10,13,4,3,1,1,0,0,Ramy Touchan
+USA,18/05/2023,02:30,Los Angeles FC,Sporting Kansas City,1,1,13,7,6,3,15,8,5,3,3,1,0,0,Armando Villarreal
+USA,18/05/2023,02:30,Seattle Sounders FC,Austin FC,1,2,13,6,4,4,5,8,8,3,0,2,0,0,Rosendo Mendoza
+USA,20/05/2023,23:30,Charlotte FC,Nashville SC,1,2,12,10,6,4,8,13,2,8,2,2,0,0,Rubiel Vazquez
+USA,20/05/2023,23:30,DC United,LA Galaxy,3,0,13,11,5,6,16,13,2,1,2,2,0,0,Fotis Bazakos
+USA,20/05/2023,23:30,FC Cincinnati,Columbus Crew,3,2,10,11,6,7,7,14,2,4,1,1,0,0,Nima Saghafi
+USA,20/05/2023,23:30,Inter Miami CF,Orlando City,1,3,6,11,2,4,12,12,3,2,4,3,0,0,Ramy Touchan
+USA,20/05/2023,23:30,Philadelphia Union,New England Revolution,3,0,17,8,7,0,12,13,7,5,1,5,0,0,Lukasz Szpala
+USA,20/05/2023,23:30,Red Bull New York,CF Montréal,2,1,16,5,6,3,17,13,5,3,1,3,0,0,Drew Fischer
+USA,21/05/2023,00:30,Austin FC,Toronto FC,1,0,16,3,2,0,12,13,11,2,4,3,0,0,Ismir Pekmic
+USA,21/05/2023,00:30,Chicago Fire FC,Atlanta United,3,3,10,15,3,7,14,12,2,5,3,2,1,1,Rosendo Mendoza
+USA,21/05/2023,00:30,FC Dallas,Houston Dynamo FC,1,1,10,8,4,2,11,15,5,7,0,2,0,0,Víctor Rivas
+USA,21/05/2023,01:30,Colorado Rapids,Real Salt Lake,2,3,12,7,4,4,13,16,4,4,3,4,0,0,Jon Freemon
+USA,21/05/2023,01:30,St. Louis City,Sporting Kansas City,4,0,15,17,6,7,18,9,4,11,1,2,0,0,Chris Penso
+USA,21/05/2023,02:30,Los Angeles FC,San Jose Earthquakes,2,1,14,14,6,3,15,9,15,7,1,2,0,0,Ismail Elfath
+USA,21/05/2023,02:30,Portland Timbers,Minnesota United,0,1,18,9,3,6,13,13,7,4,3,2,0,0,Armando Villarreal
+USA,21/05/2023,02:30,Vancouver Whitecaps,Seattle Sounders FC,2,0,17,8,5,1,16,11,6,9,3,3,0,0,Joe Dickerson
+USA,27/05/2023,23:30,CF Montréal,Inter Miami CF,1,0,14,13,2,5,11,12,2,4,2,1,0,0,Nima Saghafi
+USA,27/05/2023,23:30,New England Revolution,Chicago Fire FC,3,3,16,9,6,3,14,4,9,4,3,2,0,0,Malik Badawi
+USA,27/05/2023,23:30,New York City FC,Philadelphia Union,1,3,16,13,7,6,16,15,5,7,3,3,0,0,Guido Gonzalez
+USA,27/05/2023,23:30,Orlando City,Atlanta United,1,1,13,11,5,3,9,15,8,6,1,2,0,0,Allen Chapman
+USA,27/05/2023,23:30,Toronto FC,DC United,2,1,11,19,5,4,5,13,3,6,2,1,0,0,Lukasz Szpala
+USA,28/05/2023,00:30,Houston Dynamo FC,Austin FC,2,1,15,11,5,3,7,9,6,6,2,1,0,0,Ted Unkel
+USA,28/05/2023,00:30,Minnesota United,Real Salt Lake,1,1,16,9,3,2,10,11,5,4,2,3,0,0,Rosendo Mendoza
+USA,28/05/2023,00:30,St. Louis City,Vancouver Whitecaps,3,1,16,12,7,2,11,12,7,5,4,3,0,0,Sergii Boiko
+USA,28/05/2023,01:30,Colorado Rapids,FC Cincinnati,0,1,12,16,3,6,14,11,2,3,1,1,0,0,Marcos de Oliveira
+USA,28/05/2023,02:30,LA Galaxy,Charlotte FC,0,1,14,14,2,4,10,10,5,7,0,2,1,0,Drew Fischer
+USA,28/05/2023,02:30,San Jose Earthquakes,FC Dallas,1,1,8,8,2,4,11,11,5,0,3,2,1,0,Filip Dujic
+USA,28/05/2023,02:30,Seattle Sounders FC,Red Bull New York,1,0,8,10,1,4,19,14,7,4,2,3,1,0,Jon Freemon
+USA,28/05/2023,19:00,Sporting Kansas City,Portland Timbers,4,1,15,9,7,3,15,13,8,1,3,1,0,0,Rubiel Vazquez
+USA,29/05/2023,00:30,Nashville SC,Columbus Crew,3,1,17,12,10,6,14,11,6,5,3,2,0,0,Víctor Rivas
+USA,31/05/2023,23:00,Atlanta United,New England Revolution,3,3,20,5,7,3,14,6,0,3,4,2,0,0,Rubiel Vazquez
+USA,31/05/2023,23:30,Columbus Crew,Colorado Rapids,3,2,17,9,6,3,6,5,7,0,1,1,0,0,Tori Penso
+USA,31/05/2023,23:30,DC United,CF Montréal,2,2,12,11,4,5,15,9,4,7,1,1,0,0,Alex Chilowicz
+USA,31/05/2023,23:30,Inter Miami CF,Red Bull New York,0,1,6,18,1,9,9,16,2,5,1,2,0,1,Pierre Luce Lauziere
+USA,31/05/2023,23:30,New York City FC,FC Cincinnati,1,3,12,11,6,5,12,17,5,0,7,4,0,0,Armando Villarreal
+USA,31/05/2023,23:30,Philadelphia Union,Charlotte FC,1,0,11,5,2,2,17,10,5,6,1,1,0,0,Ted Unkel
+USA,31/05/2023,23:30,Toronto FC,Chicago Fire FC,0,0,19,4,7,1,16,14,7,4,1,1,0,0,Nima Saghafi
+USA,01/06/2023,00:30,Austin FC,Minnesota United,2,1,13,22,6,7,11,9,4,7,1,0,0,0,Fotis Bazakos
+USA,01/06/2023,00:30,Sporting Kansas City,FC Dallas,2,1,15,11,5,4,2,13,5,2,1,1,0,0,Guido Gonzalez
+USA,01/06/2023,01:30,Real Salt Lake,LA Galaxy,2,3,20,10,8,4,21,13,8,4,4,1,0,0,Ismir Pekmic
+USA,01/06/2023,02:30,Seattle Sounders FC,San Jose Earthquakes,0,1,23,9,8,3,12,9,10,2,3,2,0,0,Ramy Touchan
+USA,01/06/2023,02:30,Vancouver Whitecaps,Houston Dynamo FC,6,2,16,13,7,7,12,7,3,2,3,3,0,1,Mark Allatin
+USA,03/06/2023,19:30,New York City FC,New England Revolution,0,0,17,12,5,2,13,17,7,4,1,2,1,0,Rosendo Mendoza
+USA,03/06/2023,20:30,Seattle Sounders FC,Portland Timbers,0,0,5,11,1,2,10,17,5,5,1,3,0,0,Allen Chapman
+USA,03/06/2023,23:30,Columbus Crew,Charlotte FC,4,2,18,9,7,4,10,15,4,3,1,3,0,0,Alex Chilowicz
+USA,03/06/2023,23:30,FC Cincinnati,Chicago Fire FC,1,0,17,6,1,0,13,7,7,5,2,3,0,0,Chris Penso
+USA,03/06/2023,23:30,Inter Miami CF,DC United,1,2,4,23,1,6,15,12,5,6,4,2,1,0,Marcos de Oliveira
+USA,03/06/2023,23:30,Philadelphia Union,CF Montréal,3,0,23,9,8,2,16,17,7,4,1,3,0,0,Jon Freemon
+USA,03/06/2023,23:30,Red Bull New York,Orlando City,0,3,14,7,2,5,19,17,8,2,2,2,1,0,Víctor Rivas
+USA,04/06/2023,00:30,Austin FC,Real Salt Lake,1,2,15,15,5,6,11,12,12,1,3,3,0,0,Tori Penso
+USA,04/06/2023,00:30,FC Dallas,Nashville SC,1,2,14,7,3,3,8,7,2,5,1,2,0,0,Pierre Luce Lauziere
+USA,04/06/2023,00:30,Minnesota United,Toronto FC,1,1,20,10,4,5,17,10,5,1,1,2,0,0,Ramy Touchan
+USA,04/06/2023,00:30,St. Louis City,Houston Dynamo FC,3,0,11,16,5,4,13,14,7,6,3,4,0,0,Joe Dickerson
+USA,04/06/2023,01:30,Colorado Rapids,San Jose Earthquakes,0,0,12,11,5,0,11,6,8,7,1,0,1,0,Sergii Boiko
+USA,04/06/2023,02:30,Vancouver Whitecaps,Sporting Kansas City,1,1,11,12,3,2,11,7,4,5,4,3,0,0,Lukasz Szpala
+USA,08/06/2023,00:35,FC Dallas,St. Louis City,2,0,8,16,4,3,7,18,3,6,0,4,0,0,Drew Fischer
+USA,08/06/2023,02:30,Los Angeles FC,Atlanta United,0,0,22,4,8,0,19,11,8,3,3,5,0,0,Joe Dickerson
+USA,10/06/2023,23:30,Atlanta United,DC United,3,1,10,13,4,5,15,10,7,4,2,3,0,0,Filip Dujic
+USA,10/06/2023,23:30,CF Montréal,Minnesota United,4,0,13,16,8,4,11,7,7,9,5,2,0,0,Guido Gonzalez
+USA,10/06/2023,23:30,Charlotte FC,Seattle Sounders FC,3,3,10,7,3,6,15,7,2,0,4,1,0,0,Lukasz Szpala
+USA,10/06/2023,23:30,New England Revolution,Inter Miami CF,3,1,10,14,5,5,19,13,4,3,2,5,0,0,Sergii Boiko
+USA,10/06/2023,23:30,Orlando City,Colorado Rapids,2,0,15,4,6,2,16,12,5,3,2,1,0,2,Rosendo Mendoza
+USA,10/06/2023,23:30,Toronto FC,Nashville SC,1,1,15,9,2,3,4,18,2,5,1,1,0,0,Jon Freemon
+USA,11/06/2023,00:30,Chicago Fire FC,Columbus Crew,1,2,7,12,2,4,10,11,1,1,2,4,0,0,Mark Allatin
+USA,11/06/2023,00:30,Houston Dynamo FC,Los Angeles FC,4,0,12,13,5,3,13,7,5,12,3,1,0,0,Alex Chilowicz
+USA,11/06/2023,00:30,Sporting Kansas City,Austin FC,4,1,15,14,6,2,11,12,2,5,2,2,0,0,Marcos de Oliveira
+USA,11/06/2023,01:30,Real Salt Lake,New York City FC,0,0,20,5,4,1,12,11,9,2,1,4,0,0,Fotis Bazakos
+USA,11/06/2023,02:30,San Jose Earthquakes,Philadelphia Union,2,1,10,18,2,7,12,21,1,6,0,0,0,0,Nima Saghafi
+USA,11/06/2023,02:30,Vancouver Whitecaps,FC Cincinnati,1,1,11,10,3,3,16,13,5,2,2,2,0,0,Ismir Pekmic
+USA,11/06/2023,17:00,St. Louis City,LA Galaxy,1,1,22,12,6,5,15,8,7,4,4,2,0,0,Víctor Rivas
+USA,12/06/2023,02:00,Portland Timbers,FC Dallas,1,0,14,5,8,2,12,12,2,2,4,3,0,0,Ted Unkel
+USA,15/06/2023,02:30,Los Angeles FC,Houston Dynamo FC,0,1,14,12,1,3,12,19,4,5,3,5,1,0,Guido Gonzalez
+USA,17/06/2023,19:30,New York City FC,Columbus Crew,1,1,13,9,5,2,13,11,2,6,3,0,0,0,Pierre Luce Lauziere
+USA,17/06/2023,23:30,DC United,Real Salt Lake,1,2,15,18,2,8,15,8,4,5,3,2,1,0,Malik Badawi
+USA,17/06/2023,23:30,New England Revolution,Orlando City,3,1,14,16,4,4,14,7,2,2,2,2,0,0,Fotis Bazakos
+USA,18/06/2023,00:30,Nashville SC,St. Louis City,3,1,10,13,5,3,14,19,3,3,4,1,0,1,Nima Saghafi
+USA,18/06/2023,00:30,Sporting Kansas City,Los Angeles FC,1,2,16,6,7,4,14,17,8,2,1,2,0,0,Rosendo Mendoza
+USA,18/06/2023,02:30,San Jose Earthquakes,Portland Timbers,0,0,12,16,2,4,8,15,7,4,3,3,0,0,Alex Chilowicz
+USA,21/06/2023,23:30,Atlanta United,New York City FC,2,2,12,3,5,3,14,11,5,1,2,3,0,0,Jon Freemon
+USA,21/06/2023,23:30,CF Montréal,Nashville SC,1,0,15,10,6,2,5,3,2,4,2,0,0,0,Tori Penso
+USA,21/06/2023,23:30,FC Cincinnati,Toronto FC,3,0,14,11,7,4,21,11,6,1,3,2,0,0,Mark Allatin
+USA,21/06/2023,23:30,Orlando City,Philadelphia Union,2,2,8,9,4,5,11,14,4,7,4,4,0,0,Alex Chilowicz
+USA,21/06/2023,23:30,Red Bull New York,Charlotte FC,2,2,15,6,6,3,8,19,6,3,4,5,0,0,Sergii Boiko
+USA,22/06/2023,00:30,Houston Dynamo FC,San Jose Earthquakes,4,1,15,8,5,1,11,15,1,6,2,5,0,0,Ismir Pekmic
+USA,22/06/2023,00:30,St. Louis City,Real Salt Lake,1,3,11,13,3,8,13,8,4,3,4,2,0,0,Lukasz Szpala
+USA,22/06/2023,01:30,Austin FC,FC Dallas,3,0,15,12,7,3,5,8,7,6,1,1,0,0,Rosendo Mendoza
+USA,22/06/2023,02:30,LA Galaxy,Sporting Kansas City,2,2,10,21,2,5,11,11,6,8,1,2,0,0,Filip Dujic
+USA,22/06/2023,02:30,Los Angeles FC,Seattle Sounders FC,1,0,14,10,2,2,17,8,8,6,1,1,0,0,Ted Unkel
+USA,22/06/2023,02:30,Portland Timbers,Chicago Fire FC,1,2,18,12,5,3,21,15,6,4,2,0,0,0,Fotis Bazakos
+USA,24/06/2023,23:30,Charlotte FC,CF Montréal,0,0,13,9,4,3,15,10,7,4,3,0,0,0,Mark Allatin
+USA,24/06/2023,23:30,Columbus Crew,Nashville SC,2,0,16,7,5,4,7,14,3,4,0,2,0,0,Filip Dujic
+USA,24/06/2023,23:30,DC United,FC Cincinnati,3,0,17,17,7,2,13,11,2,8,1,0,0,1,Sergii Boiko
+USA,24/06/2023,23:30,New England Revolution,Toronto FC,2,1,12,14,2,10,10,10,3,2,0,0,0,0,Ted Unkel
+USA,24/06/2023,23:30,Philadelphia Union,Inter Miami CF,4,1,8,9,3,3,10,8,2,0,2,1,0,0,Malik Badawi
+USA,24/06/2023,23:30,Red Bull New York,Atlanta United,4,0,11,5,5,3,14,12,5,3,2,2,0,0,Rosendo Mendoza
+USA,25/06/2023,00:30,Sporting Kansas City,Chicago Fire FC,0,1,13,12,4,5,9,12,7,1,2,3,0,0,Alex Chilowicz
+USA,25/06/2023,01:30,Austin FC,Houston Dynamo FC,3,0,10,10,4,3,11,14,7,3,5,3,0,0,Víctor Rivas
+USA,25/06/2023,01:30,Colorado Rapids,LA Galaxy,0,0,8,13,1,3,13,8,5,4,2,1,0,0,Lukasz Szpala
+USA,25/06/2023,01:30,Real Salt Lake,Minnesota United,2,2,27,8,6,4,8,8,7,3,1,1,0,0,Tori Penso
+USA,25/06/2023,02:30,Los Angeles FC,Vancouver Whitecaps,2,3,17,16,9,9,14,12,2,5,2,3,0,0,Jon Freemon
+USA,25/06/2023,02:30,Portland Timbers,New York City FC,1,1,16,8,7,3,15,14,3,1,3,1,0,0,Nima Saghafi
+USA,25/06/2023,02:30,San Jose Earthquakes,St. Louis City,1,2,14,9,9,5,19,13,6,3,3,3,0,0,Marcos de Oliveira
+USA,25/06/2023,02:30,Seattle Sounders FC,Orlando City,0,0,16,13,2,3,11,7,5,7,3,2,0,0,Pierre Luce Lauziere
