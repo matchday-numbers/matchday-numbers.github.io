@@ -410,8 +410,9 @@ def main():
                     continue  # kicked off (or postponed and not rescheduled): never rewritten
                 if ko - now > timedelta(days=UPCOMING_DAYS):
                     continue
-                if not e["home"].get("espn_id") or not e["away"].get("espn_id"):
-                    continue  # knockout slot whose teams aren't known yet
+                if not e["home"].get("espn_id") or not e["away"].get("espn_id") or \
+                        any((e[x].get("name") or "").startswith("TBD") for x in ("home", "away")):
+                    continue  # knockout slot whose teams aren't known yet (ESPN: no team, or "TBD Home"/"TBD Away")
                 if lg in DOMESTIC:
                     hf, af = fe.get(e["home"]["espn_id"]), fe.get(e["away"]["espn_id"])
                     if not hf or not af:
