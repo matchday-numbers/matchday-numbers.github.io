@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from model.data import load_file  # noqa: E402
 from model.adjustments import is_derby  # noqa: E402
-from pipeline import merge, players, predictions, site_data, sources, teams  # noqa: E402
+from pipeline import fotmob_stats, merge, players, predictions, site_data, sources, teams  # noqa: E402
 
 try:  # the estimate engine needs numpy/scipy; stats must still publish without it
     from pipeline import engine, europe  # noqa: E402
@@ -59,7 +59,41 @@ def model_version():
 
 def season_start(season, league):
     y = 2000 + int(season[:2])
+    if league == "mls":
+        # MLS played calendar years until 2026; from 2027-28 it runs July-May like Europe. The 2026-27
+        # window keeps the whole 2026 season (from February) and the short spring 2027 season.
+        return date(y, 2, 1) if season <= "2627" else date(y, 7, 1)
     return date(y, 9, 1) if league in EUROPE else date(y, 7, 25)
+
+
+def season_window(season):
+    """July-June dates a season label covers in data/history files."""
+    y = 2000 + int(season[:2])
+    return date(y, 7, 1), date(y + 1, 7, 1)
+
+
+def copy_season_rows(src, dst, season):
+    """Copies a football-data.co.uk-style CSV, keeping only the season's July-June rows."""
+    import csv
+    lo, hi = season_window(season)
+    with open(src, encoding="utf-8-sig", errors="replace") as f:
+        rows = list(csv.DictReader(f))
+    keep = []
+    for r in rows:
+        try:
+            d = datetime.strptime((r.get("Date") or "").strip(), "%d/%m/%Y").date()
+        except ValueError:
+            try:
+                d = datetime.strptime((r.get("Date") or "").strip(), "%d/%m/%y").date()
+            except ValueError:
+                continue
+        if lo <= d < hi:
+            keep.append(r)
+    if rows:
+        with open(dst, "w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+            w.writeheader()
+            w.writerows(keep)
 
 
 def history_seasons(league, season):
@@ -82,7 +116,10 @@ def roll_history(season, sdir):
         dst = os.path.join(HISTORY, f"{lg}_{prev}.csv")
         src = os.path.join(DATA, "state", prev, f"fd_{lg}.csv")
         if not os.path.exists(dst) and os.path.exists(src):
-            shutil.copy(src, dst)
+            if lg == "mls":  # its 2026-27 window started in February 2026 (already in the 2025-26 file)
+                copy_season_rows(src, dst, prev)
+            else:
+                shutil.copy(src, dst)
     pdir = os.path.join(DATA, "state", prev)
     dst = os.path.join(HISTORY, f"europe_{prev}.json")
     if europe is not None and not os.path.exists(dst) and os.path.exists(os.path.join(pdir, "espn_events_champions-league.json")):
@@ -257,16 +294,33 @@ def main():
         summaries[lg] = summ
         log["leagues"][lg] = {"scoreboard_months": fetched, "events": len(ev), "new_summaries": new}
 
-    # ------------------------------------------------------------ 3. football-data.co.uk
+    # ------------------------------------------------------------ 3. football-data.co.uk (FotMob for MLS)
     fd = {}
     for lg in DOMESTIC:
         path = os.path.join(sdir, f"fd_{lg}.csv")
-        text = sources.fd_results_csv(lg, season)
-        if text and "HomeTeam" in text:
-            with open(path, "w") as f:
-                f.write(text)
-        elif os.path.exists(path):
-            log["errors"].append(f"football-data.co.uk {lg}: download failed, using last good copy")
+        if LEAGUES[lg].get("stats") == "fotmob":
+            # results and stats from FotMob in football-data.co.uk's format; each match's details fetched once
+            cpath = os.path.join(sdir, f"fotmob_stats_{lg}.json")
+            cache = jload(cpath, {})
+            start = season_start(season, lg)
+            seasons = [None] + sorted({str(start.year), str(today.year)})
+            try:
+                rows, new = fotmob_stats.season_rows(LEAGUES[lg]["fd_div"], LEAGUES[lg]["fotmob"], seasons, start,
+                                                     today + timedelta(days=1), cache, log=log["errors"])
+                jsave(cpath, cache)
+                if rows:
+                    with open(path, "w") as f:
+                        f.write(fotmob_stats.to_csv(rows))
+                log["leagues"][lg]["fotmob_new_stats"] = new
+            except Exception as ex:  # FotMob down or changed: keep the last good copy
+                log["errors"].append(f"FotMob stats {lg}: {ex!r}")
+        else:
+            text = sources.fd_results_csv(lg, season)
+            if text and "HomeTeam" in text:
+                with open(path, "w") as f:
+                    f.write(text)
+            elif os.path.exists(path):
+                log["errors"].append(f"football-data.co.uk {lg}: download failed, using last good copy")
         fd[lg] = load_file(path, lg, season) if os.path.exists(path) else []
     fixtures_txt = sources.fd_fixtures_csv() or ""
     referees = {}
@@ -302,7 +356,8 @@ def main():
     for lg in DOMESTIC:
         fe = teams.espn_to_fd(team_map[lg])
         fd_of_espn[lg] = fe
-        matches[lg], reports[lg] = merge.merge_league(lg, season, fd[lg], list(events[lg].values()), summaries[lg], fe)
+        matches[lg], reports[lg] = merge.merge_league(lg, season, fd[lg], list(events[lg].values()), summaries[lg], fe,
+                                                      primary="FotMob" if LEAGUES[lg].get("stats") == "fotmob" else "football-data.co.uk")
         log["leagues"][lg]["cross_check"] = {k: v for k, v in reports[lg].items() if k != "conflicts"}
         log["leagues"][lg]["conflicts"] = reports[lg]["conflicts"][-30:]
     for lg in EUROPE:
@@ -397,7 +452,8 @@ def main():
                             info[f"{side}_europe_midweek"] = "UEFA" in (last[1] or "") and (ko - lko).days <= 4 and lg in DOMESTIC
                 info["injuries_known"] = known
                 info["derby"] = lg in DOMESTIC and is_derby(hf, af)
-                info["stakes"] = engine.stakes_now(lg, tables.get(lg, []), hf, af, e["kickoff"])
+                info["stakes"] = ("Playoff match" if "playoff" in (e.get("season_slug") or "")
+                                  else engine.stakes_now(lg, tables.get(lg, []), hf, af, e["kickoff"]))
                 info["analyst_view"] = analyst.get(e["espn_id"])
                 labels = {"home": e["home"]["name"], "away": e["away"]["name"]}
                 try:
@@ -419,6 +475,8 @@ def main():
             done = []
             for lg in PREDICTED:
                 for e in events[lg].values():
+                    if e["kickoff"][:10] < season_window(season)[0].isoformat():
+                        continue  # MLS: February-June 2026 games belong to last season's checks
                     if e.get("completed") and e["espn_id"] not in frozen_ids and e["home"].get("espn_id") and e["away"].get("espn_id"):
                         done.append({"id": e["espn_id"], "date": e["kickoff"][:10], "home_key": e["home"]["espn_id"],
                                      "away_key": e["away"]["espn_id"], "ctx": lg if lg in DOMESTIC else "europe"})

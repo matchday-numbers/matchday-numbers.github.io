@@ -28,7 +28,7 @@ from model.predict import load_tuned  # noqa: E402
 from model.ratings import Ratings, league_groups  # noqa: E402
 from model.recipe import Recipe  # noqa: E402
 from pipeline.referees import join as referee_join, load_rows as load_referee_rows  # noqa: E402
-from pipeline.sources import DOMESTIC  # noqa: E402
+from pipeline.sources import DOMESTIC, FOTMOB_STATS, JOINT_SKIP  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 H = os.path.join(ROOT, "data", "history")
@@ -50,6 +50,9 @@ def data():
                 clubs.setdefault(tid, []).extend(games)
         matches, groups, names = assemble(fd, rows, clubs)
         referees = referee_join(matches, names, load_referee_rows(H), DOMESTIC)
+        for m in matches:  # MLS: FotMob, its first stats source, already names the referee
+            if m["ctx"] in FOTMOB_STATS and m.get("referee"):
+                referees.setdefault((m["date"], m["home"], m["away"]), m["referee"])
         # last game before each match, any competition (club schedules include cups)
         played = defaultdict(set)
         for m in matches:
@@ -148,7 +151,8 @@ def _fit_week(args):
             continue
         g = league_groups(lm, start)
         lf[lg] = {s: Ratings(**rating_args(cfg, stat=s)).fit(lm, g, s, d) for s in STATS}
-    jf = {s: Ratings(**rating_args(cfg, joint=True, stat=s)).fit(window, D["groups"], s, d) for s in STATS}
+    jw = [m for m in window if m["ctx"] not in JOINT_SKIP]
+    jf = {s: Ratings(**rating_args(cfg, joint=True, stat=s)).fit(jw, D["groups"], s, d) for s in STATS}
     return d, lf, jf
 
 

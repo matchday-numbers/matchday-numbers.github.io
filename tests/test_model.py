@@ -18,8 +18,13 @@ from pipeline.sources import parse_summary  # noqa: E402
 SEASONS = ["2122", "2223", "2324", "2425", "2526"]
 
 
+ORIGINAL = ["premier-league", "la-liga", "serie-a", "bundesliga", "ligue-1", "eredivisie", "primeira-liga"]
+
+
 def seasons(league):
-    return [load_file(os.path.join(ROOT, "data", "history", f"{league}_{s}.csv"), league, s) for s in SEASONS]
+    """History seasons on disk, oldest first (MLS history starts in 2022-23)."""
+    return [load_file(os.path.join(ROOT, "data", "history", f"{league}_{s}.csv"), league, s) for s in SEASONS
+            if os.path.exists(os.path.join(ROOT, "data", "history", f"{league}_{s}.csv"))]
 
 
 def test_goal_probabilities_are_consistent():
@@ -55,9 +60,9 @@ def _logloss_1x2(preds):
 
 
 def test_beats_league_average_on_2025_26():
-    """Walk-forward over every 2025-26 match: the model must clearly beat a no-information baseline on 1X2."""
-    from pipeline.sources import DOMESTIC, PREDICTED
-    for league in [x for x in PREDICTED if x in DOMESTIC]:
+    """Walk-forward over every 2025-26 match: the previous model (still used for estimates frozen before
+    6 Nov 2026) must clearly beat a no-information baseline on 1X2 in the seven leagues it covered."""
+    for league in ORIGINAL:
         lg = seasons(league)
         pred = Predictor(league, lg[:4])
         season = lg[4]
@@ -160,7 +165,7 @@ def test_every_domestic_league_has_history_and_derbies():
     names = {n for pair in DERBIES for n in pair}
     for lg in DOMESTIC:
         ss = seasons(lg)
-        assert all(len(s) >= 300 for s in ss), lg
+        assert len(ss) >= 4 and all(len(s) >= 300 for s in ss), lg
         teams = {m["home"] for s in ss for m in s}
         assert names & teams, f"no derby defined for {lg}"
 

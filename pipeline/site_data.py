@@ -126,7 +126,14 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
 
     def table(lg):
         t = {}
-        for m in matches[lg]:
+        ms = matches[lg]
+        if lg == "mls":  # one combined table (the Supporters' Shield standings) of the latest season, no playoffs
+            ev = events.get(lg, {})
+            regs = [m for m in ms if (ev.get(m.get("espn_id")) or {}).get("season_slug") == "regular-season"]
+            if regs:
+                latest = max((ev[m["espn_id"]].get("season_year") or 0) for m in regs)
+                ms = [m for m in regs if (ev[m["espn_id"]].get("season_year") or 0) == latest]
+        for m in ms:
             if lg in EUROPE and m["date"] >= f"20{season[2:]}-01-25":
                 continue  # knockout rounds are not part of the league phase table
             for side, gf, ga in (("home", m["hg"], m["ag"]), ("away", m["ag"], m["hg"])):

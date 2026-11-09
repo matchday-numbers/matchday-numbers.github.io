@@ -16,7 +16,7 @@ from model.recipe import Recipe
 from pipeline import referees as refmod
 from pipeline.europe import club_schedules, live_rows
 from pipeline.predictions import rnd
-from pipeline.sources import DOMESTIC, EUROPE
+from pipeline.sources import DOMESTIC, EUROPE, FOTMOB_STATS, JOINT_SKIP
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HISTORY = os.path.join(ROOT, "data", "history")
@@ -50,7 +50,8 @@ def fit(allm, groups, asof):
         if lm:
             g = league_groups(lm, start)
             lf[lg] = {s: Ratings(**rating_args(cfg, stat=s)).fit(lm, g, s, asof) for s in STATS}
-    jf = {s: Ratings(**rating_args(cfg, joint=True, stat=s)).fit(window, groups, s, asof) for s in STATS}
+    jw = [m for m in window if m["ctx"] not in JOINT_SKIP]  # leagues with no clubs in Europe add nothing there
+    jf = {s: Ratings(**rating_args(cfg, joint=True, stat=s)).fit(jw, groups, s, asof) for s in STATS}
     return lf, jf
 
 
@@ -61,8 +62,11 @@ def build(season, now, fd, matches, events, team_map, sdir, log, jload, jsave, l
     hist_fd = {}
     for lg in DOMESTIC:
         files = sorted(glob.glob(os.path.join(HISTORY, f"{lg}_*.csv")))[-3:]
-        # this season: the cross-checked records (stats the two sources disagree on are already removed)
-        hist_fd[lg] = [m for f in files for m in load_file(f, lg, os.path.basename(f)[-8:-4])] + list(matches.get(lg, []))
+        hist = [m for f in files for m in load_file(f, lg, os.path.basename(f)[-8:-4])]
+        last = max((m["date"] for m in hist), default="")
+        # this season: the cross-checked records (stats the two sources disagree on are already removed);
+        # MLS's window reaches back into games the history files already hold, so those are skipped
+        hist_fd[lg] = hist + [m for m in matches.get(lg, []) if m["date"] > last]
     rows, clubs = [], {}
     for f in sorted(glob.glob(os.path.join(HISTORY, "europe_[0-9]*.json")))[-3:]:
         rows += json.load(open(f))
@@ -77,6 +81,9 @@ def build(season, now, fd, matches, events, team_map, sdir, log, jload, jsave, l
     extra = {lg: {n: tm["espn_id"] for n, tm in (team_map.get(lg) or {}).items()} for lg in DOMESTIC}
     allm, groups, names = assemble(hist_fd, rows, clubs, extra)
     refs = refmod.join(allm, names, refmod.load_rows(HISTORY) + list(live_ref_rows), DOMESTIC)
+    for m in allm:  # MLS: FotMob, its first stats source, already names the referee
+        if m["ctx"] in FOTMOB_STATS and m.get("referee"):
+            refs.setdefault((m["date"], m["home"], m["away"]), m["referee"])
     asof = (now + timedelta(days=1)).date().isoformat()
     lf, jf = fit(allm, groups, asof)
     owner = {k: v for k, v in t.get("owner", {}).items() if not k.startswith("_")}  # owner's choices on top

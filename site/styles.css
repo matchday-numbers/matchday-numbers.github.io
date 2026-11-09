@@ -381,11 +381,16 @@ td.pts { font-weight: 800; }
 .ltag.primeira-liga { background: #e3f1e6; color: #1f6a36; }
 .ltag.europa-league { background: #fbead6; color: #8a4b05; }
 .ltag.conference-league { background: #e4f4ec; color: #136442; }
+.ltag.super-lig { background: #fbe3e3; color: #b0141e; }
+.ltag.segunda-division { background: #f6efd9; color: #7a5a06; }
+.ltag.mls { background: #e2e8f2; color: #1b2f57; }
 @media (prefers-color-scheme: dark) {
   .ltag.serie-a { background: #1b2c41; color: #9fc5f2; } .ltag.bundesliga { background: #3d1c1d; color: #f2a3a5; }
   .ltag.ligue-1 { background: #232b39; color: #c3cde0; } .ltag.eredivisie { background: #3b2516; color: #f5b789; }
   .ltag.primeira-liga { background: #1a3222; color: #9fdcb1; } .ltag.europa-league { background: #382813; color: #f1c27e; }
   .ltag.conference-league { background: #17332a; color: #92dcb9; }
+  .ltag.super-lig { background: #3d1a1c; color: #f4a1a6; } .ltag.segunda-division { background: #33290f; color: #ecd08a; }
+  .ltag.mls { background: #1c2536; color: #aec2e8; }
 }
 .leaders { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
 .leader { display: block; background: var(--paper); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px 8px; color: var(--ink); text-decoration: none; }

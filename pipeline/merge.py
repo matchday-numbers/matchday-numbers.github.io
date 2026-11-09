@@ -44,8 +44,9 @@ def finish(m):
     return m
 
 
-def merge_league(league, season, fd_matches, espn_events, summaries, fd_of_espn):
-    """Returns (matches, report). Each match carries `checks`, `sources` and ESPN ids."""
+def merge_league(league, season, fd_matches, espn_events, summaries, fd_of_espn, primary="football-data.co.uk"):
+    """Returns (matches, report). Each match carries `checks`, `sources` and ESPN ids.
+    `primary` names the first source (football-data.co.uk, or FotMob for MLS)."""
     espn_done = [e for e in espn_events if e.get("completed")]
     used = set()
     out = []
@@ -65,7 +66,7 @@ def merge_league(league, season, fd_matches, espn_events, summaries, fd_of_espn)
         rec = dict(m)
         e = find(m)
         rec["checks"] = {}
-        rec["sources"] = ["football-data.co.uk"]
+        rec["sources"] = [primary]
         if e:
             used.add(e["espn_id"])
             s = summaries.get(e["espn_id"])
@@ -83,8 +84,8 @@ def merge_league(league, season, fd_matches, espn_events, summaries, fd_of_espn)
                     rec["checks"][stat] = "verified"
                 else:
                     rec["checks"][stat] = "conflict"
-                    rec.setdefault("conflict_values", {})[stat] = {"football-data.co.uk": [fh, fa], "ESPN": [eh, ea]}
-                    report["conflicts"].append(f"{m['date']} {m['home']}-{m['away']} {stat}: fd {fh}-{fa} vs espn {eh}-{ea}")
+                    rec.setdefault("conflict_values", {})[stat] = {primary: [fh, fa], "ESPN": [eh, ea]}
+                    report["conflicts"].append(f"{m['date']} {m['home']}-{m['away']} {stat}: {primary} {fh}-{fa} vs ESPN {eh}-{ea}")
                     if stat != "goals":
                         rec[hk] = rec[ak] = None   # excluded from the model
         else:
@@ -92,7 +93,7 @@ def merge_league(league, season, fd_matches, espn_events, summaries, fd_of_espn)
                 rec["checks"][stat] = "single"
         out.append(finish(rec))
 
-    # ESPN-only matches (football-data.co.uk not updated yet)
+    # ESPN-only matches (first source not updated yet)
     for e in espn_done:
         if e["espn_id"] in used:
             continue

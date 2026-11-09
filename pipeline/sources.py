@@ -1,8 +1,9 @@
-"""Downloads from the two free sources.
+"""Downloads from the free sources.
 
 football-data.co.uk  curated per-season CSVs: results, shots, corners, cards, referee (PL), xG.
 ESPN public JSON     the feed behind espn.com: fixtures, results, team stats, lineups, goals.
-                     Unofficial: if its format changes, the run logs it and keeps the last good data.
+FotMob public JSON   team news and referees; match stats for MLS (football-data.co.uk has MLS results only).
+                     ESPN and FotMob are unofficial: if a format changes, the run logs it and keeps the last good data.
 """
 from __future__ import annotations
 
@@ -26,6 +27,10 @@ LEAGUES = {
     "ligue-1": {"name": "Ligue 1", "short": "Ligue 1", "espn": "fra.1", "fd": "F1", "fotmob": 53, "country": "France", "kind": "domestic"},
     "eredivisie": {"name": "Eredivisie", "short": "Eredivisie", "espn": "ned.1", "fd": "N1", "fotmob": 57, "country": "Netherlands", "kind": "domestic"},
     "primeira-liga": {"name": "Primeira Liga", "short": "Primeira", "espn": "por.1", "fd": "P1", "fotmob": 61, "country": "Portugal", "kind": "domestic"},
+    "super-lig": {"name": "Süper Lig", "short": "Süper Lig", "espn": "tur.1", "fd": "T1", "fotmob": 71, "country": "Turkey", "kind": "domestic"},
+    "segunda-division": {"name": "Segunda División", "short": "Segunda", "espn": "esp.2", "fd": "SP2", "fotmob": 140, "country": "Spain", "kind": "domestic"},
+    # MLS: football-data.co.uk has results only, so FotMob is the first stats source (pipeline/fotmob_stats.py)
+    "mls": {"name": "MLS", "short": "MLS", "espn": "usa.1", "fd": None, "stats": "fotmob", "fd_div": "USA", "fotmob": 130, "country": "USA", "kind": "domestic"},
     "champions-league": {"name": "Champions League", "short": "UCL", "espn": "uefa.champions", "fd": None, "fotmob": 42, "country": "Europe", "kind": "europe"},
     "europa-league": {"name": "Europa League", "short": "UEL", "espn": "uefa.europa", "fd": None, "fotmob": 73, "country": "Europe", "kind": "europe"},
     "conference-league": {"name": "Conference League", "short": "UECL", "espn": "uefa.europa.conf", "fd": None, "fotmob": 10216, "country": "Europe", "kind": "europe"},
@@ -33,7 +38,13 @@ LEAGUES = {
 DOMESTIC = [k for k, v in LEAGUES.items() if v["kind"] == "domestic"]
 # leagues whose estimates passed the backtest (beat league averages on win/draw/loss and goals in 2025-26,
 # see backtest/results.json "by_league"); a league that fails is removed here and shows stats only
-PREDICTED = list(DOMESTIC) + ["champions-league", "europa-league", "conference-league"]  # Europe: backtest/results_europe.json
+# (Super Lig, Segunda Division and MLS, added Nov 2026: backtest/results_recipe.json "by_comp"; they beat the
+# average on win/draw/loss and goals in both 2024-25 and 2025-26)
+PREDICTED = list(DOMESTIC) + ["champions-league", "europa-league", "conference-league"]
+# leagues whose first stats source is FotMob rather than football-data.co.uk
+FOTMOB_STATS = [k for k, v in LEAGUES.items() if v.get("stats") == "fotmob"]
+# leagues with no clubs in Europe: left out of the all-competition fit used for European games
+JOINT_SKIP = {"segunda-division", "mls"}
 EUROPE = [k for k, v in LEAGUES.items() if v["kind"] == "europe"]
 FOTMOB = "https://www.fotmob.com/api/data"
 FOTMOB_LEAGUE = {k: v["fotmob"] for k, v in LEAGUES.items()}
@@ -105,6 +116,7 @@ def parse_event(e):
         "status_detail": st.get("description"),
         "home": _team(cs["home"]), "away": _team(cs["away"]),
         "venue": (comp.get("venue") or {}).get("fullName"),
+        "season_year": (e.get("season") or {}).get("year"), "season_slug": (e.get("season") or {}).get("slug"),
     }
     if out["completed"]:
         out["hg"] = int(cs["home"].get("score") or 0)

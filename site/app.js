@@ -4,12 +4,14 @@ const STAT = { goals: "Goals", corners: "Corners", cards: "Cards", shots: "Shots
 const STAT_HELP = { cards: "yellow + red, both teams", corners: "both teams", goals: "both teams", shots: "both teams", shots_on_target: "both teams" };
 const LEAGUES = {
   "premier-league": "Premier League", "la-liga": "La Liga", "serie-a": "Serie A", "bundesliga": "Bundesliga", "ligue-1": "Ligue 1",
-  "eredivisie": "Eredivisie", "primeira-liga": "Primeira Liga",
+  "eredivisie": "Eredivisie", "primeira-liga": "Primeira Liga", "super-lig": "Süper Lig", "segunda-division": "Segunda División", "mls": "MLS",
   "champions-league": "Champions League", "europa-league": "Europa League", "conference-league": "Conference League",
 };
 const EUROPE = new Set(["champions-league", "europa-league", "conference-league"]);
 // usual Champions League places (incl. qualifying) and direct relegation; exact numbers vary by season
-const ZONES = { "premier-league": [4, 3], "la-liga": [4, 3], "serie-a": [4, 3], "bundesliga": [4, 2], "ligue-1": [3, 2], "eredivisie": [2, 2], "primeira-liga": [2, 2] };
+const ZONES = { "premier-league": [4, 3], "la-liga": [4, 3], "serie-a": [4, 3], "bundesliga": [4, 2], "ligue-1": [3, 2], "eredivisie": [2, 2], "primeira-liga": [2, 2], "super-lig": [2, 3], "segunda-division": [2, 4] };
+const ZONE_LABELS = { "segunda-division": ["Automatic promotion (3rd to 6th go to the play-offs)", "Relegation"] };
+const TABLE_NOTE = { mls: "Both conferences in one table, as for the Supporters' Shield. Playoff places are decided within each conference." };
 const BANNER = `<p class="banner">Statistical estimates, not advice. Football is unpredictable — use your own judgement.</p>`;
 let version = String(Date.now());
 const cache = {};
@@ -54,7 +56,7 @@ const tlink = t => `<a class="tlink" href="#/team/${h(t.slug)}">${disc(t, "xs")}
 const norm = s => String(s || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").replace(/ı/g, "i").toLowerCase();
 const daysTo = iso => (new Date(iso) - Date.now()) / 86400000;
 const LTAG = LEAGUES;
-const LSHORT = { ...LEAGUES, "primeira-liga": "Primeira", "champions-league": "UCL", "europa-league": "UEL", "conference-league": "UECL" };
+const LSHORT = { ...LEAGUES, "primeira-liga": "Primeira", "segunda-division": "Segunda", "champions-league": "UCL", "europa-league": "UEL", "conference-league": "UECL" };
 
 /* colours: clubs' own colours, kept readable */
 function rgb(hex) {
@@ -149,7 +151,8 @@ function tableHtml(rows, lg) {
   </tbody></table></div>
   <div class="legend">${EUROPE.has(lg)
     ? `<span><i style="background:var(--pitch)"></i>Top 8 go straight to the last 16</span>`
-    : `<span><i style="background:var(--pitch)"></i>Usual Champions League places</span><span><i style="background:var(--red)"></i>Direct relegation</span>`}</div>`;
+    : TABLE_NOTE[lg] ? `<span>${h(TABLE_NOTE[lg])}</span>`
+    : `<span><i style="background:var(--pitch)"></i>${h((ZONE_LABELS[lg] || [])[0] || "Usual Champions League places")}</span><span><i style="background:var(--red)"></i>${h((ZONE_LABELS[lg] || [])[1] || "Direct relegation")}</span>`}</div>`;
 }
 function featureBlock(u, label) {
   const p = u.prediction;
@@ -667,7 +670,7 @@ async function renderAccuracy() {
       <h3 style="margin-top:22px">Calibration in testing</h3>${calibSvg(bt.calibration)}
       <p class="sub small">${rc
         ? `Measured on 2024-25 and used as adjustment sizes: derbies ${sgn((T.derby_cards || 0) * 100, 0)}% cards, high-stakes matches ${sgn((T.stakes_cards || 0) * 100, 0)}% cards, short rest or a European game midweek ${sgn((T.congestion_goals || 0) * 100, 0)}% goals for that team. A size of 0 means the effect was too small or too rare to apply. A referee's record is blended with ${fx(T.referee_k || 0, 0)} games at the average, so it takes a long record to move the number much. Recent form was weighed the same way and turned out to add little beyond the base, so momentum adjustments are usually small.`
-        : `Referee history didn't improve accuracy in testing, so it's shown on cards for context only. Derby matches had ${fx((T.derby_cards - 1) * 100, 0)}% more cards than expected across the seven leagues, so that adjustment is applied.`}</p></section>`;
+        : `Referee history didn't improve accuracy in testing, so it's shown on cards for context only. Derby matches had ${fx((T.derby_cards - 1) * 100, 0)}% more cards than expected across the leagues, so that adjustment is applied.`}</p></section>`;
   }
   app.innerHTML = `<section class="hero turf"><div class="wrap"><h1>Track record</h1>
     <p class="sub" style="margin-top:8px;max-width:64ch">Every estimate is frozen at kick-off and compared with what happened, misses included. A good model should beat plain league averages, and its 70% calls should come true about 70% of the time.</p></div></section>${wrap(body)}`;
@@ -678,15 +681,15 @@ function renderAbout() {
   title("How it works");
   setNav("about");
   app.innerHTML = `<section class="hero turf"><div class="wrap"><h1>How it works</h1></div></section>${wrap(`<div class="prose">
-  <p>Matchday Numbers shows past statistics and statistical estimates for every match in the next month in the Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie and Primeira Liga, plus full stats for the Champions League, Europa League and Conference League. It's an information tool: every estimate shows its inputs, its uncertainty and its track record, so you can decide how much to trust it.</p>
+  <p>Matchday Numbers shows past statistics and statistical estimates for every match in the next month in the Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie, Primeira Liga, Süper Lig, Segunda División and MLS, and in the Champions League, Europa League and Conference League. It's an information tool: every estimate shows its inputs, its uncertainty and its track record, so you can decide how much to trust it.</p>
   <h2>Where the data comes from</h2>
-  <ul><li><b>football-data.co.uk</b>: results, shots, corners and cards for all seven leagues.</li>
-  <li><b>ESPN</b>: fixtures, kick-off times, European competition matches, every club's games in all competitions, lineups, goals, assists and minutes.</li>
-  <li><b>FotMob</b>: team news (injured and suspended players) and referees, for every competition.</li></ul>
-  <p>The ESPN and FotMob feeds are public but unofficial, so they can change without notice. Where football-data.co.uk and ESPN both cover a match, they're compared stat by stat; if they disagree by more than a corner or card (two shots), that stat is shown with both values and left out of the model for that match. Data refreshes every three hours.</p>
+  <ul><li><b>football-data.co.uk</b>: results, shots, corners and cards for every league except MLS.</li>
+  <li><b>ESPN</b>: fixtures, kick-off times, team stats for every match, European competition matches, every club's games in all competitions, lineups, goals, assists and minutes.</li>
+  <li><b>FotMob</b>: team news (injured and suspended players) and referees, for every competition, and MLS match stats (football-data.co.uk only has MLS scores).</li></ul>
+  <p>The ESPN and FotMob feeds are public but unofficial, so they can change without notice. Every league match is covered by two sources (football-data.co.uk and ESPN; FotMob and ESPN for MLS), which are compared stat by stat; if they disagree by more than a corner or card (two shots), that stat is shown with both values and left out of the model for that match. Data refreshes every three hours.</p>
   <h2>The method, in plain words</h2>
   <p>Every match, league or European, gets the same recipe: <b>final = 45% base + 55% adjusted</b>.</p>
-  <ol><li><b>Base (45%).</b> The home team's home numbers against the away team's away numbers, for each stat. Each team's numbers are adjusted for the strength of the opponents it faced and measured against the league average, and recent games count more (older games fade out). Teams with few games lean toward their league's level; promoted teams start from the level of past promoted teams. How far a team may sit from its league's level was measured per stat: team differences are real for goals, but much smaller than raw averages suggest for corners and shots, so those lean harder toward the league average. For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale.</li>
+  <ol><li><b>Base (45%).</b> The home team's home numbers against the away team's away numbers, for each stat. Each team's numbers are adjusted for the strength of the opponents it faced and measured against the league average, and recent games count more (older games fade out). Teams with few games lean toward their league's level; promoted teams (and new MLS clubs) start from the level of past promoted or new teams. How far a team may sit from its league's level was measured per stat: team differences are real for goals, but much smaller than raw averages suggest for corners and shots, so those lean harder toward the league average. For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale.</li>
   <li><b>Adjustments (55%).</b> The same base, changed by:
     <ul><li>Momentum: each team's last 6 games in any competition, against what was expected of them. Tested on 2024-25, recent form added little beyond the base (which already weights recent games more), so its measured size is small.</li>
     <li>Head-to-head: past meetings, as a minor factor.</li>
@@ -702,6 +705,7 @@ function renderAbout() {
   <ul><li>Team news is only as good as FotMob's reports, and doubtful players aren't counted.</li>
   <li>European estimates are less certain for clubs from small leagues: their ratings rest on fewer games, and the strength of their league is judged mostly from European results.</li>
   <li>Suspensions worked out from cards use La Liga's rule (a ban every 5th yellow) for every league except the Premier League, so they're approximate. FotMob's team news replaces them in the last 4 days.</li>
+  <li>Some leagues are harder to call than others. In testing, the estimates beat the plain average on win/draw/loss by 5% to 17% in the top European leagues and the Süper Lig, but only by about 2% to 3% in the Segunda División and MLS, where results are closer and more random.</li>
   <li>Corners are hard to predict for anyone: in testing the estimates were about as good as the league average, a little better in some competitions and a little worse in others. Cards and shots beat the average in most competitions, but only slightly. Each match page says when a stat didn't beat the average in that competition.</li>
   <li>Subjective views (new manager, motivation, rotation) appear in each stat's Why box and the Analyst view section. They're never mixed into the numbers, and not every match gets one.</li></ul>
   <p>Every estimate is saved in the project's public history before kick-off, so the track record can't be edited after the fact.</p></div>`)}`;
@@ -730,7 +734,7 @@ function compactRows(list) {
   }).join("")}</ul>`).join("");
 }
 // how big a match is: table positions, nudged by competition (a judgement call, used only to pick featured games)
-const WEIGHT = { "champions-league": -4, "premier-league": 0, "la-liga": 0, "serie-a": 1, "bundesliga": 1, "ligue-1": 3, "europa-league": 3, "eredivisie": 6, "primeira-liga": 6, "conference-league": 8 };
+const WEIGHT = { "champions-league": -4, "premier-league": 0, "la-liga": 0, "serie-a": 1, "bundesliga": 1, "ligue-1": 3, "europa-league": 3, "super-lig": 5, "eredivisie": 6, "primeira-liga": 6, "mls": 7, "conference-league": 8, "segunda-division": 10 };
 async function renderHome() {
   title("");
   setNav("home");
@@ -900,7 +904,7 @@ async function boot() {
     const fd = meta.sources.football_data_last_match || {};
     document.getElementById("freshness").textContent =
       `Data last updated ${kick(meta.updated_at)} (your time), refreshed every 3 hours. ` +
-      `Latest football-data.co.uk match: ${Object.entries(fd).map(([k, v]) => `${LEAGUES[k]} ${v ? day(v) : "none"}`).join(", ")}.`;
+      `Latest match with full stats (football-data.co.uk; FotMob for MLS): ${Object.entries(fd).map(([k, v]) => `${LEAGUES[k]} ${v ? day(v) : "none"}`).join(", ")}.`;
   } catch (e) {
     document.getElementById("freshness").textContent = "Data freshness unknown.";
   }

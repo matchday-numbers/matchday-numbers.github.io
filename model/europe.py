@@ -31,7 +31,8 @@ from .core import LINES, STATS, count_probabilities, goal_probabilities, has_sta
 EUROPE_CTX = "europe"
 VIEW_WEIGHTS = {"form": 0.40, "gap": 0.35, "h2h": 0.25}
 COVERED_SLUGS = {"eng.1": "premier-league", "esp.1": "la-liga", "ita.1": "serie-a", "ger.1": "bundesliga",
-                 "fra.1": "ligue-1", "ned.1": "eredivisie", "por.1": "primeira-liga"}
+                 "fra.1": "ligue-1", "ned.1": "eredivisie", "por.1": "primeira-liga", "tur.1": "super-lig",
+                 "esp.2": "segunda-division", "usa.1": "mls"}
 TOP_FLIGHT = re.compile(r"^[a-z]{3}\.1$")
 
 

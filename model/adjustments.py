@@ -101,6 +101,20 @@ DERBIES = [
     ("Feyenoord", "Excelsior"), ("Groningen", "Heerenveen"), ("Twente", "Heracles"),
     # Primeira Liga
     ("Benfica", "Sp Lisbon"), ("Benfica", "Porto"), ("Porto", "Sp Lisbon"), ("Sp Braga", "Guimaraes"), ("Porto", "Boavista"),
+    # Super Lig
+    ("Galatasaray", "Fenerbahce"), ("Galatasaray", "Besiktas"), ("Fenerbahce", "Besiktas"), ("Trabzonspor", "Fenerbahce"),
+    ("Trabzonspor", "Galatasaray"), ("Trabzonspor", "Besiktas"), ("Ankaragucu", "Genclerbirligi"),
+    # Segunda Division
+    ("Sp Gijon", "Oviedo"), ("Zaragoza", "Huesca"), ("Las Palmas", "Tenerife"), ("Malaga", "Granada"), ("Almeria", "Granada"),
+    ("Malaga", "Cordoba"), ("Valladolid", "Burgos"), ("Valladolid", "Cultural Leonesa"), ("Leganes", "Alcorcon"),
+    ("Santander", "Sp Gijon"),
+    # MLS (FotMob names): El Trafico, Cascadia, Hudson River, Hell is Real, Texas, Canadian Classique, Florida,
+    # California Clasico, Rocky Mountain Cup, Atlantic Cup, SoCal
+    ("Los Angeles FC", "LA Galaxy"), ("Seattle Sounders FC", "Portland Timbers"), ("Seattle Sounders FC", "Vancouver Whitecaps"),
+    ("Portland Timbers", "Vancouver Whitecaps"), ("New York City FC", "Red Bull New York"), ("Columbus Crew", "FC Cincinnati"),
+    ("Houston Dynamo FC", "FC Dallas"), ("Austin FC", "FC Dallas"), ("Austin FC", "Houston Dynamo FC"), ("Toronto FC", "CF Montréal"),
+    ("Orlando City", "Inter Miami CF"), ("LA Galaxy", "San Jose Earthquakes"), ("Real Salt Lake", "Colorado Rapids"),
+    ("DC United", "Red Bull New York"), ("San Diego FC", "Los Angeles FC"), ("San Diego FC", "LA Galaxy"),
 ]
 _DERBY_SET = {frozenset(p) for p in DERBIES}
 
