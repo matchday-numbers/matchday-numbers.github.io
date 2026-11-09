@@ -1,0 +1,511 @@
+Div,Date,Time,HomeTeam,AwayTeam,FTHG,FTAG,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,Referee
+USA,21/02/2026,19:30,St. Louis City,Charlotte FC,1,1,22,8,11,3,12,9,6,1,2,2,0,0,Ismail Elfath
+USA,21/02/2026,21:45,FC Cincinnati,Atlanta United,2,0,11,8,3,3,10,18,5,2,1,2,0,0,Rosendo Mendoza
+USA,22/02/2026,00:30,DC United,Philadelphia Union,1,0,7,12,1,3,19,16,1,5,2,4,0,1,Guido Gonzalez
+USA,22/02/2026,00:30,Orlando City,Red Bull New York,1,2,17,22,6,13,7,15,5,9,1,2,0,0,Rubiel Vazquez
+USA,22/02/2026,00:30,Vancouver Whitecaps,Real Salt Lake,1,0,13,10,5,2,15,15,7,5,2,3,0,0,Drew Thomas Fischer
+USA,22/02/2026,01:30,Austin FC,Minnesota United,2,2,10,11,6,4,8,16,7,8,1,1,0,0,Armando Villarreal
+USA,22/02/2026,01:30,FC Dallas,Toronto FC,3,2,13,12,3,5,18,11,3,7,1,2,0,0,Timothy Ford
+USA,22/02/2026,01:30,Houston Dynamo FC,Chicago Fire FC,2,1,10,6,4,3,11,20,3,5,3,2,0,0,Filip Dujic
+USA,22/02/2026,01:30,Nashville SC,New England Revolution,4,1,14,4,8,1,16,11,3,2,0,1,0,0,Mary Victoria Penso
+USA,22/02/2026,02:30,Los Angeles FC,Inter Miami CF,3,0,15,12,6,3,14,15,4,3,1,2,0,0,Pierre-Luc Lauzière
+USA,22/02/2026,03:30,Portland Timbers,Columbus Crew,3,2,12,15,6,4,5,6,6,8,1,1,0,0,Allen Chapman
+USA,22/02/2026,03:30,San Diego FC,CF Montréal,5,0,10,6,7,2,12,13,5,2,1,1,0,1,Joe Dickerson
+USA,22/02/2026,03:30,San Jose Earthquakes,Sporting Kansas City,3,0,17,7,6,1,16,12,15,3,1,0,0,0,Alexis Da Silva
+USA,23/02/2026,00:00,LA Galaxy,New York City FC,1,1,8,10,6,1,15,16,1,2,1,3,1,0,Víctor Manuel Rivas
+USA,23/02/2026,02:15,Seattle Sounders FC,Colorado Rapids,2,0,15,8,5,3,10,17,8,4,2,4,0,0,Malik Badawi
+USA,28/02/2026,19:30,Chicago Fire FC,CF Montréal,3,0,17,4,11,2,12,13,9,3,1,3,1,0,Elijio Arreguin
+USA,28/02/2026,19:30,Red Bull New York,New England Revolution,1,0,12,5,4,3,14,19,6,6,2,4,0,0,Ricardo Montero
+USA,28/02/2026,21:30,Colorado Rapids,Portland Timbers,2,0,24,12,9,3,12,15,12,6,2,2,0,1,Jair Marrufo
+USA,28/02/2026,21:30,Minnesota United,FC Cincinnati,1,0,16,13,5,4,9,6,5,12,2,0,0,0,Marcos de Oliveira
+USA,01/03/2026,00:30,Real Salt Lake,Seattle Sounders FC,2,1,16,14,5,7,9,7,5,10,3,1,0,0,Mary Victoria Penso
+USA,01/03/2026,00:30,San Jose Earthquakes,Atlanta United,2,0,11,8,5,1,9,19,7,4,1,3,0,0,Ricardo Fierro
+USA,01/03/2026,01:30,FC Dallas,Nashville SC,0,0,9,7,2,1,10,15,4,3,3,1,0,1,Serhii Boiko
+USA,01/03/2026,01:30,Houston Dynamo FC,Los Angeles FC,0,2,12,18,3,6,6,14,4,8,1,3,2,0,Jon Freemon
+USA,01/03/2026,01:30,Sporting Kansas City,Columbus Crew,2,2,8,10,4,5,9,13,4,4,1,2,0,0,Sergii Demianchuk
+USA,01/03/2026,02:30,Vancouver Whitecaps,Toronto FC,3,0,14,5,4,2,14,15,5,1,1,0,0,0,Fotis Bazakos
+USA,01/03/2026,03:30,LA Galaxy,Charlotte FC,3,0,14,4,12,1,9,14,4,5,2,4,0,0,Joe Dickerson
+USA,01/03/2026,19:30,Austin FC,DC United,1,0,18,7,9,2,14,18,10,4,3,3,0,0,Lorenzo Hernandez
+USA,01/03/2026,21:30,Philadelphia Union,New York City FC,1,2,16,13,5,9,12,14,5,4,1,2,1,0,Chris Penso
+USA,02/03/2026,00:00,Orlando City,Inter Miami CF,2,4,10,15,5,8,16,14,2,8,3,3,1,0,Ismail Elfath
+USA,02/03/2026,02:15,San Diego FC,St. Louis City,2,0,10,6,6,2,10,12,7,2,0,1,0,0,Drew Thomas Fischer
+USA,07/03/2026,19:30,New York City FC,Orlando City,5,0,13,4,5,1,17,7,5,2,0,1,0,1,Guido Gonzalez
+USA,07/03/2026,21:30,DC United,Inter Miami CF,1,2,15,7,3,4,16,8,8,1,1,1,0,0,Filip Dujic
+USA,08/03/2026,00:30,Atlanta United,Real Salt Lake,2,3,16,11,5,4,12,4,4,2,2,3,0,0,Jon Freemon
+USA,08/03/2026,00:30,Charlotte FC,Austin FC,3,1,25,5,11,0,9,13,12,3,2,1,0,1,Rosendo Mendoza
+USA,08/03/2026,00:30,Columbus Crew,Chicago Fire FC,0,0,13,8,5,3,11,10,7,3,2,4,0,0,Mary Victoria Penso
+USA,08/03/2026,00:30,Philadelphia Union,San Jose Earthquakes,0,1,13,8,3,3,20,16,11,1,3,2,0,0,Armando Villarreal
+USA,08/03/2026,01:30,Nashville SC,Minnesota United,3,1,15,14,6,3,11,10,5,2,1,1,0,0,Pierre-Luc Lauzière
+USA,08/03/2026,01:30,Sporting Kansas City,San Diego FC,0,1,5,15,3,5,11,12,2,6,3,4,0,0,Malik Badawi
+USA,08/03/2026,01:30,St. Louis City,Seattle Sounders FC,0,1,12,8,5,4,13,7,8,1,1,3,0,0,Timothy Ford
+USA,08/03/2026,02:30,Colorado Rapids,LA Galaxy,4,1,11,16,6,7,10,6,2,5,0,1,0,1,Allen Chapman
+USA,08/03/2026,03:30,Los Angeles FC,FC Dallas,1,0,8,15,5,5,13,14,4,7,2,2,0,0,Drew Thomas Fischer
+USA,08/03/2026,03:30,Portland Timbers,Vancouver Whitecaps,1,4,7,17,2,8,10,13,3,7,3,3,0,0,Víctor Manuel Rivas
+USA,08/03/2026,20:30,Red Bull New York,CF Montréal,0,3,12,10,4,4,8,9,11,4,1,0,0,0,Serhii Boiko
+USA,08/03/2026,23:00,FC Cincinnati,Toronto FC,0,1,14,11,2,5,14,11,8,7,2,2,0,0,Alexis Da Silva
+USA,14/03/2026,17:10,Toronto FC,Red Bull New York,1,1,12,17,6,8,10,13,5,11,1,2,0,0,Chris Penso
+USA,14/03/2026,19:15,Atlanta United,Philadelphia Union,3,1,10,14,4,3,15,12,4,6,4,0,0,0,Marcos de Oliveira
+USA,14/03/2026,22:15,Columbus Crew,Nashville SC,0,1,8,8,2,4,4,12,6,3,1,5,0,0,Fotis Bazakos
+USA,14/03/2026,23:30,Charlotte FC,Inter Miami CF,0,0,11,10,5,3,12,16,3,5,3,2,0,0,Guido Gonzalez
+USA,14/03/2026,23:30,New York City FC,Colorado Rapids,3,1,13,8,8,2,14,25,4,4,2,2,0,0,Brandon Stevis
+USA,14/03/2026,23:30,Orlando City,CF Montréal,2,1,15,18,6,6,12,14,4,10,1,1,0,0,Jair Marrufo
+USA,15/03/2026,00:30,Chicago Fire FC,DC United,1,2,15,13,2,4,12,11,4,5,3,1,0,0,Sergii Demianchuk
+USA,15/03/2026,00:30,FC Dallas,San Diego FC,3,3,13,5,8,4,16,12,3,0,3,2,0,0,Ricardo Montero
+USA,15/03/2026,00:30,Houston Dynamo FC,Portland Timbers,3,2,19,17,6,9,12,9,10,6,2,4,1,0,Rubiel Vazquez
+USA,15/03/2026,01:30,LA Galaxy,Sporting Kansas City,1,2,18,7,5,4,7,12,10,3,1,1,0,0,Ismail Elfath
+USA,15/03/2026,01:30,Real Salt Lake,Austin FC,2,1,23,10,8,3,12,10,7,4,1,4,0,0,Elijio Arreguin
+USA,15/03/2026,02:30,Los Angeles FC,St. Louis City,2,0,16,18,5,4,12,9,5,9,0,0,0,0,Rosendo Mendoza
+USA,15/03/2026,18:30,New England Revolution,FC Cincinnati,6,1,16,15,10,9,15,14,1,3,3,2,0,1,Lorenzo Hernandez
+USA,15/03/2026,20:30,Vancouver Whitecaps,Minnesota United,6,0,16,8,8,4,23,22,3,7,1,2,0,0,Ricardo Fierro
+USA,15/03/2026,23:00,San Jose Earthquakes,Seattle Sounders FC,0,1,25,6,7,4,6,11,17,0,1,4,0,0,Víctor Manuel Rivas
+USA,21/03/2026,17:00,Toronto FC,Columbus Crew,2,1,12,8,7,4,9,20,10,7,1,3,0,0,Pierre-Luc Lauzière
+USA,21/03/2026,20:30,Philadelphia Union,Chicago Fire FC,1,2,12,11,3,4,11,15,6,2,1,3,0,0,Nabil Bensalah
+USA,21/03/2026,22:15,Nashville SC,Orlando City,5,0,19,9,8,1,15,5,5,5,1,2,0,0,Víctor Manuel Rivas
+USA,21/03/2026,23:30,Atlanta United,DC United,0,0,7,4,3,1,7,10,3,4,1,1,0,0,Jair Marrufo
+USA,21/03/2026,23:30,Charlotte FC,Red Bull New York,6,1,15,22,10,7,8,7,2,8,1,1,0,1,Allen Chapman
+USA,22/03/2026,00:30,FC Dallas,Houston Dynamo FC,4,3,16,10,6,4,16,14,6,8,2,2,0,1,Rosendo Mendoza
+USA,22/03/2026,00:30,Sporting Kansas City,Colorado Rapids,1,4,8,17,3,9,17,21,6,4,3,3,0,0,Fotis Bazakos
+USA,22/03/2026,00:30,St. Louis City,New England Revolution,3,1,11,8,6,2,11,12,6,3,3,2,0,0,Serhii Boiko
+USA,22/03/2026,00:45,Austin FC,Los Angeles FC,0,0,10,12,1,1,11,7,5,4,3,2,0,0,Rubiel Vazquez
+USA,22/03/2026,02:30,Vancouver Whitecaps,San Jose Earthquakes,0,1,12,6,6,3,11,12,3,5,1,3,0,0,Chris Penso
+USA,22/03/2026,17:00,FC Cincinnati,CF Montréal,4,3,15,19,8,7,20,11,2,2,4,1,1,0,Filip Dujic
+USA,22/03/2026,17:00,New York City FC,Inter Miami CF,2,3,11,22,5,8,12,14,7,7,1,4,0,0,Armando Villarreal
+USA,22/03/2026,18:30,Minnesota United,Seattle Sounders FC,0,0,8,11,3,2,9,13,4,7,1,3,0,0,Jon Freemon
+USA,22/03/2026,20:45,Portland Timbers,LA Galaxy,1,1,8,22,2,7,11,14,2,9,3,1,1,0,Drew Thomas Fischer
+USA,22/03/2026,23:00,San Diego FC,Real Salt Lake,2,2,15,21,6,8,15,12,7,8,1,2,1,0,Alexis Da Silva
+USA,04/04/2026,17:00,Toronto FC,Colorado Rapids,3,2,17,5,5,4,16,13,7,4,3,3,1,2,Ricardo Montero
+USA,04/04/2026,20:30,New England Revolution,CF Montréal,3,0,9,18,6,4,16,23,1,5,2,3,0,0,Joshua Encarnación
+USA,04/04/2026,20:30,Real Salt Lake,Sporting Kansas City,3,1,22,5,7,3,15,11,7,1,1,0,0,0,Timothy Ford
+USA,04/04/2026,23:30,Atlanta United,Columbus Crew,1,3,7,16,4,7,9,9,4,8,2,1,0,0,Lorenzo Hernandez
+USA,04/04/2026,23:30,Charlotte FC,Philadelphia Union,2,1,9,17,5,3,10,22,6,7,4,4,0,0,Drew Thomas Fischer
+USA,04/04/2026,23:30,DC United,FC Dallas,0,4,11,15,4,8,15,11,6,3,2,1,0,0,Rubiel Vazquez
+USA,04/04/2026,23:30,New York City FC,St. Louis City,1,1,15,14,7,3,9,12,2,4,1,3,0,0,Pierre-Luc Lauzière
+USA,04/04/2026,23:30,Red Bull New York,FC Cincinnati,4,2,18,17,6,6,12,12,2,6,2,2,0,1,
+USA,05/04/2026,00:00,Inter Miami CF,Austin FC,2,2,28,9,8,3,7,8,7,3,2,0,0,0,Allen Chapman
+USA,05/04/2026,00:30,Chicago Fire FC,Nashville SC,1,0,10,10,3,4,19,13,1,3,2,1,0,0,Marcos de Oliveira
+USA,05/04/2026,00:30,Houston Dynamo FC,Seattle Sounders FC,0,1,13,6,3,2,5,13,9,3,1,2,0,0,Ismail Elfath
+USA,05/04/2026,01:30,Los Angeles FC,Orlando City,6,0,17,12,8,6,12,14,8,7,2,3,0,0,Alexis Da Silva
+USA,05/04/2026,02:30,LA Galaxy,Minnesota United,1,2,20,9,7,4,11,13,9,0,2,3,0,0,Malik Badawi
+USA,05/04/2026,02:30,San Jose Earthquakes,San Diego FC,3,0,24,4,10,1,17,13,7,5,3,2,0,1,Fotis Bazakos
+USA,05/04/2026,02:30,Vancouver Whitecaps,Portland Timbers,3,2,22,8,9,3,15,11,7,2,1,1,0,0,Joe Dickerson
+USA,11/04/2026,17:10,Toronto FC,FC Cincinnati,1,1,10,7,3,4,14,20,7,4,2,1,0,1,Ricardo Fierro
+USA,11/04/2026,18:30,Austin FC,LA Galaxy,1,2,13,12,5,7,9,9,6,5,2,4,0,0,Mary Victoria Penso
+USA,11/04/2026,18:30,CF Montréal,Philadelphia Union,1,2,7,15,4,6,16,19,2,4,3,4,0,0,Alexis Da Silva
+USA,11/04/2026,20:45,Portland Timbers,Los Angeles FC,2,1,10,18,8,4,9,10,1,7,2,2,0,0,Armando Villarreal
+USA,11/04/2026,23:30,Charlotte FC,Nashville SC,1,2,8,11,3,6,9,15,2,4,0,3,0,0,Rubiel Vazquez
+USA,11/04/2026,23:30,Inter Miami CF,Red Bull New York,2,2,16,5,7,2,8,14,12,3,1,2,0,0,Rosendo Mendoza
+USA,11/04/2026,23:30,New England Revolution,DC United,1,0,11,14,4,4,10,11,2,3,0,0,0,0,Jon Freemon
+USA,11/04/2026,23:30,Vancouver Whitecaps,New York City FC,2,0,23,10,10,2,16,8,12,5,2,0,0,0,Jair Marrufo
+USA,12/04/2026,00:30,Chicago Fire FC,Atlanta United,1,0,18,20,3,6,12,5,6,11,2,1,0,0,Guido Gonzalez
+USA,12/04/2026,00:30,FC Dallas,St. Louis City,1,1,11,10,3,5,11,8,5,10,3,1,0,0,Filip Dujic
+USA,12/04/2026,00:30,Sporting Kansas City,San Jose Earthquakes,1,3,10,10,4,3,9,6,2,4,2,0,0,0,Allen Chapman
+USA,12/04/2026,01:30,Colorado Rapids,Houston Dynamo FC,6,2,16,20,8,8,14,10,2,4,1,1,0,0,Serhii Boiko
+USA,12/04/2026,02:30,San Diego FC,Minnesota United,1,2,17,21,6,7,9,19,4,5,1,1,1,0,Víctor Manuel Rivas
+USA,12/04/2026,23:00,Columbus Crew,Orlando City,1,1,20,5,7,1,12,9,8,1,1,4,0,0,Ricardo Montero
+USA,18/04/2026,02:30,Vancouver Whitecaps,Sporting Kansas City,3,0,25,3,6,0,15,16,6,3,1,2,0,0,Elijio Arreguin
+USA,18/04/2026,17:00,Toronto FC,Austin FC,3,3,18,12,11,6,18,11,6,5,5,2,0,0,Drew Thomas Fischer
+USA,18/04/2026,18:30,CF Montréal,Red Bull New York,4,1,9,8,6,1,17,12,2,7,3,3,0,0,Sergii Demianchuk
+USA,18/04/2026,20:30,Colorado Rapids,Inter Miami CF,2,3,14,5,4,3,12,19,3,2,4,5,0,1,Jon Freemon
+USA,18/04/2026,23:30,Atlanta United,Nashville SC,0,2,13,17,4,8,11,6,5,7,2,0,0,0,Allen Chapman
+USA,18/04/2026,23:30,FC Cincinnati,Chicago Fire FC,3,3,23,18,9,6,11,9,9,1,4,3,0,0,Malik Badawi
+USA,18/04/2026,23:30,New England Revolution,Columbus Crew,2,1,10,11,3,4,8,12,3,7,1,3,0,0,Timothy Ford
+USA,18/04/2026,23:30,New York City FC,Charlotte FC,1,2,22,7,7,5,7,7,6,1,2,4,0,0,Mary Victoria Penso
+USA,18/04/2026,23:30,Orlando City,Houston Dynamo FC,0,1,17,18,3,5,16,9,4,3,2,2,0,0,Pierre-Luc Lauzière
+USA,18/04/2026,23:30,Philadelphia Union,DC United,0,0,17,6,4,0,11,11,13,1,0,3,0,0,Lorenzo Hernandez
+USA,19/04/2026,00:30,FC Dallas,LA Galaxy,2,2,13,9,5,4,21,11,4,3,2,0,0,0,Marcos de Oliveira
+USA,19/04/2026,00:30,Minnesota United,Portland Timbers,2,0,17,13,7,2,16,8,3,4,2,0,0,0,Nabil Bensalah
+USA,19/04/2026,01:30,Real Salt Lake,San Diego FC,4,2,15,9,9,5,12,13,1,8,1,1,0,0,Ismail Elfath
+USA,19/04/2026,01:30,Seattle Sounders FC,St. Louis City,4,1,13,12,9,2,9,12,5,8,0,0,0,0,Chris Penso
+USA,19/04/2026,23:00,Los Angeles FC,San Jose Earthquakes,1,4,16,12,3,5,13,10,5,3,3,3,0,0,Joe Dickerson
+USA,22/04/2026,23:30,New York City FC,FC Cincinnati,4,4,17,12,9,6,7,9,2,4,0,3,0,0,Serhii Boiko
+USA,22/04/2026,23:30,Orlando City,Charlotte FC,4,1,11,15,6,5,12,10,2,4,5,2,0,0,Filip Dujic
+USA,22/04/2026,23:30,Red Bull New York,DC United,4,4,13,14,5,5,14,13,3,3,1,2,0,0,Marcos de Oliveira
+USA,22/04/2026,23:30,Toronto FC,Philadelphia Union,3,3,12,12,4,5,12,18,2,2,4,4,0,0,Fotis Bazakos
+USA,22/04/2026,23:45,Atlanta United,New England Revolution,1,2,23,7,9,4,14,10,8,3,2,2,0,0,Ricardo Montero
+USA,23/04/2026,00:30,FC Dallas,Minnesota United,0,1,15,5,2,4,8,7,4,3,2,3,0,0,Allen Chapman
+USA,23/04/2026,00:30,Houston Dynamo FC,San Diego FC,1,0,11,9,3,1,10,11,1,3,2,2,1,1,Rubiel Vazquez
+USA,23/04/2026,01:30,Real Salt Lake,Inter Miami CF,0,2,11,19,4,7,15,9,2,4,3,3,0,0,Pierre-Luc Lauzière
+USA,23/04/2026,01:45,Columbus Crew,LA Galaxy,2,1,14,7,4,1,13,5,4,1,0,1,0,0,Rosendo Mendoza
+USA,23/04/2026,02:30,Los Angeles FC,Colorado Rapids,0,0,5,6,1,2,17,9,4,3,2,4,0,0,Víctor Manuel Rivas
+USA,23/04/2026,02:30,San Jose Earthquakes,Austin FC,5,1,37,5,16,2,16,21,13,1,4,1,0,0,Timothy Ford
+USA,25/04/2026,17:00,Toronto FC,Atlanta United,1,2,9,6,2,2,10,15,8,7,0,2,0,0,Ismail Elfath
+USA,25/04/2026,18:30,CF Montréal,New York City FC,1,0,8,4,5,2,18,15,3,1,5,2,0,1,Ramy Touchan
+USA,25/04/2026,20:45,Minnesota United,Los Angeles FC,0,1,23,7,4,7,11,9,11,2,1,3,0,0,Guido Gonzalez
+USA,25/04/2026,23:30,Columbus Crew,Philadelphia Union,2,0,7,10,4,2,11,18,2,4,1,1,0,1,Filip Dujic
+USA,25/04/2026,23:30,DC United,Orlando City,3,2,15,8,8,5,11,14,7,8,5,3,0,0,Chris Penso
+USA,25/04/2026,23:30,FC Cincinnati,Red Bull New York,2,0,15,19,5,6,9,15,4,7,1,2,0,0,Fotis Bazakos
+USA,25/04/2026,23:30,Inter Miami CF,New England Revolution,1,1,18,16,10,7,14,7,7,1,3,0,0,0,Rubiel Vazquez
+USA,26/04/2026,00:30,Austin FC,Houston Dynamo FC,2,0,13,11,4,5,14,12,3,5,4,2,0,0,Alexis Da Silva
+USA,26/04/2026,00:30,Chicago Fire FC,Sporting Kansas City,5,0,17,6,6,1,15,17,4,2,1,0,0,0,Brandon Stevis
+USA,26/04/2026,00:40,Nashville SC,Charlotte FC,4,2,13,8,7,2,13,8,6,4,2,1,0,0,Joe Dickerson
+USA,26/04/2026,00:40,St. Louis City,San Jose Earthquakes,2,3,21,9,5,3,12,13,10,3,2,3,0,0,Drew Thomas Fischer
+USA,26/04/2026,01:40,San Diego FC,Portland Timbers,1,2,10,11,3,5,12,10,6,6,2,1,0,0,Jon Freemon
+USA,26/04/2026,02:30,Seattle Sounders FC,FC Dallas,2,1,9,12,6,6,6,13,4,7,1,4,0,0,Mary Victoria Penso
+USA,26/04/2026,02:30,Vancouver Whitecaps,Colorado Rapids,3,1,20,13,8,3,24,12,8,3,1,1,0,0,Lorenzo Hernandez
+USA,26/04/2026,23:00,LA Galaxy,Real Salt Lake,2,1,16,15,7,8,16,14,7,0,4,4,0,0,Víctor Manuel Rivas
+USA,02/05/2026,17:00,Toronto FC,San Jose Earthquakes,1,1,11,10,2,4,17,7,8,9,2,2,0,0,Michael Venne
+USA,02/05/2026,18:30,Sporting Kansas City,Seattle Sounders FC,1,1,10,26,7,9,10,7,4,9,0,2,0,0,Sergii Demianchuk
+USA,02/05/2026,20:45,Real Salt Lake,Portland Timbers,2,0,25,11,15,2,15,12,6,2,1,2,0,0,Rosendo Mendoza
+USA,02/05/2026,23:15,Inter Miami CF,Orlando City,3,4,26,13,10,9,18,5,10,2,4,3,0,0,Guido Gonzalez
+USA,02/05/2026,23:30,Atlanta United,CF Montréal,3,1,18,11,5,5,14,9,3,2,4,3,0,1,Rubiel Vazquez
+USA,02/05/2026,23:30,Columbus Crew,Minnesota United,2,3,13,12,4,7,10,11,4,6,2,2,0,0,Serhii Boiko
+USA,02/05/2026,23:30,New England Revolution,Charlotte FC,1,0,14,9,4,4,10,16,3,5,3,4,0,0,Pierre-Luc Lauzière
+USA,02/05/2026,23:30,Philadelphia Union,Nashville SC,0,0,16,8,4,1,14,11,5,2,1,1,0,0,Elijio Arreguin
+USA,02/05/2026,23:30,Red Bull New York,FC Dallas,0,2,9,12,0,6,6,7,8,4,0,2,0,0,Jair Marrufo
+USA,03/05/2026,00:30,Chicago Fire FC,FC Cincinnati,2,3,33,10,10,4,12,5,10,1,1,3,0,1,Joe Dickerson
+USA,03/05/2026,00:30,Houston Dynamo FC,Colorado Rapids,1,0,9,4,5,2,11,8,6,5,3,3,0,0,Allen Chapman
+USA,03/05/2026,01:30,San Diego FC,Los Angeles FC,2,2,8,9,3,4,12,17,2,3,3,2,0,0,Filip Dujic
+USA,03/05/2026,02:30,LA Galaxy,Vancouver Whitecaps,1,1,7,19,2,6,12,18,1,2,5,5,0,0,Alexis Da Silva
+USA,03/05/2026,19:00,New York City FC,DC United,0,2,9,19,4,7,10,17,6,3,1,4,0,0,Ismail Elfath
+USA,03/05/2026,21:42,Austin FC,St. Louis City,2,0,16,15,6,5,14,20,4,6,2,3,0,0,Jon Freemon
+USA,09/05/2026,17:00,Toronto FC,Inter Miami CF,2,4,13,11,5,7,9,12,4,4,1,2,0,0,Víctor Manuel Rivas
+USA,09/05/2026,18:30,Chicago Fire FC,Red Bull New York,1,3,15,9,4,4,7,10,6,3,1,3,0,0,Allen Chapman
+USA,09/05/2026,20:30,CF Montréal,Orlando City,2,0,23,8,5,3,10,16,11,3,0,2,0,0,Marcos de Oliveira
+USA,09/05/2026,23:30,Atlanta United,LA Galaxy,1,2,14,10,3,6,7,5,6,5,3,1,0,0,Fotis Bazakos
+USA,09/05/2026,23:30,Charlotte FC,FC Cincinnati,2,2,12,13,3,5,9,15,7,4,1,4,0,0,Ismail Elfath
+USA,09/05/2026,23:30,New England Revolution,Philadelphia Union,2,1,10,11,2,2,8,16,9,3,0,3,0,0,Mary Victoria Penso
+USA,10/05/2026,00:30,FC Dallas,Real Salt Lake,3,1,11,9,4,2,15,13,4,7,2,3,0,0,Joe Dickerson
+USA,10/05/2026,01:15,Nashville SC,DC United,2,2,16,12,7,6,9,15,8,7,3,0,0,1,Joshua Encarnación
+USA,10/05/2026,01:30,Colorado Rapids,St. Louis City,0,1,10,10,2,1,19,18,11,1,3,3,1,1,Timothy Ford
+USA,10/05/2026,02:30,Portland Timbers,Sporting Kansas City,6,0,16,11,6,3,11,20,4,4,1,5,0,0,Ramy Touchan
+USA,10/05/2026,02:30,San Jose Earthquakes,Vancouver Whitecaps,1,1,7,16,3,5,14,15,2,4,4,1,0,0,Malik Badawi
+USA,10/05/2026,02:30,Seattle Sounders FC,San Diego FC,1,1,26,15,5,5,9,8,8,2,3,2,0,0,Armando Villarreal
+USA,10/05/2026,20:30,New York City FC,Columbus Crew,3,0,9,11,6,2,7,8,3,8,0,1,0,0,Rubiel Vazquez
+USA,10/05/2026,23:00,Minnesota United,Austin FC,2,2,18,12,5,5,15,11,3,4,5,2,0,0,Chris Penso
+USA,11/05/2026,01:00,Los Angeles FC,Houston Dynamo FC,1,4,19,12,5,6,12,12,10,3,4,3,0,0,Drew Thomas Fischer
+USA,13/05/2026,23:15,Charlotte FC,New York City FC,0,1,5,4,2,1,14,19,8,2,4,5,0,0,
+USA,13/05/2026,23:30,CF Montréal,Portland Timbers,2,2,23,14,8,3,17,6,6,9,4,1,0,0,
+USA,13/05/2026,23:30,DC United,Chicago Fire FC,1,3,13,14,6,8,14,12,7,8,0,5,0,0,
+USA,13/05/2026,23:30,FC Cincinnati,Inter Miami CF,3,5,10,17,3,5,19,13,1,8,2,3,0,0,
+USA,13/05/2026,23:30,New England Revolution,Nashville SC,0,3,8,8,2,4,8,12,6,7,2,3,0,0,
+USA,13/05/2026,23:30,Orlando City,Philadelphia Union,4,3,12,26,6,7,9,12,2,10,1,3,0,0,
+USA,13/05/2026,23:30,Red Bull New York,Columbus Crew,3,2,13,12,6,4,17,7,3,2,3,2,0,0,
+USA,14/05/2026,00:30,FC Dallas,Vancouver Whitecaps,2,3,8,16,3,6,17,12,6,6,3,4,0,0,Rosendo Mendoza
+USA,14/05/2026,00:30,Minnesota United,Colorado Rapids,0,1,12,5,2,2,18,24,5,5,5,4,0,0,
+USA,14/05/2026,00:30,Sporting Kansas City,LA Galaxy,3,1,15,18,7,7,19,6,4,8,1,2,0,0,Ricardo Montero
+USA,14/05/2026,00:30,St. Louis City,Los Angeles FC,2,1,8,16,2,4,13,10,2,8,3,3,0,0,
+USA,14/05/2026,01:30,Real Salt Lake,Houston Dynamo FC,3,0,9,15,2,4,8,11,4,1,0,1,0,0,
+USA,14/05/2026,01:30,San Diego FC,Austin FC,5,0,22,9,10,3,9,7,6,4,1,0,0,0,
+USA,14/05/2026,01:30,Seattle Sounders FC,San Jose Earthquakes,3,2,23,11,9,3,12,11,9,6,0,2,0,0,
+USA,16/05/2026,20:30,CF Montréal,Chicago Fire FC,0,2,15,11,5,4,14,13,16,3,4,3,0,0,Fotis Bazakos
+USA,16/05/2026,23:30,Charlotte FC,Toronto FC,3,1,18,13,6,4,8,13,7,3,2,2,0,0,Allen Chapman
+USA,16/05/2026,23:30,DC United,St. Louis City,1,1,16,15,5,3,17,11,5,8,3,3,0,1,Rodrigo Albuquerque
+USA,16/05/2026,23:30,New England Revolution,Minnesota United,2,1,11,12,5,6,11,12,8,11,2,1,0,0,Rosendo Mendoza
+USA,16/05/2026,23:30,Orlando City,Atlanta United,1,1,7,21,3,6,8,12,4,10,2,1,0,0,Mary Victoria Penso
+USA,16/05/2026,23:30,Philadelphia Union,Columbus Crew,1,1,12,5,5,1,14,12,4,4,3,1,0,0,Armando Villarreal
+USA,16/05/2026,23:30,Red Bull New York,New York City FC,1,1,12,14,5,5,16,10,9,3,4,3,0,0,Víctor Manuel Rivas
+USA,17/05/2026,00:30,Austin FC,Sporting Kansas City,1,2,8,20,3,8,13,21,3,7,4,3,0,0,Marcos de Oliveira
+USA,17/05/2026,00:30,Houston Dynamo FC,Vancouver Whitecaps,1,0,14,9,7,3,16,13,4,3,1,4,0,1,Ismail Elfath
+USA,17/05/2026,01:15,Seattle Sounders FC,LA Galaxy,0,2,15,9,5,2,3,13,5,1,1,4,0,0,Joe Dickerson
+USA,17/05/2026,01:30,Real Salt Lake,Colorado Rapids,2,1,17,8,8,4,18,8,2,6,2,3,0,0,Malik Badawi
+USA,17/05/2026,01:30,San Diego FC,FC Cincinnati,3,3,16,8,5,6,8,9,7,2,1,3,0,0,Timothy Ford
+USA,17/05/2026,02:30,San Jose Earthquakes,FC Dallas,2,3,16,16,7,9,9,17,12,4,3,3,0,0,Chris Penso
+USA,17/05/2026,22:00,Inter Miami CF,Portland Timbers,2,0,22,16,9,4,15,10,8,5,2,2,0,0,
+USA,18/05/2026,00:00,Nashville SC,Los Angeles FC,3,2,7,21,4,9,11,10,3,11,3,2,0,0,
+USA,23/05/2026,18:45,St. Louis City,Austin FC,3,0,16,8,6,2,19,9,2,2,1,1,0,0,Pierre-Luc Lauzière
+USA,23/05/2026,20:30,Minnesota United,Real Salt Lake,1,1,11,8,1,1,6,11,6,3,0,2,0,0,Mary Victoria Penso
+USA,23/05/2026,23:30,Charlotte FC,New England Revolution,1,0,12,13,6,3,9,13,3,4,0,4,1,0,Fotis Bazakos
+USA,23/05/2026,23:30,DC United,CF Montréal,4,4,18,22,10,8,19,16,6,4,2,5,0,0,Filip Dujic
+USA,23/05/2026,23:30,FC Cincinnati,Orlando City,6,2,21,19,11,9,17,13,6,9,2,3,0,0,Rubiel Vazquez
+USA,24/05/2026,00:30,Chicago Fire FC,Toronto FC,2,1,15,11,6,4,12,12,3,4,4,4,0,0,Sergii Demianchuk
+USA,24/05/2026,00:30,Nashville SC,New York City FC,2,1,12,7,6,4,11,12,6,3,2,1,0,0,Alexis Da Silva
+USA,24/05/2026,00:30,Sporting Kansas City,Red Bull New York,1,2,15,10,8,4,5,15,6,1,1,2,0,0,Nabil Bensalah
+USA,24/05/2026,01:30,Colorado Rapids,FC Dallas,1,2,17,5,5,2,11,13,5,3,3,3,1,0,Ismail Elfath
+USA,24/05/2026,01:30,Portland Timbers,San Jose Earthquakes,1,3,15,7,7,6,10,14,4,6,1,4,0,0,Timothy Ford
+USA,24/05/2026,01:30,San Diego FC,Vancouver Whitecaps,2,4,11,21,3,12,14,15,2,4,1,3,1,0,Drew Thomas Fischer
+USA,24/05/2026,02:30,LA Galaxy,Houston Dynamo FC,1,1,18,10,6,5,6,9,9,2,1,3,0,0,Lorenzo Hernandez
+USA,24/05/2026,21:00,Columbus Crew,Atlanta United,2,0,10,16,4,2,9,13,2,3,3,3,0,0,Chris Penso
+USA,24/05/2026,23:00,Inter Miami CF,Philadelphia Union,6,4,17,21,10,10,18,16,4,2,6,3,0,0,Rosendo Mendoza
+USA,25/05/2026,01:15,Los Angeles FC,Seattle Sounders FC,1,0,17,10,3,4,11,10,7,5,0,0,0,0,Ramy Touchan
+USA,16/07/2026,23:30,CF Montréal,Toronto FC,0,0,14,8,3,0,13,8,9,3,1,1,0,0,Guido Gonzalez
+USA,17/07/2026,00:30,St. Louis City,Sporting Kansas City,3,2,20,12,5,3,15,11,5,6,2,1,0,0,Allen Chapman
+USA,17/07/2026,02:30,Seattle Sounders FC,Portland Timbers,1,5,10,20,6,10,7,7,2,8,2,0,0,0,
+USA,18/07/2026,00:10,Nashville SC,Atlanta United,1,0,8,12,3,5,10,13,4,2,1,1,0,0,Filip Dujic
+USA,18/07/2026,02:25,LA Galaxy,Los Angeles FC,0,3,10,13,2,5,13,11,9,3,3,0,0,0,
+USA,22/07/2026,23:30,Columbus Crew,New York City FC,1,2,11,8,4,5,7,11,3,0,3,2,0,0,Lorenzo Hernandez
+USA,22/07/2026,23:30,FC Cincinnati,Vancouver Whitecaps,4,3,10,19,6,6,12,13,1,3,1,5,0,0,Jon Freemon
+USA,22/07/2026,23:30,Inter Miami CF,Chicago Fire FC,3,2,14,15,7,4,8,16,8,4,1,1,0,0,Rubiel Vazquez
+USA,22/07/2026,23:30,New England Revolution,Toronto FC,0,0,11,13,3,1,10,13,7,9,2,0,0,0,Sergii Demianchuk
+USA,22/07/2026,23:30,Philadelphia Union,Red Bull New York,3,1,24,9,9,4,13,10,8,6,0,3,0,0,Fotis Bazakos
+USA,23/07/2026,00:15,Charlotte FC,Atlanta United,2,2,24,12,9,6,3,9,6,3,1,3,0,0,Serhii Boiko
+USA,23/07/2026,00:30,Houston Dynamo FC,DC United,1,1,20,7,5,1,8,15,3,3,2,4,0,0,Víctor Manuel Rivas
+USA,23/07/2026,00:30,Nashville SC,CF Montréal,1,0,10,7,1,2,9,12,3,2,1,1,0,0,Marcos de Oliveira
+USA,23/07/2026,00:30,Sporting Kansas City,Minnesota United,2,1,11,16,7,10,17,7,3,6,2,3,0,0,Mathew Corrigan
+USA,23/07/2026,01:30,Austin FC,Seattle Sounders FC,3,1,10,10,6,3,5,12,4,4,2,0,0,1,
+USA,23/07/2026,02:05,Colorado Rapids,San Diego FC,1,0,9,6,1,2,17,7,5,3,4,3,0,0,
+USA,23/07/2026,02:30,LA Galaxy,St. Louis City,1,3,11,15,3,9,11,16,4,7,2,1,1,0,
+USA,23/07/2026,02:30,Los Angeles FC,Real Salt Lake,3,1,12,28,3,6,5,7,7,12,0,0,0,0,
+USA,23/07/2026,02:30,Portland Timbers,FC Dallas,2,2,16,11,4,3,12,13,5,3,3,2,0,0,
+USA,23/07/2026,02:30,San Jose Earthquakes,Orlando City,0,4,11,15,7,8,20,10,3,2,4,2,0,0,
+USA,25/07/2026,22:30,Red Bull New York,Charlotte FC,0,2,24,4,6,3,14,5,6,1,3,1,1,0,Rosendo Mendoza
+USA,25/07/2026,23:25,Columbus Crew,FC Cincinnati,2,1,13,12,6,5,11,8,4,5,1,1,0,1,Allen Chapman
+USA,25/07/2026,23:30,CF Montréal,Inter Miami CF,0,1,8,20,2,2,7,14,5,6,0,2,0,0,Alexis Da Silva
+USA,25/07/2026,23:30,DC United,Toronto FC,2,1,16,13,7,7,14,7,8,5,1,1,0,0,Serhii Boiko
+USA,25/07/2026,23:30,New England Revolution,Atlanta United,4,1,11,17,7,6,7,16,4,6,2,2,0,0,Pierre-Luc Lauzière
+USA,25/07/2026,23:30,New York City FC,Chicago Fire FC,3,1,11,9,3,5,8,16,1,2,1,3,0,0,Ricardo Montero
+USA,25/07/2026,23:30,Philadelphia Union,Seattle Sounders FC,1,0,15,7,5,1,11,11,6,1,0,1,0,0,Timothy Ford
+USA,26/07/2026,00:30,Houston Dynamo FC,Austin FC,3,0,10,15,4,5,12,10,1,6,2,2,0,0,Filip Dujic
+USA,26/07/2026,00:30,Minnesota United,Vancouver Whitecaps,0,0,11,11,3,5,7,13,5,2,2,1,0,0,Lorenzo Hernandez
+USA,26/07/2026,00:30,St. Louis City,Colorado Rapids,1,0,20,2,3,0,22,9,10,1,1,3,0,1,Nabil Bensalah
+USA,26/07/2026,00:45,Orlando City,Nashville SC,1,0,12,7,4,2,8,10,2,7,1,0,0,0,Ramy Touchan
+USA,26/07/2026,01:30,San Diego FC,FC Dallas,1,0,19,6,8,1,10,10,9,4,0,2,0,0,Víctor Manuel Rivas
+USA,26/07/2026,02:30,Los Angeles FC,Sporting Kansas City,4,0,8,8,5,1,8,11,5,1,0,2,0,0,Ricardo Fierro
+USA,26/07/2026,02:30,Portland Timbers,Real Salt Lake,2,1,22,6,6,2,12,13,14,5,2,1,0,1,Elijio Arreguin
+USA,26/07/2026,02:30,San Jose Earthquakes,LA Galaxy,1,1,20,9,5,2,14,16,6,6,4,3,0,0,Armando Villarreal
+USA,31/07/2026,23:30,New York City FC,Toronto FC,1,1,16,13,5,5,11,12,3,2,2,4,0,0,Ramy Touchan
+USA,01/08/2026,23:30,CF Montréal,New England Revolution,2,2,15,21,8,5,9,4,6,3,1,0,0,0,Jair Marrufo
+USA,01/08/2026,23:30,DC United,Nashville SC,2,2,16,10,7,2,14,10,8,3,2,3,0,0,Ricardo Montero
+USA,01/08/2026,23:30,Philadelphia Union,Atlanta United,3,2,30,4,6,2,15,5,12,2,3,2,0,1,Allen Chapman
+USA,01/08/2026,23:30,Red Bull New York,Orlando City,3,2,19,20,8,7,10,10,5,4,3,2,0,0,Filip Dujic
+USA,01/08/2026,23:30,Vancouver Whitecaps,Los Angeles FC,1,1,21,5,5,1,14,9,11,1,1,1,0,0,Elijio Arreguin
+USA,02/08/2026,00:10,Inter Miami CF,Columbus Crew,2,2,12,13,4,3,9,5,5,2,1,2,0,0,Mary Victoria Penso
+USA,02/08/2026,00:30,Chicago Fire FC,Charlotte FC,2,1,14,14,5,1,8,7,8,6,3,0,0,0,Jon Freemon
+USA,02/08/2026,00:30,Minnesota United,San Diego FC,1,1,14,13,8,2,8,3,8,4,1,1,0,0,Timothy Ford
+USA,02/08/2026,00:30,Sporting Kansas City,Houston Dynamo FC,0,2,6,14,4,4,10,12,2,6,0,1,1,0,Serhii Boiko
+USA,02/08/2026,00:30,St. Louis City,Real Salt Lake,1,1,20,9,4,3,12,10,9,4,3,3,0,0,Chris Penso
+USA,02/08/2026,01:30,Colorado Rapids,Austin FC,1,0,23,9,8,3,15,12,11,0,1,4,0,0,Armando Villarreal
+USA,02/08/2026,01:46,FC Cincinnati,San Jose Earthquakes,4,2,23,12,11,2,12,6,9,6,3,0,0,0,Víctor Manuel Rivas
+USA,02/08/2026,02:30,LA Galaxy,FC Dallas,0,0,18,18,9,4,11,13,6,6,2,4,0,0,Fotis Bazakos
+USA,02/08/2026,02:45,Portland Timbers,Seattle Sounders FC,2,1,14,16,5,3,7,12,4,5,2,2,0,0,Joseph Dickerson
+USA,08/08/2026,20:30,New England Revolution,Houston Dynamo FC,0,2,9,13,2,7,10,10,9,4,0,1,0,0,Malik Badawi
+USA,15/08/2026,23:30,Atlanta United,Red Bull New York,2,1,10,11,3,3,14,12,3,7,3,1,0,0,Marcos de Oliveira
+USA,15/08/2026,23:30,CF Montréal,DC United,1,1,23,7,8,2,10,11,5,3,1,2,0,0,Pierre-Luc Lauzière
+USA,15/08/2026,23:30,Charlotte FC,Columbus Crew,3,1,9,26,7,4,9,9,1,13,3,0,0,0,Filip Dujic
+USA,15/08/2026,23:30,Orlando City,FC Cincinnati,1,1,18,11,5,3,7,12,10,5,1,2,0,0,Mary Victoria Penso
+USA,15/08/2026,23:30,Toronto FC,New England Revolution,2,1,3,24,1,7,11,5,0,9,1,1,1,0,Joseph Dickerson
+USA,16/08/2026,00:30,Houston Dynamo FC,LA Galaxy,1,0,9,9,2,0,15,14,4,3,2,1,1,1,Ricardo Fierro
+USA,16/08/2026,00:30,Nashville SC,Inter Miami CF,4,1,18,16,8,5,15,10,10,4,1,3,0,0,Drew Thomas Fischer
+USA,16/08/2026,01:30,Colorado Rapids,Sporting Kansas City,2,0,28,6,4,3,12,12,8,2,1,3,0,2,
+USA,16/08/2026,01:30,Real Salt Lake,Minnesota United,1,1,13,15,7,3,7,12,7,10,3,1,0,0,
+USA,16/08/2026,02:30,Los Angeles FC,San Diego FC,0,1,15,9,3,2,21,12,9,7,4,2,0,1,
+USA,16/08/2026,02:30,San Jose Earthquakes,St. Louis City,1,3,6,14,1,7,16,17,4,5,1,2,0,0,
+USA,16/08/2026,22:00,Chicago Fire FC,Portland Timbers,2,1,8,11,4,2,15,6,0,4,2,2,0,0,
+USA,16/08/2026,22:00,New York City FC,Philadelphia Union,2,3,17,17,4,5,15,21,8,4,3,4,0,0,
+USA,17/08/2026,00:30,Austin FC,FC Dallas,1,2,9,15,4,6,12,17,7,4,3,4,0,0,Ramy Touchan
+USA,17/08/2026,02:30,Seattle Sounders FC,Vancouver Whitecaps,0,2,5,19,0,6,16,11,1,8,3,0,0,0,Armando Villarreal
+USA,19/08/2026,23:30,Columbus Crew,CF Montréal,1,2,6,13,2,7,7,7,5,3,2,4,0,0,Malik Badawi
+USA,19/08/2026,23:30,DC United,New England Revolution,0,3,15,18,3,7,15,10,4,5,1,2,0,0,Ricardo Fierro
+USA,19/08/2026,23:30,FC Cincinnati,New York City FC,2,1,14,16,6,8,10,9,2,5,3,3,0,0,Fotis Bazakos
+USA,19/08/2026,23:30,Orlando City,Chicago Fire FC,1,2,16,7,5,3,15,11,3,3,2,2,0,0,Rosendo Mendoza
+USA,19/08/2026,23:30,Philadelphia Union,Inter Miami CF,2,2,17,5,6,3,18,13,4,1,4,2,1,1,Filip Dujic
+USA,19/08/2026,23:30,Red Bull New York,Nashville SC,0,1,13,11,1,3,4,12,7,10,1,2,0,0,Lorenzo Hernandez
+USA,19/08/2026,23:30,Toronto FC,Charlotte FC,3,3,16,16,6,10,10,10,6,5,1,0,1,0,Gérard-Kader Lebuis
+USA,20/08/2026,00:25,Sporting Kansas City,St. Louis City,1,1,18,7,3,2,12,11,9,2,2,2,0,0,Victor Manuel Rivas
+USA,20/08/2026,00:30,Minnesota United,Atlanta United,1,2,13,10,4,3,13,13,6,4,4,3,0,0,Joshua Encarnación
+USA,20/08/2026,01:30,Colorado Rapids,Los Angeles FC,1,0,13,10,4,2,14,10,4,4,3,3,0,0,Joe Dickerson
+USA,20/08/2026,01:30,Real Salt Lake,FC Dallas,3,4,14,13,7,5,11,13,6,3,3,3,0,0,Armando Villarreal
+USA,20/08/2026,01:30,Seattle Sounders FC,Austin FC,1,2,19,12,7,7,10,9,7,5,1,0,0,0,Allen Chapman
+USA,20/08/2026,02:30,LA Galaxy,San Jose Earthquakes,1,0,10,22,7,5,12,17,2,5,2,3,1,0,Ramy Touchan
+USA,20/08/2026,02:30,Portland Timbers,San Diego FC,3,1,11,21,5,6,15,11,0,7,2,1,0,0,Rubiel Vazquez
+USA,20/08/2026,02:30,Vancouver Whitecaps,Houston Dynamo FC,0,1,17,9,1,5,13,12,8,2,1,2,0,0,Ricardo Montero
+USA,22/08/2026,23:30,CF Montréal,LA Galaxy,2,2,15,9,6,5,9,8,6,5,2,0,0,1,Lorenzo Hernandez
+USA,22/08/2026,23:30,Charlotte FC,DC United,3,1,11,17,5,5,15,11,4,9,2,3,0,0,Elijio Arreguin
+USA,22/08/2026,23:30,FC Cincinnati,Seattle Sounders FC,1,1,17,10,9,3,7,14,9,4,1,2,0,0,Drew Fischer
+USA,22/08/2026,23:30,Inter Miami CF,Toronto FC,1,2,10,7,3,3,15,8,3,2,2,1,0,0,Ismail Elfath
+USA,22/08/2026,23:30,Orlando City,Real Salt Lake,2,1,11,8,3,3,12,14,5,4,1,3,0,0,Fotis Bazakos
+USA,22/08/2026,23:30,Red Bull New York,Chicago Fire FC,1,1,11,10,6,5,10,10,3,2,1,2,0,0,Sergii Demianchuk
+USA,23/08/2026,00:30,Nashville SC,Columbus Crew,3,2,13,3,7,2,8,7,8,1,1,1,0,0,Victor Manuel Rivas
+USA,23/08/2026,00:30,St. Louis City,Houston Dynamo FC,2,1,9,18,4,4,18,10,1,5,4,3,0,0,Alexis Da Silva
+USA,23/08/2026,01:00,Austin FC,Philadelphia Union,1,1,12,9,6,3,8,13,6,6,1,2,0,0,Rodrigo Albuquerque
+USA,23/08/2026,01:30,Vancouver Whitecaps,FC Dallas,5,0,17,6,10,1,12,9,9,3,1,5,0,0,Malik Badawi
+USA,23/08/2026,02:30,Los Angeles FC,Portland Timbers,1,1,33,8,12,2,10,15,12,0,2,1,0,1,Jon Freemon
+USA,23/08/2026,02:30,San Diego FC,Colorado Rapids,3,0,6,9,4,2,13,21,2,3,0,3,0,0,Pierre-Luc Lauzière
+USA,23/08/2026,02:30,San Jose Earthquakes,Minnesota United,1,5,11,11,6,7,14,15,3,3,1,0,0,0,Jair Marrufo
+USA,23/08/2026,20:30,New England Revolution,New York City FC,1,1,10,12,6,5,6,12,6,4,1,1,0,0,Guido Gonzales Jr.
+USA,23/08/2026,23:00,Atlanta United,Sporting Kansas City,2,1,8,8,4,1,8,13,2,6,2,1,0,0,Tori Penso
+USA,29/08/2026,20:30,Seattle Sounders FC,Chicago Fire FC,2,2,11,20,3,11,9,9,4,7,1,0,0,0,Ismail Elfath
+USA,29/08/2026,23:30,Atlanta United,Charlotte FC,0,2,18,12,3,5,8,5,11,7,1,1,0,0,Victor Manuel Rivas
+USA,29/08/2026,23:30,DC United,Los Angeles FC,0,0,14,19,4,1,11,6,5,8,0,0,0,0,Sergii Demianchuk
+USA,29/08/2026,23:30,Inter Miami CF,CF Montréal,7,1,21,10,12,5,10,11,6,6,1,2,0,0,Elijio Arreguin
+USA,29/08/2026,23:30,Red Bull New York,Philadelphia Union,1,3,11,18,4,7,12,13,4,7,1,2,0,0,Drew Fischer
+USA,29/08/2026,23:30,Toronto FC,New York City FC,1,1,14,6,6,2,10,13,7,2,3,3,0,0,Malik Badawi
+USA,30/08/2026,00:30,Houston Dynamo FC,San Jose Earthquakes,0,0,10,11,0,4,8,9,7,4,0,1,0,0,Pierre-Luc Lauzière
+USA,30/08/2026,00:30,Minnesota United,Orlando City,3,3,21,6,9,5,13,10,8,1,2,2,0,0,Allen Chapman
+USA,30/08/2026,00:30,Nashville SC,FC Cincinnati,4,0,19,15,7,8,14,9,6,4,3,2,0,0,Armando Villarreal
+USA,30/08/2026,00:30,Sporting Kansas City,Vancouver Whitecaps,0,3,7,16,0,6,15,20,1,4,2,2,0,0,Marcos de Oliveira
+USA,30/08/2026,01:30,Colorado Rapids,Real Salt Lake,1,0,14,4,4,0,13,21,7,1,3,5,0,0,Rosendo Mendoza
+USA,30/08/2026,02:30,Portland Timbers,Austin FC,1,2,13,10,5,3,9,14,6,3,1,4,0,0,Guido Gonzales Jr.
+USA,30/08/2026,02:30,San Diego FC,LA Galaxy,3,1,20,17,7,7,10,14,7,7,3,2,1,0,Tori Penso
+USA,30/08/2026,20:30,Columbus Crew,New England Revolution,1,3,7,20,1,11,10,7,5,5,1,1,0,0,Jon Freemon
+USA,30/08/2026,23:00,St. Louis City,FC Dallas,3,3,10,12,5,7,8,15,6,3,1,2,0,0,Jair Marrufo
+USA,04/09/2026,23:30,New York City FC,Nashville SC,0,0,6,13,1,2,14,13,3,3,2,4,0,0,Rosendo Mendoza
+USA,05/09/2026,23:30,Charlotte FC,Houston Dynamo FC,0,0,9,18,3,5,13,9,8,6,2,4,1,0,Guido Gonzales Jr.
+USA,05/09/2026,23:30,Columbus Crew,Colorado Rapids,3,0,15,10,6,2,13,16,1,3,4,0,0,0,Alexis Da Silva
+USA,05/09/2026,23:30,Orlando City,San Diego FC,1,0,15,7,5,2,11,11,6,4,3,2,0,0,Joe Dickerson
+USA,05/09/2026,23:30,Philadelphia Union,CF Montréal,2,0,19,5,8,2,15,8,6,1,4,4,0,0,Chris Penso
+USA,05/09/2026,23:30,Toronto FC,Chicago Fire FC,4,4,17,15,7,6,9,7,6,3,2,2,0,0,Tori Penso
+USA,06/09/2026,00:30,Austin FC,San Jose Earthquakes,1,1,16,10,3,3,10,12,7,7,1,1,0,0,Serhii Boiko
+USA,06/09/2026,00:30,FC Dallas,Sporting Kansas City,4,3,15,26,9,10,9,10,3,7,0,2,0,0,Lorenzo Hernandez
+USA,06/09/2026,00:30,Seattle Sounders FC,Red Bull New York,0,0,21,9,6,4,11,15,9,7,1,3,0,0,Ricardo Fierro
+USA,06/09/2026,01:00,Inter Miami CF,Atlanta United,2,2,11,14,3,5,15,17,6,6,5,2,0,0,Jon Freemon
+USA,06/09/2026,01:30,LA Galaxy,New England Revolution,2,1,8,24,3,7,13,11,5,3,2,3,0,0,Drew Fischer
+USA,06/09/2026,01:30,Real Salt Lake,Los Angeles FC,2,2,22,17,9,5,5,7,5,8,3,0,0,0,Allen Chapman
+USA,06/09/2026,02:30,Portland Timbers,Minnesota United,5,4,11,17,5,8,12,18,4,3,1,3,0,0,Filip Dujic
+USA,06/09/2026,02:30,Vancouver Whitecaps,St. Louis City,1,3,15,11,3,6,18,18,6,2,4,3,0,0,Michael Venne
+USA,09/09/2026,23:30,Atlanta United,Orlando City,2,3,15,14,2,7,9,9,7,5,1,2,0,0,Armando Villarreal
+USA,09/09/2026,23:30,CF Montréal,Charlotte FC,1,2,17,15,5,4,11,12,11,3,2,1,0,0,Rubiel Vazquez
+USA,09/09/2026,23:30,DC United,Columbus Crew,2,1,10,16,5,4,8,12,3,5,3,2,0,0,Muhammad Kaleia
+USA,09/09/2026,23:30,Toronto FC,Nashville SC,2,1,16,11,7,5,9,10,3,8,1,0,0,0,Filip Dujic
+USA,09/09/2026,23:45,Philadelphia Union,FC Cincinnati,5,0,20,1,6,0,16,6,7,1,0,2,0,1,Joe Dickerson
+USA,10/09/2026,00:00,New York City FC,New England Revolution,1,2,18,11,6,6,5,10,12,4,0,2,0,0,Allen Chapman
+USA,10/09/2026,00:30,Austin FC,Colorado Rapids,1,1,11,11,2,5,8,18,8,4,0,2,0,0,Sergii Demianchuk
+USA,10/09/2026,00:30,Chicago Fire FC,Inter Miami CF,1,1,10,20,3,8,16,14,2,5,2,3,0,0,Jair Marrufo
+USA,10/09/2026,00:30,Houston Dynamo FC,Real Salt Lake,2,1,12,9,6,4,7,18,1,4,1,4,0,0,Ramy Touchan
+USA,10/09/2026,00:30,Minnesota United,FC Dallas,1,2,8,13,2,6,13,21,2,6,2,2,0,0,Ricardo Fierro
+USA,10/09/2026,02:30,Los Angeles FC,Red Bull New York,2,0,15,8,8,1,11,13,9,3,2,2,0,0,Ricardo Montero
+USA,10/09/2026,02:30,Portland Timbers,St. Louis City,2,2,16,10,3,4,10,21,9,2,1,4,0,0,Fotis Bazakos
+USA,10/09/2026,02:30,San Diego FC,San Jose Earthquakes,2,3,10,11,6,6,12,17,1,3,2,4,1,1,Alexis Da Silva
+USA,10/09/2026,02:30,Vancouver Whitecaps,LA Galaxy,3,0,18,10,9,5,11,13,7,5,1,3,0,0,Pierre-Luc Lauzière
+USA,12/09/2026,23:30,Columbus Crew,Red Bull New York,0,1,11,15,4,5,12,14,7,3,3,2,0,0,Ramy Touchan
+USA,12/09/2026,23:30,DC United,Atlanta United,0,0,4,20,0,4,16,6,4,8,3,2,0,0,Malik Badawi
+USA,12/09/2026,23:30,FC Cincinnati,Charlotte FC,3,3,28,8,9,4,6,10,12,3,2,1,0,0,Pierre-Luc Lauzière
+USA,12/09/2026,23:30,Inter Miami CF,Nashville SC,2,2,14,18,5,3,13,18,4,3,3,2,0,0,Guido Gonzales Jr.
+USA,12/09/2026,23:30,Orlando City,Toronto FC,3,0,13,18,8,4,13,8,4,3,3,2,0,0,Jon Freemon
+USA,13/09/2026,00:30,FC Dallas,Portland Timbers,2,1,9,17,5,4,13,4,7,5,1,0,0,0,Timothy Ford
+USA,13/09/2026,00:30,Sporting Kansas City,Los Angeles FC,3,1,20,22,8,8,6,9,6,13,2,2,0,0,Chris Penso
+USA,13/09/2026,00:30,St. Louis City,Minnesota United,4,2,14,11,8,3,14,15,6,5,0,1,0,1,Ricardo Montero
+USA,13/09/2026,01:30,Colorado Rapids,CF Montréal,1,0,17,11,6,5,13,11,5,1,2,1,0,0,Drew Fischer
+USA,13/09/2026,01:30,Real Salt Lake,New York City FC,0,2,15,6,6,3,18,11,10,1,2,2,0,0,Abdou Ndiaye
+USA,13/09/2026,02:30,LA Galaxy,Seattle Sounders FC,1,1,18,17,5,8,9,15,5,3,0,2,0,0,Marcos de Oliveira
+USA,13/09/2026,02:30,San Jose Earthquakes,Houston Dynamo FC,1,0,10,11,1,5,17,14,1,3,4,1,0,0,Rosendo Mendoza
+USA,13/09/2026,21:30,Chicago Fire FC,New England Revolution,1,2,22,4,7,2,14,9,13,0,2,2,0,0,Rubiel Vazquez
+USA,13/09/2026,22:30,Vancouver Whitecaps,Austin FC,1,2,20,4,6,2,16,14,6,0,2,3,0,1,Víctor Manuel Rivas
+USA,14/09/2026,01:00,San Diego FC,Philadelphia Union,0,5,10,21,5,5,13,15,11,4,2,2,0,0,Ismail Elfath
+USA,18/09/2026,23:30,New York City FC,Red Bull New York,0,1,16,10,4,1,10,19,6,7,2,3,0,0,Jon Freemon
+USA,19/09/2026,23:30,CF Montréal,Columbus Crew,0,2,9,13,2,3,20,11,5,1,2,1,0,0,Fotis Bazakos
+USA,19/09/2026,23:30,DC United,Charlotte FC,1,2,31,10,11,7,7,12,4,3,2,2,0,0,Armando Villarreal
+USA,19/09/2026,23:30,New England Revolution,Orlando City,4,2,18,11,9,5,8,5,10,3,4,0,0,0,Serhii Boiko
+USA,19/09/2026,23:30,San Jose Earthquakes,Los Angeles FC,2,2,22,3,9,2,8,7,17,3,2,2,0,1,Drew Fischer
+USA,20/09/2026,00:30,FC Dallas,Austin FC,0,0,12,8,4,3,7,6,8,6,2,2,0,0,Allen Chapman
+USA,20/09/2026,00:30,Houston Dynamo FC,FC Cincinnati,2,2,7,26,2,8,7,13,3,7,0,0,0,0,Jair Marrufo
+USA,20/09/2026,00:30,Minnesota United,LA Galaxy,2,3,16,17,5,5,14,8,5,9,1,1,0,0,Sergii Demianchuk
+USA,20/09/2026,00:30,Sporting Kansas City,Philadelphia Union,3,4,10,12,6,8,11,14,3,4,3,4,0,0,Ekaterina Koroleva
+USA,20/09/2026,00:30,St. Louis City,Toronto FC,3,1,18,10,8,2,17,9,8,4,2,2,0,0,Lukasz Szpala
+USA,20/09/2026,01:30,Nashville SC,Chicago Fire FC,3,0,13,9,5,1,12,9,5,2,1,1,0,0,Lorenzo Hernandez
+USA,20/09/2026,01:30,Real Salt Lake,Vancouver Whitecaps,0,3,12,21,3,6,14,14,6,7,2,5,0,0,Guido Gonzales Jr.
+USA,20/09/2026,02:30,Colorado Rapids,Seattle Sounders FC,3,3,18,16,7,6,17,14,4,6,2,0,0,0,Elijio Arreguin
+USA,20/09/2026,02:30,Portland Timbers,Atlanta United,0,1,21,10,3,3,4,13,5,3,2,2,0,0,Ismail Elfath
+USA,20/09/2026,23:00,Inter Miami CF,San Diego FC,2,2,19,8,8,3,20,10,4,1,2,1,0,0,Rosendo Mendoza
+USA,24/09/2026,01:30,Seattle Sounders FC,Real Salt Lake,2,0,11,12,4,2,10,9,7,6,4,2,0,0,Joe Dickerson
+USA,26/09/2026,23:30,Atlanta United,New York City FC,2,2,7,9,5,3,14,14,4,3,1,1,0,0,Alexis Da Silva
+USA,26/09/2026,23:30,CF Montréal,FC Cincinnati,3,1,15,18,5,4,8,7,4,6,2,2,0,0,Ismail Elfath
+USA,26/09/2026,23:30,Charlotte FC,Chicago Fire FC,0,1,11,18,2,9,14,15,4,6,4,2,1,0,Chris Penso
+USA,26/09/2026,23:30,Philadelphia Union,Orlando City,4,2,20,11,9,2,19,13,7,7,2,4,0,0,Sergii Demianchuk
+USA,27/09/2026,00:30,Austin FC,San Diego FC,3,3,13,15,6,5,11,6,4,1,1,0,0,0,Jon Freemon
+USA,27/09/2026,00:30,FC Dallas,Los Angeles FC,1,0,13,11,4,3,15,12,2,2,2,4,0,0,Serhii Boiko
+USA,27/09/2026,00:30,Houston Dynamo FC,Sporting Kansas City,0,2,21,10,3,4,3,11,8,2,1,4,1,0,Timothy Ford
+USA,27/09/2026,00:30,Nashville SC,Toronto FC,2,0,23,11,11,3,12,9,9,3,1,0,0,0,Ramy Touchan
+USA,27/09/2026,00:30,Seattle Sounders FC,Minnesota United,3,1,13,14,8,2,12,6,5,7,2,2,0,0,Nabil Bensalah
+USA,27/09/2026,01:30,Real Salt Lake,New England Revolution,3,0,9,16,6,4,8,14,1,11,2,2,0,0,Ricardo Fierro
+USA,27/09/2026,02:30,LA Galaxy,Colorado Rapids,3,2,16,9,7,4,13,20,5,6,1,3,0,0,Armando Villarreal
+USA,27/09/2026,02:30,San Jose Earthquakes,Portland Timbers,3,1,13,18,8,6,8,11,5,9,2,1,0,0,Lorenzo Hernandez
+USA,27/09/2026,02:30,Vancouver Whitecaps,DC United,3,3,16,21,9,8,10,10,7,10,0,1,0,0,Fotis Bazakos
+USA,27/09/2026,23:00,Columbus Crew,Inter Miami CF,2,1,14,5,6,3,18,17,9,1,4,5,0,1,Víctor Manuel Rivas
+USA,30/09/2026,23:30,Red Bull New York,St. Louis City,0,3,10,15,5,8,12,12,4,3,1,1,0,0,Rubiel Vazquez
+USA,02/10/2026,01:30,Seattle Sounders FC,Sporting Kansas City,2,1,21,22,7,11,7,4,11,6,1,1,0,0,Jair Marrufo
+USA,07/10/2026,00:30,Chicago Fire FC,Vancouver Whitecaps,3,1,22,15,7,2,8,11,2,8,2,1,0,0,Serhii Boiko
+USA,10/10/2026,17:00,Toronto FC,CF Montréal,2,1,14,16,5,7,9,17,8,6,1,3,0,0,Allen Chapman
+USA,10/10/2026,18:30,Chicago Fire FC,New York City FC,2,1,14,12,4,6,18,10,4,4,2,0,1,0,Brandon Stevis
+USA,10/10/2026,23:30,Atlanta United,FC Cincinnati,1,3,16,13,6,4,8,14,5,4,2,3,0,0,Fotis Bazakos
+USA,10/10/2026,23:30,Charlotte FC,FC Dallas,3,2,18,13,8,5,14,11,14,3,1,1,0,0,Drew Fischer
+USA,10/10/2026,23:30,Inter Miami CF,DC United,4,0,16,16,9,2,17,6,4,2,0,0,0,0,Lukasz Szpala
+USA,10/10/2026,23:30,New England Revolution,Seattle Sounders FC,0,3,13,9,5,5,6,15,8,5,1,2,0,0,Tori Penso
+USA,10/10/2026,23:30,Orlando City,Columbus Crew,3,2,19,27,8,15,14,11,2,11,4,2,0,0,Rosendo Mendoza
+USA,10/10/2026,23:30,Philadelphia Union,Real Salt Lake,2,1,14,11,5,4,21,13,4,3,4,2,0,0,Elijio Arreguin
+USA,10/10/2026,23:30,Red Bull New York,San Diego FC,4,1,28,14,12,5,20,14,4,7,2,3,0,0,Malik Badawi
+USA,11/10/2026,00:30,Austin FC,Nashville SC,1,4,11,25,5,11,5,11,4,6,1,2,0,0,Ismail Elfath
+USA,11/10/2026,00:30,Minnesota United,Houston Dynamo FC,2,2,15,15,6,6,16,4,2,5,2,0,0,0,Marcos de Oliveira
+USA,11/10/2026,00:30,Sporting Kansas City,Portland Timbers,3,3,12,9,5,5,17,9,6,1,0,1,0,0,Pierre-Luc Lauzière
+USA,11/10/2026,01:30,Colorado Rapids,San Jose Earthquakes,1,1,13,9,10,3,16,12,6,3,1,1,0,0,Filip Dujic
+USA,11/10/2026,02:30,Los Angeles FC,Vancouver Whitecaps,1,1,11,9,4,3,15,9,3,2,3,2,0,1,Guido Gonzales Jr.
+USA,11/10/2026,23:00,St. Louis City,LA Galaxy,6,2,11,18,6,7,17,10,2,3,2,2,0,0,Joe Dickerson
+USA,14/10/2026,23:30,CF Montréal,Atlanta United,0,3,9,18,2,6,16,15,7,6,1,2,0,0,Ricardo Montero
+USA,14/10/2026,23:30,Columbus Crew,Charlotte FC,3,1,33,9,14,2,6,6,10,4,2,0,0,0,Timothy Ford
+USA,14/10/2026,23:30,DC United,Red Bull New York,2,1,4,24,3,6,9,12,3,11,1,3,1,0,Guido Gonzales Jr.
+USA,14/10/2026,23:30,FC Cincinnati,New England Revolution,2,3,21,10,9,5,8,7,12,5,3,1,0,0,Rubiel Vazquez
+USA,14/10/2026,23:30,Inter Miami CF,New York City FC,2,0,14,14,6,5,14,8,3,4,2,0,0,0,Lorenzo Hernandez
+USA,14/10/2026,23:30,Toronto FC,Orlando City,3,3,16,14,7,4,17,12,5,5,3,1,0,0,Armando Villarreal
+USA,15/10/2026,00:30,Chicago Fire FC,Philadelphia Union,1,3,8,19,4,8,12,16,2,7,2,2,1,0,Ricardo Fierro
+USA,15/10/2026,00:30,FC Dallas,Seattle Sounders FC,1,0,15,17,3,7,6,5,7,11,2,0,0,0,Jon Freemon
+USA,15/10/2026,00:30,Nashville SC,Sporting Kansas City,4,0,18,9,11,1,14,10,7,4,0,0,0,0,Joshua Encarnación
+USA,15/10/2026,00:30,St. Louis City,Vancouver Whitecaps,0,0,8,17,4,0,17,14,5,10,2,2,0,0,Filip Dujic
+USA,15/10/2026,01:30,Colorado Rapids,Minnesota United,2,2,15,11,4,2,7,10,7,4,2,1,1,0,Víctor Manuel Rivas
+USA,15/10/2026,01:30,Real Salt Lake,San Jose Earthquakes,1,1,22,16,8,2,11,9,5,5,1,0,0,0,Sergii Demianchuk
+USA,15/10/2026,02:30,LA Galaxy,Portland Timbers,2,0,9,12,5,3,7,11,2,5,3,3,0,0,Chris Penso
+USA,15/10/2026,02:30,Los Angeles FC,Austin FC,3,1,28,14,11,4,8,8,7,5,0,0,0,0,Jair Marrufo
+USA,15/10/2026,02:30,San Diego FC,Houston Dynamo FC,3,3,17,10,6,3,15,12,10,3,3,3,0,0,Serhii Boiko
+USA,17/10/2026,18:30,Philadelphia Union,Charlotte FC,2,2,21,13,5,3,18,15,7,1,0,3,0,0,Jon Freemon
+USA,17/10/2026,20:30,Minnesota United,St. Louis City,3,2,27,15,11,6,14,15,6,7,2,2,0,0,Ramy Touchan
+USA,17/10/2026,23:30,Atlanta United,Inter Miami CF,1,3,21,7,3,5,8,11,5,2,3,2,0,0,Allen Chapman
+USA,17/10/2026,23:30,New England Revolution,Chicago Fire FC,1,0,5,19,4,6,9,17,0,10,1,1,0,0,Nabil Bensalah
+USA,17/10/2026,23:30,New York City FC,Los Angeles FC,1,1,13,9,3,3,18,8,10,4,3,0,0,0,Rosendo Mendoza
+USA,17/10/2026,23:30,Orlando City,DC United,4,1,13,15,7,3,10,19,1,8,1,3,0,0,Pierre-Luc Lauzière
+USA,17/10/2026,23:30,Red Bull New York,Toronto FC,0,2,15,6,4,4,14,15,7,1,0,3,0,0,Marcos de Oliveira
+USA,18/10/2026,00:30,Austin FC,Vancouver Whitecaps,1,2,9,10,5,3,8,11,4,6,0,3,0,0,Tori Penso
+USA,18/10/2026,00:30,Houston Dynamo FC,FC Dallas,2,2,11,15,3,6,13,20,5,5,5,1,0,1,Víctor Manuel Rivas
+USA,18/10/2026,00:30,Sporting Kansas City,Real Salt Lake,1,3,9,13,3,8,14,10,7,5,3,4,0,0,Alexis Da Silva
+USA,18/10/2026,02:30,LA Galaxy,San Diego FC,2,2,12,15,9,7,11,10,5,3,2,1,0,0,Rubiel Vazquez
+USA,18/10/2026,02:30,Portland Timbers,Colorado Rapids,0,0,11,9,4,1,17,20,1,4,1,3,0,0,Elijio Arreguin
+USA,18/10/2026,02:30,San Jose Earthquakes,Nashville SC,1,1,14,6,2,4,11,15,4,0,3,1,0,0,Joe Dickerson
+USA,18/10/2026,02:30,Seattle Sounders FC,CF Montréal,1,1,18,9,5,2,10,12,5,2,1,2,0,0,Fotis Bazakos
+USA,18/10/2026,21:00,FC Cincinnati,Columbus Crew,0,2,23,3,7,2,13,16,2,2,2,2,0,0,Drew Fischer
+USA,21/10/2026,23:15,FC Cincinnati,DC United,2,1,15,13,6,4,8,13,6,9,2,2,0,0,Timothy Ford
+USA,24/10/2026,17:30,CF Montréal,Nashville SC,0,2,10,8,6,5,13,14,6,5,2,2,0,0,Lukasz Szpala
+USA,24/10/2026,19:30,Columbus Crew,Toronto FC,4,2,10,20,6,8,12,7,4,5,0,0,1,0,Chris Penso
+USA,24/10/2026,21:30,Red Bull New York,Inter Miami CF,2,0,19,12,6,2,13,5,3,2,1,1,0,0,Filip Dujic
+USA,24/10/2026,23:30,Atlanta United,Chicago Fire FC,2,3,8,12,3,4,8,14,4,5,3,4,0,0,Víctor Manuel Rivas
+USA,24/10/2026,23:30,DC United,FC Cincinnati,0,2,13,10,2,4,12,10,8,3,1,2,0,0,Jon Freemon
+USA,24/10/2026,23:30,Orlando City,New York City FC,2,2,10,17,5,7,16,12,3,9,4,1,0,0,Elijio Arreguin
+USA,24/10/2026,23:30,Philadelphia Union,New England Revolution,1,2,25,12,8,8,14,7,4,6,2,1,0,0,Malik Badawi
+USA,25/10/2026,00:30,Colorado Rapids,Vancouver Whitecaps,1,0,18,8,8,2,10,12,6,3,2,0,0,0,Jair Marrufo
+USA,25/10/2026,00:30,FC Dallas,San Jose Earthquakes,3,0,15,4,6,1,13,13,6,1,0,2,0,0,Rubiel Vazquez
+USA,25/10/2026,00:30,Houston Dynamo FC,Minnesota United,0,0,10,17,1,5,11,16,4,7,3,0,0,0,Tori Penso
+USA,25/10/2026,00:30,Real Salt Lake,St. Louis City,3,0,20,3,8,2,18,9,7,0,2,1,0,1,Drew Fischer
+USA,25/10/2026,00:30,Sporting Kansas City,Austin FC,1,2,19,13,5,8,16,11,2,5,5,2,0,0,Ricardo Fierro
+USA,25/10/2026,02:30,Portland Timbers,Charlotte FC,3,2,27,6,13,3,10,9,9,3,1,1,0,0,Rosendo Mendoza
+USA,25/10/2026,02:30,San Diego FC,Seattle Sounders FC,2,2,13,12,4,3,11,12,5,3,0,2,0,0,Allen Chapman
+USA,26/10/2026,01:00,Los Angeles FC,LA Galaxy,2,2,21,10,5,4,9,7,12,1,1,1,0,0,Armando Villarreal
+USA,28/10/2026,23:30,Inter Miami CF,FC Cincinnati,2,2,14,13,4,3,9,10,4,3,3,0,0,0,Armando Villarreal
+USA,28/10/2026,23:30,New England Revolution,Red Bull New York,3,2,9,20,4,11,9,12,2,6,2,3,0,0,Chris Penso
+USA,28/10/2026,23:30,Toronto FC,DC United,2,1,9,10,2,2,7,15,5,7,3,3,0,0,Alexis Da Silva
+USA,28/10/2026,23:40,Charlotte FC,CF Montréal,4,0,13,10,7,1,8,15,8,6,0,3,0,0,Ricardo Fierro
+USA,28/10/2026,23:40,New York City FC,Atlanta United,2,1,11,19,6,6,13,14,3,3,2,4,0,0,Tori Penso
+USA,29/10/2026,00:30,Austin FC,Real Salt Lake,1,2,17,19,5,4,7,11,8,7,2,1,0,0,Ricardo Montero
+USA,29/10/2026,00:30,Chicago Fire FC,Orlando City,2,2,23,9,5,5,14,9,8,3,2,2,0,0,Marcos de Oliveira
+USA,29/10/2026,00:30,FC Dallas,Columbus Crew,0,2,16,9,5,3,17,8,8,3,4,1,0,0,Sergii Demianchuk
+USA,29/10/2026,00:30,Minnesota United,Sporting Kansas City,3,1,18,10,8,2,12,12,8,4,4,0,0,0,Serhii Boiko
+USA,29/10/2026,00:30,Nashville SC,Philadelphia Union,0,0,9,6,1,2,8,15,2,8,1,2,0,0,Pierre-Luc Lauzière
+USA,29/10/2026,00:30,St. Louis City,Portland Timbers,2,3,13,12,6,6,15,12,5,4,0,3,0,1,Rubiel Vazquez
+USA,29/10/2026,02:30,San Jose Earthquakes,Colorado Rapids,2,2,19,10,8,3,20,19,11,5,2,5,1,1,Ramy Touchan
+USA,29/10/2026,02:30,Seattle Sounders FC,Houston Dynamo FC,0,1,21,2,5,1,14,10,10,1,1,1,0,0,Lorenzo Hernandez
+USA,29/10/2026,02:40,Vancouver Whitecaps,San Diego FC,4,1,16,20,10,7,19,8,8,3,1,2,1,0,Joe Dickerson
+USA,31/10/2026,17:00,Charlotte FC,Orlando City,4,0,16,16,6,8,12,12,4,4,2,2,1,0,Víctor Manuel Rivas
+USA,31/10/2026,18:00,Columbus Crew,DC United,3,0,14,9,4,4,11,20,3,4,0,2,0,0,Elijio Arreguin
+USA,31/10/2026,18:00,FC Cincinnati,Philadelphia Union,1,0,7,15,2,6,11,4,3,12,0,0,0,0,Allen Chapman
+USA,31/10/2026,18:00,New York City FC,CF Montréal,1,1,12,10,4,2,17,19,3,4,3,5,0,0,Timothy Ford
+USA,31/10/2026,19:00,Sporting Kansas City,FC Dallas,1,1,8,10,4,2,17,17,3,7,3,4,0,0,Fotis Bazakos
+USA,31/10/2026,19:00,St. Louis City,San Diego FC,0,1,16,13,7,2,18,14,3,4,2,1,0,0,Jon Freemon
+USA,31/10/2026,21:00,LA Galaxy,Austin FC,4,1,18,12,10,2,5,8,7,5,1,1,0,1,Lukasz Szpala
+USA,31/10/2026,21:00,San Jose Earthquakes,Real Salt Lake,2,1,15,16,5,5,13,12,5,5,2,2,0,0,Lorenzo Hernandez
+USA,01/11/2026,01:30,Colorado Rapids,Chicago Fire FC,2,4,14,14,4,6,11,13,5,6,4,2,0,0,Malik Badawi
+USA,01/11/2026,20:30,Vancouver Whitecaps,Seattle Sounders FC,5,1,18,13,8,5,11,17,1,6,1,1,0,0,Alexis Da Silva
+USA,01/11/2026,21:30,Atlanta United,Toronto FC,3,1,19,13,8,3,14,10,3,3,0,2,0,0,Filip Dujic
+USA,01/11/2026,21:30,Nashville SC,Red Bull New York,3,2,21,14,7,4,5,13,12,3,0,2,0,0,Sergii Demianchuk
+USA,02/11/2026,00:00,New England Revolution,Inter Miami CF,1,2,13,14,3,6,6,16,7,1,1,3,0,0,Serhii Boiko
+USA,02/11/2026,01:30,Los Angeles FC,Minnesota United,1,3,22,6,7,3,15,17,8,1,3,4,0,0,Joe Dickerson
+USA,02/11/2026,02:45,Portland Timbers,Houston Dynamo FC,3,1,18,8,6,1,11,12,6,6,2,2,0,0,Drew Fischer
+USA,07/11/2026,21:00,CF Montréal,Vancouver Whitecaps,0,2,8,17,3,8,15,15,4,5,2,3,0,0,Marcos de Oliveira
+USA,07/11/2026,21:00,Chicago Fire FC,Columbus Crew,3,4,14,11,6,6,14,14,6,4,4,2,0,0,Rosendo Mendoza
+USA,07/11/2026,21:00,DC United,New York City FC,0,1,12,14,5,5,8,15,5,3,1,2,0,0,Matthew Thompson
+USA,07/11/2026,21:00,FC Cincinnati,Nashville SC,0,2,14,14,5,5,13,6,6,2,5,2,0,0,Tori Penso
+USA,07/11/2026,21:00,Inter Miami CF,Charlotte FC,3,3,15,11,5,5,14,6,6,2,1,1,0,0,Rubiel Vazquez
+USA,07/11/2026,21:00,Orlando City,New England Revolution,1,0,15,9,4,3,8,10,5,8,1,0,0,0,Guido Gonzales Jr.
+USA,07/11/2026,21:00,Philadelphia Union,Toronto FC,4,1,19,6,9,2,15,11,6,1,2,2,0,0,Timothy Ford
+USA,07/11/2026,21:00,Red Bull New York,Atlanta United,3,0,14,8,7,0,15,10,5,4,1,1,0,0,Pierre-Luc Lauzière
+USA,08/11/2026,00:00,Austin FC,Portland Timbers,0,2,16,9,7,4,9,10,5,5,1,0,0,0,Víctor Manuel Rivas
+USA,08/11/2026,00:00,FC Dallas,Colorado Rapids,3,1,27,6,10,1,11,13,6,4,0,2,0,0,Drew Fischer
+USA,08/11/2026,00:00,Houston Dynamo FC,St. Louis City,0,1,23,13,6,1,6,13,9,3,1,0,0,0,Allen Chapman
+USA,08/11/2026,00:00,Minnesota United,San Jose Earthquakes,3,1,15,8,6,3,16,14,8,2,3,3,0,0,Alexis Da Silva
+USA,08/11/2026,00:10,Real Salt Lake,LA Galaxy,2,1,20,13,9,0,12,10,6,9,4,1,0,0,Joe Dickerson
+USA,08/11/2026,00:10,San Diego FC,Sporting Kansas City,0,1,17,15,4,7,11,12,8,4,3,2,0,0,Ramy Touchan
+USA,08/11/2026,00:10,Seattle Sounders FC,Los Angeles FC,2,1,5,24,2,8,15,15,2,12,3,1,0,0,Filip Dujic
