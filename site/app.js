@@ -384,6 +384,7 @@ function predictionCard(m, acc, teams) {
   return `
     <div class="grow">${strip(m.home, m.away, P.stats.goals)}</div>
     <div class="factrow">${facts}</div>
+    ${analystBox(P.analyst_view, m)}
     ${teams ? compareSection(m, teams) : ""}
     <section class="section"><h2>Expected numbers</h2>
     <div class="grid">${Object.keys(STAT).map(s => statPanel(s, P, m, acc)).join("")}</div></section>
@@ -392,18 +393,26 @@ function predictionCard(m, acc, teams) {
     ${adjs.length ? `<ul class="adj">${adjs.map(a => `<li><span class="eff ${effCls(a.effect_pct)}">${a.effect_pct > 0 ? "+" : ""}${fx(a.effect_pct, 1)}%</span><span>${h(STAT[a.stat] || a.stat)}, ${h(a.side === "both" ? "both teams" : a.side === "home" ? m.home.short : m.away.short)}: ${h(a.detail)}</span><span class="pill ${h(a.status)}" title="${a.status === "info" ? "Shown for context; not used in the numbers" : a.status === "provisional" ? "Used in the numbers; size not yet calibrated on data" : "Used in the numbers; size measured on past seasons"}">${h(statusLabel[a.status] || a.status)}</span></li>`).join("")}</ul>` : `<p class="empty">No adjustments for this match.</p>`}</section>`}
     <section class="section"><h2>Missing players</h2>
     ${out.length || dbt.length ? `<ul class="adj">${out.map(x => `<li><span class="eff">${h(x.team)}</span><span>${h(x.name)}: ${h(x.reason)}${x.share ? `, ${pct(x.share)} of team goal involvement` : ""}</span><span class="pill provisional" title="Counted in the numbers">out</span></li>`).join("")}${dbt.map(x => `<li><span class="eff">${h(x.team)}</span><span>${h(x.name)}: ${h(x.reason)}</span><span class="pill info" title="Not counted in the numbers">may play</span></li>`).join("")}</ul>` : `<p class="empty">${pr.team_news ? "No injuries or suspensions reported." : "No team news yet."}</p>`}
-    <p class="note" style="margin-top:12px">${pr.team_news ? "Team news comes from FotMob in the last 4 days before kick-off and is refreshed every 3 hours. It can still change before the match." : "Team news appears 4 days before kick-off. Until then, only suspensions worked out from cards are counted, and they may miss appeals or cup bans."}</p></section>
-    ${analystBox(P.analyst_view)}`;
+    <p class="note" style="margin-top:12px">${pr.team_news ? "Team news comes from FotMob in the last 4 days before kick-off and is refreshed every 3 hours. It can still change before the match." : "Team news appears 4 days before kick-off. Until then, only suspensions worked out from cards are counted, and they may miss appeals or cup bans."}</p></section>`;
 }
 
-function analystBox(av) {
-  if (!av) return "";
-  const paras = Array.isArray(av) ? av : [av.overall].filter(Boolean);
-  if (!paras.length) return "";
+function analystBox(av, m) {
+  if (!av || (!Array.isArray(av) && !av.overall)) {
+    return m && m.status === "upcoming"
+      ? `<section class="section"><h2>Subjective view</h2><div class="panel"><p class="sub">Being written. Every match gets a subjective view for each stat from the latest news, redone as the news changes and again in the day before kick-off.</p></div></section>`
+      : "";
+  }
+  const paras = Array.isArray(av) ? av : [av.overall];
   const src = !Array.isArray(av) && av.sources ? av.sources : [];
-  return `<section class="section"><h2>Analyst view</h2><div class="panel">${paras.map(x => `<p>${h(x)}</p>`).join("")}
+  const calls = Array.isArray(av) ? "" : Object.keys(STAT).map(k => {
+    const x = analystStat({ analyst_view: av }, k);
+    return x && (x.call || x.lean)
+      ? `<li><span class="lab">${h(STAT[k])}</span><b>${h(x.call || "No change")}</b>${x.lean ? ` <span class="pill lean">${h(LEAN[x.lean] || x.lean)}</span>` : ""}</li>` : "";
+  }).join("");
+  return `<section class="section"><h2>Subjective view</h2><div class="panel">${paras.map(x => `<p>${h(x)}</p>`).join("")}
+    ${calls ? `<ul class="jcalls">${calls}</ul>` : ""}
     ${src.length ? `<p class="sub small">Read before writing: ${src.map(u => { try { return `<a href="${h(u)}" rel="noopener">${h(new URL(u).hostname.replace("www.", ""))}</a>`; } catch (e) { return ""; } }).join(", ")}</p>` : ""}
-    <p class="sub small">Opinion${!Array.isArray(av) && av.written_at ? `, written ${h(ago(av.written_at))}` : ""}. It is kept separate and never changes the numbers above.</p></div></section>`;
+    <p class="sub small">Opinion from the latest news${!Array.isArray(av) && av.written_at ? `, written ${h(ago(av.written_at))}` : ""}. It's redone as the news changes, the reasons for each stat are under its "Why", and it never changes the numbers.</p></div></section>`;
 }
 
 function compareSection(m, teams) {
@@ -699,7 +708,7 @@ function renderAbout() {
     <li>Derby or high stakes (late-season top or bottom clashes, European knockouts), for cards.</li></ul>
     Every adjustment is listed on the match page with its effect on the final number. All sizes were measured on 2024-25, then counted at about twice that size, so the adjustments have more say than the data alone would give them (the owner's choice; the cost in accuracy is on the Track record page). One that made no measurable difference (congestion, stakes) is shown for information with a size of 0.</li>
   <li><b>Probabilities.</b> Goals use a Dixon-Coles model for win/draw/loss, likely scores and over/under. Corners, cards and shots use a negative binomial distribution, which allows for more spread than a simple average suggests.</li>
-  <li><b>Our call, reasoning and judgement.</b> Each stat ends with "our call": the tightest line the numbers still give 60% or more, or "close call" when none does. Its "Why" box explains the number in words: where the base sits against the average and why, what each adjustment did, and the bottom line. Where available, a subjective view from recent news (rotation, motivation, a new manager, lineups) says whether judgement leans higher or lower than the numbers, with a judgement call. It sits next to the numbers and never changes them, so the track record stays a test of the numbers.</li></ol>
+  <li><b>Our call, reasoning and judgement.</b> Each stat ends with "our call": the tightest line the numbers still give 60% or more, or "close call" when none does. Its "Why" box explains the number in words: where the base sits against the average and why, what each adjustment did, and the bottom line. Every match also gets a subjective view from the latest news (rotation, motivation, a new manager, lineups): for each stat, whether judgement leans higher or lower than the numbers, with a judgement call and the reasons. It's redone as the news changes, at least every five days, every two days in the final week and again in the day before kick-off. It sits next to the numbers and never changes them, so the track record stays a test of the numbers.</li></ol>
   <p>Finished matches from before estimates started show a "model check": what the method would have said using only earlier games. It's labelled as such and isn't part of the track record.</p>
   <h2>What it can't do</h2>
   <ul><li>Team news is only as good as FotMob's reports, and doubtful players aren't counted.</li>
@@ -707,7 +716,7 @@ function renderAbout() {
   <li>Suspensions worked out from cards use La Liga's rule (a ban every 5th yellow) for every league except the Premier League, so they're approximate. FotMob's team news replaces them in the last 4 days.</li>
   <li>Some leagues are harder to call than others. In testing, the estimates beat the plain average on win/draw/loss by 5% to 17% in the top European leagues and the Süper Lig, but only by about 2% to 3% in the Segunda División and MLS, where results are closer and more random.</li>
   <li>Corners are hard to predict for anyone: in testing the estimates were about as good as the league average, a little better in some competitions and a little worse in others. Cards and shots beat the average in most competitions, but only slightly. Each match page says when a stat didn't beat the average in that competition.</li>
-  <li>Subjective views (new manager, motivation, rotation) appear in each stat's Why box and the Analyst view section. They're never mixed into the numbers, and not every match gets one.</li></ul>
+  <li>Subjective views (new manager, motivation, rotation, lineups) are judgement, not measurement. Every posted match gets one, shown at the top of the match page and in each stat's Why box, and it's redone as the news changes. A view written two weeks before a match can differ from the one written the day before. Views are never mixed into the numbers, so the track record stays a test of the numbers.</li></ul>
   <p>Every estimate is saved in the project's public history before kick-off, so the track record can't be edited after the fact.</p></div>`)}`;
 }
 
