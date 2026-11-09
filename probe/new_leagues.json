@@ -1,0 +1,2694 @@
+{
+ "_fd": {
+  "SP2_2122": {
+   "rows": 462,
+   "has": {
+    "HS": 462,
+    "HST": 462,
+    "HC": 462,
+    "HY": 462,
+    "HR": 462,
+    "Referee": null
+   },
+   "first": "13/08/2021",
+   "last": "29/05/2022",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BWH",
+    "BWD",
+    "BWA",
+    "IWH",
+    "IWD",
+    "IWA",
+    "PSH",
+    "PSD",
+    "PSA",
+    "WHH",
+    "WHD",
+    "WHA",
+    "VCH",
+    "VCD"
+   ]
+  },
+  "SP2_2223": {
+   "rows": 462,
+   "has": {
+    "HS": 462,
+    "HST": 462,
+    "HC": 462,
+    "HY": 462,
+    "HR": 462,
+    "Referee": null
+   },
+   "first": "12/08/2022",
+   "last": "28/05/2023",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BWH",
+    "BWD",
+    "BWA",
+    "IWH",
+    "IWD",
+    "IWA",
+    "PSH",
+    "PSD",
+    "PSA",
+    "WHH",
+    "WHD",
+    "WHA",
+    "VCH",
+    "VCD"
+   ]
+  },
+  "SP2_2324": {
+   "rows": 462,
+   "has": {
+    "HS": 462,
+    "HST": 462,
+    "HC": 462,
+    "HY": 462,
+    "HR": 462,
+    "Referee": null
+   },
+   "first": "11/08/2023",
+   "last": "02/06/2024",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BWH",
+    "BWD",
+    "BWA",
+    "IWH",
+    "IWD",
+    "IWA",
+    "PSH",
+    "PSD",
+    "PSA",
+    "WHH",
+    "WHD",
+    "WHA",
+    "VCH",
+    "VCD"
+   ]
+  },
+  "SP2_2425": {
+   "rows": 462,
+   "has": {
+    "HS": 462,
+    "HST": 462,
+    "HC": 462,
+    "HY": 462,
+    "HR": 462,
+    "Referee": null
+   },
+   "first": "15/08/2024",
+   "last": "01/06/2025",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BWH",
+    "BWD",
+    "BWA",
+    "BFH",
+    "BFD",
+    "BFA",
+    "PSH",
+    "PSD",
+    "PSA",
+    "WHH",
+    "WHD",
+    "WHA",
+    "1XBH",
+    "1XBD"
+   ]
+  },
+  "SP2_2526": {
+   "rows": 462,
+   "has": {
+    "HS": 462,
+    "HST": 462,
+    "HC": 462,
+    "HY": 462,
+    "HR": 462,
+    "Referee": null
+   },
+   "first": "15/08/2025",
+   "last": "31/05/2026",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BFDH",
+    "BFDD",
+    "BFDA",
+    "BMGMH",
+    "BMGMD",
+    "BMGMA",
+    "BVH",
+    "BVD",
+    "BVA",
+    "BWH",
+    "BWD",
+    "BWA",
+    "CLH",
+    "CLD"
+   ]
+  },
+  "SP2_2627": {
+   "rows": 138,
+   "has": {
+    "HS": 138,
+    "HST": 138,
+    "HC": 138,
+    "HY": 138,
+    "HR": 138,
+    "Referee": null
+   },
+   "first": "14/08/2026",
+   "last": "08/11/2026",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HxG",
+    "AxG",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BFDH",
+    "BFDD",
+    "BFDA",
+    "BVH",
+    "BVD",
+    "BVA",
+    "BWH",
+    "BWD",
+    "BWA",
+    "PPH",
+    "PPD",
+    "PPA"
+   ]
+  },
+  "T1_2627": {
+   "rows": 99,
+   "has": {
+    "HS": 99,
+    "HST": 99,
+    "HC": 99,
+    "HY": 99,
+    "HR": 99,
+    "Referee": null
+   },
+   "first": "14/08/2026",
+   "last": "08/11/2026",
+   "cols": [
+    "Div",
+    "Date",
+    "Time",
+    "HomeTeam",
+    "AwayTeam",
+    "FTHG",
+    "FTAG",
+    "FTR",
+    "HTHG",
+    "HTAG",
+    "HTR",
+    "HxG",
+    "AxG",
+    "HS",
+    "AS",
+    "HST",
+    "AST",
+    "HF",
+    "AF",
+    "HC",
+    "AC",
+    "HY",
+    "AY",
+    "HR",
+    "AR",
+    "B365H",
+    "B365D",
+    "B365A",
+    "BFDH",
+    "BFDD",
+    "BFDA",
+    "BVH",
+    "BVD",
+    "BVA",
+    "BWH",
+    "BWD",
+    "BWA",
+    "PPH",
+    "PPD",
+    "PPA"
+   ]
+  },
+  "USA": {
+   "rows": 6311,
+   "cols": [
+    "Country",
+    "League",
+    "Season",
+    "Date",
+    "Time",
+    "Home",
+    "Away",
+    "HG",
+    "AG",
+    "Res",
+    "PSCH",
+    "PSCD",
+    "PSCA",
+    "MaxCH",
+    "MaxCD",
+    "MaxCA",
+    "AvgCH",
+    "AvgCD",
+    "AvgCA",
+    "BFECH",
+    "BFECD",
+    "BFECA",
+    "B365CH",
+    "B365CD",
+    "B365CA",
+    ""
+   ],
+   "seasons": [
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ]
+  }
+ },
+ "_espn": {
+  "segunda-division": {
+   "202610": {
+    "status": 200,
+    "events": 48,
+    "completed": 48,
+    "first": "2026-10-02T18:30Z",
+    "last": "2026-10-31T20:00Z",
+    "notes": [],
+    "season_types": [
+     "14356:regular-season"
+    ]
+   },
+   "box": {
+    "month": "202610",
+    "event": "401883126",
+    "stats": {
+     "Albacete": {
+      "foulsCommitted": "11",
+      "yellowCards": "1",
+      "redCards": "1",
+      "wonCorners": "7",
+      "totalShots": "5",
+      "shotsOnTarget": "2"
+     },
+     "CD Sabadell": {
+      "foulsCommitted": "17",
+      "yellowCards": "3",
+      "redCards": "0",
+      "wonCorners": "6",
+      "totalShots": "25",
+      "shotsOnTarget": "5"
+     }
+    },
+    "rosters": 44,
+    "key_events": 17
+   },
+   "202611": {
+    "status": 200,
+    "events": 51,
+    "completed": 13,
+    "first": "2026-11-01T13:00Z",
+    "last": "2026-11-29T20:00Z",
+    "notes": [],
+    "season_types": [
+     "14356:regular-season"
+    ]
+   },
+   "202612": {
+    "status": 200,
+    "events": 33,
+    "completed": 0,
+    "first": "2026-12-06T20:00Z",
+    "last": "2026-12-20T20:00Z",
+    "notes": [],
+    "season_types": [
+     "14356:regular-season"
+    ]
+   },
+   "202602": {
+    "status": 200,
+    "events": 44,
+    "completed": 44,
+    "first": "2026-02-01T13:00Z",
+    "last": "2026-02-28T20:00Z",
+    "notes": [],
+    "season_types": [
+     "13564:regular-season"
+    ]
+   },
+   "202503": {
+    "status": 200,
+    "events": 55,
+    "completed": 55,
+    "first": "2025-03-01T15:15Z",
+    "last": "2025-03-31T18:30Z",
+    "notes": [],
+    "season_types": [
+     "12722:regular-season"
+    ]
+   },
+   "202409": {
+    "status": 200,
+    "events": 50,
+    "completed": 50,
+    "first": "2024-09-01T15:00Z",
+    "last": "2024-09-30T18:30Z",
+    "notes": [],
+    "season_types": [
+     "12722:regular-season"
+    ]
+   },
+   "old_box": {
+    "Eibar": {
+     "yellowCards": "5",
+     "wonCorners": "7",
+     "totalShots": "14",
+     "shotsOnTarget": "5"
+    },
+    "Real Oviedo": {
+     "yellowCards": "6",
+     "wonCorners": "1",
+     "totalShots": "9",
+     "shotsOnTarget": "3"
+    }
+   },
+   "standings_groups": [
+    "2026-2027 Spanish LALIGA 2"
+   ]
+  },
+  "super-lig": {
+   "202610": {
+    "status": 200,
+    "events": 31,
+    "completed": 31,
+    "first": "2026-10-09T17:00Z",
+    "last": "2026-10-31T16:00Z",
+    "notes": [],
+    "season_types": [
+     "14382:2026-27-turkish-super-lig"
+    ]
+   },
+   "box": {
+    "month": "202610",
+    "event": "401888258",
+    "stats": {
+     "Fenerbahce": {
+      "foulsCommitted": "8",
+      "yellowCards": "2",
+      "redCards": "0",
+      "wonCorners": "5",
+      "totalShots": "18",
+      "shotsOnTarget": "6"
+     },
+     "Goztepe": {
+      "foulsCommitted": "19",
+      "yellowCards": "4",
+      "redCards": "0",
+      "wonCorners": "8",
+      "totalShots": "12",
+      "shotsOnTarget": "6"
+     }
+    },
+    "rosters": 42,
+    "key_events": 18
+   },
+   "202611": {
+    "status": 200,
+    "events": 32,
+    "completed": 14,
+    "first": "2026-11-01T10:30Z",
+    "last": "2026-11-30T18:00Z",
+    "notes": [],
+    "season_types": [
+     "14382:2026-27-turkish-super-lig"
+    ]
+   },
+   "202612": {
+    "status": 200,
+    "events": 27,
+    "completed": 0,
+    "first": "2026-12-04T17:00Z",
+    "last": "2026-12-21T17:00Z",
+    "notes": [],
+    "season_types": [
+     "14382:2026-27-turkish-super-lig"
+    ]
+   },
+   "202602": {
+    "status": 200,
+    "events": 36,
+    "completed": 36,
+    "first": "2026-02-01T14:00Z",
+    "last": "2026-02-28T17:00Z",
+    "notes": [],
+    "season_types": [
+     "13566:2025-26-turkish-super-lig"
+    ]
+   },
+   "202503": {
+    "status": 200,
+    "events": 36,
+    "completed": 36,
+    "first": "2025-03-01T13:00Z",
+    "last": "2025-03-31T17:00Z",
+    "notes": [],
+    "season_types": [
+     "12783:2024-25-turkish-super-lig"
+    ]
+   },
+   "202409": {
+    "status": 200,
+    "events": 34,
+    "completed": 34,
+    "first": "2024-09-01T16:15Z",
+    "last": "2024-09-30T17:00Z",
+    "notes": [],
+    "season_types": [
+     "12783:2024-25-turkish-super-lig"
+    ]
+   },
+   "old_box": {
+    "Caykur Rizespor": {
+     "yellowCards": "0",
+     "wonCorners": "9",
+     "totalShots": "9",
+     "shotsOnTarget": "4"
+    },
+    "Sivasspor": {
+     "yellowCards": "0",
+     "wonCorners": "2",
+     "totalShots": "13",
+     "shotsOnTarget": "3"
+    }
+   },
+   "standings_groups": [
+    "2026/2027 Turkish Super Lig"
+   ]
+  },
+  "mls": {
+   "202610": {
+    "status": 200,
+    "events": 86,
+    "completed": 86,
+    "first": "2026-10-02T01:30Z",
+    "last": "2026-11-01T01:30Z",
+    "notes": [],
+    "season_types": [
+     "13846:regular-season"
+    ]
+   },
+   "box": {
+    "month": "202610",
+    "event": "761923",
+    "stats": {
+     "Colorado Rapids": {
+      "foulsCommitted": "11",
+      "yellowCards": "4",
+      "redCards": "0",
+      "wonCorners": "5",
+      "totalShots": "14",
+      "shotsOnTarget": "4"
+     },
+     "Chicago Fire FC": {
+      "foulsCommitted": "13",
+      "yellowCards": "2",
+      "redCards": "0",
+      "wonCorners": "6",
+      "totalShots": "14",
+      "shotsOnTarget": "6"
+     }
+    },
+    "rosters": 39,
+    "key_events": 29
+   },
+   "202611": {
+    "status": 200,
+    "events": 39,
+    "completed": 21,
+    "first": "2026-11-01T20:30Z",
+    "last": "2026-11-29T03:30Z",
+    "notes": [],
+    "season_types": [
+     "13835:western-conference-playoffs---round-one",
+     "13836:western-conference-playoffs---round-one",
+     "13837:western-conference-playoffs---round-one",
+     "13838:western-conference-playoffs---round-one",
+     "13839:eastern-conference-playoffs---round-one",
+     "13840:eastern-conference-playoffs---round-one"
+    ]
+   },
+   "202612": {
+    "status": 200,
+    "events": 8,
+    "completed": 0,
+    "first": "2026-12-02T20:00Z",
+    "last": "2026-12-02T20:00Z",
+    "notes": [],
+    "season_types": [
+     "13835:western-conference-playoffs---round-one",
+     "13836:western-conference-playoffs---round-one",
+     "13837:western-conference-playoffs---round-one",
+     "13838:western-conference-playoffs---round-one",
+     "13839:eastern-conference-playoffs---round-one",
+     "13840:eastern-conference-playoffs---round-one"
+    ]
+   },
+   "202602": {
+    "status": 200,
+    "events": 26,
+    "completed": 26,
+    "first": "2026-02-21T19:30Z",
+    "last": "2026-03-01T03:30Z",
+    "notes": [],
+    "season_types": [
+     "13846:regular-season"
+    ]
+   },
+   "202503": {
+    "status": 200,
+    "events": 74,
+    "completed": 74,
+    "first": "2025-03-01T19:15Z",
+    "last": "2025-03-30T23:00Z",
+    "notes": [],
+    "season_types": [
+     "13135:regular-season"
+    ]
+   },
+   "202409": {
+    "status": 200,
+    "events": 62,
+    "completed": 62,
+    "first": "2024-09-01T18:45Z",
+    "last": "2024-09-29T02:30Z",
+    "notes": [],
+    "season_types": [
+     "12328:regular-season"
+    ]
+   },
+   "old_box": {
+    "Charlotte FC": {
+     "yellowCards": "3",
+     "wonCorners": "3",
+     "totalShots": "5",
+     "shotsOnTarget": "4"
+    },
+    "Nashville SC": {
+     "yellowCards": "2",
+     "wonCorners": "8",
+     "totalShots": "13",
+     "shotsOnTarget": "7"
+    }
+   },
+   "standings_groups": [
+    "Eastern Conference",
+    "Western Conference"
+   ]
+  }
+ },
+ "_fotmob": {
+  "segunda-division": {
+   "detail": {
+    "match": "5868535",
+    "general": {
+     "homeTeam": {
+      "name": "Sporting Gij\u00f3n",
+      "id": 9869
+     },
+     "awayTeam": {
+      "name": "Real Valladolid",
+      "id": 10281
+     },
+     "leagueName": "LaLiga2",
+     "matchTimeUTCDate": "2026-11-08T17:30:00.000Z"
+    },
+    "header": "1 - 2",
+    "referee": "Daniel Palencia Caballero",
+    "stats": [
+     [
+      "top_stats",
+      "BallPossesion",
+      "Ball possession",
+      [
+       63,
+       37
+      ]
+     ],
+     [
+      "top_stats",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       "2.19",
+       "1.16"
+      ]
+     ],
+     [
+      "top_stats",
+      "total_shots",
+      "Total shots",
+      [
+       21,
+       15
+      ]
+     ],
+     [
+      "top_stats",
+      "ShotsOnTarget",
+      "Shots on target",
+      [
+       6,
+       6
+      ]
+     ],
+     [
+      "top_stats",
+      "touches_opp_box",
+      "Touches in opposition box",
+      [
+       34,
+       17
+      ]
+     ],
+     [
+      "top_stats",
+      "big_chance",
+      "Big chances",
+      [
+       2,
+       2
+      ]
+     ],
+     [
+      "top_stats",
+      "big_chance_missed_title",
+      "Big chances missed",
+      [
+       1,
+       0
+      ]
+     ],
+     [
+      "top_stats",
+      "accurate_passes",
+      "Accurate passes",
+      [
+       "465 (85%)",
+       "265 (79%)"
+      ]
+     ],
+     [
+      "top_stats",
+      "yellow_cards",
+      "Yellow cards",
+      [
+       4,
+       3
+      ]
+     ],
+     [
+      "top_stats",
+      "corners",
+      "Corners",
+      [
+       9,
+       6
+      ]
+     ],
+     [
+      "shots",
+      "shots",
+      "Shots",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "shots",
+      "total_shots",
+      "Total shots",
+      [
+       21,
+       15
+      ]
+     ],
+     [
+      "shots",
+      "ShotsOffTarget",
+      "Shots off target",
+      [
+       10,
+       6
+      ]
+     ],
+     [
+      "shots",
+      "ShotsOnTarget",
+      "Shots on target",
+      [
+       6,
+       6
+      ]
+     ],
+     [
+      "shots",
+      "blocked_shots",
+      "Blocked shots",
+      [
+       5,
+       3
+      ]
+     ],
+     [
+      "shots",
+      "shots_woodwork",
+      "Hit woodwork",
+      [
+       0,
+       0
+      ]
+     ],
+     [
+      "shots",
+      "shots_inside_box",
+      "Shots inside box",
+      [
+       16,
+       10
+      ]
+     ],
+     [
+      "shots",
+      "shots_outside_box",
+      "Shots outside box",
+      [
+       5,
+       5
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       "2.19",
+       "1.16"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_open_play",
+      "xG open play",
+      [
+       "1.60",
+       "1.11"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_set_play",
+      "xG set play",
+      [
+       "0.59",
+       "0.05"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_non_penalty",
+      "xG non-penalty",
+      [
+       "2.19",
+       "1.16"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_on_target",
+      "xG on target (xGOT)",
+      [
+       "2.07",
+       "1.65"
+      ]
+     ],
+     [
+      "passes",
+      "passes",
+      "Passes",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "passes",
+      "passes",
+      "Passes",
+      [
+       548,
+       334
+      ]
+     ],
+     [
+      "passes",
+      "accurate_passes",
+      "Accurate passes",
+      [
+       "465 (85%)",
+       "265 (79%)"
+      ]
+     ],
+     [
+      "passes",
+      "own_half_passes",
+      "Own half",
+      [
+       182,
+       150
+      ]
+     ],
+     [
+      "passes",
+      "opposition_half_passes",
+      "Opposition half",
+      [
+       283,
+       115
+      ]
+     ],
+     [
+      "passes",
+      "long_balls_accurate",
+      "Accurate long balls",
+      [
+       "14 (44%)",
+       "14 (24%)"
+      ]
+     ],
+     [
+      "passes",
+      "accurate_crosses",
+      "Accurate crosses",
+      [
+       "11 (37%)",
+       "2 (20%)"
+      ]
+     ],
+     [
+      "passes",
+      "player_throws",
+      "Throws",
+      [
+       18,
+       12
+      ]
+     ],
+     [
+      "passes",
+      "touches_opp_box",
+      "Touches in opposition box",
+      [
+       34,
+       17
+      ]
+     ],
+     [
+      "passes",
+      "Offsides",
+      "Offsides",
+      [
+       1,
+       0
+      ]
+     ],
+     [
+      "defense",
+      "defense",
+      "Defence",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "defense",
+      "matchstats.headers.tackles",
+      "Tackles",
+      [
+       15,
+       16
+      ]
+     ],
+     [
+      "defense",
+      "interceptions",
+      "Interceptions",
+      [
+       8,
+       9
+      ]
+     ],
+     [
+      "defense",
+      "shot_blocks",
+      "Blocks",
+      [
+       3,
+       5
+      ]
+     ],
+     [
+      "defense",
+      "clearances",
+      "Clearances",
+      [
+       17,
+       25
+      ]
+     ],
+     [
+      "defense",
+      "keeper_saves",
+      "Keeper saves",
+      [
+       4,
+       5
+      ]
+     ],
+     [
+      "duels",
+      "duels",
+      "Duels",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "duels",
+      "duel_won",
+      "Duels won",
+      [
+       50,
+       51
+      ]
+     ],
+     [
+      "duels",
+      "ground_duels_won",
+      "Ground duels won",
+      [
+       "31 (48%)",
+       "34 (52%)"
+      ]
+     ],
+     [
+      "duels",
+      "aerials_won",
+      "Aerial duels won",
+      [
+       "19 (53%)",
+       "17 (47%)"
+      ]
+     ],
+     [
+      "duels",
+      "dribbles_succeeded",
+      "Successful dribbles",
+      [
+       "6 (35%)",
+       "4 (67%)"
+      ]
+     ],
+     [
+      "discipline",
+      "discipline",
+      "Discipline",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "discipline",
+      "yellow_cards",
+      "Yellow cards",
+      [
+       4,
+       3
+      ]
+     ],
+     [
+      "discipline",
+      "red_cards",
+      "Red cards",
+      [
+       1,
+       0
+      ]
+     ],
+     [
+      "discipline",
+      "fouls",
+      "Fouls committed",
+      [
+       15,
+       11
+      ]
+     ]
+    ]
+   },
+   "leagues?id=140": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 462,
+    "finished": 138,
+    "first": "2026-08-14T18:30:00Z",
+    "last": "2027-06-06T13:00:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/castellon-vs-real-sociedad-b/6spa038#5868402",
+     "id": "5868402",
+     "home": {
+      "name": "Real Sociedad B",
+      "shortName": "Real Sociedad B",
+      "id": "161744"
+     },
+     "away": {
+      "name": "Castell\u00f3n",
+      "shortName": "Castell\u00f3n",
+      "id": "10279"
+     },
+     "status": {
+      "utcTime": "2026-08-14T18:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "0 - 1",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026/2027",
+     "2025/2026",
+     "2024/2025",
+     "2023/2024",
+     "2022/2023",
+     "2021/2022"
+    ]
+   },
+   "leagues?id=140&season=2025": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 462,
+    "finished": 138,
+    "first": "2026-08-14T18:30:00Z",
+    "last": "2027-06-06T13:00:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/castellon-vs-real-sociedad-b/6spa038#5868402",
+     "id": "5868402",
+     "home": {
+      "name": "Real Sociedad B",
+      "shortName": "Real Sociedad B",
+      "id": "161744"
+     },
+     "away": {
+      "name": "Castell\u00f3n",
+      "shortName": "Castell\u00f3n",
+      "id": "10279"
+     },
+     "status": {
+      "utcTime": "2026-08-14T18:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "0 - 1",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026/2027",
+     "2025/2026",
+     "2024/2025",
+     "2023/2024",
+     "2022/2023",
+     "2021/2022"
+    ]
+   },
+   "leagues?id=140&season=2025%2F2026": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 468,
+    "finished": 468,
+    "first": "2025-08-15T19:30:00Z",
+    "last": "2026-06-20T19:30:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/cultural-leonesa-vs-burgos-cf/rlwhj#4837496",
+     "id": "4837496",
+     "home": {
+      "name": "Burgos CF",
+      "shortName": "Burgos CF",
+      "id": "7876"
+     },
+     "away": {
+      "name": "Cultural Leonesa",
+      "shortName": "Cultural Leonesa",
+      "id": "1753"
+     },
+     "status": {
+      "utcTime": "2025-08-15T19:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "5 - 1",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026/2027",
+     "2025/2026",
+     "2024/2025",
+     "2023/2024",
+     "2022/2023",
+     "2021/2022"
+    ]
+   }
+  },
+  "super-lig": {
+   "detail": {
+    "match": "5904801",
+    "general": {
+     "homeTeam": {
+      "name": "Be\u015fikta\u015f",
+      "id": 10188
+     },
+     "awayTeam": {
+      "name": "Gen\u00e7lerbirli\u011fi",
+      "id": 7800
+     },
+     "leagueName": "S\u00fcper Lig",
+     "matchTimeUTCDate": "2026-11-08T18:00:00.000Z"
+    },
+    "header": "3 - 0",
+    "referee": "Atilla Karao\u011flan",
+    "stats": [
+     [
+      "top_stats",
+      "BallPossesion",
+      "Ball possession",
+      [
+       69,
+       31
+      ]
+     ],
+     [
+      "top_stats",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       "3.94",
+       "0.29"
+      ]
+     ],
+     [
+      "top_stats",
+      "total_shots",
+      "Total shots",
+      [
+       20,
+       3
+      ]
+     ],
+     [
+      "top_stats",
+      "ShotsOnTarget",
+      "Shots on target",
+      [
+       10,
+       1
+      ]
+     ],
+     [
+      "top_stats",
+      "touches_opp_box",
+      "Touches in opposition box",
+      [
+       36,
+       2
+      ]
+     ],
+     [
+      "top_stats",
+      "big_chance",
+      "Big chances",
+      [
+       4,
+       0
+      ]
+     ],
+     [
+      "top_stats",
+      "big_chance_missed_title",
+      "Big chances missed",
+      [
+       1,
+       0
+      ]
+     ],
+     [
+      "top_stats",
+      "accurate_passes",
+      "Accurate passes",
+      [
+       "518 (89%)",
+       "182 (70%)"
+      ]
+     ],
+     [
+      "top_stats",
+      "yellow_cards",
+      "Yellow cards",
+      [
+       3,
+       1
+      ]
+     ],
+     [
+      "top_stats",
+      "corners",
+      "Corners",
+      [
+       4,
+       1
+      ]
+     ],
+     [
+      "shots",
+      "shots",
+      "Shots",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "shots",
+      "total_shots",
+      "Total shots",
+      [
+       20,
+       3
+      ]
+     ],
+     [
+      "shots",
+      "ShotsOffTarget",
+      "Shots off target",
+      [
+       5,
+       2
+      ]
+     ],
+     [
+      "shots",
+      "ShotsOnTarget",
+      "Shots on target",
+      [
+       10,
+       1
+      ]
+     ],
+     [
+      "shots",
+      "blocked_shots",
+      "Blocked shots",
+      [
+       5,
+       0
+      ]
+     ],
+     [
+      "shots",
+      "shots_woodwork",
+      "Hit woodwork",
+      [
+       0,
+       0
+      ]
+     ],
+     [
+      "shots",
+      "shots_inside_box",
+      "Shots inside box",
+      [
+       13,
+       1
+      ]
+     ],
+     [
+      "shots",
+      "shots_outside_box",
+      "Shots outside box",
+      [
+       7,
+       2
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       "3.94",
+       "0.29"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_open_play",
+      "xG open play",
+      [
+       "3.76",
+       "0.14"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_set_play",
+      "xG set play",
+      [
+       "0.18",
+       "0.16"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_non_penalty",
+      "xG non-penalty",
+      [
+       "3.94",
+       "0.29"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_on_target",
+      "xG on target (xGOT)",
+      [
+       "3.65",
+       "0.07"
+      ]
+     ],
+     [
+      "passes",
+      "passes",
+      "Passes",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "passes",
+      "passes",
+      "Passes",
+      [
+       583,
+       259
+      ]
+     ],
+     [
+      "passes",
+      "accurate_passes",
+      "Accurate passes",
+      [
+       "518 (89%)",
+       "182 (70%)"
+      ]
+     ],
+     [
+      "passes",
+      "own_half_passes",
+      "Own half",
+      [
+       246,
+       119
+      ]
+     ],
+     [
+      "passes",
+      "opposition_half_passes",
+      "Opposition half",
+      [
+       272,
+       63
+      ]
+     ],
+     [
+      "passes",
+      "long_balls_accurate",
+      "Accurate long balls",
+      [
+       "22 (55%)",
+       "20 (37%)"
+      ]
+     ],
+     [
+      "passes",
+      "accurate_crosses",
+      "Accurate crosses",
+      [
+       "2 (18%)",
+       "0 (0%)"
+      ]
+     ],
+     [
+      "passes",
+      "player_throws",
+      "Throws",
+      [
+       18,
+       14
+      ]
+     ],
+     [
+      "passes",
+      "touches_opp_box",
+      "Touches in opposition box",
+      [
+       36,
+       2
+      ]
+     ],
+     [
+      "passes",
+      "Offsides",
+      "Offsides",
+      [
+       4,
+       3
+      ]
+     ],
+     [
+      "defense",
+      "defense",
+      "Defence",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "defense",
+      "matchstats.headers.tackles",
+      "Tackles",
+      [
+       10,
+       18
+      ]
+     ],
+     [
+      "defense",
+      "interceptions",
+      "Interceptions",
+      [
+       12,
+       12
+      ]
+     ],
+     [
+      "defense",
+      "shot_blocks",
+      "Blocks",
+      [
+       0,
+       5
+      ]
+     ],
+     [
+      "defense",
+      "clearances",
+      "Clearances",
+      [
+       19,
+       27
+      ]
+     ],
+     [
+      "defense",
+      "keeper_saves",
+      "Keeper saves",
+      [
+       1,
+       6
+      ]
+     ],
+     [
+      "duels",
+      "duels",
+      "Duels",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "duels",
+      "duel_won",
+      "Duels won",
+      [
+       37,
+       50
+      ]
+     ],
+     [
+      "duels",
+      "ground_duels_won",
+      "Ground duels won",
+      [
+       "32 (44%)",
+       "40 (56%)"
+      ]
+     ],
+     [
+      "duels",
+      "aerials_won",
+      "Aerial duels won",
+      [
+       "5 (33%)",
+       "10 (67%)"
+      ]
+     ],
+     [
+      "duels",
+      "dribbles_succeeded",
+      "Successful dribbles",
+      [
+       "7 (47%)",
+       "9 (82%)"
+      ]
+     ],
+     [
+      "discipline",
+      "discipline",
+      "Discipline",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "discipline",
+      "yellow_cards",
+      "Yellow cards",
+      [
+       3,
+       1
+      ]
+     ],
+     [
+      "discipline",
+      "red_cards",
+      "Red cards",
+      [
+       0,
+       1
+      ]
+     ],
+     [
+      "discipline",
+      "fouls",
+      "Fouls committed",
+      [
+       14,
+       15
+      ]
+     ]
+    ]
+   },
+   "leagues?id=71": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 306,
+    "finished": 99,
+    "first": "2026-08-14T18:30:00Z",
+    "last": "2027-05-23T00:00:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/galatasaray-vs-corum-fk/ur5p06p#5904710",
+     "id": "5904710",
+     "home": {
+      "name": "Galatasaray",
+      "shortName": "Galatasaray",
+      "id": "8637"
+     },
+     "away": {
+      "name": "\u00c7orum FK",
+      "shortName": "\u00c7orum FK",
+      "id": "357274"
+     },
+     "status": {
+      "utcTime": "2026-08-14T18:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "2 - 2",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026/2027",
+     "2025/2026",
+     "2024/2025",
+     "2023/2024",
+     "2022/2023",
+     "2021/2022"
+    ]
+   },
+   "leagues?id=71&season=2025": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 306,
+    "finished": 99,
+    "first": "2026-08-14T18:30:00Z",
+    "last": "2027-05-23T00:00:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/galatasaray-vs-corum-fk/ur5p06p#5904710",
+     "id": "5904710",
+     "home": {
+      "name": "Galatasaray",
+      "shortName": "Galatasaray",
+      "id": "8637"
+     },
+     "away": {
+      "name": "\u00c7orum FK",
+      "shortName": "\u00c7orum FK",
+      "id": "357274"
+     },
+     "status": {
+      "utcTime": "2026-08-14T18:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "2 - 2",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026/2027",
+     "2025/2026",
+     "2024/2025",
+     "2023/2024",
+     "2022/2023",
+     "2021/2022"
+    ]
+   },
+   "leagues?id=71&season=2025%2F2026": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 306,
+    "finished": 306,
+    "first": "2025-08-08T18:30:00Z",
+    "last": "2026-05-17T17:00:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/gaziantep-fk-vs-galatasaray/1c5q5y#4842318",
+     "id": "4842318",
+     "home": {
+      "name": "Gaziantep FK",
+      "shortName": "Gaziantep FK",
+      "id": "4081"
+     },
+     "away": {
+      "name": "Galatasaray",
+      "shortName": "Galatasaray",
+      "id": "8637"
+     },
+     "status": {
+      "utcTime": "2025-08-08T18:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "0 - 3",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026/2027",
+     "2025/2026",
+     "2024/2025",
+     "2023/2024",
+     "2022/2023",
+     "2021/2022"
+    ]
+   }
+  },
+  "mls": {
+   "detail": {
+    "match": "5071499",
+    "general": {
+     "homeTeam": {
+      "name": "Seattle Sounders FC",
+      "id": 130394
+     },
+     "awayTeam": {
+      "name": "Los Angeles FC",
+      "id": 867280
+     },
+     "leagueName": "Major League Soccer",
+     "matchTimeUTCDate": "2026-11-08T00:10:00.000Z"
+    },
+    "header": "2 - 1",
+    "referee": "Filip Dujic",
+    "stats": [
+     [
+      "top_stats",
+      "BallPossesion",
+      "Ball possession",
+      [
+       39,
+       61
+      ]
+     ],
+     [
+      "top_stats",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       "0.71",
+       "1.94"
+      ]
+     ],
+     [
+      "top_stats",
+      "total_shots",
+      "Total shots",
+      [
+       5,
+       24
+      ]
+     ],
+     [
+      "top_stats",
+      "ShotsOnTarget",
+      "Shots on target",
+      [
+       2,
+       8
+      ]
+     ],
+     [
+      "top_stats",
+      "touches_opp_box",
+      "Touches in opposition box",
+      [
+       15,
+       47
+      ]
+     ],
+     [
+      "top_stats",
+      "big_chance",
+      "Big chances",
+      [
+       1,
+       3
+      ]
+     ],
+     [
+      "top_stats",
+      "big_chance_missed_title",
+      "Big chances missed",
+      [
+       0,
+       2
+      ]
+     ],
+     [
+      "top_stats",
+      "accurate_passes",
+      "Accurate passes",
+      [
+       "293 (78%)",
+       "495 (88%)"
+      ]
+     ],
+     [
+      "top_stats",
+      "yellow_cards",
+      "Yellow cards",
+      [
+       3,
+       1
+      ]
+     ],
+     [
+      "top_stats",
+      "corners",
+      "Corners",
+      [
+       2,
+       12
+      ]
+     ],
+     [
+      "shots",
+      "shots",
+      "Shots",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "shots",
+      "total_shots",
+      "Total shots",
+      [
+       5,
+       24
+      ]
+     ],
+     [
+      "shots",
+      "ShotsOffTarget",
+      "Shots off target",
+      [
+       3,
+       8
+      ]
+     ],
+     [
+      "shots",
+      "ShotsOnTarget",
+      "Shots on target",
+      [
+       2,
+       8
+      ]
+     ],
+     [
+      "shots",
+      "blocked_shots",
+      "Blocked shots",
+      [
+       0,
+       8
+      ]
+     ],
+     [
+      "shots",
+      "shots_woodwork",
+      "Hit woodwork",
+      [
+       0,
+       0
+      ]
+     ],
+     [
+      "shots",
+      "shots_inside_box",
+      "Shots inside box",
+      [
+       3,
+       16
+      ]
+     ],
+     [
+      "shots",
+      "shots_outside_box",
+      "Shots outside box",
+      [
+       2,
+       8
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals",
+      "Expected goals (xG)",
+      [
+       "0.71",
+       "1.94"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_open_play",
+      "xG open play",
+      [
+       "0.62",
+       "1.10"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_set_play",
+      "xG set play",
+      [
+       "0.09",
+       "0.84"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_non_penalty",
+      "xG non-penalty",
+      [
+       "0.71",
+       "1.94"
+      ]
+     ],
+     [
+      "expected_goals",
+      "expected_goals_on_target",
+      "xG on target (xGOT)",
+      [
+       "1.48",
+       "2.55"
+      ]
+     ],
+     [
+      "passes",
+      "passes",
+      "Passes",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "passes",
+      "passes",
+      "Passes",
+      [
+       375,
+       563
+      ]
+     ],
+     [
+      "passes",
+      "accurate_passes",
+      "Accurate passes",
+      [
+       "293 (78%)",
+       "495 (88%)"
+      ]
+     ],
+     [
+      "passes",
+      "own_half_passes",
+      "Own half",
+      [
+       155,
+       173
+      ]
+     ],
+     [
+      "passes",
+      "opposition_half_passes",
+      "Opposition half",
+      [
+       138,
+       322
+      ]
+     ],
+     [
+      "passes",
+      "long_balls_accurate",
+      "Accurate long balls",
+      [
+       "18 (33%)",
+       "25 (56%)"
+      ]
+     ],
+     [
+      "passes",
+      "accurate_crosses",
+      "Accurate crosses",
+      [
+       "1 (13%)",
+       "8 (29%)"
+      ]
+     ],
+     [
+      "passes",
+      "player_throws",
+      "Throws",
+      [
+       15,
+       21
+      ]
+     ],
+     [
+      "passes",
+      "touches_opp_box",
+      "Touches in opposition box",
+      [
+       15,
+       47
+      ]
+     ],
+     [
+      "passes",
+      "Offsides",
+      "Offsides",
+      [
+       4,
+       1
+      ]
+     ],
+     [
+      "defense",
+      "defense",
+      "Defence",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "defense",
+      "matchstats.headers.tackles",
+      "Tackles",
+      [
+       24,
+       8
+      ]
+     ],
+     [
+      "defense",
+      "interceptions",
+      "Interceptions",
+      [
+       13,
+       10
+      ]
+     ],
+     [
+      "defense",
+      "shot_blocks",
+      "Blocks",
+      [
+       7,
+       0
+      ]
+     ],
+     [
+      "defense",
+      "clearances",
+      "Clearances",
+      [
+       30,
+       13
+      ]
+     ],
+     [
+      "defense",
+      "keeper_saves",
+      "Keeper saves",
+      [
+       7,
+       0
+      ]
+     ],
+     [
+      "duels",
+      "duels",
+      "Duels",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "duels",
+      "duel_won",
+      "Duels won",
+      [
+       53,
+       40
+      ]
+     ],
+     [
+      "duels",
+      "ground_duels_won",
+      "Ground duels won",
+      [
+       "46 (61%)",
+       "30 (39%)"
+      ]
+     ],
+     [
+      "duels",
+      "aerials_won",
+      "Aerial duels won",
+      [
+       "7 (41%)",
+       "10 (59%)"
+      ]
+     ],
+     [
+      "duels",
+      "dribbles_succeeded",
+      "Successful dribbles",
+      [
+       "7 (54%)",
+       "8 (40%)"
+      ]
+     ],
+     [
+      "discipline",
+      "discipline",
+      "Discipline",
+      [
+       null,
+       null
+      ]
+     ],
+     [
+      "discipline",
+      "yellow_cards",
+      "Yellow cards",
+      [
+       3,
+       1
+      ]
+     ],
+     [
+      "discipline",
+      "red_cards",
+      "Red cards",
+      [
+       0,
+       0
+      ]
+     ],
+     [
+      "discipline",
+      "fouls",
+      "Fouls committed",
+      [
+       15,
+       15
+      ]
+     ]
+    ]
+   },
+   "leagues?id=130": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 524,
+    "finished": 510,
+    "first": "2026-02-21T19:30:00Z",
+    "last": "2026-11-29T03:30:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/charlotte-fc-vs-st-louis-city/1cbhl3z1n#5070991",
+     "id": "5070991",
+     "home": {
+      "name": "St. Louis City",
+      "shortName": "St. Louis City",
+      "id": "1427963"
+     },
+     "away": {
+      "name": "Charlotte FC",
+      "shortName": "Charlotte FC",
+      "id": "1323940"
+     },
+     "status": {
+      "utcTime": "2026-02-21T19:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "1 - 1",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026",
+     "2025",
+     "2024",
+     "2023",
+     "2022",
+     "2021"
+    ]
+   },
+   "leagues?id=130&season=2025": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 540,
+    "finished": 540,
+    "first": "2025-02-22T21:45:00Z",
+    "last": "2025-12-06T19:30:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/minnesota-united-vs-los-angeles-fc/7d7hm53j#4694246",
+     "id": "4694246",
+     "home": {
+      "name": "Los Angeles FC",
+      "shortName": "LAFC",
+      "id": "867280"
+     },
+     "away": {
+      "name": "Minnesota United",
+      "shortName": "Minnesota",
+      "id": "207242"
+     },
+     "status": {
+      "utcTime": "2025-02-22T21:45:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "1 - 0",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026",
+     "2025",
+     "2024",
+     "2023",
+     "2022",
+     "2021"
+    ]
+   },
+   "leagues?id=130&season=2025%2F2026": {
+    "status": 200,
+    "keys": [
+     "tabs",
+     "allAvailableSeasons",
+     "details",
+     "seostr",
+     "QAData",
+     "table",
+     "transfers",
+     "overview",
+     "stats",
+     "fixtures",
+     "playoff",
+     "seasons"
+    ],
+    "matches": 524,
+    "finished": 510,
+    "first": "2026-02-21T19:30:00Z",
+    "last": "2026-11-29T03:30:00Z",
+    "sample": {
+     "round": "1",
+     "roundName": 1,
+     "pageUrl": "/matches/charlotte-fc-vs-st-louis-city/1cbhl3z1n#5070991",
+     "id": "5070991",
+     "home": {
+      "name": "St. Louis City",
+      "shortName": "St. Louis City",
+      "id": "1427963"
+     },
+     "away": {
+      "name": "Charlotte FC",
+      "shortName": "Charlotte FC",
+      "id": "1323940"
+     },
+     "status": {
+      "utcTime": "2026-02-21T19:30:00Z",
+      "timezone": "",
+      "finished": true,
+      "started": true,
+      "cancelled": false,
+      "awarded": false,
+      "scoreStr": "1 - 1",
+      "reason": {
+       "short": "FT",
+       "shortKey": "fulltime_short",
+       "long": "Full-Time",
+       "longKey": "finished"
+      }
+     }
+    },
+    "seasons": [
+     "2026",
+     "2025",
+     "2024",
+     "2023",
+     "2022",
+     "2021"
+    ]
+   }
+  }
+ }
+}
