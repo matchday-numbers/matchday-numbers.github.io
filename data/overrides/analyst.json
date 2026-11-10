@@ -16419,6 +16419,587 @@
     "https://www.record.pt/futebol/futebol-nacional/liga-betclic/"
    ],
    "written_at": "2026-11-09T21:55:00Z"
+  },
+  "401915493": {
+   "overall": "Early view: Both sides arrive in poor shape: Milan have lost three of four European games under Ruben Amorim, who said after the 2-0 home defeat to Ferencvaros that the team is 'not ready to be competitive on two fronts', while Sunderland lost 2-0 at home to Dinamo Zagreb and were reported bottom of the Premier League. Milan sit 28th and need points to reach the play-off places, so this matters more to them than to Sunderland on seven points.",
+   "goals": {
+    "lean": "lower",
+    "call": "Under 2.5 goals",
+    "text": "The numbers say 2.6 goals. I lean slightly lower: Milan managed only two shots on target against Ferencvaros and Sunderland struggled to get shots away against Dinamo Zagreb, so neither attack is in form. Milan have also had injuries in attack this autumn, with Goncalo Ramos and Samuel Chukwueze reported out in October."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 8 corners",
+    "text": "The numbers say 7.7 corners. Nothing I found points clearly either way; Sunderland had most of the ball against Zagreb without much end product, and Milan's wide options were thinned by Alexis Saelemaekers' ankle surgery."
+   },
+   "cards": {
+    "lean": "higher",
+    "call": "Around 4 to 5 cards",
+    "text": "The numbers say 3.8 cards. I lean a little higher: Milan are under pressure at home and a frustrated side chasing a result tends to pick up bookings, and Sunderland are without Trai Hume through a yellow-card ban, which hints at an edgy campaign. The referee is not known yet."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 26 shots",
+    "text": "The numbers say 26.5 shots. Milan had 15 shots against Ferencvaros, so volume is not their problem; quality is, which keeps me close to the site's figure."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "call": "Under 9.5 shots on target",
+    "text": "The numbers say 9.3 shots on target. I lean lower because both sides have been wasteful: Milan put two of 15 shots on target against Ferencvaros, and Sunderland drew few saves in their home loss to Zagreb."
+   },
+   "sources": [
+    "https://www.soccernews.com/milan-not-ready-to-be-competitive-on-two-fronts-claims-amorim/407721/",
+    "https://www.flashscore.co.uk/news/football-europa-league-ten-man-ferencvaros-shock-ac-milan-to-keep-perfect-europa-league-record-alive/x0r6HVMb/",
+    "https://www.ysscores.com/en/news/14076804/5-absences-hit-ac-milan-before-clash-with-afc-bournemouth-in-uefa-europa-league",
+    "https://africa.espn.com/football/report/_/gameId/401915523",
+    "https://www.vavel.com/en/international-football/2026/11/05/europa-league/1278174-sunderland-vs-dinamo-zagreb-europa-league-preview-gameweek-4-2026.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915488": {
+   "overall": "Early view: Bournemouth have won all four league-phase games, the latest a 3-1 comeback win at Sparta Prague under Marco Rose, and sit level on 12 points with Benfica and Ferencvaros. Viktoria Plzen picked up their first points with a 1-0 win at Lillestrom after three defeats. A home win would push Bournemouth towards a top-eight place.",
+   "goals": {
+    "lean": "same",
+    "call": "Over 2.5 goals",
+    "text": "The numbers say 3.5 goals. Bournemouth scored three in Prague with 20 shots and nine on target, which fits the site's view; Plzen's 1-0 at Lillestrom shows they can keep games tight, so I stay with the number rather than push it higher."
+   },
+   "corners": {
+    "lean": "higher",
+    "call": "Over 10.5 corners",
+    "text": "The numbers say 10.3 corners. I lean higher: Bournemouth won ten corners in Prague, and Plzen are likely to defend deep at the Vitality Stadium, which tends to push the home side's corner count up."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.2 cards. Plzen took four yellows at Lillestrom while Bournemouth had two in Prague, so the mix roughly matches the site's split; nothing points clearly either way until the referee is known."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 29 shots",
+    "text": "The numbers say 29.3 shots. Bournemouth's 20 shots in Prague and Plzen's 15 at Lillestrom suggest the site's figure is about right."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 11 shots on target",
+    "text": "The numbers say 11.2 shots on target. Bournemouth put nine on target in Prague, in line with the home split here; Plzen managed four at Lillestrom, so there is no clear reason to move."
+   },
+   "sources": [
+    "https://www.thestar.com.my/sport/football/2026/11/06/soccer-milan-stunned-by-ferencvaros-marseille-and-juventus-secure-europa-league-wins",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62487/sparta-prag-bournemouth-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62482/lillestrom-vikt-pilsen-europa-league-im-liveticker.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915492": {
+   "overall": "Early view: Leverkusen lost their unbeaten league-phase record with a 1-0 home defeat to Marseille, and Besiktas, under Vincenzo Italiano, lost 3-2 at Celtic after leading twice. The sides are close in the table (7th and 8th), so both have something to play for in the race for the top eight.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 2.9 goals. Leverkusen were blunt against Marseille with ten shots and no goal, but Besiktas' 3-2 at Celtic shows their games can open up, so the two pull in opposite directions."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 10 corners",
+    "text": "The numbers say 10.4 corners. Leverkusen won six corners against Marseille with 58 percent possession, and Besiktas earned seven at Celtic, so nothing points away from the site's figure."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 5 cards",
+    "text": "The numbers say 4.9 cards. Besiktas picked up two late bookings at Celtic, and the referee for this game is not known yet, so I stay with the number."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Under 26.5 shots",
+    "text": "The numbers say 27.1 shots. I lean slightly lower: Leverkusen's game against Marseille produced only 18 shots in total, and they tend to keep the ball rather than shoot often."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 10 shots on target",
+    "text": "The numbers say 10.6 shots on target. Besiktas put four of 15 on target at Celtic; with no team news yet I see no clear reason to move."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62475/leverkusen-marseille-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62478/celtic-besiktas-europa-league-im-liveticker.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915491": {
+   "overall": "Early view: Benfica top the league phase on goal difference after a 3-1 home win over Lech Poznan, their fourth win from four. OFI Crete are 16th after a 2-0 win over Hapoel Be'er Sheva and could still finish in the play-off places, which gives them a reason to defend carefully in Lisbon.",
+   "goals": {
+    "lean": "same",
+    "call": "Over 2.5 goals",
+    "text": "The numbers say 3.2 goals. Benfica scored three against Lech from 24 shots, while OFI kept a clean sheet against Be'er Sheva, so the site's figure is a fair middle."
+   },
+   "corners": {
+    "lean": "lower",
+    "call": "Around 10 corners",
+    "text": "The numbers say 11.1 corners. I lean slightly lower: Benfica created a lot against Lech but won only six corners, and OFI took two in their last game, so the total may not climb as high as the site expects."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.4 cards. Benfica's game with Lech had three yellows and OFI's had four, both close to the site's number; the referee is not known yet."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Over 26.5 shots",
+    "text": "The numbers say 32.9 shots. Benfica's 24 shots against Lech and OFI's 11 at Be'er Sheva support a high total, so I stay with the number."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 11 shots on target",
+    "text": "The numbers say 11.1 shots on target. Benfica put 12 on target against Lech on their own, which backs the site's figure."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/uefa-europa-league/sdc_fm-62476/benfica-lech-uefa-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62480/h-beer-sheva-ofi-europa-league-im-liveticker.html",
+    "https://www.thestar.com.my/sport/football/2026/11/06/soccer-milan-stunned-by-ferencvaros-marseille-and-juventus-secure-europa-league-wins"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915486": {
+   "overall": "Early view: Ferencvaros are unbeaten in 20 games under Balazs Borbely and won 2-0 at San Siro, while Lech Poznan are 35th with one point after a 3-1 defeat at Benfica. The numbers make Lech slight favourites at home, which sits awkwardly with the current form of both sides.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 3.0 goals. Lech scored at Benfica but conceded three, and Ferencvaros created 3.1 xG at Milan, so there should be chances at both ends; nothing points clearly away from the site's number."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 8.6 corners. Lech won three corners at Benfica; with home advantage they should see more of the ball, so I stay near the site's figure."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.0 cards. Ferencvaros will be without Bamidele Yusuf after his red card at Milan, which two reports confirmed; that does not change much on its own and the referee is not known yet."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Under 26.5 shots",
+    "text": "The numbers say 27.4 shots. I lean slightly lower: Lech managed only six shots at Benfica, and Ferencvaros' win in Milan came from 12 shots, so neither side has been piling up attempts."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 10 shots on target",
+    "text": "The numbers say 10.0 shots on target. Lech's five on target at Benfica from six shots and Ferencvaros' efficiency in Milan point to accuracy rather than volume, so I stay with the number."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/uefa-europa-league/sdc_fm-62476/benfica-lech-uefa-europa-league-im-liveticker.html",
+    "https://www.soccernews.com/milan-not-ready-to-be-competitive-on-two-fronts-claims-amorim/407721/",
+    "https://www.flashscore.co.uk/news/football-europa-league-ten-man-ferencvaros-shock-ac-milan-to-keep-perfect-europa-league-record-alive/x0r6HVMb/"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915510": {
+   "overall": "Early view: Levski Sofia have won their last two European games under Julio Velazquez, 2-1 at Viktoria Plzen and 1-0 at home to Jagiellonia, and sit 10th. Lillestrom are 34th with one point after a 1-0 home defeat to Plzen, and need a result to keep play-off hopes alive.",
+   "goals": {
+    "lean": "lower",
+    "call": "Under 2.5 goals",
+    "text": "The numbers say 2.5 goals. I lean slightly lower: Levski's last two games ended 1-0 and 2-1, Lillestrom scored none against Plzen with one shot on target, and Levski have been winning tight games."
+   },
+   "corners": {
+    "lean": "lower",
+    "call": "Under 9.5 corners",
+    "text": "The numbers say 10.0 corners. I lean lower: Levski's last two European games had nine and five corners, and Lillestrom's home game with Plzen had nine."
+   },
+   "cards": {
+    "lean": "higher",
+    "call": "Around 4 to 5 cards",
+    "text": "The numbers say 3.8 cards. I lean higher: Levski's win over Jagiellonia had six yellows and Lillestrom's game with Plzen also had six, both above the site's figure."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Under 25.5 shots",
+    "text": "The numbers say 26.0 shots. Levski's last two games produced 19 and 23 shots in total, which points slightly below the site's number."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "call": "Under 8.5 shots on target",
+    "text": "The numbers say 9.6 shots on target. I lean lower: Levski's last two European games had five and seven shots on target in total, and Lillestrom managed one against Plzen."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62481/levski-sofia-jagiellonia-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62482/lillestrom-vikt-pilsen-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62472/vikt-pilsen-levski-sofia-europa-league-im-liveticker.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915485": {
+   "overall": "Early view: Lyon drew 1-1 at Real Sociedad, with Corentin Tolisso scoring, and sit 13th. Union Saint-Gilloise are fourth after a 2-1 win at Celta Vigo, where Besfort Zeneli scored twice, and are pushing for a top-eight place.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 2 to 3 goals",
+    "text": "The numbers say 2.7 goals. Both teams' last games ended with three goals or fewer, and nothing in the news points clearly either way."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 9.4 corners. Lyon took six corners at Real Sociedad; Union won only one at Celta while sitting deeper, which fits the site's home-heavy split."
+   },
+   "cards": {
+    "lean": "higher",
+    "call": "Over 4.5 cards",
+    "text": "The numbers say 3.9 cards. I lean higher: Lyon picked up four yellows at Real Sociedad, and Union's style of defending deep and countering tends to bring fouls. The referee is not known yet."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 26 shots",
+    "text": "The numbers say 26.0 shots. Lyon's game in San Sebastian had 23 shots and Union's in Vigo had 28, which brackets the site's figure."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "call": "Under 9.5 shots on target",
+    "text": "The numbers say 9.8 shots on target. I lean slightly lower: Lyon's last game had eight on target in total and Union's had seven."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62485/real-sociedad-lyon-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62477/vigo-saint-gilloise-europa-league-im-liveticker.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915489": {
+   "overall": "Early view: Both sides are on four points and in poor form: Salzburg lost 2-0 at Anderlecht and Sparta Prague lost 3-1 at home to Bournemouth after Tobias Guddal's red card. Both need points to stay in the play-off race, which should make this an open game.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 3.0 goals. Salzburg failed to score in Brussels with three shots on target, but Sparta conceded three at home, so the two weaknesses roughly cancel out."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 8.9 corners. Salzburg's game at Anderlecht had nine corners in total; nothing points clearly away from the site's figure."
+   },
+   "cards": {
+    "lean": "higher",
+    "call": "Over 4.5 cards",
+    "text": "The numbers say 4.1 cards. I lean higher: Salzburg committed 20 fouls and took three yellows at Anderlecht, and Sparta had a player sent off and two more booked against Bournemouth, with Guddal now suspended."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Under 27.5 shots",
+    "text": "The numbers say 29.4 shots. I lean lower: Salzburg managed only eight shots at Anderlecht despite more of the ball, and their game had 20 shots in total."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 9 shots on target",
+    "text": "The numbers say 9.2 shots on target. Salzburg's game at Anderlecht had ten on target and Sparta's with Bournemouth had 12, so I stay with the number."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62474/anderlecht-salzburg-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62487/sparta-prag-bournemouth-europa-league-im-liveticker.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915490": {
+   "overall": "Early view: Real Sociedad drew 1-1 with Lyon and sit 20th with five points, so a home win over Torreense matters. Torreense beat Ararat-Armenia 3-2 with two stoppage-time goals despite playing most of the game with ten men after Jorge Aguirre's red card, and will be without him here.",
+   "goals": {
+    "lean": "lower",
+    "call": "Around 3 goals",
+    "text": "The numbers say 4.3 goals, which looks high. Real Sociedad scored once from 11 shots against Lyon, and while Torreense concede chances, a total above four needs a lot to go right for the home side."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 11 corners",
+    "text": "The numbers say 11.1 corners. Real Sociedad took five corners against Lyon, but a deep-sitting Torreense side at Anoeta should give them more; I stay with the number."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 5 cards",
+    "text": "The numbers say 5.4 cards. Real Sociedad picked up three yellows against Lyon, and Torreense's game with Ararat had a red card and eight yellows, so the high figure is supported."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Under 29.5 shots",
+    "text": "The numbers say 31.3 shots. I lean slightly lower: Real Sociedad took only 11 shots against Lyon, and Torreense's last game had 31 shots mostly because Ararat had an extra man for over an hour."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 10 shots on target",
+    "text": "The numbers say 10.1 shots on target. Torreense's game had 13 on target in total, though helped by the man advantage; nothing else points clearly either way."
+   },
+   "sources": [
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62485/real-sociedad-lyon-europa-league-im-liveticker.html",
+    "https://www.t-online.de/sport/live-ticker/fussball/europa-league/sdc_fm-62490/torreense-ararat-armenia-europa-league-im-liveticker.html"
+   ],
+   "written_at": "2026-11-10T10:16:51Z"
+  },
+  "401915795": {
+   "overall": "Early view: AGF are still looking for a first league-phase win (lost 1-0 at Gent, 1-1 with Egnatia, 0-0 with Braga), while John van den Brom's Twente have won all three (1-0 Thun, 4-1 Lincoln, 3-1 Pafos). Twente need the points to stay in the top eight, AGF need them to get into the top 24. No injury news for this game yet; it is refreshed with team news the day before.",
+   "goals": {
+    "lean": "lower",
+    "call": "Under 3.5 goals",
+    "text": "The numbers say 3.1 goals. I lean a little lower: AGF have scored two goals in three European games and kept Braga out in a 0-0, and Twente dominated possession against Pafos but struggled to create in the first half before winning 3-1 against ten men."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 10 corners",
+    "text": "The numbers say 9.7 corners, with Twente taking most of them. Twente's control of the ball should push AGF back and win corners, which fits the estimate, so I stay with it."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.0 cards. Nothing in the news points to a heated game or a strict referee yet; the referee is not known, so I stay with the estimate."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Under 30 shots",
+    "text": "The numbers say 31.6 shots, nearly 23 of them from Twente. That is a lot for an away side; Twente's first half against Pafos was slow for clear chances and AGF created the better first-half openings against Braga, so I lean a bit lower."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 10 on target",
+    "text": "The numbers say 10.3 shots on target. AGF goalkeeper Mads Hedenstad was busy against Braga and Twente have Wout Weghorst and Daouda Weidmann testing keepers, so I see no reason to move off the estimate."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://www.flashscore.com/news/agf-share-the-spoils-with-braga-in-goalless-draw-in-conference-league/bcVRNiRs/",
+    "https://www.flashscore.com/news/soccer-conference-league-twente-remain-flawless-with-10-man-pafos-downed-after-second-half-comeback/j1ojoGan/",
+    "https://nltimes.nl/node/92952"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915732": {
+   "overall": "Early view: a meeting of two unbeaten sides near the top. Fabian Hurzeler's Brighton have 7 points (4-0 Kauno Zalgiris, 0-0 at Jablonec, 1-0 at Getafe) and Monaco have won all three (2-1 at CSKA Sofia, 3-0 Freiburg, 2-0 Nordsjaelland). The site makes Brighton strong favourites, but Monaco's form says this should be closer than that.",
+   "goals": {
+    "lean": "lower",
+    "call": "Under 2.5 goals",
+    "text": "The numbers say 3.2 goals. I lean lower: Brighton have kept clean sheets in 10 of their 13 European games and found it hard to break down Jablonec and Getafe, while Monaco have conceded once in three games and won at home against Nordsjaelland with few chances in a cagey first half."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 or 10 corners",
+    "text": "The numbers say 9.6 corners, most for Brighton. With Brighton at home and likely to have more of the ball, that split looks fair and I have nothing to move it."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 3 or 4 cards",
+    "text": "The numbers say 3.5 cards. The referee is not known yet and neither side has shown a discipline problem in the competition, so I stay with the estimate."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 27 shots",
+    "text": "The numbers say 27.8 shots, with Brighton on 19. Brighton had plenty of efforts at Getafe (Jaouen Hadjam hit the woodwork twice) but Monaco are a stronger side than the 8.4 shots they are given suggests, so the total looks about right even if the split is more even."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "call": "Under 9.5 on target",
+    "text": "The numbers say 9.2 shots on target. I lean slightly lower: in their last European games Brighton needed one goal and a lot of misses at Getafe, and Monaco needed only one shot on target to go ahead against Nordsjaelland."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://www.flashscore.com/news/brighton-hold-on-to-narrow-win-against-getafe-to-get-back-on-track-in-conference-league/rZx18MKO/",
+    "https://www.flashscore.com/news/monaco-preserve-perfect-record-on-home-soil-against-helpless-danes/boDudXD4/",
+    "https://www.101greatgoals.com/football/conference-league/conference-league-brighton-monaco-test/"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915629": {
+   "overall": "Early view: Egnatia, who lead the Albanian league, drew their first two games (1-1 with Midtjylland and at AGF) and then lost 2-0 at Universitatea Craiova with ten men. Kauno Zalgiris are bottom with no points, one goal scored and eleven conceded. Egnatia need a win to stay in the race for the top 24.",
+   "goals": {
+    "lean": "lower",
+    "call": "Under 3.5 goals",
+    "text": "The numbers say 3.0 goals. I lean a little lower: Egnatia have scored two goals in three games and sat in a five-man defence at Craiova, and Kauno Zalgiris have scored once in three games. Kauno do leak goals (4-0 at Brighton, 1-4 v Brann, 3-0 at Lugano), so Egnatia should score, but not freely."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 8.8 corners, more for Egnatia at home. Nothing in the reports points away from that, so I stay with it."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.2 cards. Eneo Bitri was sent off at Craiova after reacting to provocation, and Kauno picked up two bookings at Lugano, so cards are a real feature, but the estimate already covers that. On Bitri: if it was a one-match ban he should serve it against Lincoln on 26 November, so he may be back here; that needs checking nearer the game."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 26 shots",
+    "text": "The numbers say 26.3 shots, with Egnatia on 16. Egnatia should have more of the ball at home than they did in Romania, and Kauno started brightly at Lugano before fading, so I stay with the estimate."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 9 on target",
+    "text": "The numbers say 8.9 shots on target. I found nothing that moves it either way, so the view rests on form here."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://www.flashscore.ro/stiri/fotbal-conference-league-universitatea-craiova-egnatia-etapa-3-rezultat-rezumat-video-clasament/behFg19m/",
+    "https://www.bluewin.ch/en/sport/football/lugano-secures-its-third-win-without-any-trouble-li.3663509",
+    "https://global.espn.com/football/team/_/id/20028"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915794": {
+   "overall": "Early view: Thun, coached by Gian-Luca Privitelli, got their first league-phase win by beating Hearts 3-1 on their artificial pitch after defeats to Twente and Hajduk. Rik De Mil's Gent have won once in their last five games and drew 0-0 at KuPS. Both sides sit mid-table and need points for the top 24.",
+   "goals": {
+    "lean": "lower",
+    "call": "Around 2.5 goals",
+    "text": "The numbers say 2.8 goals. I lean a little lower: Gent have not scored away in the league phase (0-2 at Braga, 0-0 at KuPS), though Thun's Brighton Labeau and Furkan Dursun both scored against Hearts, so a home goal is likely."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 8.7 corners. Gent's best moments at KuPS came from Hyllarion Goore's runs down the right, which can win corners, but nothing points clearly off the estimate."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 3 or 4 cards",
+    "text": "The numbers say 3.7 cards. The referee is not known and there is no history of bad feeling between the clubs, so I stay with the estimate."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 29 shots",
+    "text": "The numbers say 28.9 shots. Gent had no shots on target in the first half at KuPS but dominated after the break, and Thun take their chances at home, so nothing moves me off the estimate."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 9 on target",
+    "text": "The numbers say 8.9 shots on target. Gent have been short of quality in the final third and Thun were sharp against Hearts; those roughly cancel out, so I stay with the estimate."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://www.irishnews.com/sport/soccer/wouter-vrancken-demands-unity-as-hearts-seek-to-bounce-back-from-thun-defeat-QYSLNQXATZMJXAAKTTN6BM2DQQ/",
+    "https://www.flashscore.com/news/soccer-conference-league-no-goals-in-finland-as-kups-grind-out-first-conference-league-point-versus-gent/K2OwuQKM/"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915792": {
+   "overall": "Early view: Hajduk beat Ajax and won at Thun, then lost 1-0 in Gibraltar to Lincoln Red Imps, with no shot on target until the 85th minute. Nordsjaelland are winless in Europe (two draws and a 2-0 loss at Monaco) but scored six at Randers in the league on 8 November. Hajduk are on six points and one more win would put them close to the top 24.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 3.0 goals. Hajduk were blunt in Gibraltar and missed Adrion Pajaziti, Leander Dendoncker, Roko Brajkovic and goalkeeper Ivica Ivusic, while Nordsjaelland managed one attempt at Monaco but score freely at home in Denmark. Those pull in different directions, so I stay with the estimate."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 8.9 corners. Nothing in the reports points away from that, so I stay with it."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Over 3.5 cards",
+    "text": "The numbers say 4.7 cards, already high, which fits a loud Poljud and a home side under pressure after the Lincoln defeat. The referee is not known yet, so I do not push it higher."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 25 shots",
+    "text": "The numbers say 24.8 shots. Hajduk took plenty of long-range shots through Dalisson in Gibraltar, which keeps shot counts up even when chances are poor, so I stay with the estimate."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "call": "Under 9.5 on target",
+    "text": "The numbers say 9.2 shots on target. I lean slightly lower: Hajduk had one shot on target in 90 minutes against Lincoln, with Dalisson and Soticek missing the target, and Nordsjaelland did not test Lukas Hradecky at Monaco."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://total-croatia-news.com/news/sport/hajduk-conference-league/",
+    "https://www.flashscore.com/news/monaco-preserve-perfect-record-on-home-soil-against-helpless-danes/boDudXD4/",
+    "https://africa.espn.com/football/team/results/_/id/3101/den.fc_nordsjlland"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915793": {
+   "overall": "Early view: Hearts have one point from three games and lost 3-1 at Thun with ten players injured, captain Stephen Kingsley going off hurt as well. Wouter Vrancken said a league game mattered more than the next European tie, a sign of where Hearts' priorities are. Borac beat KuPS at home but lost at Panathinaikos and Mjallby, and have lost 14 of their last 20 European away games.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 3.1 goals. Hearts have conceded seven in three European games and their defence is stretched by injuries, but Borac were muted after going behind at Mjallby and rarely score away. I stay with the estimate."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 10 or 11 corners",
+    "text": "The numbers say 10.9 corners, seven of them for Hearts. Hearts at Tynecastle should have territory against a Borac side that struggles away, so the split makes sense even with a weakened squad."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.0 cards. Borac started aggressively at Mjallby, but there is nothing on the referee yet, so I stay with the estimate."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 28 shots",
+    "text": "The numbers say 28.4 shots. Borac took several long-range shots early at Mjallby without testing the keeper, and Hearts should be on the front foot at home, so the estimate looks fair."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 9 on target",
+    "text": "The numbers say 9.1 shots on target. How many of Hearts' injured players return by December matters most here; until that is known I stay with the estimate."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://www.irishnews.com/sport/soccer/wouter-vrancken-demands-unity-as-hearts-seek-to-bounce-back-from-thun-defeat-QYSLNQXATZMJXAAKTTN6BM2DQQ/",
+    "https://www.flashscore.com/news/soccer-conference-league-mjallby-continue-to-impress-in-europe-by-taking-borac-gift-in-home-win/zc9ho7t3/"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915628": {
+   "overall": "Early view: Mjallby are unbeaten in Europe (2-0 Inter Escaldes, 1-1 at Iberia, 2-0 Borac), the first Swedish side since Ostersund in 2017 to do that in the first three main-draw games. Pafos are on a six-game winless run and lost 3-1 at Twente after Lele's goal and later red card. A win would all but put Mjallby in the top 24.",
+   "goals": {
+    "lean": "same",
+    "call": "Under 2.5 goals",
+    "text": "The numbers say 1.9 goals, already low. Nine of Mjallby's last 11 competitive games had fewer than three goals and they won 2-0 against Borac with a goal from a defensive error, so I agree with a low total."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 10 corners",
+    "text": "The numbers say 9.9 corners, mostly for Mjallby at home. Their best first-half chance against Borac came from a corner (an Axel Noren header), so set pieces matter for them, but nothing moves the estimate."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.1 cards. Lele was sent off for a second booking for a cynical foul at Twente; that one-match ban should be served against Midtjylland on 26 November, so he is likely back here. The referee is not known, so I stay with the estimate."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 26 shots",
+    "text": "The numbers say 26.2 shots. Mjallby did not dominate the first half against Borac and are patient rather than shot-heavy, but they have the home edge, so I stay with the estimate."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 8 on target",
+    "text": "The numbers say 8.4 shots on target. I found nothing that moves it either way."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://www.flashscore.com/news/soccer-conference-league-mjallby-continue-to-impress-in-europe-by-taking-borac-gift-in-home-win/zc9ho7t3/",
+    "https://www.flashscore.com/news/soccer-conference-league-twente-remain-flawless-with-10-man-pafos-downed-after-second-half-comeback/j1ojoGan/",
+    "https://nltimes.nl/node/92952"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
+  },
+  "401915630": {
+   "overall": "Early view: Sint-Truiden are unbeaten in the league phase (2-0 Iberia, 1-0 at Midtjylland, 1-1 Brann) and have conceded once. Ajax lost at Hajduk on the first night but then beat Atalanta 2-0 and won 6-1 at Midtjylland, with Tolu Arokodare scoring twice. Little recent Sint-Truiden news was found, so their side of this view rests on results.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 3.4 goals. Ajax are scoring freely under Michel, but Sint-Truiden have let in one goal in three games; those cancel out, so I stay with the estimate."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 8 or 9 corners",
+    "text": "The numbers say 8.6 corners. Nothing in the news points either way, so I stay with it."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 3 or 4 cards",
+    "text": "The numbers say 3.5 cards. The referee is not known and there is no history between the sides, so I stay with the estimate."
+   },
+   "shots": {
+    "lean": "higher",
+    "call": "Over 28.5 shots",
+    "text": "The numbers say 28.3 shots, with Ajax on only 12. I lean a little higher: Ajax created a lot in their last two European games and now have Arokodare, Oscar Gloukh and Marcos Leonardo all scoring, which should lift their share. They were without Sofyan Amrabat and Julian Brandt at Midtjylland, and Kasper Dolberg hurt his knee in October."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 10 on target",
+    "text": "The numbers say 10.0 shots on target. Ajax's finishing has been sharp, but Sint-Truiden have kept things tight, so I stay with the estimate."
+   },
+   "sources": [
+    "https://www.uefa.com/uefaconferenceleague/news/02a8-2174cb200f25-b94693ddff4e-1000--2026-27-conference-league-all-the-league-phase-fixtures-a/",
+    "https://nltimes.nl/2026/11/05/ajax-thrash-danish-side-midtjylland-6-1-second-half-goal-rush-conference-league",
+    "https://roundtable.io/sports/soccer/eredivisie/afc-ajax/news/ajax-fear-serious-knee-injury-for-striker-kasper-dolberg"
+   ],
+   "written_at": "2026-11-10T10:19:40Z"
   }
  }
 }
