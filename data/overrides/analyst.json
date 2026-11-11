@@ -38,42 +38,6 @@
    ],
    "written_at": "2026-11-08T08:15:06Z"
   },
-  "401885395": {
-   "overall": "Paulo Fonseca takes charge of Sporting for the first time after Rui Borges was sacked on 1 November. Sporting won 1-0 against Shakhtar in midweek under an interim coach. Fonseca says he wants to defend better and press man-to-man. Reports name João Gonçalves as referee, not João Ferreira as the site lists. Moreirense are 9th, have won their last two, and Domingues and Mendonça are doubts.",
-   "goals": {
-    "lean": "same",
-    "call": "Around 3 goals",
-    "text": "The numbers say 3.4 goals. A new coach often gives a lift, but Fonseca's first priority is defending better, and Moreirense arrive in form, so the two balance out."
-   },
-   "corners": {
-    "lean": "higher",
-    "call": "Over 8.5 corners",
-    "text": "The numbers say 8.8 corners. Fonseca says Sporting will play positional attack about 80% of the time, and a pressing, possession side at home against a team that will sit tends to win corners, so we lean slightly higher."
-   },
-   "cards": {
-    "lean": "lower",
-    "call": "Under 4.5 cards",
-    "text": "The numbers say 4.2 cards, but they assume a different referee: reports name João Gonçalves, not João Ferreira. Sporting's Maxi Araújo and Luis Suárez are one yellow from a ban before a big run of games, which may make them careful. We lean slightly lower."
-   },
-   "shots": {
-    "lean": "same",
-    "call": "Around 28 shots",
-    "text": "The numbers say 28.0 shots. Nothing points either way beyond the uncertainty of a new coach."
-   },
-   "shots_on_target": {
-    "lean": "same",
-    "call": "Around 9 on target",
-    "text": "The numbers say 9.1 shots on target. No news points either way."
-   },
-   "sources": [
-    "https://www.espn.com/soccer/story/_/id/50359218/sporting-lisbon-sack-borges-ucl-match-shakhtar-donetsk",
-    "https://www.noticiasaominuto.com/desporto/3079593/crenca-no-titulo-e-o-que-e-urgente-mudar-o-que-disse-paulo-fonseca",
-    "https://www.noticiasaominuto.com/desporto/3078593/joao-goncalves-na-estreia-de-paulo-fonseca-os-arbitros-da-11-jornada",
-    "https://www.record.pt/futebol/futebol-nacional/liga-betclic/sporting/detalhe/paulo-fonseca-com-duas-baixas-para-a-estreia-em-alvalade-diante-do-moreirense",
-    "https://www.dazn.com/pt-PT/news/futebol/sporting-x-moreirense-data-hora-antevisao-e-favorito-no-jogo-da-liga-portuguesa/1cets9d7w52vr1rbadnsfz64gu"
-   ],
-   "written_at": "2026-11-06T20:15:13Z"
-  },
   "401875551": {
    "overall": "Robin Veldman's Heerenveen have won their last four competitive games and kept five clean sheets this season, and Veldman says his whole squad is fit. Giovanni van Bronckhorst's Feyenoord top the Eredivisie but arrive after a 1-1 draw at Fortuna Sittard and a 3-0 home defeat to Inter in the Champions League on Tuesday. Feyenoord have not won on their last two visits to the Abe Lenstra Stadion.",
    "goals": {
@@ -16236,6 +16200,140 @@
     "https://en.wikipedia.org/wiki/2026%E2%80%9327_S%C3%BCper_Lig"
    ],
    "written_at": "2026-11-10T20:20:00Z"
+  },
+  "401884704": {
+   "overall": "Early view: Hamburg have turned their season around under Merlin Polzin after losing their first three games, swapping possession play for a compact, low-possession set-up, though captain Nicolai Remberg is out long term after ACL surgery. Schalke sit 17th, lost in Hoffenheim on 8 November after a Loris Karius error, and lost Robin Gosens to a knee injury and Timo Becker to a foot injury; this is refreshed with team news the day before kick-off.",
+   "goals": {
+    "lean": "lower",
+    "call": "Around 2 goals, under 2.5",
+    "text": "The numbers say 2.0 goals. I lean slightly lower: Hamburg under Polzin have won games with around 35-37% possession and tight margins (1-0 against Stuttgart), and Schalke have scored little lately (0-0 at Köln, 0-2 at home to Leipzig, one late goal at Hoffenheim)."
+   },
+   "corners": {
+    "lean": "lower",
+    "call": "Under 10 corners",
+    "text": "The numbers say 10.1 corners with Hamburg taking most of them. I lean a little lower because Polzin's Hamburg have been happy to sit compact without the ball, which tends to limit their own corner count at home against a side that may need to attack."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 3-4 cards",
+    "text": "The numbers say 3.4 cards. Schalke's position near the bottom adds some edge, but there is no referee named yet and nothing in the news points clearly up or down, so I stay with the number for now."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Around 25 shots",
+    "text": "The numbers say 27.5 shots. Hamburg's low-possession approach and Schalke's blunt recent attack both suggest a slightly quieter game than that, so I lean a touch lower."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "call": "Under 9.5 on target",
+    "text": "The numbers say 9.3 shots on target. With Schalke scoring once in their last three league games and Hamburg winning tight, low-margin games, I lean a little lower."
+   },
+   "sources": [
+    "https://www.getfootballnewsgermany.com/2026/hamburg-injuries-bundesliga/",
+    "https://schalke04.de/en/news/newscenter/",
+    "https://bulinews.com/hoffenheim-claim-2-1-victory-over-schalke-after-early-karius-error"
+   ],
+   "written_at": "2026-11-11T08:40:00Z"
+  },
+  "401874775": {
+   "overall": "Early view: Udinese are bottom with 5 points, sacked Kosta Runjaic on 2 November after one point from eight games, and lost 2-1 at Venezia in Paolo Zanetti's first game. Frosinone are 6th and in form, with Antonio Raimondo among Serie A's top scorers after the 5-1 win over Lecce; Gabriele Bracaglia is banned. This is refreshed with team news the day before kick-off.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 3 goals",
+    "text": "The numbers say 3.1 goals, which is already high. Frosinone's direct, wide attacking (five against Lecce) and Udinese's leaky run support goals, but a new coach like Zanetti usually tightens the defence first, so I stay with the number."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 10-11 corners",
+    "text": "The numbers say 10.7 corners, split evenly. Frosinone use wide attackers a lot, which can push their share up, but Udinese at home under a new coach should also push forward, so I see no clear reason to move off the number."
+   },
+   "cards": {
+    "lean": "higher",
+    "call": "Around 4 cards",
+    "text": "The numbers say 3.3 cards. I lean higher: Udinese are in a relegation fight under a new coach and will be chasing points at home, and Frosinone already have a player (Bracaglia) out on a five-yellow ban, which hints at a side that picks up bookings."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Around 30 shots",
+    "text": "The numbers say 36.4 shots, which is very high for a Serie A game. I lean lower simply because that is far above normal, and Zanetti's first job at Udinese is likely to be making them harder to play through."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 10-11 on target",
+    "text": "The numbers say 11.3 shots on target. Frosinone have been clinical, with Raimondo on eight league goals by late October, but I trim nothing firm until team news is in, so I stay with the number."
+   },
+   "sources": [
+    "https://www.agi.it/sport/news/2026-11-02/udinese-esonera-runjaic-zanetti-pole-39836670/",
+    "https://www.agi.it/sport/news/2026-11-06/venezia-udinese-2-1-risultato-serie-a-39919111/",
+    "https://www.livescore.com/en/news/football/serie-a/serie-a-frosinone-5-1-lecce-fantastic-frosinone-surge-into-european-places-football-italia/"
+   ],
+   "written_at": "2026-11-11T08:40:00Z"
+  },
+  "401876375": {
+   "overall": "Early view: Auxerre are 14th and lost 1-0 at home to Paris FC on 7 November, with a Cameron Archer goal ruled out and Kevin Trapp denying Archer later on. Toulouse are 12th and beat Strasbourg 3-1 on 6 November, with two goals coming from corners. I found little team news yet, so this rests mostly on form and is refreshed the day before kick-off.",
+   "goals": {
+    "lean": "lower",
+    "call": "Under 2.5 goals",
+    "text": "The numbers say 2.6 goals. I lean slightly lower: Auxerre were held scoreless at home by Paris FC and their attack leans heavily on Archer, while two mid-to-lower sides with little separating them often produce a cagey game."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 9 corners",
+    "text": "The numbers say 9.2 corners. Toulouse won seven corners against Strasbourg and scored twice from set pieces, but one game is not enough to move off the number."
+   },
+   "cards": {
+    "lean": "same",
+    "call": "Around 4 cards",
+    "text": "The numbers say 4.2 cards. The Toulouse-Strasbourg game had plenty of fouls and a confrontation involving Tapé, but with no referee named yet I stay with the number."
+   },
+   "shots": {
+    "lean": "lower",
+    "call": "Around 20-21 shots",
+    "text": "The numbers say 22.4 shots. Toulouse had only 10 shots against Strasbourg even while winning 3-1, which fits an efficient rather than high-volume side, so I lean a touch lower."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 8 on target",
+    "text": "The numbers say 7.9 shots on target. Toulouse put 5 of 10 on target in their last game, which offsets the lower shot volume, so I stay with the number."
+   },
+   "sources": [
+    "https://beninwebtv.bj/ligue-1-sinayoko-fait-gagner-le-paris-fc-a-auxerre/",
+    "https://m.maxifoot.fr/ligue-1/toulouse-3-1-strasbourg-fini-foot-467242.htm"
+   ],
+   "written_at": "2026-11-11T08:40:00Z"
+  },
+  "401885375": {
+   "overall": "Early view: two of the surprise packages meet level on 20 points. Promoted Académico de Viseu, coached by Bruno Pinheiro, have had a historic run in their first top-flight season in 37 years with keeper Ewerton and striker André Clóvis key, and draw some of the league's best crowds at the Fontelo. Arouca under Vítor Severino lost late at Famalicão before the break after wins over Alverca and Nacional; this is refreshed with team news the day before kick-off.",
+   "goals": {
+    "lean": "same",
+    "call": "Around 2-3 goals",
+    "text": "The numbers say 2.6 goals. Both sides are in good form and attack with intent, but Viseu's goalkeeper Ewerton has been making a lot of saves, so nothing points clearly either way yet."
+   },
+   "corners": {
+    "lean": "same",
+    "call": "Around 8 corners",
+    "text": "The numbers say 8.0 corners. Viseu like to play out from the back rather than go wide and long, which fits a modest corner count, so I stay with the number."
+   },
+   "cards": {
+    "lean": "lower",
+    "call": "Around 5 cards",
+    "text": "The numbers say 5.5 cards, which is high. I lean slightly lower: there is no particular rivalry here and both sides are comfortable in the table, though Arouca did have a player sent off against Alverca, so this is a mild lean only."
+   },
+   "shots": {
+    "lean": "same",
+    "call": "Around 25-26 shots",
+    "text": "The numbers say 26.0 shots with Arouca taking more. Ewerton was averaging about 4.5 saves a game early in the season, which suggests Viseu do allow shots, so the number looks reasonable."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "call": "Around 9 on target",
+    "text": "The numbers say 8.9 shots on target. Nothing in the news moves this yet, so I stay with the number until team news arrives."
+   },
+   "sources": [
+    "https://www.flashscore.pt/noticias/futebol-liga-portugal-betclic-viriatos-contra-leoes-e-dragoes-os-cinco-pilares-do-academico-de-viseu/ncEJYWQQ/",
+    "https://www.flashscore.pt/noticias/arouca/fJqfm7CGnZdPEiqF/"
+   ],
+   "written_at": "2026-11-11T08:40:00Z"
   }
  }
 }
