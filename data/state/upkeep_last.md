@@ -7,7 +7,8 @@
 - Cross-check: 0 "single" matches in every league; 64 conflicts in total (mostly yellow-card count differences), unchanged across the last 8 runs — no jump.
 - site/data/meta.json updated_at 2026-11-12T16:22 UTC (matches the last run).
 - Local test suite: 16 passed (includes headless-browser page check).
-- Live site home.json: could not be fetched from this session (the fetch permission request timed out); the publish job deployed successfully at 16:23 UTC, so the live site should be current.
+- Live site home.json: made_at 2026-11-12T19:17 UTC (re-checked later in the session) — current.
+- International break: no league results since 8–9 Nov, so frozen (103) and scored (102) counts are unchanged, as expected. 4 matches ESPN marks Postponed (Estoril–Maritimo, Castellón–Eibar, Granada–Tenerife, Andorra–Mallorca) are correctly not treated as finished.
 
 ## Found / fixed
 - Nothing broken; no changes to code or settings.
