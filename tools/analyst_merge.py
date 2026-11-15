@@ -51,7 +51,7 @@ def problems(e):
         if not isinstance(t, str) or len(t.strip()) < 40:
             out.append(f"{s}.text missing or too short")
         p = x.get("adjust_pct")
-        if not isinstance(p, (int, float)) or isinstance(p, bool) or abs(p) > MAX_PCT:
+        if not isinstance(p, (int, float)) or isinstance(p, bool) or p != p or abs(p) > MAX_PCT:
             out.append(f"{s}.adjust_pct must be a number from -{MAX_PCT:.0f} to {MAX_PCT:.0f}")
         elif (x.get("lean") == "higher" and p <= 0) or (x.get("lean") == "lower" and p >= 0) or (x.get("lean") == "same" and p != 0):
             out.append(f"{s}.adjust_pct must agree with the lean (higher > 0, lower < 0, same = 0)")

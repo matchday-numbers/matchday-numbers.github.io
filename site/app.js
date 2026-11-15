@@ -261,7 +261,7 @@ function whyBox(stat, s, P, m, acc, av, tk) {
       : `<b>Effect on the number: none.</b> Our take stays at the numbers' ${fx(s.total)} ${h(lab)}.`}</p>` : "";
   const subj = av && (av.text || av.call)
     ? `<p class="small">${av.lean ? `<span class="pill lean">${h(LEAN[av.lean] || av.lean)}</span> ` : ""}${h(av.text || "")}${av.call ? ` <b>Judgement call: ${h(av.call)}</b>` : ""}</p>${size}
-       <p class="small sub">Opinion from recent news, written ${P.analyst_view.written_at ? h(ago(P.analyst_view.written_at)) : "before kick-off"}. It moves this stat by the size shown (at most 25% either way) to give our take; the numbers alone are shown above and kept in the track record.</p>`
+       <p class="small sub">Opinion from recent news, written ${P.analyst_view.written_at ? h(ago(P.analyst_view.written_at)) : "before kick-off"}. ${tk ? "It moves this stat by the size shown (at most 25% either way) to give our take; the numbers alone are in the line above and kept in the track record." : "Written before views moved the numbers, so it sits next to them and our take is the numbers alone."}</p>`
     : `<p class="small sub">No subjective view for this match${m.status === "upcoming" ? " yet. It's written from the latest news in the 48 hours before kick-off, then our take includes it" : ", so our take is the numbers alone"}.</p>`;
   return `<details><summary>Why</summary>
     ${s.reasoning ? `<p class="why-h">Reasoning</p>${s.reasoning.map(x => `<p class="small reason">${h(x)}</p>`).join("")}` : ""}
@@ -287,6 +287,7 @@ function statPanel(stat, P, m, acc) {
   let note;
   if (tk && tk.adjust_pct) note = `Numbers alone ${fx(n.total)}, judgement ${sgn(tk.adjust_pct, 0)}% (analyst ${LEAN[tk.lean] || "view"}).`;
   else if (tk) note = `The analyst agrees with the numbers (${fx(n.total)}).`;
+  else if (av) note = `Numbers only: this subjective view was written before views moved the numbers.`;
   else if (m.status === "upcoming" && daysTo(m.kickoff) * 24 > JUDGE_HOURS) note = `Numbers only for now: the subjective view is added in the 48 hours before kick-off.`;
   else note = `Numbers only: no subjective view for this match.`;
   const verdict = `<p class="call"><b>Our take:</b> ${h(ourCall(stat, s, m))}<br><span class="sub">${h(note)} Reasons under Why.</span></p>`;
@@ -400,7 +401,7 @@ function predictionCard(m, acc, teams) {
   return `
     <div class="grow">${strip(m.home, m.away, pub(P).goals)}</div>
     <div class="factrow">${facts}</div>
-    ${analystBox(P.analyst_view, m)}
+    ${analystBox(P.analyst_view, m, !!P.take)}
     ${teams ? compareSection(m, teams) : ""}
     <section class="section"><h2>Expected numbers</h2>
     <div class="grid">${Object.keys(STAT).map(s => statPanel(s, P, m, acc)).join("")}</div></section>
@@ -412,7 +413,7 @@ function predictionCard(m, acc, teams) {
     <p class="note" style="margin-top:12px">${pr.team_news ? "Team news comes from FotMob in the last 4 days before kick-off and is refreshed every 3 hours. It can still change before the match." : "Team news appears 4 days before kick-off. Until then, only suspensions worked out from cards are counted, and they may miss appeals or cup bans."}</p></section>`;
 }
 
-function analystBox(av, m) {
+function analystBox(av, m, moved = true) {
   if (!av || (!Array.isArray(av) && !av.overall)) {
     return m && m.status === "upcoming"
       ? `<section class="section"><h2>Subjective view</h2><div class="panel"><p class="sub">${daysTo(m.kickoff) * 24 > JUDGE_HOURS ? "Written in the 48 hours before kick-off" : "Being written"}: a subjective view for each stat from the latest news (team news, rotation, motivation, referee), redone on match day. Once it's in, the expected numbers below become our take: the numbers moved by that judgement.</p></div></section>`
@@ -428,7 +429,7 @@ function analystBox(av, m) {
   return `<section class="section"><h2>Subjective view</h2><div class="panel">${paras.map(x => `<p>${h(x)}</p>`).join("")}
     ${calls ? `<ul class="jcalls">${calls}</ul>` : ""}
     ${src.length ? `<p class="sub small">Read before writing: ${src.map(u => { try { return `<a href="${h(u)}" rel="noopener">${h(new URL(u).hostname.replace("www.", ""))}</a>`; } catch (e) { return ""; } }).join(", ")}</p>` : ""}
-    <p class="sub small">Opinion from the latest news${!Array.isArray(av) && av.written_at ? `, written ${h(ago(av.written_at))}` : ""}. It's redone as the news changes, and each stat's lean moves its number by the size shown (at most 25%), giving our take under Expected numbers. The reasons and the numbers alone are under each stat's "Why".</p></div></section>`;
+    <p class="sub small">Opinion from the latest news${!Array.isArray(av) && av.written_at ? `, written ${h(ago(av.written_at))}` : ""}. ${moved ? `It's redone as the news changes, and each stat's lean moves its number by the size shown (at most 25%), giving our take under Expected numbers. The reasons and the numbers alone are under each stat's "Why".` : `Written before views moved the numbers: it sits next to them and never changed them. The reasons for each stat are under its "Why".`}</p></div></section>`;
 }
 
 function compareSection(m, teams) {

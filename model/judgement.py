@@ -26,7 +26,7 @@ def view_pct(v):
     lean = v.get("lean")
     sign = 1 if lean == "higher" else -1 if lean == "lower" else 0
     p = v.get("adjust_pct")
-    if isinstance(p, (int, float)) and not isinstance(p, bool):
+    if isinstance(p, (int, float)) and not isinstance(p, bool) and p == p:  # p == p: not NaN
         p = min(abs(float(p)), MAX_PCT)
         return sign * p, True
     return sign * DEFAULT_PCT, False
