@@ -50,7 +50,7 @@ def data():
                 clubs.setdefault(tid, []).extend(games)
         matches, groups, names = assemble(fd, rows, clubs)
         referees = referee_join(matches, names, load_referee_rows(H), DOMESTIC)
-        for m in matches:  # MLS: FotMob, its first stats source, already names the referee
+        for m in matches:  # leagues whose first stats source is FotMob: it already names the referee
             if m["ctx"] in FOTMOB_STATS and m.get("referee"):
                 referees.setdefault((m["date"], m["home"], m["away"]), m["referee"])
         # last game before each match, any competition (club schedules include cups)

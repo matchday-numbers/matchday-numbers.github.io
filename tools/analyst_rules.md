@@ -1,36 +1,33 @@
 # Subjective view: how to write it
 
-Every match the site posts (every upcoming fixture with an estimate) gets a subjective view: human-style
-judgement next to the statistical numbers. It is shown at the top of the match page, next to each stat's
-"Our call" and in each stat's "Why" box. It never changes the numbers.
+The subjective view is human-style judgement on top of the statistical numbers. It is written ONLY for
+matches the site posts that kick off within the next 48 hours (`model/judgement.py` JUDGE_HOURS); matches
+further away get no view. For each stat it gives a lean and a size (`adjust_pct`), and the site moves the
+numbers by that size to show **our take**: the expected number, the likely range and every line percentage
+are worked out again from the moved number. So the size matters: it changes what the site shows.
 
-## A view follows the news
+It is shown at the top of the match page, and in each stat's "Our take" line and "Why" box (next to the
+reasoning, the base, the adjustments and the numbers alone). The numbers alone are kept and scored in the
+track record; our take is scored separately against them.
 
-A view is a judgement on what is known today, so it changes when the news changes: a view written two weeks
-before a match will often differ from the one written the day before. Each match's view is redone:
-weekly while the match is far off, and again in the day and a half before kick-off with team news, lineups
-and the referee. When you redo a view, the brief includes the current one: keep what still holds, change
-what the news has changed, and never copy it without checking.
+## Views follow the news
 
-## Views change with the news
-
-A view is a judgement on the news of the day, not a one-off. Each match's view is rewritten as kick-off
-approaches: at least every five days, every two days in the final week, and in the last 36 hours with the
-latest team news, lineups and referee. When a brief carries `current_view`, start from it but re-research:
-keep what still holds, change the lean or the call when the news has changed (a key player back or injured,
-a manager sacked, rotation announced), and say what changed. Two views of the same match written two weeks
-apart can and often should differ.
+A view is written when a match enters the 48-hour window and redone on match day (kick-off within 24 h, view
+older than 16 h) with the latest team news, expected lineups and the referee. When a brief carries
+`current_view`, start from it but re-research: keep what still holds, change the lean, size or call where
+the news changed (a key player back or injured, a manager sacked, rotation announced), and say what changed.
+A brief with `current_view_needs_sizes: true` is an older view without sizes: redo it with sizes.
 
 ## Input
 
 A brief per match (from `tools/analyst_briefs.py`): competition, kick-off, teams, table positions and form,
-win/draw/loss probabilities, and for each stat the site's expected total (home/away split) and "our call"
-line, plus missing players, referee, derby/stakes flags and how many days are left to kick-off.
+win/draw/loss probabilities, and for each stat the numbers' expected total (home/away split, before any
+judgement) and the tightest line they give 60% or more (`line_60`), plus missing players, referee,
+derby/stakes flags, hours left to kick-off and `max_adjust_pct` (25).
 
 ## Research (web search and web fetch; never from memory)
 
-Look for what the numbers can't see, published recently (last 7-10 days; for matches more than a week away,
-the latest available):
+Look for what the numbers can't see, published recently (the last few days; team news from the last 48 hours):
 - injuries and suspensions (including anyone missing from the brief's list), expected or confirmed lineups
 - rotation before or after a European or cup game, fixture congestion, travel
 - manager situation (new, under pressure, sacked), dressing-room or club turmoil
@@ -54,24 +51,29 @@ injury roundups cover many teams at once.
 {"matches": {
   "<espn match id>": {
     "overall": "Two or three sentences with the main context of the match.",
-    "goals": {"lean": "higher|lower|same", "call": "Under 2.5 goals", "text": "The numbers say 2.4 goals. I lean lower: ..."},
-    "corners": {"lean": "...", "call": "Around 10 corners", "text": "..."},
-    "cards": {"lean": "...", "call": "Over 4.5 cards", "text": "..."},
-    "shots": {"lean": "...", "call": "...", "text": "..."},
-    "shots_on_target": {"lean": "...", "call": "...", "text": "..."},
+    "goals": {"lean": "lower", "adjust_pct": -8, "call": "Around 2.2 goals", "text": "The numbers say 2.4 goals. I lean lower: ..."},
+    "corners": {"lean": "same", "adjust_pct": 0, "call": "Around 10 corners", "text": "..."},
+    "cards": {"lean": "higher", "adjust_pct": 10, "call": "Over 4.5 cards", "text": "..."},
+    "shots": {"lean": "...", "adjust_pct": 0, "call": "...", "text": "..."},
+    "shots_on_target": {"lean": "...", "adjust_pct": 0, "call": "...", "text": "..."},
     "sources": ["https://...", "https://..."],
     "written_at": "2026-11-09T18:30:00Z"
   }
 }}
 ```
 
-- `lean`: compared with the site's expected total. Take a side when the research supports one; "same" only when
+- `lean`: compared with the numbers' expected total. Take a side when the research supports one; "same" only when
   nothing points either way.
+- `adjust_pct`: how far you would move the numbers' expected total, in percent: a whole number from -25 to 25.
+  It must agree with the lean (higher > 0, lower < 0, same = 0). Size it to the evidence: 3-6 for a mild lean
+  (one doubtful player, a hunch from style), 7-12 for a clear reason (a key striker out, heavy rotation, a
+  strict referee with a long record), 13-25 only for something big and confirmed (several first-choice
+  players out, a dead-rubber with a reserve side). Your own number is the numbers' expected total x
+  (1 + adjust_pct / 100); write it in `call` or `text` so it matches (e.g. 28.2 shots and -12 -> about 24.8).
 - `call`: your judgement call in a few words (a line or a rough number). No percentages or probabilities.
-- `text`: two or three plain sentences. Start from the site's number, then give the reasons for your lean,
-  naming the players, manager, referee or situation involved.
-- `overall`: two or three sentences. If kick-off is more than 3 days away, start with "Early view:" and base it
-  on the latest form and news; it is refreshed with team news in the day before kick-off.
+- `text`: two or three plain sentences. Start from the numbers' expected total, then give the reasons for your
+  lean and its size, naming the players, manager, referee or situation involved.
+- `overall`: two or three sentences with the main context of the match.
 - `sources`: the pages you actually read for this match (at least one).
 - English, plain words, no hype. Never write "lock", "sure thing" or "guaranteed", never tell anyone to bet.
 

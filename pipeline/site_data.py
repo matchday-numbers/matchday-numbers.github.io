@@ -8,7 +8,8 @@ import re
 import unicodedata
 from datetime import timedelta
 
-from pipeline.predictions import aggregate, rnd
+from model.judgement import merged
+from pipeline.predictions import aggregate, rnd, take_record
 from pipeline.sources import DOMESTIC, EUROPE, LEAGUES, PREDICTED
 
 STATS = [("goals", "hg", "ag"), ("corners", "hc", "ac"), ("cards", "hcards", "acards"),
@@ -127,12 +128,6 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
     def table(lg):
         t = {}
         ms = matches[lg]
-        if lg == "mls":  # one combined table (the Supporters' Shield standings) of the latest season, no playoffs
-            ev = events.get(lg, {})
-            regs = [m for m in ms if (ev.get(m.get("espn_id")) or {}).get("season_slug") == "regular-season"]
-            if regs:
-                latest = max((ev[m["espn_id"]].get("season_year") or 0) for m in regs)
-                ms = [m for m in regs if (ev[m["espn_id"]].get("season_year") or 0) == latest]
         for m in ms:
             if lg in EUROPE and m["date"] >= f"20{season[2:]}-01-25":
                 continue  # knockout rounds are not part of the league phase table
@@ -167,11 +162,12 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
     def pred_summary(p):
         if not p:
             return None
-        s = p["prediction"]["stats"]
+        s = merged(p["prediction"]["stats"], p["prediction"].get("take"))  # our take when there is one
         return {"home_win": s["goals"]["home_win"], "draw": s["goals"]["draw"], "away_win": s["goals"]["away_win"],
                 "home_goals": s["goals"]["home"], "away_goals": s["goals"]["away"],
                 "goals": s["goals"]["total"], "corners": s["corners"]["total"], "cards": s["cards"]["total"],
-                "team_news": p["prediction"].get("basis", {}).get("team_news", False), "made_at": p["made_at"]}
+                "team_news": p["prediction"].get("basis", {}).get("team_news", False), "made_at": p["made_at"],
+                "judged": bool((p["prediction"].get("take") or {}).get("applied"))}
 
     def league_scorers(lg):
         out = []
@@ -344,7 +340,8 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
         with open(rpath) as f:
             r = json.load(f)
         bc = {k: v for k, v in r["by_comp"].items() if k in PREDICTED}
-        bt = {"season": "2025-26", "method": "recipe", "leagues": [LEAGUES[k]["name"] for k in bc], "matches": r["matches"],
+        bt = {"season": "2025-26", "method": "recipe", "leagues": [LEAGUES[k]["name"] for k in bc],
+              "matches": sum(v["matches"] for v in bc.values()) or r["matches"],
               "by_league": {k: {"matches": v["matches"], "brier_1x2": v["brier_1x2"], "baseline_brier_1x2": v["baseline_brier_1x2"],
                                 "prev_brier_1x2": v.get("prev_brier_1x2"),
                                 "gain_pct": {st: (1 - x["objective"] / x["baseline_objective"]) * 100 for st, x in v["stats"].items()},
@@ -369,7 +366,7 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
                        "goals": [p["prediction"]["stats"]["goals"]["total"], g.get("actual_total")],
                        "corners": [p["prediction"]["stats"]["corners"]["total"], r.get("corners", {}).get("actual_total")],
                        "cards": [p["prediction"]["stats"]["cards"]["total"], r.get("cards", {}).get("actual_total")]})
-    dump(os.path.join(out, "accuracy.json"), {"live": aggregate(scored), "recent": recent, "backtest": bt,
+    dump(os.path.join(out, "accuracy.json"), {"live": aggregate(scored), "take": take_record(scored), "recent": recent, "backtest": bt,
                                               "updated_at": now.isoformat()})
 
     # ---------------------------------------------------------------- meta

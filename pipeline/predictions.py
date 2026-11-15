@@ -88,6 +88,51 @@ def score(pred, match):
     return rnd(res)
 
 
+def score_take(pred, match):
+    """Scores "our take" (numbers moved by the subjective view) when a judgement was applied; else None."""
+    take = (pred.get("prediction") or {}).get("take")
+    if not take or not take.get("applied"):
+        return None
+    stats = {k: {**v, **(take.get(k) or {})} for k, v in pred["prediction"]["stats"].items()}
+    return score({**pred, "prediction": {**pred["prediction"], "stats": stats}}, match)
+
+
+def take_record(scored):
+    """Our take against the numbers alone, on the matches where a judgement moved at least one stat."""
+    out, n = {}, 0
+    for pred in scored:
+        rt, rn = pred.get("result_take"), pred.get("result")
+        if not rt or not rn:
+            continue
+        n += 1
+        for stat, t in rt.items():
+            r = rn.get(stat) or {}
+            if t.get("excluded") or r.get("excluded"):
+                continue
+            a = out.setdefault(stat, {"n": 0, "abs_error_numbers": 0.0, "abs_error_take": 0.0, "brier_numbers": 0.0,
+                                      "brier_take": 0.0, "lines": 0})
+            a["n"] += 1
+            a["abs_error_numbers"] += abs(r["error"])
+            a["abs_error_take"] += abs(t["error"])
+            for line, d in t["lines"].items():
+                a["lines"] += 1
+                a["brier_take"] += d["brier"]
+                a["brier_numbers"] += r["lines"][line]["brier"]
+            if stat == "goals":
+                a["brier_1x2_numbers"] = a.get("brier_1x2_numbers", 0.0) + r["brier_1x2"]
+                a["brier_1x2_take"] = a.get("brier_1x2_take", 0.0) + t["brier_1x2"]
+    for a in out.values():
+        k = a["n"]
+        a["mae_numbers"], a["mae_take"] = a.pop("abs_error_numbers") / k, a.pop("abs_error_take") / k
+        L = a.pop("lines") or 1
+        a["brier_numbers"] /= L
+        a["brier_take"] /= L
+        if "brier_1x2_numbers" in a:
+            a["brier_1x2_numbers"] /= k
+            a["brier_1x2_take"] /= k
+    return rnd({"matches": n, "by_stat": out})
+
+
 def aggregate(scored):
     """Track record: per league and stat, plus calibration of every probability."""
     out = {}

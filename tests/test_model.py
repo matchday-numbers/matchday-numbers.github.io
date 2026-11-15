@@ -22,7 +22,7 @@ ORIGINAL = ["premier-league", "la-liga", "serie-a", "bundesliga", "ligue-1", "er
 
 
 def seasons(league):
-    """History seasons on disk, oldest first (MLS history starts in 2022-23)."""
+    """History seasons on disk, oldest first."""
     return [load_file(os.path.join(ROOT, "data", "history", f"{league}_{s}.csv"), league, s) for s in SEASONS
             if os.path.exists(os.path.join(ROOT, "data", "history", f"{league}_{s}.csv"))]
 
@@ -271,3 +271,64 @@ def test_recipe_is_45_base_55_adjusted():
         a1 = math.log(out[1.0]["stats"][s]["home"] / out[1.0]["stats"][s]["base_home"])
         a2 = math.log(out[2.0]["stats"][s]["home"] / out[2.0]["stats"][s]["base_home"])
         assert abs(a2 - 2 * a1) < 1e-9
+
+
+# ---------------------------------------------------------------- our take (numbers moved by the subjective view)
+def _stats():
+    from pipeline.predictions import rnd  # noqa: F401
+    out = {}
+    for st in STATS:
+        h_, a_ = {"goals": (1.5, 1.1), "corners": (5.5, 4.5), "cards": (2.2, 2.6), "shots": (14.0, 11.0),
+                  "shots_on_target": (4.8, 3.6)}[st]
+        probs = goal_probabilities(h_, a_, -0.1) if st == "goals" else count_probabilities(st, h_, a_, 0.02)
+        out[st] = {"home": h_, "away": a_, "total": h_ + a_, "reasoning": ["x"], **probs}
+    return out
+
+
+def test_take_moves_numbers_and_probabilities_with_the_lean():
+    from model import judgement
+    st = _stats()
+    view = {"written_at": "2026-11-15T10:00:00Z",
+            "corners": {"lean": "lower", "adjust_pct": -10}, "cards": {"lean": "higher", "adjust_pct": 40},
+            "goals": {"lean": "same", "adjust_pct": 0}, "shots": {"lean": "higher"}}
+    t = judgement.apply(st, view, -0.1, lambda s: 0.02)
+    assert t["applied"]
+    assert abs(t["corners"]["total"] - 0.9 * st["corners"]["total"]) < 1e-9
+    assert t["corners"]["over"]["9.5"] < st["corners"]["over"]["9.5"]
+    assert t["cards"]["adjust_pct"] == judgement.MAX_PCT  # capped
+    assert t["goals"]["total"] == st["goals"]["total"]
+    assert t["shots"]["adjust_pct"] == judgement.DEFAULT_PCT and not t["shots"]["sized"]  # older view: lean only
+    m = judgement.merged(st, t)
+    assert m["corners"]["reasoning"] == ["x"] and m["corners"]["total"] == t["corners"]["total"]
+    assert judgement.apply(st, None, -0.1, lambda s: 0.02) is None
+
+
+def test_take_is_scored_separately():
+    from model import judgement
+    from pipeline.predictions import score_take, take_record
+    st = _stats()
+    base = {k: {"total": v["total"], "over": v["over"], **({k2: v[k2] for k2 in ("home_win", "draw", "away_win", "btts")} if k == "goals" else {})}
+            for k, v in st.items()}
+    view = {s: {"lean": "lower", "adjust_pct": -20} for s in STATS}
+    pred = {"prediction": {"stats": st, "take": judgement.apply(st, view, -0.1, lambda s: 0.02)}, "baseline": base}
+    match = {"hg": 0, "ag": 1, "hc": 3, "ac": 4, "hcards": 1, "acards": 2, "hs": 9, "as": 8, "hst": 2, "ast": 3}
+    numbers, take = score(pred, match), score_take(pred, match)
+    assert take["corners"]["error"] < numbers["corners"]["error"]  # the take expected fewer, closer to a low game
+    rec = take_record([{**pred, "result": numbers, "result_take": take}])
+    assert rec["matches"] == 1 and rec["by_stat"]["corners"]["mae_take"] < rec["by_stat"]["corners"]["mae_numbers"]
+    assert score_take({"prediction": {"stats": st}, "baseline": base}, match) is None
+
+
+def test_analyst_view_validation_requires_sizes_that_agree_with_the_lean():
+    sys.path.insert(0, os.path.join(ROOT, "tools"))
+    import analyst_merge as am
+    good = {"overall": "x" * 80, "sources": ["https://example.com/a"]}
+    for s in STATS:
+        good[s] = {"lean": "higher", "adjust_pct": 6, "call": "Around 10", "text": "y" * 50}
+    assert am.problems(good) == []
+    bad = json.loads(json.dumps(good))
+    bad["corners"]["adjust_pct"] = -6
+    bad["cards"].pop("adjust_pct")
+    bad["shots"]["adjust_pct"] = 30
+    pr = " ".join(am.problems(bad))
+    assert "corners.adjust_pct must agree" in pr and "cards.adjust_pct" in pr and "shots.adjust_pct" in pr

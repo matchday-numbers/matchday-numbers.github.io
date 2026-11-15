@@ -10,6 +10,7 @@ from datetime import date, timedelta
 from model.core import STATS, Params, count_probabilities, goal_probabilities
 from model.data import load_file
 from model.europe import EUROPE_CTX, assemble
+from model import judgement
 from model.predict import load_tuned
 from model.ratings import Ratings, league_groups
 from model.recipe import Recipe
@@ -65,7 +66,7 @@ def build(season, now, fd, matches, events, team_map, sdir, log, jload, jsave, l
         hist = [m for f in files for m in load_file(f, lg, os.path.basename(f)[-8:-4])]
         last = max((m["date"] for m in hist), default="")
         # this season: the cross-checked records (stats the two sources disagree on are already removed);
-        # MLS's window reaches back into games the history files already hold, so those are skipped
+        # games the history files already hold are skipped
         hist_fd[lg] = hist + [m for m in matches.get(lg, []) if m["date"] > last]
     rows, clubs = [], {}
     for f in sorted(glob.glob(os.path.join(HISTORY, "europe_[0-9]*.json")))[-3:]:
@@ -81,7 +82,7 @@ def build(season, now, fd, matches, events, team_map, sdir, log, jload, jsave, l
     extra = {lg: {n: tm["espn_id"] for n, tm in (team_map.get(lg) or {}).items()} for lg in DOMESTIC}
     allm, groups, names = assemble(hist_fd, rows, clubs, extra)
     refs = refmod.join(allm, names, refmod.load_rows(HISTORY) + list(live_ref_rows), DOMESTIC)
-    for m in allm:  # MLS: FotMob, its first stats source, already names the referee
+    for m in allm:  # leagues whose first stats source is FotMob: it already names the referee
         if m["ctx"] in FOTMOB_STATS and m.get("referee"):
             refs.setdefault((m["date"], m["home"], m["away"]), m["referee"])
     asof = (now + timedelta(days=1)).date().isoformat()
@@ -162,6 +163,9 @@ def make(rec, league, fixture, home_file_key, away_file_key, info, labels, made_
     hk, ak = fixture["home"]["espn_id"], fixture["away"]["espn_id"]
     p = rec.predict(hk, ak, ctx_key, info, labels)
     p["league"] = league
+    # our take: the numbers moved by the subjective view (only matches within judgement.JUDGE_HOURS have one)
+    p["take"] = judgement.apply(p["stats"], info.get("analyst_view"), rec.params.dc_rho,
+                                lambda st: rec.t.get("nb_alpha", {}).get(st, rec.params.nb_alpha.get(st, 0.03)))
     return rnd({
         "id": fixture["espn_id"], "league": league, "kickoff": fixture["kickoff"],
         "home": home_file_key, "away": away_file_key, "made_at": made_at, "model_version": version, "model": "recipe",

@@ -4,14 +4,14 @@ const STAT = { goals: "Goals", corners: "Corners", cards: "Cards", shots: "Shots
 const STAT_HELP = { cards: "yellow + red, both teams", corners: "both teams", goals: "both teams", shots: "both teams", shots_on_target: "both teams" };
 const LEAGUES = {
   "premier-league": "Premier League", "la-liga": "La Liga", "serie-a": "Serie A", "bundesliga": "Bundesliga", "ligue-1": "Ligue 1",
-  "eredivisie": "Eredivisie", "primeira-liga": "Primeira Liga", "super-lig": "Süper Lig", "segunda-division": "Segunda División", "mls": "MLS",
+  "eredivisie": "Eredivisie", "primeira-liga": "Primeira Liga", "segunda-division": "Segunda División",
   "champions-league": "Champions League", "europa-league": "Europa League", "conference-league": "Conference League",
 };
 const EUROPE = new Set(["champions-league", "europa-league", "conference-league"]);
 // usual Champions League places (incl. qualifying) and direct relegation; exact numbers vary by season
-const ZONES = { "premier-league": [4, 3], "la-liga": [4, 3], "serie-a": [4, 3], "bundesliga": [4, 2], "ligue-1": [3, 2], "eredivisie": [2, 2], "primeira-liga": [2, 2], "super-lig": [2, 3], "segunda-division": [2, 4] };
+const ZONES = { "premier-league": [4, 3], "la-liga": [4, 3], "serie-a": [4, 3], "bundesliga": [4, 2], "ligue-1": [3, 2], "eredivisie": [2, 2], "primeira-liga": [2, 2], "segunda-division": [2, 4] };
 const ZONE_LABELS = { "segunda-division": ["Automatic promotion (3rd to 6th go to the play-offs)", "Relegation"] };
-const TABLE_NOTE = { mls: "Both conferences in one table, as for the Supporters' Shield. Playoff places are decided within each conference." };
+const TABLE_NOTE = {};
 const BANNER = `<p class="banner">Statistical estimates, not advice. Football is unpredictable — use your own judgement.</p>`;
 let version = String(Date.now());
 const cache = {};
@@ -108,6 +108,7 @@ const wrap = html => `<div class="wrap">${html}</div>`;
 function factTag(u) {
   const p = u.prediction;
   if (!p) return "";
+  if (p.judged) return `<span class="pill" title="Numbers include the subjective view from the latest news">Our take</span>`;
   if (p.team_news) return `<span class="pill" title="Injuries and suspensions are included">Team news in</span>`;
   if (daysTo(u.kickoff) > 7) return `<span class="pill info" title="Far from kick-off: it will move as games are played">Early estimate</span>`;
   return "";
@@ -217,6 +218,11 @@ function accuracyLine(acc, lg, stat) {
   if (bt) return `No live results yet. Tested on 2025-26: average miss ${fx(bt.mae, 2)}, league averages miss by ${fx(bb.mae, 2)}.`;
   return "";
 }
+// published numbers: "our take" (the numbers moved by the subjective view) over the numbers alone
+function pub(P) {
+  const T = P.take || {};
+  return Object.fromEntries(Object.keys(P.stats).map(k => [k, { ...P.stats[k], ...(T[k] || {}) }]));
+}
 function ourCall(stat, s, m) {
   // the tightest line the numbers still back at 60% or more (the most informative one, not the safest);
   // a close call when no line reaches 60%
@@ -233,13 +239,14 @@ function ourCall(stat, s, m) {
 }
 
 const LEAN = { higher: "leans higher", lower: "leans lower", same: "agrees with the numbers" };
+const JUDGE_HOURS = 48;
 function analystStat(P, stat) {
   const v = P.analyst_view && !Array.isArray(P.analyst_view) ? P.analyst_view[stat] : null;
   if (!v) return null;
   return typeof v === "string" ? { text: v } : v;
 }
 const ADJ_NAME = { momentum: "Momentum", h2h: "Head-to-head", missing: "Missing player", referee: "Referee", congestion: "Congestion", derby: "Derby", stakes: "Stakes" };
-function whyBox(stat, s, P, m, acc, av) {
+function whyBox(stat, s, P, m, acc, av, tk) {
   const R = P.recipe || {};
   const bw = R.base_weight ? pct(R.base_weight) : "60%", aw = R.adj_weight ? pct(R.adj_weight) : "40%";
   const side = a => (a.side === "home" ? m.home.short : a.side === "away" ? m.away.short : "both teams");
@@ -247,10 +254,15 @@ function whyBox(stat, s, P, m, acc, av) {
   const adjList = adjs.length
     ? `<ul class="why">${adjs.map(a => `<li><b class="${a.effect_pct > 0.05 ? "up" : a.effect_pct < -0.05 ? "down" : ""}">${a.effect_pct > 0 ? "+" : ""}${fx(a.effect_pct, 1)}%</b> ${h(ADJ_NAME[a.kind] || a.kind)}, ${h(side(a))}: ${h(a.detail)}${a.status === "info" ? " (context only)" : ""}</li>`).join("")}</ul>`
     : `<p class="small sub">None for this stat.</p>`;
+  const lab = STAT[stat].toLowerCase();
+  const size = tk
+    ? `<p class="small">${tk.adjust_pct
+      ? `<b>Effect on the number: ${sgn(tk.adjust_pct, 0)}%</b>${tk.sized ? "" : " (default size: this view gave a lean but no size)"}. Numbers alone ${fx(s.total)} ${h(lab)}, our take ${fx(tk.total)}.`
+      : `<b>Effect on the number: none.</b> Our take stays at the numbers' ${fx(s.total)} ${h(lab)}.`}</p>` : "";
   const subj = av && (av.text || av.call)
-    ? `<p class="small">${av.lean ? `<span class="pill lean">${h(LEAN[av.lean] || av.lean)}</span> ` : ""}${h(av.text || "")}${av.call ? ` <b>Judgement call: ${h(av.call)}</b>` : ""}</p>
-       <p class="small sub">Opinion from recent news, written ${P.analyst_view.written_at ? h(ago(P.analyst_view.written_at)) : "before kick-off"}. It sits next to the numbers and never changes them.</p>`
-    : `<p class="small sub">No analyst view for this match yet. Views are written from the latest news in the day or so before kick-off, for as many matches as possible.</p>`;
+    ? `<p class="small">${av.lean ? `<span class="pill lean">${h(LEAN[av.lean] || av.lean)}</span> ` : ""}${h(av.text || "")}${av.call ? ` <b>Judgement call: ${h(av.call)}</b>` : ""}</p>${size}
+       <p class="small sub">Opinion from recent news, written ${P.analyst_view.written_at ? h(ago(P.analyst_view.written_at)) : "before kick-off"}. It moves this stat by the size shown (at most 25% either way) to give our take; the numbers alone are shown above and kept in the track record.</p>`
+    : `<p class="small sub">No subjective view for this match${m.status === "upcoming" ? " yet. It's written from the latest news in the 48 hours before kick-off, then our take includes it" : ", so our take is the numbers alone"}.</p>`;
   return `<details><summary>Why</summary>
     ${s.reasoning ? `<p class="why-h">Reasoning</p>${s.reasoning.map(x => `<p class="small reason">${h(x)}</p>`).join("")}` : ""}
     <p class="why-h">Base (${bw})</p><ul class="why">${(s.why || []).map(w => `<li>${h(w)}</li>`).join("")}</ul>
@@ -260,21 +272,24 @@ function whyBox(stat, s, P, m, acc, av) {
 }
 
 function statPanel(stat, P, m, acc) {
-  const s = P.stats[stat];
+  const n = P.stats[stat], s = pub(P)[stat], tk = P.take && P.take[stat];
   const res = m.prediction && m.prediction.result && m.prediction.result[stat];
   const actual = res && !res.excluded ? `<span class="actual">Actual ${res.actual_total}</span>` : "";
   const g = acc && acc.backtest && acc.backtest.by_league && acc.backtest.by_league[m.comp];
   const weak = g && g.gain_pct && g.gain_pct[stat] < 0
-    ? `<p class="weak">In testing on 2025-26, this number was no better than the ${h(LEAGUES[m.comp])} average for ${STAT[stat].toLowerCase()}.</p>` : "";
+    ? `<p class="weak">In testing on 2025-26, the numbers were no better than the ${h(LEAGUES[m.comp])} average for ${STAT[stat].toLowerCase()}.</p>` : "";
   const head = `<h3>${STAT[stat]} <span class="sub">${STAT_HELP[stat]}</span></h3>${weak}
     <div class="stat-row"><span class="stat-big">${fx(s.total)}</span><span class="range">likely ${s.range[0]}–${s.range[1]}</span>${actual}</div>
     <p class="small sub" style="margin:6px 0 0">${h(m.home.short)} ${fx(s.home)}, ${h(m.away.short)} ${fx(s.away)}</p>
-    ${lineList(stat, s, m.prediction && m.prediction.result)}`;
+    ${lineList(stat, s, tk ? null : m.prediction && m.prediction.result)}`;
   const av = analystStat(P, stat);
-  const why = whyBox(stat, s, P, m, acc, av);
-  const judge = av && (av.call || av.lean)
-    ? `<br><b>With judgement:</b> ${h(av.call ? av.call.replace(/\.$/, "") : `the numbers' call`)}${av.lean ? ` (analyst ${h(LEAN[av.lean] || av.lean)})` : ""}. <span class="sub">Reasons under Why.</span>` : "";
-  const verdict = `<p class="call"><b>Our call:</b> ${h(ourCall(stat, s, m))}${judge}</p>`;
+  const why = whyBox(stat, n, P, m, acc, av, tk);
+  let note;
+  if (tk && tk.adjust_pct) note = `Numbers alone ${fx(n.total)}, judgement ${sgn(tk.adjust_pct, 0)}% (analyst ${LEAN[tk.lean] || "view"}).`;
+  else if (tk) note = `The analyst agrees with the numbers (${fx(n.total)}).`;
+  else if (m.status === "upcoming" && daysTo(m.kickoff) * 24 > JUDGE_HOURS) note = `Numbers only for now: the subjective view is added in the 48 hours before kick-off.`;
+  else note = `Numbers only: no subjective view for this match.`;
+  const verdict = `<p class="call"><b>Our take:</b> ${h(ourCall(stat, s, m))}<br><span class="sub">${h(note)} Reasons under Why.</span></p>`;
   if (stat !== "goals") return `<section class="panel">${head}${verdict}${why}</section>`;
   return `<section class="panel goals"><div>${head}${verdict}${why}</div>
     <div><h3>Score</h3>
@@ -288,17 +303,18 @@ const ADJ_ROWS = [["momentum", "Momentum (last 6 games)"], ["h2h", "Head-to-head
   ["referee", "Referee"], ["congestion", "Fixture congestion"], ["derby", "Derby"], ["stakes", "High stakes"]];
 function recipeSection(P, m) {
   const R = P.recipe;
+  const T = P.take, ps = pub(P);
   const rows = Object.keys(STAT).map(k => {
-    const s = P.stats[k];
-    return `<tr><td>${STAT[k]}</td><td class="n">${fx(s.base_home + s.base_away)}</td><td class="n">${fx(s.adj_home + s.adj_away)}</td><td class="n final">${fx(s.total)}</td></tr>`;
+    const s = P.stats[k], tk = T && T[k];
+    return `<tr><td>${STAT[k]}</td><td class="n">${fx(s.base_home + s.base_away)}</td><td class="n">${fx(s.adj_home + s.adj_away)}</td><td class="n ${T ? "" : "final"}">${fx(s.total)}</td>${T ? `<td class="n final">${fx(ps[k].total)}${tk && tk.adjust_pct ? ` <span class="sub">(${sgn(tk.adjust_pct, 0)}%)</span>` : ""}</td>` : ""}</tr>`;
   }).join("");
   const nm = k => (k === P.home ? m.home.short : k === P.away ? m.away.short : k);
   const meet = (P.h2h || []).map(x => `<li>${h(day(x.date))}: ${h(nm(x.home))} ${x.score[0]}–${x.score[1]} ${h(nm(x.away))}</li>`).join("");
   const eu = EUROPE.has(m.comp);
   return `<section class="section"><h2>How the numbers were built</h2>
     <div class="split" aria-label="Weights"><span class="b" style="flex:${R.base_weight}">Base ${pct(R.base_weight)}</span><span class="v1" style="flex:${R.adj_weight}">Adjustments ${pct(R.adj_weight)}</span></div>
-    <p class="sub small">Base: ${h(m.home.short)}'s home numbers against ${h(m.away.short)}'s away numbers, adjusted for the strength of the opponents each has faced and measured against the ${eu ? "competition" : "league"} average. Recent games count more.${eu ? " For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale." : ""} Adjustments: the same base after momentum, head-to-head (minor), missing players, referee, fixture congestion and derby or high stakes${R.adj_strength > 1.01 ? `, each counted at about ${fx(R.adj_strength, 0)}x the size measured in testing` : ""}. Final = ${pct(R.base_weight)} base + ${pct(R.adj_weight)} adjusted.</p>
-    <div class="tscroll build"><table><thead><tr><th>Total, both teams</th><th class="n">Base</th><th class="n">After adjustments</th><th class="n">Final (${Math.round(R.base_weight * 100)}/${Math.round(R.adj_weight * 100)})</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <p class="sub small">Base: ${h(m.home.short)}'s home numbers against ${h(m.away.short)}'s away numbers, adjusted for the strength of the opponents each has faced and measured against the ${eu ? "competition" : "league"} average. Recent games count more.${eu ? " For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale." : ""} Adjustments: the same base after momentum, head-to-head (minor), missing players, referee, fixture congestion and derby or high stakes${R.adj_strength > 1.01 ? `, each counted at about ${fx(R.adj_strength, 0)}x the size measured in testing` : ""}. Numbers = ${pct(R.base_weight)} base + ${pct(R.adj_weight)} adjusted.${T ? " Our take = the numbers moved by the subjective view (shown in brackets), written from the latest news in the 48 hours before kick-off." : " In the 48 hours before kick-off, the subjective view moves them to give our take."}</p>
+    <div class="tscroll build"><table><thead><tr><th>Total, both teams</th><th class="n">Base</th><th class="n">After adjustments</th><th class="n">Numbers (${Math.round(R.base_weight * 100)}/${Math.round(R.adj_weight * 100)})</th>${T ? `<th class="n">Our take</th>` : ""}</tr></thead><tbody>${rows}</tbody></table></div>
     ${meet ? `<p class="small" style="margin-top:12px">Last ${(P.h2h || []).length} meetings (a minor factor):</p><ul class="h2h">${meet}</ul>` : `<p class="small sub" style="margin-top:12px">No meetings in the last three seasons.</p>`}</section>`;
 }
 function recipeAdjustments(P, m) {
@@ -382,7 +398,7 @@ function predictionCard(m, acc, teams) {
     `<span class="fact"><b>${m.status === "upcoming" ? h(ago(pr.made_at)) : "Frozen"}</b>${m.status === "upcoming" ? "last update, frozen at kick-off" : `last update ${h(kick(pr.made_at))}`}</span>`,
   ].join("");
   return `
-    <div class="grow">${strip(m.home, m.away, P.stats.goals)}</div>
+    <div class="grow">${strip(m.home, m.away, pub(P).goals)}</div>
     <div class="factrow">${facts}</div>
     ${analystBox(P.analyst_view, m)}
     ${teams ? compareSection(m, teams) : ""}
@@ -399,7 +415,7 @@ function predictionCard(m, acc, teams) {
 function analystBox(av, m) {
   if (!av || (!Array.isArray(av) && !av.overall)) {
     return m && m.status === "upcoming"
-      ? `<section class="section"><h2>Subjective view</h2><div class="panel"><p class="sub">Being written. Every match gets a subjective view for each stat from the latest news, redone as the news changes and again in the day before kick-off.</p></div></section>`
+      ? `<section class="section"><h2>Subjective view</h2><div class="panel"><p class="sub">${daysTo(m.kickoff) * 24 > JUDGE_HOURS ? "Written in the 48 hours before kick-off" : "Being written"}: a subjective view for each stat from the latest news (team news, rotation, motivation, referee), redone on match day. Once it's in, the expected numbers below become our take: the numbers moved by that judgement.</p></div></section>`
       : "";
   }
   const paras = Array.isArray(av) ? av : [av.overall];
@@ -407,12 +423,12 @@ function analystBox(av, m) {
   const calls = Array.isArray(av) ? "" : Object.keys(STAT).map(k => {
     const x = analystStat({ analyst_view: av }, k);
     return x && (x.call || x.lean)
-      ? `<li><span class="lab">${h(STAT[k])}</span><b>${h(x.call || "No change")}</b>${x.lean ? ` <span class="pill lean">${h(LEAN[x.lean] || x.lean)}</span>` : ""}</li>` : "";
+      ? `<li><span class="lab">${h(STAT[k])}</span><b>${h(x.call || "No change")}</b>${x.lean ? ` <span class="pill lean">${h(LEAN[x.lean] || x.lean)}</span>` : ""}${typeof x.adjust_pct === "number" && x.adjust_pct ? ` <span class="sub">${sgn(x.adjust_pct, 0)}%</span>` : ""}</li>` : "";
   }).join("");
   return `<section class="section"><h2>Subjective view</h2><div class="panel">${paras.map(x => `<p>${h(x)}</p>`).join("")}
     ${calls ? `<ul class="jcalls">${calls}</ul>` : ""}
     ${src.length ? `<p class="sub small">Read before writing: ${src.map(u => { try { return `<a href="${h(u)}" rel="noopener">${h(new URL(u).hostname.replace("www.", ""))}</a>`; } catch (e) { return ""; } }).join(", ")}</p>` : ""}
-    <p class="sub small">Opinion from the latest news${!Array.isArray(av) && av.written_at ? `, written ${h(ago(av.written_at))}` : ""}. It's redone as the news changes, the reasons for each stat are under its "Why", and it never changes the numbers.</p></div></section>`;
+    <p class="sub small">Opinion from the latest news${!Array.isArray(av) && av.written_at ? `, written ${h(ago(av.written_at))}` : ""}. It's redone as the news changes, and each stat's lean moves its number by the size shown (at most 25%), giving our take under Expected numbers. The reasons and the numbers alone are under each stat's "Why".</p></div></section>`;
 }
 
 function compareSection(m, teams) {
@@ -506,12 +522,13 @@ async function renderMatch(id) {
     const P = m.prediction.prediction, R = m.prediction.result, g = R.goals || {};
     body += `<section class="section"><h2>Estimate vs result</h2>
       <p>Before kick-off the model gave ${h(m.home.short)} ${pct(P.stats.goals.home_win)}, draw ${pct(P.stats.goals.draw)}, ${h(m.away.short)} ${pct(P.stats.goals.away_win)}.
-      The actual result had a ${pct(g.p_outcome)} chance. ${g.pick_correct ? "The most likely outcome happened." : "The most likely outcome did not happen."}</p>
-      <div class="tscroll"><table><thead><tr><th>Stat</th><th class="n">Expected</th><th class="n">Likely range</th><th class="n">Actual</th><th>Lines</th></tr></thead><tbody>
+      The actual result had a ${pct(g.p_outcome)} chance. ${g.pick_correct ? "The most likely outcome happened." : "The most likely outcome did not happen."}
+      ${P.take && P.take.applied ? ` With the subjective view, our take was ${h(m.home.short)} ${pct(pub(P).goals.home_win)}, draw ${pct(pub(P).goals.draw)}, ${h(m.away.short)} ${pct(pub(P).goals.away_win)}.` : ""}</p>
+      <div class="tscroll"><table><thead><tr><th>Stat</th><th class="n">Numbers</th>${P.take ? `<th class="n">Our take</th>` : ""}<th class="n">Likely range</th><th class="n">Actual</th><th>Lines (numbers)</th></tr></thead><tbody>
       ${Object.keys(STAT).map(s => {
-        const r = R[s], p = P.stats[s];
-        if (!r || r.excluded) return `<tr><td>${STAT[s]}</td><td class="n">${fx(p.total)}</td><td class="n">${p.range[0]}–${p.range[1]}</td><td class="n">–</td><td class="sub">left out (sources disagree or missing)</td></tr>`;
-        return `<tr><td>${STAT[s]}</td><td class="n">${fx(p.total)}</td><td class="n">${p.range[0]}–${p.range[1]}</td><td class="n">${r.actual_total}</td><td>${Object.entries(r.lines).map(([l, d]) => `over ${l} ${pct(d.p_over)} ${d.hit ? "✓" : "✗"}`).join(", ")}</td></tr>`;
+        const r = R[s], p = P.stats[s], tcell = P.take ? `<td class="n">${fx(pub(P)[s].total)}</td>` : "";
+        if (!r || r.excluded) return `<tr><td>${STAT[s]}</td><td class="n">${fx(p.total)}</td>${tcell}<td class="n">${p.range[0]}–${p.range[1]}</td><td class="n">–</td><td class="sub">left out (sources disagree or missing)</td></tr>`;
+        return `<tr><td>${STAT[s]}</td><td class="n">${fx(p.total)}</td>${tcell}<td class="n">${p.range[0]}–${p.range[1]}</td><td class="n">${r.actual_total}</td><td>${Object.entries(r.lines).map(([l, d]) => `over ${l} ${pct(d.p_over)} ${d.hit ? "✓" : "✗"}`).join(", ")}</td></tr>`;
       }).join("")}</tbody></table></div>
       <details><summary>Full estimate as it was frozen</summary>${predictionCard({ ...m, status: "finished" }, acc)}</details></section>`;
   } else if (!EUROPE.has(m.comp)) {
@@ -647,6 +664,14 @@ async function renderAccuracy() {
     body += `<h3 style="margin-top:22px">Calibration</h3>${calibSvg(live.calibration)}<p class="sub small">Dots on the dashed line mean the probabilities are honest. Only groups with 20+ estimates are drawn.</p>`;
     body += `<h3 style="margin-top:22px">Latest scored</h3><ul class="results">${acc.recent.slice(0, 16).map(r => resultItem({ ...r, score: r.score || ["–", "–"], has_prediction: false })).join("")}</ul></section>`;
   }
+  const tr = acc.take;
+  body += `<section class="section"><h2>Our take vs the numbers alone</h2>${tr && tr.matches
+    ? `<p class="small">On the ${tr.matches} scored ${tr.matches === 1 ? "match" : "matches"} where the subjective view moved at least one stat, how our take did against the numbers alone (lower is better).</p>
+      <div class="tscroll"><table><thead><tr><th>Stat</th><th class="n">Matches</th><th class="n">Avg miss, numbers</th><th class="n">Avg miss, our take</th><th class="n">Brier per line, numbers</th><th class="n">Brier per line, our take</th></tr></thead><tbody>
+      ${Object.keys(STAT).filter(k => tr.by_stat[k]).map(k => { const x = tr.by_stat[k]; return `<tr><td>${STAT[k]}</td><td class="n">${x.n}</td><td class="n">${fx(x.mae_numbers, 2)}</td><td class="n ${x.mae_take < x.mae_numbers ? "up" : x.mae_take > x.mae_numbers ? "down" : ""}">${fx(x.mae_take, 2)}</td><td class="n">${fx(x.brier_numbers, 3)}</td><td class="n ${x.brier_take < x.brier_numbers ? "up" : x.brier_take > x.brier_numbers ? "down" : ""}">${fx(x.brier_take, 3)}</td></tr>`; }).join("")}
+      </tbody></table></div>${tr.by_stat.goals && tr.by_stat.goals.brier_1x2_take != null ? `<p class="small" style="margin-top:8px">Win/draw/loss Brier: numbers ${fx(tr.by_stat.goals.brier_1x2_numbers, 3)}, our take ${fx(tr.by_stat.goals.brier_1x2_take, 3)}.</p>` : ""}`
+    : `<p class="empty">None scored yet. Our take (the numbers moved by the subjective view, in the 48 hours before kick-off) is frozen at kick-off and scored here against the numbers alone.</p>`}
+    <p class="sub small">The rest of this page tests the numbers alone, so it stays a test of the method.</p></section>`;
   if (bt && bt.test) {
     const g = bt.test.goals, gb = bt.baseline.goals;
     const mo = bt.objective_x1000 || {}, bo = bt.baseline_objective_x1000 || {}, po = bt.pure_objective_x1000 || {};
@@ -690,15 +715,15 @@ function renderAbout() {
   title("How it works");
   setNav("about");
   app.innerHTML = `<section class="hero turf"><div class="wrap"><h1>How it works</h1></div></section>${wrap(`<div class="prose">
-  <p>Matchday Numbers shows past statistics and statistical estimates for every match in the next month in the Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie, Primeira Liga, Süper Lig, Segunda División and MLS, and in the Champions League, Europa League and Conference League. It's an information tool: every estimate shows its inputs, its uncertainty and its track record, so you can decide how much to trust it.</p>
+  <p>Matchday Numbers shows past statistics and statistical estimates for every match in the next month in the Premier League, La Liga, Serie A, Bundesliga, Ligue 1, Eredivisie, Primeira Liga and Segunda División, and in the Champions League, Europa League and Conference League. It's an information tool: every estimate shows its inputs, its uncertainty and its track record, so you can decide how much to trust it.</p>
   <h2>Where the data comes from</h2>
-  <ul><li><b>football-data.co.uk</b>: results, shots, corners and cards for every league except MLS.</li>
+  <ul><li><b>football-data.co.uk</b>: results, shots, corners and cards for every league.</li>
   <li><b>ESPN</b>: fixtures, kick-off times, team stats for every match, European competition matches, every club's games in all competitions, lineups, goals, assists and minutes.</li>
-  <li><b>FotMob</b>: team news (injured and suspended players) and referees, for every competition, and MLS match stats (football-data.co.uk only has MLS scores).</li></ul>
-  <p>The ESPN and FotMob feeds are public but unofficial, so they can change without notice. Every league match is covered by two sources (football-data.co.uk and ESPN; FotMob and ESPN for MLS), which are compared stat by stat; if they disagree by more than a corner or card (two shots), that stat is shown with both values and left out of the model for that match. Data refreshes every three hours.</p>
+  <li><b>FotMob</b>: team news (injured and suspended players) and referees, for every competition.</li></ul>
+  <p>The ESPN and FotMob feeds are public but unofficial, so they can change without notice. Every league match is covered by two sources (football-data.co.uk and ESPN), which are compared stat by stat; if they disagree by more than a corner or card (two shots), that stat is shown with both values and left out of the model for that match. Data refreshes every three hours.</p>
   <h2>The method, in plain words</h2>
   <p>Every match, league or European, gets the same recipe: <b>final = 45% base + 55% adjusted</b>.</p>
-  <ol><li><b>Base (45%).</b> The home team's home numbers against the away team's away numbers, for each stat. Each team's numbers are adjusted for the strength of the opponents it faced and measured against the league average, and recent games count more (older games fade out). Teams with few games lean toward their league's level; promoted teams (and new MLS clubs) start from the level of past promoted or new teams. How far a team may sit from its league's level was measured per stat: team differences are real for goals, but much smaller than raw averages suggest for corners and shots, so those lean harder toward the league average. For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale.</li>
+  <ol><li><b>Base (45%).</b> The home team's home numbers against the away team's away numbers, for each stat. Each team's numbers are adjusted for the strength of the opponents it faced and measured against the league average, and recent games count more (older games fade out). Teams with few games lean toward their league's level; promoted teams start from the level of past promoted or new teams. How far a team may sit from its league's level was measured per stat: team differences are real for goals, but much smaller than raw averages suggest for corners and shots, so those lean harder toward the league average. For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale.</li>
   <li><b>Adjustments (55%).</b> The same base, changed by:
     <ul><li>Momentum: each team's last 6 games in any competition, against what was expected of them. Tested on 2024-25, recent form added little beyond the base (which already weights recent games more), so its measured size is small.</li>
     <li>Head-to-head: past meetings, as a minor factor.</li>
@@ -708,15 +733,16 @@ function renderAbout() {
     <li>Derby or high stakes (late-season top or bottom clashes, European knockouts), for cards.</li></ul>
     Every adjustment is listed on the match page with its effect on the final number. All sizes were measured on 2024-25, then counted at about twice that size, so the adjustments have more say than the data alone would give them (the owner's choice; the cost in accuracy is on the Track record page). One that made no measurable difference (congestion, stakes) is shown for information with a size of 0.</li>
   <li><b>Probabilities.</b> Goals use a Dixon-Coles model for win/draw/loss, likely scores and over/under. Corners, cards and shots use a negative binomial distribution, which allows for more spread than a simple average suggests.</li>
-  <li><b>Our call, reasoning and judgement.</b> Each stat ends with "our call": the tightest line the numbers still give 60% or more, or "close call" when none does. Its "Why" box explains the number in words: where the base sits against the average and why, what each adjustment did, and the bottom line. Every match also gets a subjective view from the latest news (rotation, motivation, a new manager, lineups): for each stat, whether judgement leans higher or lower than the numbers, with a judgement call and the reasons. It's redone as the news changes, at least every five days, every two days in the final week and again in the day before kick-off. It sits next to the numbers and never changes them, so the track record stays a test of the numbers.</li></ol>
+  <li><b>Subjective view.</b> In the 48 hours before kick-off, every match gets a subjective view from the latest news (team news, rotation, motivation, a new manager, the referee): for each stat, whether judgement leans higher or lower than the numbers, by how much (at most 25% either way), and why. It's written when the match enters the 48-hour window and redone on match day. Matches further away have the numbers only.</li>
+  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat ends with one line, the tightest line our take still gives 60% or more (or "close call" when none does). Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view, our take is the numbers alone.</li></ol>
   <p>Finished matches from before estimates started show a "model check": what the method would have said using only earlier games. It's labelled as such and isn't part of the track record.</p>
   <h2>What it can't do</h2>
   <ul><li>Team news is only as good as FotMob's reports, and doubtful players aren't counted.</li>
   <li>European estimates are less certain for clubs from small leagues: their ratings rest on fewer games, and the strength of their league is judged mostly from European results.</li>
   <li>Suspensions worked out from cards use La Liga's rule (a ban every 5th yellow) for every league except the Premier League, so they're approximate. FotMob's team news replaces them in the last 4 days.</li>
-  <li>Some leagues are harder to call than others. In testing, the estimates beat the plain average on win/draw/loss by 5% to 17% in the top European leagues and the Süper Lig, but only by about 2% to 3% in the Segunda División and MLS, where results are closer and more random.</li>
+  <li>Some leagues are harder to call than others. In testing, the estimates beat the plain average on win/draw/loss by 5% to 17% in the top European leagues, but only by about 2% in the Segunda División, where results are closer and more random.</li>
   <li>Corners are hard to predict for anyone: in testing the estimates were about as good as the league average, a little better in some competitions and a little worse in others. Cards and shots beat the average in most competitions, but only slightly. Each match page says when a stat didn't beat the average in that competition.</li>
-  <li>Subjective views (new manager, motivation, rotation, lineups) are judgement, not measurement. Every posted match gets one, shown at the top of the match page and in each stat's Why box, and it's redone as the news changes. A view written two weeks before a match can differ from the one written the day before. Views are never mixed into the numbers, so the track record stays a test of the numbers.</li></ul>
+  <li>Subjective views (new manager, motivation, rotation, lineups) are judgement, not measurement. They're written only in the 48 hours before kick-off and move our take by at most 25% per stat. The track record tests the numbers alone, and our take is scored separately against them, so you can see whether the judgement helps.</li></ul>
   <p>Every estimate is saved in the project's public history before kick-off, so the track record can't be edited after the fact.</p></div>`)}`;
 }
 
@@ -743,7 +769,7 @@ function compactRows(list) {
   }).join("")}</ul>`).join("");
 }
 // how big a match is: table positions, nudged by competition (a judgement call, used only to pick featured games)
-const WEIGHT = { "champions-league": -4, "premier-league": 0, "la-liga": 0, "serie-a": 1, "bundesliga": 1, "ligue-1": 3, "europa-league": 3, "super-lig": 5, "eredivisie": 6, "primeira-liga": 6, "mls": 7, "conference-league": 8, "segunda-division": 10 };
+const WEIGHT = { "champions-league": -4, "premier-league": 0, "la-liga": 0, "serie-a": 1, "bundesliga": 1, "ligue-1": 3, "europa-league": 3, "eredivisie": 6, "primeira-liga": 6, "conference-league": 8, "segunda-division": 10 };
 async function renderHome() {
   title("");
   setNav("home");
@@ -913,7 +939,7 @@ async function boot() {
     const fd = meta.sources.football_data_last_match || {};
     document.getElementById("freshness").textContent =
       `Data last updated ${kick(meta.updated_at)} (your time), refreshed every 3 hours. ` +
-      `Latest match with full stats (football-data.co.uk; FotMob for MLS): ${Object.entries(fd).map(([k, v]) => `${LEAGUES[k]} ${v ? day(v) : "none"}`).join(", ")}.`;
+      `Latest match with full stats (football-data.co.uk): ${Object.entries(fd).filter(([k]) => LEAGUES[k]).map(([k, v]) => `${LEAGUES[k]} ${v ? day(v) : "none"}`).join(", ")}.`;
   } catch (e) {
     document.getElementById("freshness").textContent = "Data freshness unknown.";
   }

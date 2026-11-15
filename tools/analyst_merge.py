@@ -1,8 +1,9 @@
 """Validates subjective views (tools/analyst_rules.md) and merges them into data/overrides/analyst.json.
 
   python tools/analyst_merge.py --check FILE...     validate only (exit 1 if any entry has a problem)
-  python tools/analyst_merge.py FILE...             validate, merge the valid entries, prune old ones,
-                                                    and report coverage of the matches the site posts
+  python tools/analyst_merge.py FILE...             validate, merge the valid entries, prune views of matches
+                                                    that kicked off or are more than 48 h away, and report
+                                                    coverage of the posted matches kicking off within 48 h
   python tools/analyst_merge.py --coverage          coverage report only
 """
 import argparse
@@ -14,6 +15,9 @@ import sys
 from datetime import datetime, timedelta, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+from model.judgement import JUDGE_HOURS, MAX_PCT  # noqa: E402
+
 PATH = os.path.join(ROOT, "data", "overrides", "analyst.json")
 STATS = ["goals", "corners", "cards", "shots", "shots_on_target"]
 FORBIDDEN = re.compile(r"\b(lock|locks|sure thing|guarantee[ds]?|banker|nailed[- ]on|bet|bets|betting|wager)\b", re.I)
@@ -46,6 +50,11 @@ def problems(e):
         t = x.get("text")
         if not isinstance(t, str) or len(t.strip()) < 40:
             out.append(f"{s}.text missing or too short")
+        p = x.get("adjust_pct")
+        if not isinstance(p, (int, float)) or isinstance(p, bool) or abs(p) > MAX_PCT:
+            out.append(f"{s}.adjust_pct must be a number from -{MAX_PCT:.0f} to {MAX_PCT:.0f}")
+        elif (x.get("lean") == "higher" and p <= 0) or (x.get("lean") == "lower" and p >= 0) or (x.get("lean") == "same" and p != 0):
+            out.append(f"{s}.adjust_pct must agree with the lean (higher > 0, lower < 0, same = 0)")
     src = e.get("sources")
     if not isinstance(src, list) or not src or not all(isinstance(u, str) and u.startswith("http") for u in src):
         out.append("sources must be a non-empty list of URLs")
@@ -92,12 +101,13 @@ def kickoffs():
 
 def coverage(views):
     now = datetime.now(timezone.utc)
-    ps = posted()
+    ps = {i: ko for i, ko in posted().items() if now < ts(ko) <= now + timedelta(hours=JUDGE_HOURS)}
     missing = [i for i in ps if i not in views]
-    stale = [i for i, ko in ps.items() if i in views and ts(ko) - now <= timedelta(hours=36)
-             and now - ts(views[i].get("written_at") or "2000-01-01T00:00:00+00:00") >= timedelta(hours=18)]
-    print(f"coverage: {len(ps) - len(missing)} of {len(ps)} posted matches have a subjective view; "
-          f"{len(missing)} missing, {len(stale)} due a refresh (kick-off within 36 h, view older than 18 h)")
+    unsized = [i for i in ps if i in views and not all(isinstance((views[i].get(s) or {}).get("adjust_pct"), (int, float)) for s in STATS)]
+    stale = [i for i, ko in ps.items() if i in views and ts(ko) - now <= timedelta(hours=24)
+             and now - ts(views[i].get("written_at") or "2000-01-01T00:00:00+00:00") >= timedelta(hours=16)]
+    print(f"coverage: {len(ps) - len(missing)} of {len(ps)} posted matches kicking off within {JUDGE_HOURS} h have a subjective view; "
+          f"{len(missing)} missing, {len(unsized)} without sizes, {len(stale)} due a match-day refresh (kick-off within 24 h, view older than 16 h)")
     return missing, stale
 
 
@@ -106,12 +116,15 @@ def main():
     ap.add_argument("files", nargs="*")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--coverage", action="store_true")
+    ap.add_argument("--prune", action="store_true", help="only prune (no files to merge)")
     a = ap.parse_args()
     store = json.load(open(PATH)) if os.path.exists(PATH) else {"matches": {}}
     views = store.setdefault("matches", {})
     if a.coverage:
         coverage(views)
         return
+    if a.prune:
+        a.files = []
     now = datetime.now(timezone.utc)
     good, bad = {}, 0
     for f in a.files:
@@ -136,9 +149,8 @@ def main():
     ko = kickoffs()
     for mid in list(views):
         k = ko.get(mid)
-        w = views[mid].get("written_at")
-        if (k and now - ts(k) > timedelta(days=3)) or (not k and w and now - ts(w) > timedelta(days=40)):
-            del views[mid]
+        if not k or now - ts(k) > timedelta(days=3) or ts(k) - now > timedelta(hours=JUDGE_HOURS):
+            del views[mid]  # no estimate on file, kicked off over 3 days ago, or not yet within 48 h of kick-off
     with open(PATH, "w") as f:
         json.dump(store, f, indent=1, ensure_ascii=False)
     print(f"analyst.json now holds {len(views)} views")

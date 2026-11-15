@@ -46,7 +46,7 @@ def finish(m):
 
 def merge_league(league, season, fd_matches, espn_events, summaries, fd_of_espn, primary="football-data.co.uk"):
     """Returns (matches, report). Each match carries `checks`, `sources` and ESPN ids.
-    `primary` names the first source (football-data.co.uk, or FotMob for MLS)."""
+    `primary` names the first source (football-data.co.uk, or FotMob for a league marked "stats": "fotmob")."""
     espn_done = [e for e in espn_events if e.get("completed")]
     used = set()
     out = []
