@@ -44,7 +44,8 @@ excluded from the model. State per season in `data/state/<YYZZ>/` (season Jul–
 - **Our take** (owner, 15 Nov 2026) — `model/judgement.py`, applied in `engine.make`: each stat's numbers × (1 + view's
   `adjust_pct`/100) (max ±25%; old views with a lean but no size get ±5%), probabilities recomputed; stored as
   `prediction.take` beside the unchanged `prediction.stats`. The site shows the take everywhere (Expected numbers, lines,
-  strip, fixture cards via `site_data.pred_summary`); each stat has ONE line "Our take" = tightest line ≥60% of the take,
+  strip, fixture cards via `site_data.pred_summary`); each stat shows 5 bars centred on its expected total (`core.show_lines`, `over_show`; scoring keeps the fixed
+  `LINES` in `over`) and ONE line "Our take" = tightest shown line ≥60% of the take,
   plus "Numbers alone X, judgement ±Y%". "Why" = reasoning, base, adjustments, subjective view (+ size, numbers alone).
   Track record scores the numbers; the take is scored separately (`result_take`, `accuracy.json` "take").
 - Backtest `python -m backtest.recipe` (tune 2024-25, test 2025-26; `RECIPE_TEST_ONLY=1` re-tests). Results in

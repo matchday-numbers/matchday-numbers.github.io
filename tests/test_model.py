@@ -332,3 +332,17 @@ def test_analyst_view_validation_requires_sizes_that_agree_with_the_lean():
     bad["shots"]["adjust_pct"] = 30
     pr = " ".join(am.problems(bad))
     assert "corners.adjust_pct must agree" in pr and "cards.adjust_pct" in pr and "shots.adjust_pct" in pr
+
+
+def test_five_shown_lines_centred_on_the_expected_total():
+    from model.core import show_lines
+    assert show_lines("goals", 2.4) == [0.5, 1.5, 2.5, 3.5, 4.5]
+    assert show_lines("goals", 3.1) == [1.5, 2.5, 3.5, 4.5, 5.5]
+    assert show_lines("goals", 0.9) == [0.5, 1.5, 2.5, 3.5, 4.5]  # never below 0.5
+    assert show_lines("shots", 28.2) == [22.5, 25.5, 28.5, 31.5, 34.5]
+    c = count_probabilities("corners", 5.0, 3.9, 0.02)
+    assert list(c["over_show"]) == ["6.5", "7.5", "8.5", "9.5", "10.5"]
+    o = list(c["over_show"].values())
+    assert all(a > b for a, b in zip(o, o[1:])) and o[0] > 0.5 > o[-1]
+    g = goal_probabilities(1.5, 1.1, -0.1)
+    assert len(g["over_show"]) == 5 and list(g["over"]) == ["1.5", "2.5", "3.5"]  # scoring lines unchanged

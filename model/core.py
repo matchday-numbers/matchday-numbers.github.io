@@ -31,6 +31,20 @@ LINES = {
     "shots_on_target": [6.5, 8.5, 10.5],
 }
 
+# Lines shown on the site (owner, 16 Nov 2026): five, centred on each match's expected total, this far apart.
+# LINES above stay fixed for scoring, so the track record stays comparable over time.
+SHOW_STEP = {"goals": 1, "corners": 1, "cards": 1, "shots": 3, "shots_on_target": 1}
+SHOW_COUNT = 5
+
+
+def show_lines(stat, total):
+    """Five lines centred on the expected total (middle = the nearest x.5), never below 0.5."""
+    step = SHOW_STEP[stat]
+    mid = math.floor(total) + 0.5
+    lo = max(0.5, mid - step * (SHOW_COUNT // 2))
+    return [lo + step * i for i in range(SHOW_COUNT)]
+
+
 # Used only when there is no data at all for a league yet.
 DEFAULT_MEANS = {
     "goals": (1.5, 1.2),
@@ -229,13 +243,14 @@ def goal_probabilities(lh, la, rho):
         for j in range(n):
             totals[i + j] += m[i][j]
     over = {str(l): sum(p for k, p in enumerate(totals) if k > l) for l in LINES["goals"]}
+    over_show = {str(l): sum(p for k, p in enumerate(totals) if k > l) for l in show_lines("goals", lh + la)}
     btts = sum(m[i][j] for i in range(1, n) for j in range(1, n))
     scores = sorted(((m[i][j], f"{i}-{j}") for i in range(n) for j in range(n)), reverse=True)[:5]
     clean_home = sum(m[i][0] for i in range(n))  # home keeps clean sheet
     clean_away = sum(m[0][j] for j in range(n))
     return {
         "home_win": home, "draw": draw, "away_win": away,
-        "over": over, "btts": btts,
+        "over": over, "over_show": over_show, "btts": btts,
         "likely_scores": [{"score": s, "p": p} for p, s in scores],
         "clean_sheet_home": clean_home, "clean_sheet_away": clean_away,
         "range": [quantile(totals, 0.1), quantile(totals, 0.9)],
@@ -247,4 +262,5 @@ def count_probabilities(stat, lh, la, alpha):
     kmax = int(mean * 4 + 30)
     pmf = nb_pmf_list(mean, alpha, kmax)
     over = {str(l): sum(p for k, p in enumerate(pmf) if k > l) for l in LINES[stat]}
-    return {"over": over, "range": [quantile(pmf, 0.1), quantile(pmf, 0.9)]}
+    over_show = {str(l): sum(p for k, p in enumerate(pmf) if k > l) for l in show_lines(stat, mean)}
+    return {"over": over, "over_show": over_show, "range": [quantile(pmf, 0.1), quantile(pmf, 0.9)]}

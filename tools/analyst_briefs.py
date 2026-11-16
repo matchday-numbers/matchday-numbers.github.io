@@ -42,7 +42,7 @@ def ordinal(n):
 
 def our_call(stat, s):
     """Same rule as the site: the tightest line the numbers still give 60% or more."""
-    backed = [(p if p >= 0.5 else 1 - p, f"{'over' if p >= 0.5 else 'under'} {line}") for line, p in (s.get("over") or {}).items()]
+    backed = [(p if p >= 0.5 else 1 - p, f"{'over' if p >= 0.5 else 'under'} {line}") for line, p in (s.get("over_show") or s.get("over") or {}).items()]
     backed = sorted(x for x in backed if x[0] >= 0.6)
     lab = LABEL[stat]
     if backed:
