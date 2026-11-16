@@ -349,44 +349,44 @@
    "written_at": "2026-11-15T17:04:35Z"
   },
   "401883305": {
-   "overall": "Albacete have won three league games in a row under Joseba Etxeberria and press high and fast, but are without José Corpas (suspended), Javi Moreno, Fran Gámez, Higinio and Munir, with San Bartolomé a late doubt after an ankle knock in the cup. Celta Fortuna are missing Quique Ribes, Joel López and Adrià Capdevila (suspended) plus Cuenca, Kibet and Mateo Sobral on international duty, and call up six youth players, though Anxo Rodríguez and Óscar Marcos are back. Monday-night kick-off at the Carlos Belmonte.",
+   "overall": "Albacete have won three league games in a row under Joseba Etxeberria, who says they will press high from the start, but they are without José Corpas (suspended), Javi Moreno, Fran Gámez, Higinio and Munir, and San Bartolomé is still a doubt with an ankle knock from the cup (the probable lineups leave him out). Celta Fortuna travel with ten absentees: Quique Ribes, Joel López and Adrià Capdevila banned, Cuenca, Kibet and Mateo Sobral on international duty, Gavián, Somuah and Khayat injured; five youth players are in the squad, Anxo Rodríguez and Óscar Marcos are back, and the predicted lineup is a back five. Celta Fortuna have not won away in the league since early September.",
    "goals": {
-    "lean": "same",
-    "adjust_pct": 0,
-    "call": "Around 3 goals",
-    "text": "The numbers say 2.9 goals and I hold there. Celta Fortuna's games have been open (19-25 in 13) and a squad full of youth players can be exposed, but Albacete have scored only 13 in 13 and lose Corpas and Munir, which keeps the total from climbing."
+    "lean": "lower",
+    "adjust_pct": -4,
+    "call": "Around 2.9 goals, under 3.5",
+    "text": "The numbers say 3.0 goals; I take a little off, to about 2.9. Albacete have scored only 13 in 13 and lose Corpas, Munir and Higinio, and Celta Fortuna are expected to line up with five at the back; against that, a patched-up young defence can still leak, so the cut is small."
    },
    "corners": {
     "lean": "lower",
     "adjust_pct": -5,
     "call": "Under 10.5 corners, about 9.6",
-    "text": "The numbers say 10.1 corners, with 6.3 for Albacete. I lean mildly lower, to about 9.6: Etxeberria's side win the ball high and attack quickly rather than camping in the opponent's half, and Celta Fortuna, who pass more by LaLiga's count, should have more of the ball than the split suggests. It is a style read, so the size is small."
+    "text": "The numbers say 10.1 corners, with 6.2 for Albacete. I lean mildly lower, to about 9.6: Etxeberria's side win the ball high and attack quickly rather than camping in the opponent's half, and a Celta Fortuna back five should keep play narrow. It is a style read, so the size is small."
    },
    "cards": {
     "lean": "higher",
     "adjust_pct": 6,
     "call": "Over 5.5 cards, about 5.9",
-    "text": "The numbers say 5.6 cards. I lean higher, to about 5.9: Albacete's pressing invites fouls, Celta Fortuna arrive with three players banned for yellow-card accumulation, and a game between two sides near the bottom should be scrappy. Mild size, since the numbers already expect a busy game."
+    "text": "The numbers say 5.6 cards. I lean higher, to about 5.9: Albacete's high press invites fouls, Celta Fortuna arrive with three players banned for yellow-card accumulation, and Etxeberria warns their opponents are dangerous on the break, which tends to bring tactical fouls. Mild size, since the numbers already expect a busy game and I found nothing recent on Eder Mallo's card count."
    },
    "shots": {
     "lean": "lower",
     "adjust_pct": -10,
     "call": "Around 25 shots",
-    "text": "The numbers say 28.2 shots; I would take about 25.4. The cut is mainly on Albacete's side: LaLiga counts them at under nine shots a game, so 16.1 at home looks generous, especially without Corpas, Munir and Higinio, three of their attacking options."
+    "text": "The numbers say 28.2 shots; I would take about 25.4. The cut is mainly on Albacete's side: they have shot under nine times a game by LaLiga's count, so 16.2 at home looks generous without Corpas, Munir and Higinio and probably San Bartolomé, and Celta Fortuna's expected back five should limit space."
    },
    "shots_on_target": {
     "lean": "lower",
     "adjust_pct": -8,
-    "call": "Around 8.5 on target",
-    "text": "The numbers say 9.4 shots on target; I would take about 8.6, in line with the lower shots. Óscar Marcos is back for Celta Fortuna, which helps Álvaro Marín, but the rest of their attack is young and Albacete's wins have come from few attempts."
+    "call": "Around 8.6 on target",
+    "text": "The numbers say 9.4 shots on target; I would take about 8.6, in line with the lower shots. Óscar Marcos is back for Celta Fortuna, which helps Álvaro Marín, but the rest of their attack is young and Albacete's recent wins have come from few attempts."
    },
    "sources": [
     "https://www.infobae.com/espana/agencias/2026/11/15/albacete-y-celta-fortuna-miden-sus-rachas-opuestas-en-el-carlos-belmonte/",
-    "https://metropolitano.gal/celta-de-vigo/andres-antanon-refuerza-celta-fortuna-convocatoria-diez-bajas-y-seis-juveniles/",
-    "https://www.eldigitaldealbacete.com/2026/11/14/el-albacete-no-se-rinde-por-corpas-acudira-al-tad-tras-el-rechazo-recibido/",
-    "https://www.laliga.com/es-MA/partido/temporada-2026-2027-laliga-hypermotion-albacete-bp-rc-celta-fortuna-14"
+    "https://minutonoventa.com/el-celta-fortuna-viaja-a-albacete-con-diez-bajas-y-cinco-juveniles-fredi-recupera-a-antanon-y-milla/",
+    "https://www.eldigitaldealbacete.com/2026/11/14/san-bartolome-mantiene-en-vilo-al-albacete-la-ultima-sesion-decidira-sus-opciones/",
+    "https://www.eldigitaldealbacete.com/2026/11/14/el-peligro-del-celta-fortuna-que-preocupa-a-etxeberria-los-datos-son-espectaculares/"
    ],
-   "written_at": "2026-11-15T20:20:00Z"
+   "written_at": "2026-11-16T16:25:00Z"
   }
  }
 }
