@@ -34,6 +34,12 @@ jobs:
           git commit -q -m "Data update $(date -u +%Y-%m-%dT%H:%MZ)" || echo "no changes"
           # this run's data is the newest; keep it if a concurrent commit touched the same files
           git pull -q --rebase -X theirs origin main && git push -q
+      - name: Cache-bust the page's script and styles
+        # browsers keep app.js/styles.css for a while; a new URL per deploy makes them load the new version
+        run: |
+          v=$(git rev-parse --short HEAD)
+          sed -i "s|src=\"app.js[^\"]*\"|src=\"app.js?v=$v\"|; s|href=\"styles.css[^\"]*\"|href=\"styles.css?v=$v\"|" site/index.html
+          grep -n "app.js\|styles.css" site/index.html
       - name: Package website
         uses: actions/upload-pages-artifact@v3
         with:
