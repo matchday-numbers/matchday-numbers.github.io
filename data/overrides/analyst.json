@@ -1,43 +1,6 @@
 {
  "_about": "Subjective view per upcoming match, keyed by ESPN match id, written by a scheduled task from recent news. Shown in each stat's 'Why' box and next to 'Our call'; never mixed into the numbers. Per stat (goals, corners, cards, shots, shots_on_target): {lean: higher|lower|same, call: short judgement call, text: reasoning}. Also: overall, sources (URLs), written_at (ISO). Never use 'lock', 'sure thing' or 'guaranteed'.",
  "matches": {
-  "401883136": {
-   "overall": "Leganés are 18th, one point above the drop zone, with one point from their last seven league games and no league win since 20 September; Luis Carrión's only win since replacing Rubén Albés is Tuesday's narrow Copa del Rey victory at Trival Valderas. Burgos are third and unbeaten in four after coming from behind to beat Celta Fortuna 2-1, but are without the injured Jon Karrikaburu and David González and the internationals Kevin Appin and Bruno Iribarne. New since the last view: Gonzalo Romero Freixas referees, Burgos have Llabrés and Saúl del Cerro back in training, and Leganés are missing players on international duty, with Ismaël Gharbi still out.",
-   "goals": {
-    "lean": "higher",
-    "call": "Over 1.5 goals, around 2-3",
-    "text": "The numbers now say 1.8 goals, down from 2.0. I still lean higher: Leganés have conceded 23 in 13 games and must chase this at home, and Sergio Francisco admits Burgos keep conceding early, though they have come back from behind repeatedly. Carrión's Leganés are, in Francisco's words, more attacking but less balanced than under Albés."
-   },
-   "corners": {
-    "lean": "higher",
-    "call": "Around 10 corners",
-    "text": "The numbers say 9.3 corners. I lean a little higher: Leganés should have most of the ball at Butarque under Carrión's more combinative approach, and Francisco says Burgos will try to press them back into their own half, so both ends should see set pieces. Nothing in this week's news changes that."
-   },
-   "cards": {
-    "lean": "higher",
-    "call": "Over 5.5 cards",
-    "text": "The numbers say 5.8 cards, already high, and I lean a little higher. Leganés are a nervous side near the drop zone with Francisco Montero banned after a red, and Burgos plan to press high and win the ball back in Leganés's half, which brings fouls. Romero Freixas is confirmed as referee; I found no recent card figures for him, so this lean rests on the context."
-   },
-   "shots": {
-    "lean": "lower",
-    "call": "Around 23-25 shots",
-    "text": "The numbers say 25.8 shots. I keep a slight lean lower: Burgos are missing two forwards (Karrikaburu, Iribarne) and Francisco is talking about clean sheets rather than an open game. Leganés should take most of the attempts, as they did with 17 against Albacete, but 12.5 for Burgos looks generous."
-   },
-   "shots_on_target": {
-    "lean": "same",
-    "call": "Around 8 on target",
-    "text": "The numbers say 8.3 shots on target and I leave it there. Leganés have scored only 11 goals in 13 games and Morata is on three, while Burgos are efficient rather than prolific, with Curro Sánchez on four and the Forés goal that beat Celta Fortuna."
-   },
-   "sources": [
-    "https://www.laliga.com/es-DE/partido/temporada-2026-2027-laliga-hypermotion-cd-leganes-burgos-cf-14",
-    "https://www.cdleganes.com/en/17943982135790290",
-    "https://www.canal54.es/el-burgos-cf-busca-hurgar-en-la-herida-de-un-leganes-que-acumula-siete-jornadas-sin-ganar/",
-    "https://www.revistaforofos.com/2026/11/13/el-burgos-no-se-fia-de-la-mala-racha-del-leganes/",
-    "https://www.elcorreodeburgos.com/deportes/burgos-cf/261112/247035/equipo-demostrado-gran-capacidad-rendirse.html",
-    "https://www.eldigitaldealbacete.com/2026/11/10/el-cta-desmonta-el-se-cargan-el-futbol-y-da-la-razon-al-albacete-sobre-el-codazo-de-morata-a-vallejo-codoincidimos/"
-   ],
-   "written_at": "2026-11-13T02:07:08Z"
-  },
   "401883114": {
    "overall": "Castellón are second with the best defence in the division (five conceded in 12 games) but have not played a league game since 1 November after their match with Eibar was postponed; they did win a Copa del Rey tie against Conquense. New since the last view: they lose Matías Orozco (suspended and away with his national team), Amir Saipi and Rodrigo Rêgo to international duty, so Pablo Hernández must rebuild his midfield around Diego Barri, with Álvaro Martín or Jari Vlak in Orozco's role. Valladolid have won two in a row but are without the suspended Iván Alejo (fifth yellow), the injured Latasa and Guille Bueno, and Homam and Balboa, who are with their national teams. No referee had been named when this was written.",
    "goals": {
