@@ -11,8 +11,8 @@ The site learns from its own misses, one proven change at a time, and remembers 
 With ~90 checks per review, a few SIGNALs are chance; hand-picked numbers and batches of fixes make it
 impossible to know what helped. "No change this week" is a good outcome when nothing held.
 
-Runs weekly in the "Matchday Numbers weekly review" scheduled task (Mondays; the upkeep task runs it as a fallback
-when it is 8+ days old), or when the owner asks.
+Runs weekly as step 10 of the "Matchday Numbers upkeep" scheduled task (the Tuesday run, or any run once the last
+review is 6+ days old), or when the owner asks.
 
 **Model 2 vs model 3.** Model 2 = settings frozen on 17 Nov 2026 (`data/learning/champion/model2.json`); model 3 =
 the live model with this loop's changes. The pipeline computes model 2 in the shadow for every estimate (prediction

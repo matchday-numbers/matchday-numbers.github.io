@@ -90,10 +90,11 @@ prune; `--coverage` report; `--prune` prune only).
   views (48 h window, with sizes) with subagents. It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
 - "Matchday Numbers upkeep" (trig_011wZXp3AA8i8evwSxf7ccge): Tue & Fri 8:38; health check, writes
   `data/state/upkeep_last.md`. Early runs quit in <1 min; it works since 12 Nov.
-- "Matchday Numbers weekly review" (trig_01Ccx6FQEwxB1wL1PafoAAon): Mondays 10:23; fires into the persistent session
-  session_01RdZgznZaFNJVU9imMzobjc (created with the repo as source; a task created from a session without that
-  had no repo and failed). Runs the matchday-self-review skill incl. model 2 vs model 3. The upkeep task's step 10
-  runs the review as a fallback only when review_last.json is 6+ days old (i.e. the Monday run failed).
+- The WEEKLY REVIEW runs as step 10 of "Matchday Numbers upkeep": the Tuesday 8:38 run (or any run once
+  review_last.json is 6+ days old). It always sends the owner a push notification starting "📊 Matchday Numbers ·
+  Weekly review (scheduled)" (owner's choice, 17 Nov 2026). Separate weekly tasks created from a session (Monday,
+  17 Nov) got no repo when run (fresh session, "no-git-repo") and were deleted: a task that needs the repo must be
+  created in the claude.ai routines UI with the repo attached, or live inside the upkeep task.
 - Scheduled runs see the repo under its old name and use mcp__github__ tools (owner lucasfrancofedez08-cmd, repo football-stats).
 
 ## Other workflows / tools
