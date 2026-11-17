@@ -20,6 +20,7 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from model.judgement import JUDGE_HOURS, MAX_PCT  # noqa: E402
+from model.usual import standout  # noqa: E402
 STATS = ["goals", "corners", "cards", "shots", "shots_on_target"]
 LABEL = {"goals": "goals", "corners": "corners", "cards": "cards", "shots": "shots", "shots_on_target": "shots on target"}
 
@@ -40,11 +41,18 @@ def ordinal(n):
     return f"{n}{'th' if 10 <= n % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
 
 
-def our_call(stat, s):
-    """Same rule as the site: the tightest line the numbers still give 60% or more."""
+def our_call(stat, s, usual_comp=None, comp_name="the competition"):
+    """Same rule as the site: the shown line where the match differs most from a usual game in the
+    competition (model/usual.py); without usual rates, the tightest line the numbers give 60% or more."""
+    lab = LABEL[stat]
+    so = standout(s.get("over_show") or s.get("over") or {}, (usual_comp or {}).get(stat))
+    if so and so.get("side"):
+        return (f"{so['side']} {so['line']} {lab} ({round(so['p'] * 100)}%; {comp_name} games "
+                f"{'go over' if so['side'] == 'over' else 'stay under'} {so['line']} in {round(so['usual'] * 100)}%)")
+    if so:
+        return f"about a usual {comp_name} game for {lab} ({comp_name} average {so['mean']})"
     backed = [(p if p >= 0.5 else 1 - p, f"{'over' if p >= 0.5 else 'under'} {line}") for line, p in (s.get("over_show") or s.get("over") or {}).items()]
     backed = sorted(x for x in backed if x[0] >= 0.6)
-    lab = LABEL[stat]
     if backed:
         return f"{backed[0][1]} {lab} ({round(backed[0][0] * 100)}%)"
     return "close call (no line at 60% or more)"
@@ -64,6 +72,7 @@ def main():
     meta = jload(os.path.join(ROOT, "site", "data", "meta.json"), {})
     season = meta.get("season")
     views = jload(os.path.join(ROOT, "data", "overrides", "analyst.json"), {}).get("matches", {})
+    usual_rates = jload(os.path.join(ROOT, "site", "data", "usual.json"), {})  # model/usual.py, written by the pipeline
     need = []
     for lg in meta.get("leagues", []):
         L = jload(os.path.join(ROOT, "site", "data", f"league-{lg['key']}.json"), {})
@@ -100,7 +109,7 @@ def main():
             for s in STATS:
                 x = P["stats"][s]  # the numbers alone (before any judgement)
                 numbers[s] = {"expected": round(x["total"], 1), "home": round(x["home"], 1), "away": round(x["away"], 1),
-                              "line_60": our_call(s, x)}
+                              "site_call": our_call(s, x, usual_rates.get(lg["key"]), lg["name"])}
             g = P["stats"]["goals"]
             flags = [f"{a_['kind']}: {a_['detail']}" for a_ in P.get("adjustments", []) if a_["kind"] in ("derby", "stakes")]
             need.append((prio, u["kickoff"], lg["key"], {

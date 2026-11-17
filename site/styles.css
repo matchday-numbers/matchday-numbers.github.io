@@ -195,6 +195,15 @@ p { margin: 0 0 12px; max-width: 72ch; }
 .lines .pct { text-align: right; font-stretch: var(--narrow); font-weight: 750; font-size: .98rem; }
 .lines li.hit .pct::after { content: " ✓"; color: var(--pitch); }
 .lines li.miss .pct::after { content: " ✗"; color: var(--red); }
+/* how often games in the competition go over each line (faint tick + "usual" figure), and the highlighted line */
+.lines.with-usual li { grid-template-columns: 82px 1fr 48px 68px; }
+.lines .bar { position: relative; }
+.lines.with-usual .bar { overflow: visible; }
+.lines .bar .tick { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--ink); opacity: .45; border-radius: 1px; }
+.lines .usual { color: var(--muted); font-size: .76rem; white-space: nowrap; }
+.lines li.pick { background: var(--pitch-soft); border-radius: 6px; margin: 0 -6px; padding: 4px 6px; }
+.lines li.pick > span:first-child { font-weight: 750; color: var(--pitch); }
+@media (max-width: 480px) { .lines.with-usual li { grid-template-columns: 70px 1fr 42px 60px; gap: 8px; } }
 .scores { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 .scores span { border: 1px solid var(--line); border-radius: 6px; padding: 4px 9px; font-size: .86rem; }
 .scores b { font-stretch: var(--narrow); font-size: 1.05rem; margin-right: 4px; }

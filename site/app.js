@@ -203,12 +203,42 @@ async function renderLeague(lg) {
 /* ---------------------------------------------------------------- match */
 // the lines shown: five centred on the expected total (estimates made before 16 Nov 2026 have the fixed three or four)
 function shownLines(s) { return s.over_show || s.over; }
-function lineList(stat, s, result) {
+// what usually happens in each competition (site/data/usual.json, last season + this one; model/usual.py).
+// The highlighted line is the one where this match differs most from a usual game; same rules as model/usual.py.
+let USUAL = null;
+const MIN_GAP = 0.06;
+function usualOf(m, stat) { const c = USUAL && m && USUAL[m.comp]; return (c && c[stat]) || null; }
+function usualRate(u, line) {
+  let over = 0;
+  for (const [t, c] of Object.entries(u.hist)) if (+t > +line) over += c;
+  return over / u.n;
+}
+// {side, line, p, usual, gap}: the standout call; {usual_game, mean}: no line 6+ points from usual; null: no usual rates
+function standout(stat, s, m) {
+  const u = usualOf(m, stat);
+  if (!u) return null;
+  let best = null;
+  for (const [line, p] of Object.entries(shownLines(s))) {
+    const r = usualRate(u, line);
+    for (const [side, pc, uc] of [["over", p, r], ["under", 1 - p, 1 - r]]) {
+      const gap = pc - uc;
+      if (gap >= MIN_GAP && pc > 0.5 && (!best || gap > best.gap || (gap === best.gap && pc > best.p))) best = { side, line, p: pc, usual: uc, gap };
+    }
+  }
+  return best || { usual_game: true, mean: u.mean };
+}
+function lineList(stat, s, result, m) {
   const res = result && result[stat];
   const actual = res && !res.excluded ? res.actual_total : null;
-  return `<ul class="lines">${Object.entries(shownLines(s)).map(([line, p]) => {
+  const u = usualOf(m, stat), so = u ? standout(stat, s, m) : null;
+  const name = (m && LEAGUES[m.comp]) || "the competition";
+  return `<ul class="lines${u ? " with-usual" : ""}">${Object.entries(shownLines(s)).map(([line, p]) => {
     const hit = actual == null ? null : (p >= 0.5) === (actual > +line);
-    return `<li class="${hit == null ? "" : hit ? "hit" : "miss"}"><span>Over ${h(line)}</span><span class="bar"><span style="width:${p * 100}%"></span></span><span class="pct">${pct(p)}</span></li>`;
+    const pick = !!(so && so.side && so.line === line), under = pick && so.side === "under";
+    const r = u ? usualRate(u, line) : null;
+    const q = under ? 1 - p : p, rq = r == null ? null : under ? 1 - r : r;  // an under call shows the under side
+    const tick = rq == null ? "" : `<i class="tick" style="left:${rq * 100}%" title="${h(name)} games: ${pct(rq)}"></i>`;
+    return `<li class="${hit == null ? "" : hit ? "hit" : "miss"}${pick ? " pick" : ""}"><span>${under ? "Under" : "Over"} ${h(line)}</span><span class="bar"><span style="width:${q * 100}%"></span>${tick}</span><span class="pct">${pct(q)}</span>${u ? `<span class="usual" title="How often ${h(name)} games ${under ? "stay under" : "go over"} this line (last season and this one)">usual ${pct(rq)}</span>` : ""}</li>`;
   }).join("")}</ul>`;
 }
 function accuracyLine(acc, lg, stat) {
@@ -227,13 +257,20 @@ function pub(P) {
   return Object.fromEntries(Object.keys(P.stats).map(k => [k, { ...P.stats[k], ...(T[k] || {}) }]));
 }
 function ourCall(stat, s, m) {
-  // the tightest line the numbers still back at 60% or more (the most informative one, not the safest);
-  // a close call when no line reaches 60%
-  const lines = Object.entries(shownLines(s)).map(([l, p]) => (p >= 0.5 ? [p, `over ${l}`] : [1 - p, `under ${l}`]));
-  const backed = lines.filter(x => x[0] >= 0.6).sort((a, b) => a[0] - b[0]);
   const lab = STAT[stat].toLowerCase();
-  const best = backed[0];
-  let line = best ? `${best[1]} ${lab} (${pct(best[0])}), around ${fx(s.total)} expected` : `close call, around ${fx(s.total)} ${lab} expected (no line at 60% or more)`;
+  const so = standout(stat, s, m), name = LEAGUES[m.comp] || "the competition";
+  let line;
+  if (so && so.side) {
+    // the line where this match differs most from a usual game in the competition
+    line = `${so.side} ${so.line} ${lab} (${pct(so.p)}), around ${fx(s.total)} expected. ${name} games ${so.side === "over" ? "go over" : "stay under"} ${so.line} in ${pct(so.usual)} of matches`;
+  } else if (so) {
+    line = `about a usual ${name} game for ${lab}: around ${fx(s.total)} expected (${name} average ${fx(so.mean)})`;
+  } else {
+    // no usual rates: the tightest line the numbers still back at 60% or more; a close call when none does
+    const lines = Object.entries(shownLines(s)).map(([l, p]) => (p >= 0.5 ? [p, `over ${l}`] : [1 - p, `under ${l}`]));
+    const best = lines.filter(x => x[0] >= 0.6).sort((a, b) => a[0] - b[0])[0];
+    line = best ? `${best[1]} ${lab} (${pct(best[0])}), around ${fx(s.total)} expected` : `close call, around ${fx(s.total)} ${lab} expected (no line at 60% or more)`;
+  }
   if (stat === "goals") {
     const r = [[s.home_win, `${m.home.short} win`], [s.draw, "a draw"], [s.away_win, `${m.away.short} win`]].sort((a, b) => b[0] - a[0])[0];
     line = `${r[1]} most likely (${pct(r[0])}); ${line}`;
@@ -284,7 +321,7 @@ function statPanel(stat, P, m, acc) {
   const head = `<h3>${STAT[stat]} <span class="sub">${STAT_HELP[stat]}</span></h3>${weak}
     <div class="stat-row"><span class="stat-big">${fx(s.total)}</span><span class="range">likely ${s.range[0]}–${s.range[1]}</span>${actual}</div>
     <p class="small sub" style="margin:6px 0 0">${h(m.home.short)} ${fx(s.home)}, ${h(m.away.short)} ${fx(s.away)}</p>
-    ${lineList(stat, s, m.prediction && m.prediction.result)}`;
+    ${lineList(stat, s, m.prediction && m.prediction.result, m)}`;
   const av = analystStat(P, stat);
   const why = whyBox(stat, n, P, m, acc, av, tk);
   let note;
@@ -495,7 +532,8 @@ function modelCheck(m) {
 }
 
 async function renderMatch(id) {
-  const [m, acc] = await Promise.all([get(`match/${id}.json`), get("accuracy.json").catch(() => null)]);
+  const [m, acc, us] = await Promise.all([get(`match/${id}.json`), get("accuracy.json").catch(() => null), get("usual.json").catch(() => null)]);
+  USUAL = us;
   const teams = await Promise.all([m.home.slug, m.away.slug].map(sl => get(`team/${sl}.json`).catch(() => null)));
   title(`${m.home.short} v ${m.away.short}`);
   setNav("league");
@@ -738,7 +776,7 @@ function renderAbout() {
     Every adjustment is listed on the match page with its effect on the final number. All sizes were measured on 2024-25, then counted at about twice that size, so the adjustments have more say than the data alone would give them (the owner's choice; the cost in accuracy is on the Track record page). One that made no measurable difference (congestion, stakes) is shown for information with a size of 0.</li>
   <li><b>Probabilities.</b> Goals use a Dixon-Coles model for win/draw/loss, likely scores and over/under. Corners, cards and shots use a negative binomial distribution, which allows for more spread than a simple average suggests.</li>
   <li><b>Subjective view.</b> In the 48 hours before kick-off, every match gets a subjective view from the latest news (team news, rotation, motivation, a new manager, the referee): for each stat, whether judgement leans higher or lower than the numbers, by how much (at most 25% either way), and why. It's written when the match enters the 48-hour window and redone on match day. Matches further away have the numbers only.</li>
-  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat shows five lines centred on its expected number, so a high-scoring match and a low-scoring one show different lines, and ends with one line: the tightest of those our take still gives 60% or more (or "close call" when none does). Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view (more than 48 hours before kick-off, or none written), that line is labelled "The numbers" instead of "Our take".</li></ol>
+  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat shows five lines centred on its expected number, so a high-scoring match and a low-scoring one show different lines, and ends with one highlighted line: the one where this match differs most from a usual game in the same competition (last season and this one; the faint tick and "usual" figure on each line show how often those games go over it). The highlighted call must be more likely than not and at least 6 points away from usual; when no line is, it says "about a usual game" instead. Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view (more than 48 hours before kick-off, or none written), that line is labelled "The numbers" instead of "Our take".</li></ol>
   <p>Finished matches from before estimates started show a "model check": what the method would have said using only earlier games. It's labelled as such and isn't part of the track record.</p>
   <h2>What it can't do</h2>
   <ul><li>Team news is only as good as FotMob's reports, and doubtful players aren't counted.</li>

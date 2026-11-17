@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from model.data import load_file  # noqa: E402
 from model.adjustments import is_derby  # noqa: E402
 from model.judgement import JUDGE_HOURS  # noqa: E402
+from model import usual  # noqa: E402
 from pipeline import fotmob_stats, merge, players, predictions, site_data, sources, teams  # noqa: E402
 
 try:  # the estimate engine needs numpy/scipy; stats must still publish without it
@@ -367,6 +368,18 @@ def main():
             log["errors"].append(f"estimate engine: {ex!r}")
             traceback.print_exc()
     if rec:
+        # what usually happens in each competition (last season + this one): the site highlights the line where a
+        # match differs most from it (model/usual.py); the analyst briefs use the same rule
+        try:
+            since = f"{2000 + int(season[:2]) - 1}-07-01"
+            usual_rates = usual.histograms(rec.all_matches, since,
+                                           lambda m: m.get("comp") if m.get("ctx") == "europe" else m.get("ctx"))
+            usual_rates = {k: v for k, v in usual_rates.items() if k in PREDICTED}
+            jsave(os.path.join(ROOT, "site", "data", "usual.json"), usual_rates)
+            log["usual"] = {k: v.get("goals", {}).get("n", 0) for k, v in usual_rates.items()}
+        except Exception as ex:  # the site falls back to the 60% rule without it
+            log["errors"].append(f"usual rates: {ex!r}")
+            traceback.print_exc()
         dom_of = {t["espn_id"]: (dl, n) for dl in DOMESTIC for n, t in (team_map.get(dl) or {}).items()}
         tables = {lg: engine.league_table([m for m in matches[lg]]) for lg in DOMESTIC}
         for lg in PREDICTED:

@@ -354,3 +354,24 @@ def test_five_shown_lines_centred_on_the_expected_total():
     assert all(a > b for a, b in zip(o, o[1:])) and o[0] > 0.5 > o[-1]
     g = goal_probabilities(1.5, 1.1, -0.1)
     assert len(g["over_show"]) == 5 and list(g["over"]) == ["1.5", "2.5", "3.5"]  # scoring lines unchanged
+
+
+def test_usual_standout_rules():
+    from model import usual
+    # 100 games: totals 0..4 goals, 20 each -> over 2.5 usual 40%, over 1.5 usual 60%
+    ms = [{"date": "2026-01-01", "ctx": "x", "hg": t, "ag": 0} for t in range(5) for _ in range(20)]
+    h = usual.histograms(ms, "2025-07-01", lambda m: m["ctx"])["x"]["goals"]
+    assert h["n"] == 100 and h["mean"] == 2.0 and abs(usual.rate(h, 2.5) - 0.4) < 1e-9
+    # over 2.5 at 55% vs usual 40%: +15 pts, more likely than not -> over 2.5
+    s = usual.standout({"1.5": 0.70, "2.5": 0.55, "3.5": 0.30}, h)
+    assert s["side"] == "over" and s["line"] == "2.5" and abs(s["gap"] - 0.15) < 1e-9
+    # biggest gap is below 50% (over 3.5 at 45% vs usual 20%) -> not chosen; over 2.5 (60% vs 40%) is
+    s = usual.standout({"2.5": 0.60, "3.5": 0.45}, h)
+    assert s["side"] == "over" and s["line"] == "2.5"
+    # lower than usual -> an under call, with the under side's numbers
+    s = usual.standout({"1.5": 0.40, "2.5": 0.35}, h)  # under 1.5: 60% vs usual 40% (+20); under 2.5: 65% vs 60% (+5)
+    assert s["side"] == "under" and s["line"] == "1.5" and abs(s["p"] - 0.60) < 1e-9 and abs(s["usual"] - 0.40) < 1e-9
+    # everything within 6 points of usual -> a usual game
+    assert usual.standout({"1.5": 0.63, "2.5": 0.42}, h) == {"usual_game": True, "mean": 2.0}
+    # too few games -> no usual rates
+    assert "goals" not in usual.histograms(ms[:50], "2025-07-01", lambda m: m["ctx"])["x"]

@@ -22,7 +22,8 @@ A brief with `current_view_needs_sizes: true` is an older view without sizes: re
 
 A brief per match (from `tools/analyst_briefs.py`): competition, kick-off, teams, table positions and form,
 win/draw/loss probabilities, and for each stat the numbers' expected total (home/away split, before any
-judgement) and the tightest line they give 60% or more (`line_60`), plus missing players, referee,
+judgement) and `site_call`: the line the site highlights for the numbers alone (where this match differs most from
+a usual game in the competition, or "about a usual game"), plus missing players, referee,
 derby/stakes flags, `already_counted` (every adjustment the numbers already made, with its effect: do not size
 these again), hours left to kick-off and `max_adjust_pct` (25).
 
