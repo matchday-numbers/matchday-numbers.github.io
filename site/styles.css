@@ -98,6 +98,12 @@ p { margin: 0 0 12px; max-width: 72ch; }
 .feature-teams .t { display: flex; align-items: center; gap: 12px; font-weight: 800; font-stretch: var(--semi); font-size: clamp(1.05rem, 2.6vw, 1.5rem); min-width: 0; }
 .feature-teams .t.a { justify-content: flex-end; text-align: right; }
 .feature-teams .x { font-stretch: var(--narrow); font-weight: 700; font-size: 1.1rem; color: rgba(234,243,238,.7); }
+/* phones: crest above the name so long names don't run into the "v" */
+@media (max-width: 560px) {
+  .feature-teams .t { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .feature-teams .t.a { flex-direction: column-reverse; align-items: flex-end; }
+  .feature-teams .t > span:not([class]) { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+}
 
 /* crest discs keep logos legible on any background */
 .disc { display: inline-grid; place-items: center; border-radius: 50%; background: #fff; flex: none; box-shadow: 0 0 0 1px rgba(0,0,0,.06); overflow: hidden; font-size: .62rem; font-weight: 800; color: #13201c; font-stretch: var(--narrow); }
@@ -304,6 +310,8 @@ td.pts { font-weight: 800; }
 .hsearch input::placeholder, .bigsearch input::placeholder { color: rgba(234,243,238,.6); }
 .hsearch input:focus, .bigsearch input:focus { background-color: rgba(255,255,255,.16); border-color: var(--flood); }
 @media (max-width: 760px) { .hsearch { flex-basis: 100%; max-width: none; margin-left: 0; } }
+/* phones: the home page has its own big search box, so hide the one in the top bar there */
+@media (max-width: 760px) { body:has(.bigsearch) .hsearch { display: none; } }
 .bigsearch { position: relative; max-width: 620px; margin: 22px 0 6px; }
 .bigsearch input { font-size: 1.05rem; padding: 14px 18px 14px 44px; background-position: 16px center; }
 .drop { position: absolute; left: 0; right: 0; top: calc(100% + 6px); z-index: 20; background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: var(--r); box-shadow: 0 12px 32px rgba(10,30,22,.18); padding: 6px; max-height: 70vh; overflow: auto; min-width: 300px; }

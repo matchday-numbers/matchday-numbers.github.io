@@ -112,6 +112,9 @@ def main():
                 "numbers": numbers,
                 "missing": {side: [f"{x['name']} ({x.get('reason') or 'out'})" for x in (p.get("missing") or {}).get(side, [])] for side in ("home", "away")},
                 "team_news_included": bool(p.get("team_news")), "referee": p.get("referee"), "flags": flags,
+                # what the numbers already moved for (missing players, referee, momentum, derby...): never size these again
+                "already_counted": [f"{a_['stat']} {a_.get('side') or 'both'} {a_['kind']} {a_['effect_pct']:+.1f}%: {a_.get('detail') or ''}".strip()
+                                    for a_ in P.get("adjustments", []) if a_.get("effect_pct")],
                 "current_view_written_at": (v or {}).get("written_at"),
                 "current_view": {k: (v or {}).get(k) for k in ("overall", "goals", "corners", "cards", "shots", "shots_on_target")} if v else None,
                 "current_view_needs_sizes": bool(v) and not sized,

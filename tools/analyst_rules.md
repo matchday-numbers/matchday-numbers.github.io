@@ -23,7 +23,8 @@ A brief with `current_view_needs_sizes: true` is an older view without sizes: re
 A brief per match (from `tools/analyst_briefs.py`): competition, kick-off, teams, table positions and form,
 win/draw/loss probabilities, and for each stat the numbers' expected total (home/away split, before any
 judgement) and the tightest line they give 60% or more (`line_60`), plus missing players, referee,
-derby/stakes flags, hours left to kick-off and `max_adjust_pct` (25).
+derby/stakes flags, `already_counted` (every adjustment the numbers already made, with its effect: do not size
+these again), hours left to kick-off and `max_adjust_pct` (25).
 
 ## Research (web search and web fetch; never from memory)
 
@@ -33,7 +34,8 @@ Look for what the numbers can't see, published recently (the last few days; team
 - manager situation (new, under pressure, sacked), dressing-room or club turmoil
 - motivation: title race, European places, relegation, promotion play-offs, already qualified or eliminated
 - tactics and style (sits deep, presses high, set-piece threat, wide play that drives corners)
-- the referee's style and recent card counts, when known; weather when it matters
+- the referee's style and recent card counts, when known (the numbers already count his record: only move for
+  something they can't see); weather when it matters
 
 Good sources: ESPN, Sky Sports, BBC Sport, The Athletic, the clubs' and competitions' own sites, AS, Marca,
 Relevo, Mundo Deportivo, Kicker, L'Equipe, Gazzetta dello Sport, Record, A Bola, Fanatik, Hurriyet,
@@ -66,9 +68,16 @@ injury roundups cover many teams at once.
   nothing points either way.
 - `adjust_pct`: how far you would move the numbers' expected total, in percent: a whole number from -25 to 25.
   It must agree with the lean (higher > 0, lower < 0, same = 0). Size it to the evidence: 3-6 for a mild lean
-  (one doubtful player, a hunch from style), 7-12 for a clear reason (a key striker out, heavy rotation, a
-  strict referee with a long record), 13-25 only for something big and confirmed (several first-choice
-  players out, a dead-rubber with a reserve side). Your own number is the numbers' expected total x
+  (one doubtful player, a hunch from style), 7-12 for a clear reason (a key striker out that the numbers don't
+  know about, heavy rotation, a manager just sacked), 13-25 only for something big and confirmed (several
+  first-choice players out that the numbers don't know about, a dead-rubber with a reserve side).
+  **Never count anything twice.** The brief's `already_counted` lists what the numbers have already moved for
+  (the players in `missing`, the referee, momentum, head-to-head, derby, stakes), each with its effect. Size only
+  what is NOT on that list: a player missing who isn't in `missing`, a confirmed lineup that differs, rotation,
+  a manager change, motivation, weather, tactics. A player in `missing` or the referee can only justify a size if
+  the news differs from what the numbers assumed (e.g. the banned player's appeal won, the absence is longer or
+  the referee was changed); then say so. If nothing new turns up, lean "same" with 0.
+  Your own number is the numbers' expected total x
   (1 + adjust_pct / 100); write it in `call` or `text` so it matches (e.g. 28.2 shots and -12 -> about 24.8).
 - `call`: your judgement call in a few words (a line or a rough number). No percentages or probabilities.
 - `text`: two or three plain sentences. Start from the numbers' expected total, then give the reasons for your

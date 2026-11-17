@@ -372,6 +372,7 @@ def main():
         for lg in PREDICTED:
             made_lg = made
             fe = fd_of_espn.get(lg, {})
+            next_fix = players.next_fixtures(events[lg].values(), now.strftime("%Y-%m-%dT%H:%M"))
             for e in events[lg].values():
                 path = os.path.join(pdir, lg, f"{e['espn_id']}.json")
                 ko = datetime.fromisoformat(e["kickoff"].replace("Z", "+00:00"))
@@ -409,9 +410,10 @@ def main():
                         team_key, comp_ms = eid, matches[lg]
                     ov = (overrides.get("teams", {}).get(lg, {}) or {}).get(fk) if lg in DOMESTIC else None
                     out, doubtful, ok = team_news(news.get(side) if news else None, sq, ov, today)
-                    if not ok:  # no team news yet: suspensions worked out from cards
+                    if not ok:  # no team news yet: suspensions worked out from cards, only for the team's next match here
                         own = squad[lg].get(team_key, {})
-                        out = players.likely_suspended(lg, team_key, own, comp_ms) if own else []
+                        nxt = next_fix.get(eid) == e["espn_id"]
+                        out = players.likely_suspended(lg, team_key, own, comp_ms) if own and nxt else []
                     known = known and ok
                     info[f"{side}_missing"] = engine.missing_info(out, sq, find_player)
                     info[f"{side}_doubtful"] = doubtful

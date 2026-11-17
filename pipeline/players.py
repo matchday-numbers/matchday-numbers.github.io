@@ -50,6 +50,24 @@ def team_games(matches, team):
     return sorted(m["date"] for m in matches if team in (m["home"], m["away"]))
 
 
+def next_fixtures(events, now):
+    """{team espn_id: espn_id of that team's next match in this competition} from a competition's events.
+    A ban worked out from cards is served in the team's next match of the same competition, so it is
+    counted only there (not in every upcoming fixture)."""
+    nxt = {}
+    for e in events:
+        if e.get("completed") or e.get("status") not in (None, "pre"):
+            continue
+        ko = e.get("kickoff") or ""
+        if ko < now:
+            continue
+        for side in ("home", "away"):
+            tid = (e.get(side) or {}).get("espn_id")
+            if tid and (tid not in nxt or ko < nxt[tid][0]):
+                nxt[tid] = (ko, e["espn_id"])
+    return {t: v[1] for t, v in nxt.items()}
+
+
 def likely_suspended(league, team, players, matches):
     """Players probably banned for the team's NEXT league match, from cards only.
     Red card in the last league match -> 1 match. Yellow accumulation:

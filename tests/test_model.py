@@ -119,6 +119,14 @@ def test_suspension_from_red_card():
     assert [x["name"] for x in out] == ["X"]
 
 
+def test_card_ban_only_for_next_fixture():
+    ev = [{"espn_id": "2", "kickoff": "2026-11-29T20:00Z", "status": "pre", "home": {"espn_id": "10"}, "away": {"espn_id": "30"}},
+          {"espn_id": "1", "kickoff": "2026-11-22T20:00Z", "status": "pre", "home": {"espn_id": "20"}, "away": {"espn_id": "10"}},
+          {"espn_id": "0", "kickoff": "2026-11-08T20:00Z", "completed": True, "home": {"espn_id": "10"}, "away": {"espn_id": "40"}}]
+    nxt = players.next_fixtures(ev, "2026-11-17T10:00")
+    assert nxt["10"] == "1" and nxt["20"] == "1" and nxt["30"] == "2" and "40" not in nxt
+
+
 def test_score_marks_hits():
     lg = seasons("premier-league")
     pred = Predictor("premier-league", lg[:4])

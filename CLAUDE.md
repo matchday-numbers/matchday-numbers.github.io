@@ -57,6 +57,9 @@ excluded from the model. State per season in `data/state/<YYZZ>/` (season Jul–
 ONLY for posted matches kicking off within 48 h (`model/judgement.py` JUDGE_HOURS; run.py attaches a view only then;
 `analyst_merge.py` prunes views of matches further out or kicked off 3+ days ago or with no estimate on file).
 Per stat: {lean higher/lower/same, adjust_pct (−25..25, sign must match lean), call, text} + overall, sources, written_at.
+No double counting (17 Nov 2026): briefs carry `already_counted` (every adjustment the numbers made: missing players,
+referee, momentum, h2h, derby, stakes); the view sizes only what is NOT on it (rules in `tools/analyst_rules.md`).
+Without a view a stat's verdict line is labelled "The numbers:", with one "Our take:".
 It moves the numbers ("our take", above). Written when a match enters the window, redone on match day (kick-off ≤24 h and
 view ≥16 h old); unsized old views are redone first. Tools: `tools/analyst_rules.md` (rules),
 `tools/analyst_briefs.py OUTDIR --max 80 --batch 20` (who needs a view), `tools/analyst_merge.py FILES` (validate, merge,
@@ -74,6 +77,7 @@ tests.yml (pytest + headless-browser smoke test of every page), tool.yml (run an
 inputs script, args), collect-europe.yml, pages-tool.yml (Pages status/cancel/build).
 
 ## Known open items
-- Suspensions worked out from cards are applied to every upcoming fixture of a team, not just the next one (the views
-  correct for it in words; the numbers don't yet). Fix in run.py / players.likely_suspended: only the next fixture.
+- (Fixed 17 Nov 2026) Suspensions worked out from cards now count only for the team's next match in that competition
+  (`players.next_fixtures`, used in run.py). Leagues other than PL/La Liga/UEFA still use La Liga's "every 5th yellow"
+  rule as an approximation.
 - Retro "model checks" exist for finished matches without frozen estimates (`data/retro/`).

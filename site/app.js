@@ -293,7 +293,7 @@ function statPanel(stat, P, m, acc) {
   else if (av) note = `Numbers only: this subjective view was written before views moved the numbers.`;
   else if (m.status === "upcoming" && daysTo(m.kickoff) * 24 > JUDGE_HOURS) note = `Numbers only for now: the subjective view is added in the 48 hours before kick-off.`;
   else note = `Numbers only: no subjective view for this match.`;
-  const verdict = `<p class="call"><b>Our take:</b> ${h(ourCall(stat, s, m))}<br><span class="sub">${h(note)} Reasons under Why.</span></p>`;
+  const verdict = `<p class="call"><b>${tk ? "Our take" : "The numbers"}:</b> ${h(ourCall(stat, s, m))}<br><span class="sub">${h(note)} Reasons under Why.</span></p>`;
   if (stat !== "goals") return `<section class="panel">${head}${verdict}${why}</section>`;
   return `<section class="panel goals"><div>${head}${verdict}${why}</div>
     <div><h3>Score</h3>
@@ -738,7 +738,7 @@ function renderAbout() {
     Every adjustment is listed on the match page with its effect on the final number. All sizes were measured on 2024-25, then counted at about twice that size, so the adjustments have more say than the data alone would give them (the owner's choice; the cost in accuracy is on the Track record page). One that made no measurable difference (congestion, stakes) is shown for information with a size of 0.</li>
   <li><b>Probabilities.</b> Goals use a Dixon-Coles model for win/draw/loss, likely scores and over/under. Corners, cards and shots use a negative binomial distribution, which allows for more spread than a simple average suggests.</li>
   <li><b>Subjective view.</b> In the 48 hours before kick-off, every match gets a subjective view from the latest news (team news, rotation, motivation, a new manager, the referee): for each stat, whether judgement leans higher or lower than the numbers, by how much (at most 25% either way), and why. It's written when the match enters the 48-hour window and redone on match day. Matches further away have the numbers only.</li>
-  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat shows five lines centred on its expected number, so a high-scoring match and a low-scoring one show different lines, and ends with one line: the tightest of those our take still gives 60% or more (or "close call" when none does). Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view, our take is the numbers alone.</li></ol>
+  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat shows five lines centred on its expected number, so a high-scoring match and a low-scoring one show different lines, and ends with one line: the tightest of those our take still gives 60% or more (or "close call" when none does). Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view (more than 48 hours before kick-off, or none written), that line is labelled "The numbers" instead of "Our take".</li></ol>
   <p>Finished matches from before estimates started show a "model check": what the method would have said using only earlier games. It's labelled as such and isn't part of the track record.</p>
   <h2>What it can't do</h2>
   <ul><li>Team news is only as good as FotMob's reports, and doubtful players aren't counted.</li>
@@ -788,7 +788,8 @@ async function renderHome() {
   const goaly = all.filter(u => u.prediction).sort((a, b) => b.prediction.goals - a.prediction.goals).slice(0, 6);
   const bt = acc && acc.backtest && acc.backtest.test ? acc.backtest : null;
   const live = acc && acc.live ? acc.live : null;
-  const nLeagues = bt && bt.by_league ? Object.keys(bt.by_league).length : 7;
+  const nComps = bt && bt.by_league ? Object.keys(bt.by_league).length : 11;
+  const nLeagues = bt && bt.by_league ? Object.keys(bt.by_league).filter(k => !EUROPE.has(k)).length : 8;
   app.innerHTML = `
     <section class="hero turf home-hero"><div class="wrap">
       <h1>This week, in numbers</h1>
@@ -811,7 +812,7 @@ async function renderHome() {
         <section><h2>Top scorers</h2>${scorerBars(H.scorers, 6)}</section>
       </div>
       ${bt ? `<section class="section"><h2>Are the estimates any good?</h2><div class="panel proof">
-        <div><b>${fx((1 - bt.test.goals.brier / bt.baseline.goals.brier) * 100, 1)}%</b><span>smaller error than league averages on win/draw/loss, tested on all ${bt.matches} matches of 2025-26 in ${nLeagues} leagues</span></div>
+        <div><b>${fx((1 - bt.test.goals.brier / bt.baseline.goals.brier) * 100, 1)}%</b><span>smaller error than league averages on win/draw/loss, tested on all ${bt.matches} matches of 2025-26 in ${nComps} competitions</span></div>
         <div><b>${live && live.matches ? live.matches : 0}</b><span>live estimates scored so far, every one frozen at kick-off</span></div>
         <div><a class="btn" href="#/accuracy">See the track record</a></div></div></section>` : ""}
     `)}`;
