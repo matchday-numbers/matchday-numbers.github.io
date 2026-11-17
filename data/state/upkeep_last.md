@@ -1,13 +1,11 @@
-# Upkeep report — 2026-11-15 17:02 UTC
+# Upkeep report — 2026-11-17 07:40 UTC (08:40 Madrid)
 
-## Checked
-- GitHub Actions: last 6 "update" runs (#119–#124, latest started 15:57 UTC) all succeeded; latest run's update and publish (deploy-pages) jobs both succeeded. Last 5 "tests" runs succeeded (latest 9 Nov; no code pushes since).
-- data/state/last_run.json (started 15:58, finished 15:58 UTC, ~1 h ago): errors = none; model 15,688 matches / 546 teams / 10,079 referees linked; 477 estimates made or updated, 111 frozen, 109 scored; team_news_linked 113.
-- All 13 competitions have events and predictions (PL 50, La Liga 42, Serie A 40, Bundesliga 36, Ligue 1 36, Eredivisie 35, Primeira 27, Süper Lig 36, Segunda 47, MLS 20, UCL/UEL/UECL 36 each). MLS fotmob_new_stats 0 (playoffs; no new regular-season stats due).
-- Cross-check: 0 "single" in every league except Segunda (7, up from 2 eight runs ago — this weekend's Segunda games played during the international break, not yet on football-data.co.uk; normal lag). Conflicts unchanged from earlier today (64 total, mostly yellow-card count differences) — no jump.
-- site/data/meta.json updated_at 2026-11-15T15:58 UTC (matches the last run).
-- Local test suite: 16 passed (includes headless-browser page check).
-- Live site: web fetch of home.json was refused this run (robots_disallowed), so made_at couldn't be read directly. Instead: deploy-pages succeeded at 15:58 UTC and the pages-tool status run reports Pages build_type "workflow", status "built", public.
+**Checked**
+- `update` workflow: last 6 runs all succeeded (latest 04:15 UTC, both `update` and `publish` jobs green). `tests`: last 4 runs green (latest 16 Nov 19:00 UTC).
+- `last_run.json` (finished 04:16 UTC): no errors; model 13,446 matches / 546 teams / 7,619 referees linked; 436 estimates made/updated, 114 frozen, 113 scored; team news linked 117.
+- All 11 competitions have events and predictions (PL 50, La Liga 42, Serie A 40, Bundesliga 36, Ligue 1 36, Eredivisie 35, Primeira 27, Segunda 44, UCL 36, UEL 36, UECL 54). Cross-check: 0 "single" everywhere; conflicts 2–10 per league, almost all yellow-card counts (normal level).
+- site/data/meta.json `updated_at` 04:15 UTC (within 6 h). Live-site fetch of home.json could not be done this run (fetch permission not granted); the publish job deployed successfully at 04:16 UTC.
+- Subjective view coverage: 0 of 0 — international break, no posted match kicks off within 48 h (next: 20 Nov 19:30 UTC). Expected; nothing to spot-check for "our take".
 
-## Found / fixed
-- Nothing broken; no changes to code or settings.
+**Found / fixed**
+- Nothing broken; no changes made.
