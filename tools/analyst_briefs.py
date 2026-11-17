@@ -20,7 +20,8 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from model.judgement import JUDGE_HOURS, MAX_PCT  # noqa: E402
-from model.usual import standout  # noqa: E402
+from model.core import TAKE_P  # noqa: E402
+from model.usual import pick_take, rate  # noqa: E402
 STATS = ["goals", "corners", "cards", "shots", "shots_on_target"]
 LABEL = {"goals": "goals", "corners": "corners", "cards": "cards", "shots": "shots", "shots_on_target": "shots on target"}
 
@@ -42,20 +43,27 @@ def ordinal(n):
 
 
 def our_call(stat, s, usual_comp=None, comp_name="the competition"):
-    """Same rule as the site: the shown line where the match differs most from a usual game in the
-    competition (model/usual.py); without usual rates, the tightest line the numbers give 60% or more."""
+    """Same as the site: the take line, an over or under line with 80%+ chance (model/core.py take_line +
+    model/usual.py pick_take; older estimates: the same rule over the shown lines), with how often games in the
+    competition do the same."""
     lab = LABEL[stat]
-    so = standout(s.get("over_show") or s.get("over") or {}, (usual_comp or {}).get(stat))
-    if so and so.get("side"):
-        return (f"{so['side']} {so['line']} {lab} ({round(so['p'] * 100)}%; {comp_name} games "
-                f"{'go over' if so['side'] == 'over' else 'stay under'} {so['line']} in {round(so['usual'] * 100)}%)")
-    if so:
-        return f"about a usual {comp_name} game for {lab} ({comp_name} average {so['mean']})"
-    backed = [(p if p >= 0.5 else 1 - p, f"{'over' if p >= 0.5 else 'under'} {line}") for line, p in (s.get("over_show") or s.get("over") or {}).items()]
-    backed = sorted(x for x in backed if x[0] >= 0.6)
-    if backed:
-        return f"{backed[0][1]} {lab} ({round(backed[0][0] * 100)}%)"
-    return "close call (no line at 60% or more)"
+    h = (usual_comp or {}).get(stat)
+    cands = s.get("take_line")
+    if cands is None:
+        cands = {"over": None, "under": None}
+        for line, p in (s.get("over_show") or s.get("over") or {}).items():
+            for side, q in (("over", p), ("under", 1 - p)):
+                if q >= TAKE_P - 1e-9 and (not cands[side] or q < cands[side]["p"]):
+                    cands[side] = {"line": line, "p": q, "shown": True}
+    tl = pick_take(cands, h)
+    if not tl:
+        return f"no line at {round(TAKE_P * 100)}% or more"
+    out = f"{tl['side']} {tl['line']} {lab} ({round(tl['p'] * 100)}%"
+    if h:
+        r = rate(h, tl["line"])
+        r = r if tl["side"] == "over" else 1 - r
+        out += f"; {comp_name} games {'go over' if tl['side'] == 'over' else 'stay under'} {tl['line']} in {round(r * 100)}%"
+    return out + ")"
 
 
 def main():

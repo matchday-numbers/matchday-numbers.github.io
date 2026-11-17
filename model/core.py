@@ -232,6 +232,39 @@ def quantile(pmf, q):
     return len(pmf) - 1
 
 
+TAKE_P = 0.80  # the take: a line (over or under) with at least this chance (owner, 17 Nov 2026)
+
+
+def take_line(pmf, shown):
+    """Take candidates for one stat, from the full distribution: for each side ("over", "under") the tightest
+    line with at least TAKE_P chance (closest to TAKE_P, so the most informative), taken from the shown lines
+    when one of them reaches TAKE_P, else from beyond them (shown=False: the site adds it as an extra row).
+    Returns {"over": {"line", "p", "shown"} or None, "under": ...}. Which side is the take is chosen by
+    model/usual.py pick_take (and app.js takeLine): the side where the match beats a usual game by more."""
+    tail = [0.0] * (len(pmf) + 1)  # tail[k] = P(total >= k)
+    for k in range(len(pmf) - 1, -1, -1):
+        tail[k] = tail[k + 1] + pmf[k]
+
+    def p_of(side, line):
+        k = int(line) + 1                           # over x.5 = total >= x+1
+        o = tail[k] if k < len(tail) else 0.0
+        return o if side == "over" else 1 - o
+
+    out = {}
+    every = [k + 0.5 for k in range(len(pmf))]
+    for side in ("over", "under"):
+        best = None
+        for lines, on in (([float(x) for x in shown], True), (every, False)):
+            c = [(round(p_of(side, l), 9), l) for l in lines]
+            c = [x for x in c if x[0] >= TAKE_P - 1e-9]
+            if c:
+                q, l = min(c)
+                best = {"line": str(l), "p": q, "shown": on}
+                break
+        out[side] = best
+    return out
+
+
 def goal_probabilities(lh, la, rho):
     m = score_matrix(lh, la, rho)
     n = len(m)
@@ -254,6 +287,7 @@ def goal_probabilities(lh, la, rho):
         "likely_scores": [{"score": s, "p": p} for p, s in scores],
         "clean_sheet_home": clean_home, "clean_sheet_away": clean_away,
         "range": [quantile(totals, 0.1), quantile(totals, 0.9)],
+        "take_line": take_line(totals, over_show),
     }
 
 
@@ -263,4 +297,5 @@ def count_probabilities(stat, lh, la, alpha):
     pmf = nb_pmf_list(mean, alpha, kmax)
     over = {str(l): sum(p for k, p in enumerate(pmf) if k > l) for l in LINES[stat]}
     over_show = {str(l): sum(p for k, p in enumerate(pmf) if k > l) for l in show_lines(stat, mean)}
-    return {"over": over, "over_show": over_show, "range": [quantile(pmf, 0.1), quantile(pmf, 0.9)]}
+    return {"over": over, "over_show": over_show, "range": [quantile(pmf, 0.1), quantile(pmf, 0.9)],
+            "take_line": take_line(pmf, over_show)}

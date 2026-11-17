@@ -368,8 +368,8 @@ def main():
             log["errors"].append(f"estimate engine: {ex!r}")
             traceback.print_exc()
     if rec:
-        # what usually happens in each competition (last season + this one): the site highlights the line where a
-        # match differs most from it (model/usual.py); the analyst briefs use the same rule
+        # what usually happens in each competition (last season + this one, model/usual.py): shown next to every
+        # line and to the take, so readers can tell an 80% take from what happens anyway
         try:
             since = f"{2000 + int(season[:2]) - 1}-07-01"
             usual_rates = usual.histograms(rec.all_matches, since,

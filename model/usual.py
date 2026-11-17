@@ -1,22 +1,14 @@
-"""What usually happens: how often games in a competition go over each line (fix 5(b), 17 Nov 2026).
+"""What usually happens: how often games in a competition go over each line (17 Nov 2026).
 
-Each stat's verdict line ("The numbers:" / "Our take:") highlights the shown line where this match differs
-MOST from a usual game in the same competition, instead of the tightest line at 60%+, which mostly repeated
-the base rate (e.g. "over 1.5 goals, 77%" when 77% of games go over anyway).
-
-Rules (the site's app.js `standout` mirrors these; keep them in step):
-- usual rate = share of games in the competition, last season and this one, that went over the line;
-- a line counts only if this match differs from the usual rate by at least MIN_GAP (6 points);
-- the call must be more likely than not (> 50%): over when the match is above usual, under when below;
-- the biggest difference wins (ties: the more likely call);
-- no line qualifies -> "about a usual game" (with the competition's average);
-- fewer than MIN_GAMES games with the stat -> no usual rates (the site falls back to the 60% rule).
+usual rate = share of games in the competition, last season and this one, that went over the line. The site
+shows it next to every line ("usual NN%" and a faint tick) and next to the take (model/core.py take_line,
+the line with 80%+ chance), so a reader can tell a real signal from what happens anyway.
+Fewer than MIN_GAMES games with a stat -> no usual rates for it.
 """
 from __future__ import annotations
 
 from .core import STATS
 
-MIN_GAP = 0.06
 MIN_GAMES = 100
 
 
@@ -57,21 +49,20 @@ def rate(h, line):
     return sum(c for t, c in h["hist"].items() if int(t) > float(line)) / n if n else None
 
 
-def standout(over_show, h):
-    """The highlighted call for one stat. over_show: {line: P(over)}; h: usual histogram or None.
-    Returns None (no usual rates), {"usual_game": True, "mean": ...} or
-    {"side": "over"/"under", "line": str, "p": P(call), "usual": usual rate of that side, "gap": points}."""
-    if not h:
+def pick_take(cands, h=None):
+    """The take from model/core.py take_line candidates: shown lines first; then the side where this match beats
+    a usual game in the competition by more (h = usual histogram; so an 80% under line that is LESS likely than
+    usual never wins over an over line well above usual); without usual rates, the tightest; ties go to the over.
+    Returns {"side", "line", "p", "shown"} or None. app.js takeLine mirrors this."""
+    c = [{"side": side, **v} for side, v in (cands or {}).items() if v]
+    if not c:
         return None
-    best = None
-    for line, p in over_show.items():
-        u = rate(h, line)
-        if u is None:
-            continue
-        for side, pc, uc in (("over", p, u), ("under", 1 - p, 1 - u)):
-            gap = pc - uc
-            if gap >= MIN_GAP and pc > 0.5:
-                cand = {"side": side, "line": str(line), "p": pc, "usual": uc, "gap": gap}
-                if not best or (gap, pc) > (best["gap"], best["p"]):
-                    best = cand
-    return best or {"usual_game": True, "mean": h["mean"]}
+    if any(x["shown"] for x in c):
+        c = [x for x in c if x["shown"]]
+
+    def edge(x):
+        if not h:
+            return -x["p"]
+        r = rate(h, x["line"])
+        return x["p"] - (r if x["side"] == "over" else 1 - r)
+    return max(c, key=lambda x: (round(edge(x), 9), x["side"] == "over"))

@@ -356,22 +356,36 @@ def test_five_shown_lines_centred_on_the_expected_total():
     assert len(g["over_show"]) == 5 and list(g["over"]) == ["1.5", "2.5", "3.5"]  # scoring lines unchanged
 
 
-def test_usual_standout_rules():
+def test_usual_rates():
     from model import usual
-    # 100 games: totals 0..4 goals, 20 each -> over 2.5 usual 40%, over 1.5 usual 60%
+    # 100 games: totals 0..4 goals, 20 each -> over 2.5 usual 40%
     ms = [{"date": "2026-01-01", "ctx": "x", "hg": t, "ag": 0} for t in range(5) for _ in range(20)]
     h = usual.histograms(ms, "2025-07-01", lambda m: m["ctx"])["x"]["goals"]
     assert h["n"] == 100 and h["mean"] == 2.0 and abs(usual.rate(h, 2.5) - 0.4) < 1e-9
-    # over 2.5 at 55% vs usual 40%: +15 pts, more likely than not -> over 2.5
-    s = usual.standout({"1.5": 0.70, "2.5": 0.55, "3.5": 0.30}, h)
-    assert s["side"] == "over" and s["line"] == "2.5" and abs(s["gap"] - 0.15) < 1e-9
-    # biggest gap is below 50% (over 3.5 at 45% vs usual 20%) -> not chosen; over 2.5 (60% vs 40%) is
-    s = usual.standout({"2.5": 0.60, "3.5": 0.45}, h)
-    assert s["side"] == "over" and s["line"] == "2.5"
-    # lower than usual -> an under call, with the under side's numbers
-    s = usual.standout({"1.5": 0.40, "2.5": 0.35}, h)  # under 1.5: 60% vs usual 40% (+20); under 2.5: 65% vs 60% (+5)
-    assert s["side"] == "under" and s["line"] == "1.5" and abs(s["p"] - 0.60) < 1e-9 and abs(s["usual"] - 0.40) < 1e-9
-    # everything within 6 points of usual -> a usual game
-    assert usual.standout({"1.5": 0.63, "2.5": 0.42}, h) == {"usual_game": True, "mean": 2.0}
-    # too few games -> no usual rates
-    assert "goals" not in usual.histograms(ms[:50], "2025-07-01", lambda m: m["ctx"])["x"]
+    assert "goals" not in usual.histograms(ms[:50], "2025-07-01", lambda m: m["ctx"])["x"]  # too few games
+
+
+def test_take_line_80():
+    from model.core import take_line
+    from model.usual import histograms, pick_take
+    pmf = [0.05, 0.10, 0.20, 0.30, 0.20, 0.10, 0.05]          # totals 0..6
+    t = take_line(pmf, ["1.5", "2.5", "3.5", "4.5", "5.5"])
+    # over 1.5 = 85% and under 4.5 = 85% are the tightest 80%+ lines on each side, both shown
+    assert t["over"]["line"] == "1.5" and abs(t["over"]["p"] - 0.85) < 1e-9 and t["over"]["shown"]
+    assert t["under"]["line"] == "4.5" and abs(t["under"]["p"] - 0.85) < 1e-9
+    # without usual rates: tightest, tie -> over
+    assert pick_take(t)["side"] == "over"
+    # usual games: totals mostly 0..2 -> under 4.5 happens almost always (match 85% is BELOW usual),
+    # over 1.5 is rare (match 85% far above usual) -> the over wins
+    low = [{"date": "2026-01-01", "ctx": "x", "hg": g, "ag": 0} for g in [0, 1, 2] * 40]
+    h = histograms(low, "2025-07-01", lambda m: m["ctx"])["x"]["goals"]
+    assert pick_take(t, h)["line"] == "1.5"
+    # and the reverse: usual games high-scoring -> the under is the real signal
+    high = [{"date": "2026-01-01", "ctx": "x", "hg": g, "ag": 0} for g in [4, 5, 6] * 40]
+    h = histograms(high, "2025-07-01", lambda m: m["ctx"])["x"]["goals"]
+    assert pick_take(t, h)["side"] == "under"
+    # no shown line at 80%+ -> lines beyond them, flagged as not shown
+    t = take_line(pmf, ["2.5", "3.5"])
+    assert t["over"] == {"line": "1.5", "p": 0.85, "shown": False} and not t["under"]["shown"]
+    # no candidates (e.g. an estimate made before take lines existed) -> no take
+    assert pick_take({}) is None and pick_take(None) is None

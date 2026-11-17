@@ -45,11 +45,13 @@ excluded from the model. State per season in `data/state/<YYZZ>/` (season Jul–
   `adjust_pct`/100) (max ±25%; old views with a lean but no size get ±5%), probabilities recomputed; stored as
   `prediction.take` beside the unchanged `prediction.stats`. The site shows the take everywhere (Expected numbers, lines,
   strip, fixture cards via `site_data.pred_summary`); each stat shows 5 bars centred on its expected total (`core.show_lines`, `over_show`; scoring keeps the fixed
-  `LINES` in `over`) and ONE highlighted line (17 Nov 2026, `model/usual.py`, mirrored by `standout` in app.js): the shown
-  line where the match differs most from a usual game in that competition (`site/data/usual.json`, written by run.py
-  every run from last season + this one, all 11 comps); the call must be >50% and ≥6 pts from usual, else "about a
-  usual <comp> game"; an under call shows the under side; no usual rates → old rule (tightest line ≥60%). Each line
-  shows a tick + "usual NN%". Briefs carry the same call as `site_call`. Then
+  `LINES` in `over`) and ONE highlighted line, the take (owner, 17 Nov 2026): an over or under line with ≥80% chance
+  (`model/core.py` TAKE_P, `take_line`: per side the tightest line ≥80% from the full distribution, shown lines first,
+  else beyond the bars → extra highlighted row in line order; `model/usual.py` `pick_take`, mirrored by app.js `takeLine`:
+  shown first, then the side where the match beats a usual game by more, ties → over). Each line also shows a tick +
+  "usual NN%" from `site/data/usual.json` (run.py writes it every run, last season + this one, all 11 comps) and the
+  take's text says how often games in the comp do the same. Older estimates without `take_line`: same rule on shown lines.
+  Briefs carry the same call as `site_call`. Then
   plus "Numbers alone X, judgement ±Y%". "Why" = reasoning, base, adjustments, subjective view (+ size, numbers alone).
   Track record scores the numbers; the take is scored separately (`result_take`, `accuracy.json` "take").
 - Backtest `python -m backtest.recipe` (tune 2024-25, test 2025-26; `RECIPE_TEST_ONLY=1` re-tests). Results in
