@@ -31,6 +31,9 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 - They accepted the critique's honesty fixes without pushback: card bans only for the next match, no double
   counting in views, "The numbers" label without a view (17 Nov 2026).
 
+- Asked for an ongoing self-improvement loop: find mistakes, learn from them, improve the prediction procedures,
+  and get to know them better over time (17 Nov 2026). Built as the matchday-self-review skill, run weekly.
+
 ## Open questions they have not answered yet
 - Whether to add "how often our 80% takes came true" to the track record page (offered 17 Nov 2026).
 - Whether to drop the 2x amplification for cards and shots (raised 17 Nov 2026; they kept it so far).

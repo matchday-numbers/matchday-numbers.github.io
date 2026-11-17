@@ -86,7 +86,9 @@ prune; `--coverage` report; `--prune` prune only).
   views (48 h window, with sizes) with subagents. It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
 - "Matchday Numbers upkeep" (trig_011wZXp3AA8i8evwSxf7ccge): Tue & Fri 8:38; health check, writes
   `data/state/upkeep_last.md`. Early runs quit in <1 min; it works since 12 Nov.
-- "Matchday Numbers weekly review": Mondays 10:23; runs the matchday-self-review skill (see above).
+- The weekly self-improvement review runs inside "Matchday Numbers upkeep" (step 10: when review_last.json is 6+
+  days old, normally the Tuesday run). A separate task created from a session had no repo attached and failed,
+  so it was deleted (17 Nov 2026); tasks needing the repo must be set up like the existing two.
 - Scheduled runs see the repo under its old name and use mcp__github__ tools (owner lucasfrancofedez08-cmd, repo football-stats).
 
 ## Other workflows / tools

@@ -11,6 +11,8 @@ The site learns from its own misses, one proven change at a time, and remembers 
 With ~90 checks per review, a few SIGNALs are chance; hand-picked numbers and batches of fixes make it
 impossible to know what helped. "No change this week" is a good outcome when nothing held.
 
+Runs weekly as step 10 of the "Matchday Numbers upkeep" scheduled task (Tuesdays), or when the owner asks.
+
 ## Files (data/learning/)
 | File | What it is | Who writes it |
 |---|---|---|
