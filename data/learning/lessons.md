@@ -18,4 +18,8 @@ evidence: finding kind/key, n, z and the review date. Newest first in each secti
 - (none yet)
 
 ## Rejected (tested, did not help)
-- (none yet)
+- 2026-11-17: refit the count spread (`nb_alpha`) with the owner's 2x on, fitted on 2024-25, judged on 2025-26
+  (3,357 matches). Cards: 80% takes came true 84.1% (given 83.7%) now vs 84.2% refit; log loss 2.1858 now vs
+  2.1862 refit (worse). Corners, shots, shots on target: same picture. The spread is already right on a full
+  season, so the live cards miss (65% of 31) is not a spread problem; keep watching it (small sample, or
+  something this season the backtest lacks: team news, subjective views).
