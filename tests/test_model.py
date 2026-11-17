@@ -389,3 +389,20 @@ def test_take_line_80():
     assert t["over"] == {"line": "1.5", "p": 0.85, "shown": False} and not t["under"]["shown"]
     # no candidates (e.g. an estimate made before take lines existed) -> no take
     assert pick_take({}) is None and pick_take(None) is None
+
+
+def test_review_mistakes_verdicts():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("rm", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools", "review_mistakes.py"))
+    rm = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(rm)
+    assert rm.verdict(31, -3.0) == "SIGNAL" and rm.verdict(12, 1.7) == "WATCH" and rm.verdict(8, 5.0) == "NOISE"
+    # a scored match where the 80% take (over 1.5 goals) missed: actual 1 goal
+    stats = {st: {"home": 1.0, "away": 1.0, "total": 2.0} for st in rm.STATS}
+    stats["goals"]["take_line"] = {"over": {"line": "1.5", "p": 0.82, "shown": True}, "under": None}
+    d = {"league": "x", "kickoff": "2026-11-01T20:00Z",
+         "prediction": {"stats": stats, "adjustments": [], "recipe": {"by_stat": {}}},
+         "result": {st: {"actual_total": 1, "baseline_error": 1.0} for st in rm.STATS}}
+    R = rm.review([d])
+    t = [f for f in R["findings"] if f["kind"] == "take80" and f["key"] == "goals"][0]
+    assert t["n"] == 1 and t["hit_rate"] == 0.0 and t["verdict"] == "NOISE"
