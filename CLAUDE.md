@@ -78,6 +78,10 @@ prune; `--coverage` report; `--prune` prune only).
   lessons; at most ONE change per review, through the backtest gate; owner decisions are only proposed.
 - `data/learning/lessons.md` (the analyst view task applies its "For the subjective view" section),
   `changelog.md` (changes on trial / kept / reverted), `review_report.md` (weekly report for the owner).
+- Model 2 vs model 3 (owner, 17 Nov 2026): model 2 = settings frozen 17 Nov (`data/learning/champion/model2.json`,
+  never edit); the pipeline computes it in the shadow for every estimate (`shadow` key; "same" while settings are
+  equal; `engine.shadow_recipe`), and `tools/compare_models.py` scores both live → `data/learning/model_compare.md`.
+  If model 2 wins, the review reverts its changes. Loop changes must be settings in tuned_recipe.json for this to work.
 - **`data/learning/owner_profile.md`: read it at the start of every session. In interactive sessions, add the
   owner's new preferences and decisions (date + their words); scheduled runs only read it.**
 

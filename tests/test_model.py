@@ -406,3 +406,47 @@ def test_review_mistakes_verdicts():
     R = rm.review([d])
     t = [f for f in R["findings"] if f["kind"] == "take80" and f["key"] == "goals"][0]
     assert t["n"] == 1 and t["hit_rate"] == 0.0 and t["verdict"] == "NOISE"
+
+
+def test_compare_models_paired_verdict():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("cm", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools", "compare_models.py"))
+    cm = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(cm)
+    preds = []
+    for i in range(60):  # model 3 expects 2.6 goals, model 2 expects 1.6; actual 2 or 3 -> model 3 misses by less
+        a = 2 + i % 2
+        s3 = {"total": 2.6, "home_win": 0.5, "draw": 0.3, "away_win": 0.2, "over": {"2.5": 0.5}}
+        s2 = {"total": 1.6, "home_win": 0.4, "draw": 0.3, "away_win": 0.3, "over": {"2.5": 0.3}}
+        preds.append({"prediction": {"stats": {"goals": s3}}, "shadow": {"stats": {"goals": s2}},
+                      "result": {"goals": {"actual_total": a, "actual": [a, 0]}}})
+    preds.append({"prediction": {"stats": {}}, "shadow": "same", "result": {}})
+    R = cm.compare(preds)
+    assert R["differ"] == 60 and R["same"] == 1
+    g = R["stats"]["goals"]
+    assert g["miss"]["model3_gain"] > 0 and g["1x2"]["z"] > 2 and g["verdict"] == "model 3 better"
+    assert R["overall"] == "model 3 better"
+    assert cm.compare([{"shadow": "same"}])["overall"] == "identical (no change yet)"
+
+
+def test_engine_stores_model2_shadow():
+    from pipeline import engine
+
+    class FakeRec:
+        params = type("P", (), {"dc_rho": -0.05, "nb_alpha": {}})()
+        t = {}
+
+        def __init__(self, total, shadow=None):
+            self.total, self.shadow = total, shadow
+
+        def predict(self, hk, ak, ctx, info, labels):
+            st = {s: {"home": self.total / 2, "away": self.total / 2, "total": self.total, "over": {"2.5": 0.5}, "reasoning": "x"}
+                  for s in ("goals", "corners", "cards", "shots", "shots_on_target")}
+            return {"stats": st, "adjustments": []}
+
+    engine.baseline = lambda rec, ctx: None
+    fx = {"espn_id": "1", "kickoff": "2026-11-20T20:00Z", "home": {"espn_id": "10"}, "away": {"espn_id": "20"}}
+    out = engine.make(FakeRec(3.0, shadow=FakeRec(2.0)), "la-liga", fx, "A", "B", {}, {}, "now", "v")
+    assert out["shadow"]["stats"]["goals"]["total"] == 2.0 and "reasoning" not in out["shadow"]["stats"]["goals"]
+    assert out["prediction"]["stats"]["goals"]["total"] == 3.0
+    assert engine.make(FakeRec(3.0, shadow="same"), "la-liga", fx, "A", "B", {}, {}, "now", "v")["shadow"] == "same"

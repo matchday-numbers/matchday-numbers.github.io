@@ -11,7 +11,14 @@ The site learns from its own misses, one proven change at a time, and remembers 
 With ~90 checks per review, a few SIGNALs are chance; hand-picked numbers and batches of fixes make it
 impossible to know what helped. "No change this week" is a good outcome when nothing held.
 
-Runs weekly as step 10 of the "Matchday Numbers upkeep" scheduled task (Tuesdays), or when the owner asks.
+Runs weekly in the "Matchday Numbers weekly review" scheduled task (Mondays; the upkeep task runs it as a fallback
+when it is 8+ days old), or when the owner asks.
+
+**Model 2 vs model 3.** Model 2 = settings frozen on 17 Nov 2026 (`data/learning/champion/model2.json`); model 3 =
+the live model with this loop's changes. The pipeline computes model 2 in the shadow for every estimate (prediction
+key `shadow`), so `tools/compare_models.py` scores both on the same real matches. Model 3 must beat model 2 there,
+not only in the backtest. Every change this loop makes must live in `model/tuned_recipe.json` "rating"/"tuning"
+(code changes behind a "tuning" switch whose default keeps model 2's behaviour), or the shadow cannot test it.
 
 ## Files (data/learning/)
 | File | What it is | Who writes it |
@@ -21,35 +28,40 @@ Runs weekly as step 10 of the "Matchday Numbers upkeep" scheduled task (Tuesdays
 | changelog.md | every change made from a lesson, its test result and its check date | this skill |
 | owner_profile.md | the owner's preferences and decisions, from their own words | interactive sessions only |
 | review_report.md | this week's plain-language report for the owner | this skill |
+| model_compare.md / .json, champion/model2.json | model 2 vs model 3 on live matches; the frozen model 2 settings | `tools/compare_models.py`; snapshot never edited |
 
 ## Weekly review (the steps, in order)
 1. `python tools/review_mistakes.py`, then read review_last.md, lessons.md, changelog.md, owner_profile.md.
-2. **Check last changes first.** For each changelog entry "on trial", look at its target finding now: better →
-   mark it "kept"; worse or unchanged after 2 reviews → revert it (same gate, step 5) and mark "reverted".
-3. **Sort this week's findings:**
+2. **Model 2 vs model 3:** `python tools/compare_models.py` → data/learning/model_compare.md. If the overall
+   verdict is "model 2 better", revert "rating"/"tuning" in `model/tuned_recipe.json` to the snapshot's values
+   (owner settings untouched), mark every changelog entry "reverted (model 2 better live)", and make no new
+   change this week. "too early" / "identical" / "model 3 better": carry on.
+3. **Check last changes first.** For each changelog entry "on trial", look at its target finding now: better →
+   mark it "kept"; worse or unchanged after 2 reviews → revert it (same gate, step 6) and mark "reverted".
+4. **Sort this week's findings:**
    - `held: true` (SIGNAL now, WATCH/SIGNAL last time, same sign) → a lesson. Add it to lessons.md.
    - SIGNAL for the first time, or WATCH → lessons.md "Watching" with its numbers. No change.
    - NOISE → nothing.
-4. **Pick at most ONE lesson to act on** (the one with the largest |z|), and its route. When the cause could be
+5. **Pick at most ONE lesson to act on** (the one with the largest |z|), and its route. When the cause could be
    an owner decision AND a setting the owner did not decide (e.g. cards takes overconfident: the owner's 2x
    amplification, or the count spread `nb_alpha` fitted before it), try the non-owner fix through the gate first;
    propose an owner change only if no non-owner fix passes.
 
 | Lesson about | Route | Gate |
 |---|---|---|
-| numbers: bias, error, take80 calibration, an adjustment kind hurting | a setting in `model/tuned_recipe.json` "tuning"/"rating", or model code | backtest (step 5) |
+| numbers: bias, error, take80 calibration, an adjustment kind hurting | a setting in `model/tuned_recipe.json` "tuning"/"rating", or model code | backtest (step 6) |
 | subjective view: leans on a stat wrong, or the take worse than the numbers | a line in lessons.md "For the subjective view" (the analyst task reads it) | the held finding itself, n ≥ 30 |
 | anything the owner decided (owner_profile.md "Decisions", `tuned_recipe.json` "owner", the 80% take rule, the 45/55 split, the competitions) | **no change**: write a proposal with the evidence in review_report.md and send a push notification | owner says yes |
 
-5. **Backtest gate** (numbers route). Make the change, then `RECIPE_TEST_ONLY=1 python -m backtest.recipe`
+6. **Backtest gate** (numbers route). Make the change, then `RECIPE_TEST_ONLY=1 python -m backtest.recipe`
    (or a full re-tune, `RECIPE_BASE_GRID='[[300,0.04]]' python -m backtest.recipe`, ~15 min, when the fix is a
    setting the tuner fits). Compare `backtest/results_recipe.json` with the committed version (`git diff`):
    keep only if the target metric improves AND win/draw/loss and goals do not get worse in any competition.
    Otherwise `git checkout` the files and record "rejected" in lessons.md. Every value you commit came out of a
    run; never type in a value no run produced. Run `python -m pytest -q` before pushing.
-6. **Record** in changelog.md: date; the finding (kind/key, n, z); the change (file, old → new); the backtest
+7. **Record** in changelog.md: date; the finding (kind/key, n, z); the change (file, old → new); the backtest
    numbers before/after; status "on trial"; the check: "target finding at the next 2 reviews".
-7. **Report**: write review_report.md for the owner: what was checked, what held, what changed and why, what is
+8. **Report**: write review_report.md for the owner: the model 2 vs model 3 table, what was checked, what held, what changed and why, what is
    being watched, any proposal waiting for them. Plain words, the honest hit rates. Commit everything
    (data/learning, any changed files) and push (CLAUDE.md commit rules). Push notification only for a proposal.
 
@@ -73,5 +85,5 @@ asked for something, add it.
 
 ## Common mistakes
 - Comparing backtest results to memory instead of `git diff backtest/results_recipe.json`.
-- Forgetting step 2, so a change that did not help stays forever.
+- Forgetting steps 2-3, so a change that did not help stays forever.
 - Writing a lesson without its numbers (kind/key, n, z, date). Every lesson needs them to be checked later.

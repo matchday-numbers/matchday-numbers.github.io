@@ -22,6 +22,8 @@ from pipeline.sources import DOMESTIC, EUROPE, FOTMOB_STATS, JOINT_SKIP
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HISTORY = os.path.join(ROOT, "data", "history")
 TUNED = os.path.join(ROOT, "model", "tuned_recipe.json")
+# model 2: the settings frozen on 17 Nov 2026, run in the shadow to test the self-review's changes (model 3) live
+CHAMPION = os.path.join(ROOT, "data", "learning", "champion", "model2.json")
 
 
 def load_recipe_tuning():
@@ -40,9 +42,9 @@ def rating_args(cfg, joint=False, stat=None):
     return a
 
 
-def fit(allm, groups, asof):
+def fit(allm, groups, asof, cfg=None):
     """Per-league fits (league games only) and one joint fit over all competitions, as of `asof`."""
-    cfg = load_recipe_tuning()["rating"]
+    cfg = cfg or load_recipe_tuning()["rating"]
     start = f"{int(asof[:4]) - 3}{asof[4:]}"
     window = [m for m in allm if start <= m["date"] < asof]
     lf = {}
@@ -90,9 +92,31 @@ def build(season, now, fd, matches, events, team_map, sdir, log, jload, jsave, l
     owner = {k: v for k, v in t.get("owner", {}).items() if not k.startswith("_")}  # owner's choices on top
     rec = Recipe(Params(**{**params.__dict__}), {**t["tuning"], **owner}).attach(allm, asof, lf, jf, refs)
     rec.all_matches, rec.groups, rec.names = allm, groups, names
+    try:
+        rec.shadow = shadow_recipe(params, owner, allm, groups, asof, lf, jf, refs)
+    except Exception as ex:  # the comparison must never stop the estimates
+        rec.shadow = None
+        log.setdefault("errors", []).append(f"model 2 shadow: {ex!r}")
     log["model"] = {"matches": len([m for m in allm if m["date"] >= f"{int(asof[:4]) - 3}{asof[4:]}"]),
                     "teams": len(jf["goals"].att), "referees_linked": len(refs)}
     return rec
+
+
+def shadow_recipe(params, owner, allm, groups, asof, lf, jf, refs):
+    """Model 2 for the live comparison: the frozen rating/tuning (data/learning/champion/model2.json) with the
+    owner's current settings. "same" when they equal the live settings (nothing extra is computed), None
+    without a snapshot. Fits are reused unless the rating settings differ."""
+    if not os.path.exists(CHAMPION):
+        return None
+    snap = json.load(open(CHAMPION))
+    cur = load_recipe_tuning()
+    if snap["rating"] == cur["rating"] and snap["tuning"] == cur["tuning"]:
+        return "same"
+    lf2, jf2 = (lf, jf) if snap["rating"] == cur["rating"] else fit(allm, groups, asof, snap["rating"])
+    return Recipe(Params(**{**params.__dict__}), {**snap["tuning"], **owner}).attach(allm, asof, lf2, jf2, refs)
+
+
+SHADOW_KEYS = ("home", "away", "total", "over", "take_line", "home_win", "draw", "away_win")
 
 
 def baseline(rec, ctx_key):
@@ -163,6 +187,14 @@ def make(rec, league, fixture, home_file_key, away_file_key, info, labels, made_
     hk, ak = fixture["home"]["espn_id"], fixture["away"]["espn_id"]
     p = rec.predict(hk, ak, ctx_key, info, labels)
     p["league"] = league
+    sh = getattr(rec, "shadow", None)
+    if sh == "same":
+        shadow = "same"
+    elif sh is not None:
+        p2 = sh.predict(hk, ak, ctx_key, info, labels)
+        shadow = {"stats": {st: {k: v[k] for k in SHADOW_KEYS if k in v} for st, v in p2["stats"].items()}}
+    else:
+        shadow = None
     # our take: the numbers moved by the subjective view (only matches within judgement.JUDGE_HOURS have one)
     p["take"] = judgement.apply(p["stats"], info.get("analyst_view"), rec.params.dc_rho,
                                 lambda st: rec.t.get("nb_alpha", {}).get(st, rec.params.nb_alpha.get(st, 0.03)))
@@ -173,6 +205,7 @@ def make(rec, league, fixture, home_file_key, away_file_key, info, labels, made_
         "missing": {"home": info.get("home_missing") or [], "away": info.get("away_missing") or []},
         "doubtful": {"home": info.get("home_doubtful") or [], "away": info.get("away_doubtful") or []},
         "team_news": bool(info.get("injuries_known")), "referee": info.get("referee"),
+        "shadow": shadow,  # model 2 (frozen 17 Nov 2026) for tools/compare_models.py; "same" = identical to this
     })
 
 
