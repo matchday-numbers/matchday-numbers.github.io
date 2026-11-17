@@ -63,7 +63,13 @@ not only in the backtest. Every change this loop makes must live in `model/tuned
    numbers before/after; status "on trial"; the check: "target finding at the next 2 reviews".
 8. **Report**: write review_report.md for the owner: the model 2 vs model 3 table, what was checked, what held, what changed and why, what is
    being watched, any proposal waiting for them. Plain words, the honest hit rates. Commit everything
-   (data/learning, any changed files) and push (CLAUDE.md commit rules). Push notification only for a proposal.
+   (data/learning, any changed files) and push (CLAUDE.md commit rules), message "Weekly review <date>: ...".
+9. **Weekly summary to the owner (always, every week, also when nothing changed)** — a push notification in exactly
+   this shape, plain words, under 300 characters:
+   `📊 Matchday Numbers · Weekly review (scheduled) · <date> — Model 2 vs 3: <verdict>. Held: <… or nothing>.
+   Changed: <… or nothing>. Watching: <1-2 items>.` Add ` ⚠️ Needs your decision: <proposal>` when a proposal
+   waits, and ` 🏁 First verdict!` the first time model_compare says "model 2 better" or "model 3 better".
+   (Owner's choice, 17 Nov 2026: they want the summary every week and to recognise it as the scheduled task.)
 
 ## Owner profile
 Write to owner_profile.md only from the owner's own words or choices in a conversation: date, what they said or

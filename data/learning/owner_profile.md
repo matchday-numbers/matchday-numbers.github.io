@@ -34,6 +34,12 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 - Asked for an ongoing self-improvement loop: find mistakes, learn from them, improve the prediction procedures,
   and get to know them better over time (17 Nov 2026). Built as the matchday-self-review skill, run weekly.
 
+- Wants the weekly review's one-line summary on their phone every week, also when nothing changed, clearly marked
+  as the scheduled task ("send me the summary every week. how can i identify that it is an scheduled task",
+  17 Nov 2026).
+- Wants model 2 vs model 3 compared on real matches before believing the self-review helps ("as it is potential
+  = uncertain yet, make sure you compare model 2 and 3", 17 Nov 2026).
+
 ## Open questions they have not answered yet
 - Whether to add "how often our 80% takes came true" to the track record page (offered 17 Nov 2026).
 - Whether to drop the 2x amplification for cards and shots (raised 17 Nov 2026; they kept it so far).
