@@ -11,7 +11,9 @@
    "verdict": "SIGNAL",
    "text": "cards 80% take came true 65% of 31 times (given 84% on average)",
    "hit_rate": 0.645,
-   "expected": 0.842
+   "expected": 0.842,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -20,7 +22,9 @@
    "z": 2.22,
    "verdict": "SIGNAL",
    "text": "momentum on goals: when it fired (2%+), the number got closer by 0.04 per match",
-   "gain": 0.037
+   "gain": 0.037,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -29,7 +33,9 @@
    "z": -2.97,
    "verdict": "WATCH",
    "text": "la-liga goals: actual minus expected averages -1.08 over 10 matches",
-   "mean": -1.08
+   "mean": -1.08,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -38,7 +44,9 @@
    "z": -1.82,
    "verdict": "WATCH",
    "text": "premier-league corners: actual minus expected averages -1.55 over 10 matches",
-   "mean": -1.55
+   "mean": -1.55,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -47,7 +55,9 @@
    "z": -1.65,
    "verdict": "WATCH",
    "text": "conference-league goals: actual minus expected averages -0.60 over 18 matches",
-   "mean": -0.597
+   "mean": -0.597,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take80",
@@ -57,7 +67,9 @@
    "verdict": "WATCH",
    "text": "corners 80% take came true 70% of 23 times (given 83% on average)",
    "hit_rate": 0.696,
-   "expected": 0.825
+   "expected": 0.825,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -66,7 +78,9 @@
    "z": 1.6,
    "verdict": "WATCH",
    "text": "missing on goals: when it fired (2%+), the number got closer by 0.02 per match",
-   "gain": 0.024
+   "gain": 0.024,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "error",
@@ -75,7 +89,9 @@
    "z": -1.51,
    "verdict": "WATCH",
    "text": "cards: average miss 1.82 vs league averages 1.71 (worse by 0.11 per match)",
-   "gain": -0.107
+   "gain": -0.107,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -84,7 +100,9 @@
    "z": -2.15,
    "verdict": "NOISE",
    "text": "eredivisie shots: actual minus expected averages -2.33 over 9 matches",
-   "mean": -2.328
+   "mean": -2.328,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -93,7 +111,9 @@
    "z": 2.01,
    "verdict": "NOISE",
    "text": "primeira-liga corners: actual minus expected averages +1.06 over 8 matches",
-   "mean": 1.057
+   "mean": 1.057,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -102,7 +122,9 @@
    "z": 1.87,
    "verdict": "NOISE",
    "text": "eredivisie goals: actual minus expected averages +1.40 over 9 matches",
-   "mean": 1.401
+   "mean": 1.401,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -111,7 +133,9 @@
    "z": 1.6,
    "verdict": "NOISE",
    "text": "bundesliga shots: actual minus expected averages +2.65 over 9 matches",
-   "mean": 2.653
+   "mean": 2.653,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -120,7 +144,9 @@
    "z": -1.55,
    "verdict": "NOISE",
    "text": "bundesliga corners: actual minus expected averages -1.58 over 9 matches",
-   "mean": -1.584
+   "mean": -1.584,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -129,7 +155,9 @@
    "z": 1.52,
    "verdict": "NOISE",
    "text": "bundesliga shots_on_target: actual minus expected averages +1.57 over 9 matches",
-   "mean": 1.569
+   "mean": 1.569,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -138,7 +166,9 @@
    "z": -1.47,
    "verdict": "NOISE",
    "text": "eredivisie corners: actual minus expected averages -1.85 over 9 matches",
-   "mean": -1.855
+   "mean": -1.855,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust",
@@ -147,7 +177,9 @@
    "z": 1.38,
    "verdict": "NOISE",
    "text": "goals: the adjustments helped by 0.02 per match vs the base alone",
-   "gain": 0.019
+   "gain": 0.019,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -156,7 +188,9 @@
    "z": -1.38,
    "verdict": "NOISE",
    "text": "referee on cards: when it fired (2%+), the number got further by 0.09 per match",
-   "gain": -0.092
+   "gain": -0.092,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust",
@@ -165,7 +199,9 @@
    "z": -1.35,
    "verdict": "NOISE",
    "text": "cards: the adjustments hurt by 0.08 per match vs the base alone",
-   "gain": -0.081
+   "gain": -0.081,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -174,7 +210,9 @@
    "z": 1.34,
    "verdict": "NOISE",
    "text": "europa-league cards: actual minus expected averages +0.79 over 17 matches",
-   "mean": 0.789
+   "mean": 0.789,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -183,7 +221,9 @@
    "z": 1.31,
    "verdict": "NOISE",
    "text": "h2h on goals: when it fired (2%+), the number got closer by 0.02 per match",
-   "gain": 0.019
+   "gain": 0.019,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -192,7 +232,9 @@
    "z": -1.3,
    "verdict": "NOISE",
    "text": "h2h on shots_on_target: when it fired (2%+), the number got further by 0.05 per match",
-   "gain": -0.05
+   "gain": -0.05,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "views",
@@ -201,7 +243,9 @@
    "z": -1.3,
    "verdict": "NOISE",
    "text": "subjective view on shots: lean right 15 of 38 (39%)",
-   "hit_rate": 0.395
+   "hit_rate": 0.395,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -210,7 +254,9 @@
    "z": -1.28,
    "verdict": "NOISE",
    "text": "momentum on cards: when it fired (2%+), the number got further by 0.08 per match",
-   "gain": -0.083
+   "gain": -0.083,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -219,7 +265,9 @@
    "z": 1.26,
    "verdict": "NOISE",
    "text": "serie-a corners: actual minus expected averages +1.76 over 10 matches",
-   "mean": 1.763
+   "mean": 1.763,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -228,7 +276,9 @@
    "z": -1.25,
    "verdict": "NOISE",
    "text": "ligue-1 goals: actual minus expected averages -0.42 over 9 matches",
-   "mean": -0.423
+   "mean": -0.423,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -237,7 +287,9 @@
    "z": 1.19,
    "verdict": "NOISE",
    "text": "premier-league shots_on_target: actual minus expected averages +1.30 over 10 matches",
-   "mean": 1.3
+   "mean": 1.3,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "views",
@@ -246,7 +298,9 @@
    "z": -1.15,
    "verdict": "NOISE",
    "text": "subjective view on shots_on_target: lean right 20 of 48 (42%)",
-   "hit_rate": 0.417
+   "hit_rate": 0.417,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -255,7 +309,9 @@
    "z": -1.13,
    "verdict": "NOISE",
    "text": "ligue-1 shots: actual minus expected averages -1.24 over 9 matches",
-   "mean": -1.239
+   "mean": -1.239,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -264,7 +320,9 @@
    "z": 1.11,
    "verdict": "NOISE",
    "text": "serie-a shots: actual minus expected averages +3.52 over 10 matches",
-   "mean": 3.518
+   "mean": 3.518,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "views",
@@ -273,7 +331,9 @@
    "z": 1.07,
    "verdict": "NOISE",
    "text": "subjective view on corners: lean right 9 of 14 (64%)",
-   "hit_rate": 0.643
+   "hit_rate": 0.643,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -282,7 +342,9 @@
    "z": -1.05,
    "verdict": "NOISE",
    "text": "momentum on shots_on_target: when it fired (2%+), the number got further by 0.03 per match",
-   "gain": -0.032
+   "gain": -0.032,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "views",
@@ -291,7 +353,9 @@
    "z": 1.04,
    "verdict": "NOISE",
    "text": "subjective view on cards: lean right 14 of 23 (61%)",
-   "hit_rate": 0.609
+   "hit_rate": 0.609,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust",
@@ -300,7 +364,9 @@
    "z": -1.02,
    "verdict": "NOISE",
    "text": "shots_on_target: the adjustments hurt by 0.03 per match vs the base alone",
-   "gain": -0.03
+   "gain": -0.03,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take80",
@@ -310,7 +376,9 @@
    "verdict": "NOISE",
    "text": "shots_on_target 80% take came true 80% of 61 times (given 85% on average)",
    "hit_rate": 0.803,
-   "expected": 0.848
+   "expected": 0.848,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -319,7 +387,9 @@
    "z": -0.96,
    "verdict": "NOISE",
    "text": "ligue-1 cards: actual minus expected averages -0.73 over 8 matches",
-   "mean": -0.732
+   "mean": -0.732,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -328,7 +398,9 @@
    "z": 0.94,
    "verdict": "NOISE",
    "text": "europa-league shots_on_target: actual minus expected averages +0.69 over 17 matches",
-   "mean": 0.69
+   "mean": 0.69,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -337,7 +409,9 @@
    "z": 0.94,
    "verdict": "NOISE",
    "text": "momentum on shots: when it fired (2%+), the number got closer by 0.12 per match",
-   "gain": 0.121
+   "gain": 0.121,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -346,7 +420,9 @@
    "z": -0.93,
    "verdict": "NOISE",
    "text": "primeira-liga goals: actual minus expected averages -0.52 over 8 matches",
-   "mean": -0.52
+   "mean": -0.52,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -355,7 +431,9 @@
    "z": -0.93,
    "verdict": "NOISE",
    "text": "h2h on cards: when it fired (2%+), the number got further by 0.07 per match",
-   "gain": -0.071
+   "gain": -0.071,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust",
@@ -364,7 +442,9 @@
    "z": 0.88,
    "verdict": "NOISE",
    "text": "shots: the adjustments helped by 0.11 per match vs the base alone",
-   "gain": 0.108
+   "gain": 0.108,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -373,7 +453,9 @@
    "z": 0.82,
    "verdict": "NOISE",
    "text": "bundesliga goals: actual minus expected averages +0.44 over 9 matches",
-   "mean": 0.441
+   "mean": 0.441,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -382,7 +464,9 @@
    "z": -0.74,
    "verdict": "NOISE",
    "text": "derby on cards: when it fired (2%+), the number got further by 0.70 per match",
-   "gain": -0.696
+   "gain": -0.696,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "views",
@@ -391,7 +475,9 @@
    "z": 0.73,
    "verdict": "NOISE",
    "text": "subjective view on goals: lean right 26 of 47 (55%)",
-   "hit_rate": 0.553
+   "hit_rate": 0.553,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -400,7 +486,9 @@
    "z": -0.72,
    "verdict": "NOISE",
    "text": "segunda-division shots_on_target: actual minus expected averages -0.52 over 13 matches",
-   "mean": -0.517
+   "mean": -0.517,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -409,7 +497,9 @@
    "z": 0.66,
    "verdict": "NOISE",
    "text": "eredivisie cards: actual minus expected averages +0.66 over 7 matches",
-   "mean": 0.656
+   "mean": 0.656,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -418,7 +508,9 @@
    "z": -0.65,
    "verdict": "NOISE",
    "text": "primeira-liga shots_on_target: actual minus expected averages -0.55 over 8 matches",
-   "mean": -0.554
+   "mean": -0.554,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -427,7 +519,9 @@
    "z": 0.62,
    "verdict": "NOISE",
    "text": "la-liga corners: actual minus expected averages +0.74 over 10 matches",
-   "mean": 0.74
+   "mean": 0.74,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -436,7 +530,9 @@
    "z": 0.62,
    "verdict": "NOISE",
    "text": "segunda-division cards: actual minus expected averages +0.40 over 11 matches",
-   "mean": 0.395
+   "mean": 0.395,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -445,7 +541,9 @@
    "z": -0.62,
    "verdict": "NOISE",
    "text": "serie-a cards: actual minus expected averages -0.51 over 6 matches",
-   "mean": -0.514
+   "mean": -0.514,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust",
@@ -454,7 +552,9 @@
    "z": 0.62,
    "verdict": "NOISE",
    "text": "corners: the adjustments helped by 0.01 per match vs the base alone",
-   "gain": 0.011
+   "gain": 0.011,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -463,7 +563,9 @@
    "z": 0.62,
    "verdict": "NOISE",
    "text": "momentum on corners: when it fired (2%+), the number got closer by 0.01 per match",
-   "gain": 0.012
+   "gain": 0.012,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -472,7 +574,9 @@
    "z": 0.61,
    "verdict": "NOISE",
    "text": "conference-league corners: actual minus expected averages +0.36 over 18 matches",
-   "mean": 0.355
+   "mean": 0.355,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -481,7 +585,9 @@
    "z": -0.6,
    "verdict": "NOISE",
    "text": "eredivisie shots_on_target: actual minus expected averages -0.59 over 9 matches",
-   "mean": -0.588
+   "mean": -0.588,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -490,7 +596,9 @@
    "z": 0.57,
    "verdict": "NOISE",
    "text": "la-liga cards: actual minus expected averages +0.37 over 9 matches",
-   "mean": 0.372
+   "mean": 0.372,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -499,7 +607,9 @@
    "z": -0.57,
    "verdict": "NOISE",
    "text": "ligue-1 shots_on_target: actual minus expected averages -0.44 over 9 matches",
-   "mean": -0.443
+   "mean": -0.443,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -508,7 +618,9 @@
    "z": 0.57,
    "verdict": "NOISE",
    "text": "serie-a shots_on_target: actual minus expected averages +0.66 over 10 matches",
-   "mean": 0.657
+   "mean": 0.657,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "error",
@@ -517,7 +629,9 @@
    "z": -0.57,
    "verdict": "NOISE",
    "text": "corners: average miss 2.49 vs league averages 2.45 (worse by 0.04 per match)",
-   "gain": -0.039
+   "gain": -0.039,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -526,7 +640,9 @@
    "z": -0.55,
    "verdict": "NOISE",
    "text": "serie-a goals: actual minus expected averages -0.20 over 10 matches",
-   "mean": -0.204
+   "mean": -0.204,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -535,7 +651,9 @@
    "z": 0.48,
    "verdict": "NOISE",
    "text": "premier-league goals: actual minus expected averages +0.31 over 10 matches",
-   "mean": 0.312
+   "mean": 0.312,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "error",
@@ -544,7 +662,9 @@
    "z": 0.48,
    "verdict": "NOISE",
    "text": "shots: average miss 4.79 vs league averages 4.89 (better by 0.10 per match)",
-   "gain": 0.103
+   "gain": 0.103,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "error",
@@ -553,7 +673,9 @@
    "z": 0.42,
    "verdict": "NOISE",
    "text": "shots_on_target: average miss 2.69 vs league averages 2.72 (better by 0.03 per match)",
-   "gain": 0.032
+   "gain": 0.032,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -562,7 +684,9 @@
    "z": 0.41,
    "verdict": "NOISE",
    "text": "europa-league shots: actual minus expected averages +0.51 over 17 matches",
-   "mean": 0.507
+   "mean": 0.507,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -571,7 +695,9 @@
    "z": 0.39,
    "verdict": "NOISE",
    "text": "la-liga shots: actual minus expected averages +0.76 over 10 matches",
-   "mean": 0.756
+   "mean": 0.756,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -580,7 +706,9 @@
    "z": -0.36,
    "verdict": "NOISE",
    "text": "europa-league goals: actual minus expected averages -0.13 over 17 matches",
-   "mean": -0.126
+   "mean": -0.126,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -589,7 +717,9 @@
    "z": -0.36,
    "verdict": "NOISE",
    "text": "primeira-liga shots: actual minus expected averages -0.61 over 8 matches",
-   "mean": -0.609
+   "mean": -0.609,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -598,7 +728,9 @@
    "z": -0.34,
    "verdict": "NOISE",
    "text": "ligue-1 corners: actual minus expected averages -0.38 over 9 matches",
-   "mean": -0.377
+   "mean": -0.377,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -607,7 +739,9 @@
    "z": 0.31,
    "verdict": "NOISE",
    "text": "premier-league cards: actual minus expected averages +0.36 over 7 matches",
-   "mean": 0.359
+   "mean": 0.359,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -616,7 +750,9 @@
    "z": -0.26,
    "verdict": "NOISE",
    "text": "conference-league shots: actual minus expected averages -0.55 over 18 matches",
-   "mean": -0.552
+   "mean": -0.552,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -625,7 +761,9 @@
    "z": -0.26,
    "verdict": "NOISE",
    "text": "la-liga shots_on_target: actual minus expected averages -0.23 over 10 matches",
-   "mean": -0.234
+   "mean": -0.234,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "error",
@@ -634,7 +772,9 @@
    "z": 0.22,
    "verdict": "NOISE",
    "text": "goals: average miss 1.31 vs league averages 1.32 (better by 0.01 per match)",
-   "gain": 0.008
+   "gain": 0.008,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take80",
@@ -644,7 +784,9 @@
    "verdict": "NOISE",
    "text": "goals 80% take came true 83% of 63 times (given 83% on average)",
    "hit_rate": 0.825,
-   "expected": 0.835
+   "expected": 0.835,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -653,7 +795,9 @@
    "z": 0.17,
    "verdict": "NOISE",
    "text": "segunda-division corners: actual minus expected averages +0.16 over 13 matches",
-   "mean": 0.158
+   "mean": 0.158,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -662,7 +806,9 @@
    "z": 0.15,
    "verdict": "NOISE",
    "text": "bundesliga cards: actual minus expected averages +0.27 over 4 matches",
-   "mean": 0.265
+   "mean": 0.265,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -671,7 +817,9 @@
    "z": -0.09,
    "verdict": "NOISE",
    "text": "primeira-liga cards: actual minus expected averages -0.08 over 6 matches",
-   "mean": -0.078
+   "mean": -0.078,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -680,7 +828,9 @@
    "z": 0.08,
    "verdict": "NOISE",
    "text": "europa-league corners: actual minus expected averages +0.06 over 17 matches",
-   "mean": 0.057
+   "mean": 0.057,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -689,7 +839,9 @@
    "z": -0.08,
    "verdict": "NOISE",
    "text": "segunda-division shots: actual minus expected averages -0.10 over 13 matches",
-   "mean": -0.098
+   "mean": -0.098,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -698,7 +850,9 @@
    "z": 0.05,
    "verdict": "NOISE",
    "text": "conference-league shots_on_target: actual minus expected averages +0.06 over 18 matches",
-   "mean": 0.06
+   "mean": 0.06,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -707,7 +861,9 @@
    "z": -0.04,
    "verdict": "NOISE",
    "text": "segunda-division goals: actual minus expected averages -0.02 over 13 matches",
-   "mean": -0.017
+   "mean": -0.017,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take80",
@@ -717,7 +873,9 @@
    "verdict": "NOISE",
    "text": "shots 80% take came true 86% of 83 times (given 86% on average)",
    "hit_rate": 0.855,
-   "expected": 0.857
+   "expected": 0.857,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -726,7 +884,9 @@
    "z": -0.02,
    "verdict": "NOISE",
    "text": "premier-league shots: actual minus expected averages -0.04 over 10 matches",
-   "mean": -0.042
+   "mean": -0.042,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "bias",
@@ -735,7 +895,9 @@
    "z": 0.01,
    "verdict": "NOISE",
    "text": "conference-league cards: actual minus expected averages +0.00 over 18 matches",
-   "mean": 0.004
+   "mean": 0.004,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "adjust_kind",
@@ -744,7 +906,9 @@
    "z": 0.0,
    "verdict": "NOISE",
    "text": "h2h on corners: when it fired (2%+), the number got closer by 0.20 per match",
-   "gain": 0.203
+   "gain": 0.203,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take",
@@ -753,7 +917,9 @@
    "z": 0.0,
    "verdict": "NOISE",
    "text": "our take on goals: missed by 0.12 less than the numbers alone",
-   "gain": 0.119
+   "gain": 0.119,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take",
@@ -762,7 +928,9 @@
    "z": 0.0,
    "verdict": "NOISE",
    "text": "our take on corners: missed by 0.50 more than the numbers alone",
-   "gain": -0.503
+   "gain": -0.503,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take",
@@ -771,7 +939,9 @@
    "z": 0.0,
    "verdict": "NOISE",
    "text": "our take on cards: missed by 0.33 less than the numbers alone",
-   "gain": 0.335
+   "gain": 0.335,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take",
@@ -780,7 +950,9 @@
    "z": 0.0,
    "verdict": "NOISE",
    "text": "our take on shots: missed by 0.48 more than the numbers alone",
-   "gain": -0.477
+   "gain": -0.477,
+   "previous": null,
+   "held": false
   },
   {
    "kind": "take",
@@ -789,9 +961,12 @@
    "z": 0.0,
    "verdict": "NOISE",
    "text": "our take on shots_on_target: missed by 0.06 less than the numbers alone",
-   "gain": 0.06
+   "gain": 0.06,
+   "previous": null,
+   "held": false
   }
  ],
+ "compared_with": null,
  "season": "2627",
- "made_at": "2026-11-17 14:14 UTC"
+ "made_at": "2026-11-17 14:17 UTC"
 }

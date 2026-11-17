@@ -71,11 +71,22 @@ view ≥16 h old); unsized old views are redone first. Tools: `tools/analyst_rul
 `tools/analyst_briefs.py OUTDIR --max 80 --batch 20` (who needs a view), `tools/analyst_merge.py FILES` (validate, merge,
 prune; `--coverage` report; `--prune` prune only).
 
+## Self-improvement loop (owner, 17 Nov 2026) — skill `.claude/skills/matchday-self-review/SKILL.md`
+- Weekly: `tools/review_mistakes.py` scores the misses (bias, error vs averages, 80% take hit rate, adjustments and
+  each adjustment kind, view leans, take vs numbers) into `data/learning/review_last.{md,json}` (+ `history/`), with
+  SIGNAL/WATCH/NOISE and `held` (SIGNAL now and WATCH/SIGNAL at a review 5+ days older). Only held findings are
+  lessons; at most ONE change per review, through the backtest gate; owner decisions are only proposed.
+- `data/learning/lessons.md` (the analyst view task applies its "For the subjective view" section),
+  `changelog.md` (changes on trial / kept / reverted), `review_report.md` (weekly report for the owner).
+- **`data/learning/owner_profile.md`: read it at the start of every session. In interactive sessions, add the
+  owner's new preferences and decisions (date + their words); scheduled runs only read it.**
+
 ## Scheduled tasks (claude.ai, Europe/Madrid)
 - "Matchday Numbers analyst view" (trig_0186ymbqezmJYibpT97Rr3P6): 9:07, 13:07, 17:07, 21:07 daily; writes/refreshes
   views (48 h window, with sizes) with subagents. It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
 - "Matchday Numbers upkeep" (trig_011wZXp3AA8i8evwSxf7ccge): Tue & Fri 8:38; health check, writes
   `data/state/upkeep_last.md`. Early runs quit in <1 min; it works since 12 Nov.
+- "Matchday Numbers weekly review": Mondays 10:23; runs the matchday-self-review skill (see above).
 - Scheduled runs see the repo under its old name and use mcp__github__ tools (owner lucasfrancofedez08-cmd, repo football-stats).
 
 ## Other workflows / tools

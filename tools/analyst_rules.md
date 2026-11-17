@@ -27,6 +27,12 @@ at least an 80% chance, the tightest one; your size moves it, since the take is 
 derby/stakes flags, `already_counted` (every adjustment the numbers already made, with its effect: do not size
 these again), hours left to kick-off and `max_adjust_pct` (25).
 
+## Lessons from past views
+
+Before writing, read `data/learning/lessons.md`, section "For the subjective view": lessons the weekly review
+proved from scored matches (e.g. a stat where leans have been wrong too often). Apply them; a lesson there
+overrides your instinct. Do not read the other sections as rules: "Watching" is not proven yet.
+
 ## Research (web search and web fetch; never from memory)
 
 Look for what the numbers can't see, published recently (the last few days; team news from the last 48 hours):

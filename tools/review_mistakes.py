@@ -185,7 +185,8 @@ def review(preds):
 
 def markdown(R, when):
     lines = [f"# Mistake review, {when}", "",
-             f"{R['matches']} scored matches ({R['from']} to {R['to']}). SIGNAL = n 30+ and |z| 2+; WATCH = n 10+ and |z| 1.5+.", ""]
+             f"{R['matches']} scored matches ({R['from']} to {R['to']}). SIGNAL = n 30+ and |z| 2+; WATCH = n 10+ and |z| 1.5+.",
+             f"Compared with the review of {R.get('compared_with') or 'none (first review, so nothing can have held yet)'}.", ""]
     for v in ("SIGNAL", "WATCH"):
         xs = [f for f in R["findings"] if f["verdict"] == v]
         lines.append(f"## {v} ({len(xs)})")
@@ -204,10 +205,17 @@ def main():
     season = a.season or sorted(os.listdir(os.path.join(ROOT, "data", "predictions")))[-1]
     R = review(load(season))
     prev_path = os.path.join(a.out, "review_last.json")
+    # compare with the newest archived review at least 5 days old, so re-running in the same week never
+    # compares a week with itself (which would mark every SIGNAL as held)
+    today = datetime.now(timezone.utc).date()
+    older = [f for f in sorted(glob.glob(os.path.join(a.out, "history", "review_*.json")))
+             if (today - datetime.strptime(os.path.basename(f)[7:17], "%Y-%m-%d").date()).days >= 5]
     try:
-        prev = {(f["kind"], f["key"]): f for f in json.load(open(prev_path)).get("findings", [])}
+        base = json.load(open(older[-1])) if older else {}
     except (OSError, ValueError):
-        prev = {}
+        base = {}
+    prev = {(f["kind"], f["key"]): f for f in base.get("findings", [])}
+    R["compared_with"] = base.get("made_at")
     for f in R["findings"]:
         p = prev.get((f["kind"], f["key"]))
         f["previous"] = p["verdict"] if p else None
