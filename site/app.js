@@ -296,7 +296,7 @@ function ourCall(stat, s, m) {
 }
 
 const LEAN = { higher: "leans higher", lower: "leans lower", same: "agrees with the numbers" };
-const JUDGE_HOURS = 48;
+const JUDGE_HOURS = 96;
 function analystStat(P, stat) {
   const v = P.analyst_view && !Array.isArray(P.analyst_view) ? P.analyst_view[stat] : null;
   if (!v) return null;
@@ -319,7 +319,7 @@ function whyBox(stat, s, P, m, acc, av, tk) {
   const subj = av && (av.text || av.call)
     ? `<p class="small">${av.lean ? `<span class="pill lean">${h(LEAN[av.lean] || av.lean)}</span> ` : ""}${h(av.text || "")}${av.call ? ` <b>Judgement call: ${h(av.call)}</b>` : ""}</p>${size}
        <p class="small sub">Opinion from recent news, written ${P.analyst_view.written_at ? h(ago(P.analyst_view.written_at)) : "before kick-off"}. ${tk ? "It moves this stat by the size shown (at most 25% either way) to give our take; the numbers alone are in the line above and kept in the track record." : "Written before views moved the numbers, so it sits next to them and our take is the numbers alone."}</p>`
-    : `<p class="small sub">No subjective view for this match${m.status === "upcoming" ? " yet. It's written from the latest news in the 48 hours before kick-off, then our take includes it" : ", so our take is the numbers alone"}.</p>`;
+    : `<p class="small sub">No subjective view for this match${m.status === "upcoming" ? " yet. It's written from the latest news in the 4 days before kick-off, then our take includes it" : ", so our take is the numbers alone"}.</p>`;
   return `<details><summary>Why</summary>
     ${s.reasoning ? `<p class="why-h">Reasoning</p>${s.reasoning.map(x => `<p class="small reason">${h(x)}</p>`).join("")}` : ""}
     <p class="why-h">Base (${bw})</p><ul class="why">${(s.why || []).map(w => `<li>${h(w)}</li>`).join("")}</ul>
@@ -345,7 +345,7 @@ function statPanel(stat, P, m, acc) {
   if (tk && tk.adjust_pct) note = `Numbers alone ${fx(n.total)}, judgement ${sgn(tk.adjust_pct, 0)}% (analyst ${LEAN[tk.lean] || "view"}).`;
   else if (tk) note = `The analyst agrees with the numbers (${fx(n.total)}).`;
   else if (av) note = `Numbers only: this subjective view was written before views moved the numbers.`;
-  else if (m.status === "upcoming" && daysTo(m.kickoff) * 24 > JUDGE_HOURS) note = `Numbers only for now: the subjective view is added in the 48 hours before kick-off.`;
+  else if (m.status === "upcoming" && daysTo(m.kickoff) * 24 > JUDGE_HOURS) note = `Numbers only for now: the subjective view is added in the 4 days before kick-off.`;
   else note = `Numbers only: no subjective view for this match.`;
   const verdict = `<p class="call"><b>${tk ? "Our take" : "The numbers"}:</b> ${h(ourCall(stat, s, m))}<br><span class="sub">${h(note)} Reasons under Why.</span></p>`;
   if (stat !== "goals") return `<section class="panel">${head}${verdict}${why}</section>`;
@@ -371,7 +371,7 @@ function recipeSection(P, m) {
   const eu = EUROPE.has(m.comp);
   return `<section class="section"><h2>How the numbers were built</h2>
     <div class="split" aria-label="Weights"><span class="b" style="flex:${R.base_weight}">Base ${pct(R.base_weight)}</span><span class="v1" style="flex:${R.adj_weight}">Adjustments ${pct(R.adj_weight)}</span></div>
-    <p class="sub small">Base: ${h(m.home.short)}'s home numbers against ${h(m.away.short)}'s away numbers, adjusted for the strength of the opponents each has faced and measured against the ${eu ? "competition" : "league"} average. Recent games count more.${eu ? " For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale." : ""} Adjustments: the same base after momentum, head-to-head (minor), missing players, referee, fixture congestion and derby or high stakes${R.adj_strength > 1.01 ? `, each counted at about ${fx(R.adj_strength, 0)}x the size measured in testing` : ""}. Numbers = ${pct(R.base_weight)} base + ${pct(R.adj_weight)} adjusted.${T ? " Our take = the numbers moved by the subjective view (shown in brackets), written from the latest news in the 48 hours before kick-off." : " In the 48 hours before kick-off, the subjective view moves them to give our take."}</p>
+    <p class="sub small">Base: ${h(m.home.short)}'s home numbers against ${h(m.away.short)}'s away numbers, adjusted for the strength of the opponents each has faced and measured against the ${eu ? "competition" : "league"} average. Recent games count more.${eu ? " For European games, every league and European match of the last three seasons puts clubs from different leagues on one scale." : ""} Adjustments: the same base after momentum, head-to-head (minor), missing players, referee, fixture congestion and derby or high stakes${R.adj_strength > 1.01 ? `, each counted at about ${fx(R.adj_strength, 0)}x the size measured in testing` : ""}. Numbers = ${pct(R.base_weight)} base + ${pct(R.adj_weight)} adjusted.${T ? " Our take = the numbers moved by the subjective view (shown in brackets), written from the latest news in the 4 days before kick-off." : " In the 4 days before kick-off, the subjective view moves them to give our take."}</p>
     <div class="tscroll build"><table><thead><tr><th>Total, both teams</th><th class="n">Base</th><th class="n">After adjustments</th><th class="n">Numbers (${Math.round(R.base_weight * 100)}/${Math.round(R.adj_weight * 100)})</th>${T ? `<th class="n">Our take</th>` : ""}</tr></thead><tbody>${rows}</tbody></table></div>
     ${meet ? `<p class="small" style="margin-top:12px">Last ${(P.h2h || []).length} meetings (a minor factor):</p><ul class="h2h">${meet}</ul>` : `<p class="small sub" style="margin-top:12px">No meetings in the last three seasons.</p>`}</section>`;
 }
@@ -473,7 +473,7 @@ function predictionCard(m, acc, teams) {
 function analystBox(av, m, moved = true) {
   if (!av || (!Array.isArray(av) && !av.overall)) {
     return m && m.status === "upcoming"
-      ? `<section class="section"><h2>Subjective view</h2><div class="panel"><p class="sub">${daysTo(m.kickoff) * 24 > JUDGE_HOURS ? "Written in the 48 hours before kick-off" : "Being written"}: a subjective view for each stat from the latest news (team news, rotation, motivation, referee), redone on match day. Once it's in, the expected numbers below become our take: the numbers moved by that judgement.</p></div></section>`
+      ? `<section class="section"><h2>Subjective view</h2><div class="panel"><p class="sub">${daysTo(m.kickoff) * 24 > JUDGE_HOURS ? "Written in the 4 days before kick-off" : "Being written"}: a subjective view for each stat from the latest news (team news, rotation, motivation, referee), redone on match day. Once it's in, the expected numbers below become our take: the numbers moved by that judgement.</p></div></section>`
       : "";
   }
   const paras = Array.isArray(av) ? av : [av.overall];
@@ -729,7 +729,7 @@ async function renderAccuracy() {
       <div class="tscroll"><table><thead><tr><th>Stat</th><th class="n">Matches</th><th class="n">Avg miss, numbers</th><th class="n">Avg miss, our take</th><th class="n">Brier per line, numbers</th><th class="n">Brier per line, our take</th></tr></thead><tbody>
       ${Object.keys(STAT).filter(k => tr.by_stat[k]).map(k => { const x = tr.by_stat[k]; return `<tr><td>${STAT[k]}</td><td class="n">${x.n}</td><td class="n">${fx(x.mae_numbers, 2)}</td><td class="n ${x.mae_take < x.mae_numbers ? "up" : x.mae_take > x.mae_numbers ? "down" : ""}">${fx(x.mae_take, 2)}</td><td class="n">${fx(x.brier_numbers, 3)}</td><td class="n ${x.brier_take < x.brier_numbers ? "up" : x.brier_take > x.brier_numbers ? "down" : ""}">${fx(x.brier_take, 3)}</td></tr>`; }).join("")}
       </tbody></table></div>${tr.by_stat.goals && tr.by_stat.goals.brier_1x2_take != null ? `<p class="small" style="margin-top:8px">Win/draw/loss Brier: numbers ${fx(tr.by_stat.goals.brier_1x2_numbers, 3)}, our take ${fx(tr.by_stat.goals.brier_1x2_take, 3)}.</p>` : ""}`
-    : `<p class="empty">None scored yet. Our take (the numbers moved by the subjective view, in the 48 hours before kick-off) is frozen at kick-off and scored here against the numbers alone.</p>`}
+    : `<p class="empty">None scored yet. Our take (the numbers moved by the subjective view, in the 4 days before kick-off) is frozen at kick-off and scored here against the numbers alone.</p>`}
     <p class="sub small">The rest of this page tests the numbers alone, so it stays a test of the method.</p></section>`;
   if (bt && bt.test) {
     const g = bt.test.goals, gb = bt.baseline.goals;
@@ -792,8 +792,8 @@ function renderAbout() {
     <li>Derby or high stakes (late-season top or bottom clashes, European knockouts), for cards.</li></ul>
     Every adjustment is listed on the match page with its effect on the final number. All sizes were measured on 2024-25, then counted at about twice that size, so the adjustments have more say than the data alone would give them (the owner's choice; the cost in accuracy is on the Track record page). One that made no measurable difference (congestion, stakes) is shown for information with a size of 0.</li>
   <li><b>Probabilities.</b> Goals use a Dixon-Coles model for win/draw/loss, likely scores and over/under. Corners, cards and shots use a negative binomial distribution, which allows for more spread than a simple average suggests.</li>
-  <li><b>Subjective view.</b> In the 48 hours before kick-off, every match gets a subjective view from the latest news (team news, rotation, motivation, a new manager, the referee): for each stat, whether judgement leans higher or lower than the numbers, by how much (at most 25% either way), and why. It's written when the match enters the 48-hour window and redone on match day. Matches further away have the numbers only.</li>
-  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat shows five lines centred on its expected number, so a high-scoring match and a low-scoring one show different lines, and ends with one highlighted line, the take: the over or under line with at least an 80% chance: on each side the tightest line that still reaches 80% (so it says as much as possible at that level), and of the two, the one where this match stands out more from a usual game in the same competition. When none of the five bars reaches 80%, the take is the nearest line beyond them, added as an extra row. The faint tick and "usual" figure on each line show how often games in the same competition (last season and this one) go over it, so you can tell when an 80% line is just what usually happens. Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view (more than 48 hours before kick-off, or none written), that line is labelled "The numbers" instead of "Our take".</li></ol>
+  <li><b>Subjective view.</b> In the 4 days before kick-off, every match gets a subjective view from the latest news (team news, rotation, motivation, a new manager, the referee): for each stat, whether judgement leans higher or lower than the numbers, by how much (at most 25% either way), and why. It's written when the match enters the 4-day window, refreshed about every two days and redone on match day. Matches further away have the numbers only.</li>
+  <li><b>Our take.</b> The expected numbers you see on a match page are our take: the numbers moved by the subjective view, with every percentage, range and likely score worked out again from the moved number. Each stat shows five lines centred on its expected number, so a high-scoring match and a low-scoring one show different lines, and ends with one highlighted line, the take: the over or under line with at least an 80% chance: on each side the tightest line that still reaches 80% (so it says as much as possible at that level), and of the two, the one where this match stands out more from a usual game in the same competition. When none of the five bars reaches 80%, the take is the nearest line beyond them, added as an extra row. The faint tick and "usual" figure on each line show how often games in the same competition (last season and this one) go over it, so you can tell when an 80% line is just what usually happens. Its "Why" box keeps the full working: the reasoning in words, the base, each adjustment, and the subjective view with its size, next to the numbers alone. Without a view (more than 4 days before kick-off, or none written), that line is labelled "The numbers" instead of "Our take".</li></ol>
   <p>Finished matches from before estimates started show a "model check": what the method would have said using only earlier games. It's labelled as such and isn't part of the track record.</p>
   <h2>What it can't do</h2>
   <ul><li>Team news is only as good as FotMob's reports, and doubtful players aren't counted.</li>
@@ -801,7 +801,7 @@ function renderAbout() {
   <li>Suspensions worked out from cards use La Liga's rule (a ban every 5th yellow) for every league except the Premier League, so they're approximate. FotMob's team news replaces them in the last 4 days.</li>
   <li>Some leagues are harder to call than others. In testing, the estimates beat the plain average on win/draw/loss by 5% to 17% in the top European leagues, but only by about 2% in the Segunda División, where results are closer and more random.</li>
   <li>Corners are hard to predict for anyone: in testing the estimates were about as good as the league average, a little better in some competitions and a little worse in others. Cards and shots beat the average in most competitions, but only slightly. Each match page says when a stat didn't beat the average in that competition.</li>
-  <li>Subjective views (new manager, motivation, rotation, lineups) are judgement, not measurement. They're written only in the 48 hours before kick-off and move our take by at most 25% per stat. The track record tests the numbers alone, and our take is scored separately against them, so you can see whether the judgement helps.</li></ul>
+  <li>Subjective views (new manager, motivation, rotation, lineups) are judgement, not measurement. They're written only in the 4 days before kick-off and move our take by at most 25% per stat. The track record tests the numbers alone, and our take is scored separately against them, so you can see whether the judgement helps.</li></ul>
   <p>Every estimate is saved in the project's public history before kick-off, so the track record can't be edited after the fact.</p></div>`)}`;
 }
 

@@ -2,8 +2,8 @@
 
   python tools/analyst_merge.py --check FILE...     validate only (exit 1 if any entry has a problem)
   python tools/analyst_merge.py FILE...             validate, merge the valid entries, prune views of matches
-                                                    that kicked off or are more than 48 h away, and report
-                                                    coverage of the posted matches kicking off within 48 h
+                                                    that kicked off or are more than 4 days (96 h) away, and report
+                                                    coverage of the posted matches kicking off within 4 days
   python tools/analyst_merge.py --coverage          coverage report only
 """
 import argparse
@@ -150,7 +150,7 @@ def main():
     for mid in list(views):
         k = ko.get(mid)
         if not k or now - ts(k) > timedelta(days=3) or ts(k) - now > timedelta(hours=JUDGE_HOURS):
-            del views[mid]  # no estimate on file, kicked off over 3 days ago, or not yet within 48 h of kick-off
+            del views[mid]  # no estimate on file, kicked off over 3 days ago, or not yet within JUDGE_HOURS (4 days) of kick-off
     with open(PATH, "w") as f:
         json.dump(store, f, indent=1, ensure_ascii=False)
     print(f"analyst.json now holds {len(views)} views")

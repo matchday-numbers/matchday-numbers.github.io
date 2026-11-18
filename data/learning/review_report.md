@@ -20,4 +20,4 @@ on target 42% of 48. None is far enough from a coin flip yet to be a lesson.
 **Also watching:** La Liga goals came in 1.1 below the estimate (10 matches), Premier League corners 1.6 below (10),
 Conference League goals 0.6 below (18). Too few matches to mean anything yet.
 
-**Waiting for you:** whether to show "how often our 80% takes came true" on the track record page.
+**Waiting for you:** nothing. (18 Nov 2026: you said no to showing "how often our 80% takes came true" on the track record page, and to dropping the 2x for cards and shots.)

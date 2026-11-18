@@ -24,7 +24,7 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 
 ## Decisions on the model (do not undo without asking)
 - 45% base + 55% adjustments; adjustments amplified about 2x (owner adj_strength 2.05) (15 Nov 2026).
-- Subjective view is KEY; written only within 48 h; it moves the numbers into "our take", max ±25% (15 Nov 2026).
+- Subjective view is KEY; written only within 48 h (window replaced 18 Nov 2026, see below); it moves the numbers into "our take", max ±25% (15 Nov 2026).
 - Süper Lig and MLS removed; never re-add (15 Nov 2026).
 - The highlighted take is an over or under line with an 80%+ chance; when none of the 5 bars reaches 80%, go
   further out and add an extra row (they chose "go further out", 17 Nov 2026).
@@ -40,6 +40,15 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 - Wants model 2 vs model 3 compared on real matches before believing the self-review helps ("as it is potential
   = uncertain yet, make sure you compare model 2 and 3", 17 Nov 2026).
 
+- Said no to both open questions ("Don't add any of the open questions", 18 Nov 2026):
+  - No "how often our 80% takes came true" on the track record page.
+  - Keep the 2x amplification for cards and shots too (owner adj_strength 2.05 for every stat). Don't propose
+    dropping it again unless a weekly review has new, held evidence against it.
+- Subjective view window: 4 days (96 h) before kick-off instead of 48 h ("instead of developing a subjective view
+  48 hours before a match, I want you to make it 4 days before any match starts. Change the scheduled task and
+  everything related to it", 18 Nov 2026). Views refresh when 48 h old and are redone on match day.
+
 ## Open questions they have not answered yet
-- Whether to add "how often our 80% takes came true" to the track record page (offered 17 Nov 2026).
-- Whether to drop the 2x amplification for cards and shots (raised 17 Nov 2026; they kept it so far).
+- (none)
+- (answered 18 Nov 2026) Whether to add "how often our 80% takes came true" to the track record page (offered 17 Nov 2026).
+- (answered 18 Nov 2026) Whether to drop the 2x amplification for cards and shots (raised 17 Nov 2026).

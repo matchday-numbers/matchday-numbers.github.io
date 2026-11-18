@@ -60,13 +60,13 @@ excluded from the model. State per season in `data/state/<YYZZ>/` (season Jul–
 - Old model (`model/predict.py`, `views.py`, `europe.py` predictor) kept only for estimates frozen before 6 Nov 2026.
 
 ## Subjective view (KEY) — `data/overrides/analyst.json`
-ONLY for posted matches kicking off within 48 h (`model/judgement.py` JUDGE_HOURS; run.py attaches a view only then;
+ONLY for posted matches kicking off within 4 days / 96 h (owner, 18 Nov 2026; was 48 h) (`model/judgement.py` JUDGE_HOURS; run.py attaches a view only then;
 `analyst_merge.py` prunes views of matches further out or kicked off 3+ days ago or with no estimate on file).
 Per stat: {lean higher/lower/same, adjust_pct (−25..25, sign must match lean), call, text} + overall, sources, written_at.
 No double counting (17 Nov 2026): briefs carry `already_counted` (every adjustment the numbers made: missing players,
 referee, momentum, h2h, derby, stakes); the view sizes only what is NOT on it (rules in `tools/analyst_rules.md`).
 Without a view a stat's verdict line is labelled "The numbers:", with one "Our take:".
-It moves the numbers ("our take", above). Written when a match enters the window, redone on match day (kick-off ≤24 h and
+It moves the numbers ("our take", above). Written when a match enters the window, refreshed when 48 h old (briefs --redo-hours), redone on match day (kick-off ≤24 h and
 view ≥16 h old); unsized old views are redone first. Tools: `tools/analyst_rules.md` (rules),
 `tools/analyst_briefs.py OUTDIR --max 80 --batch 20` (who needs a view), `tools/analyst_merge.py FILES` (validate, merge,
 prune; `--coverage` report; `--prune` prune only).
@@ -87,7 +87,7 @@ prune; `--coverage` report; `--prune` prune only).
 
 ## Scheduled tasks (claude.ai, Europe/Madrid)
 - "Matchday Numbers analyst view" (trig_0186ymbqezmJYibpT97Rr3P6): 9:07, 13:07, 17:07, 21:07 daily; writes/refreshes
-  views (48 h window, with sizes) with subagents. It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
+  views (4-day / 96 h window, with sizes) with subagents. It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
 - "Matchday Numbers upkeep" (trig_011wZXp3AA8i8evwSxf7ccge): Tue & Fri 8:38; health check, writes
   `data/state/upkeep_last.md`. Early runs quit in <1 min; it works since 12 Nov.
 - The WEEKLY REVIEW runs as step 10 of "Matchday Numbers upkeep": the Tuesday 8:38 run (or any run once

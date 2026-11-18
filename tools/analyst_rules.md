@@ -1,7 +1,7 @@
 # Subjective view: how to write it
 
 The subjective view is human-style judgement on top of the statistical numbers. It is written ONLY for
-matches the site posts that kick off within the next 48 hours (`model/judgement.py` JUDGE_HOURS); matches
+matches the site posts that kick off within the next 4 days (96 hours) (`model/judgement.py` JUDGE_HOURS); matches
 further away get no view. For each stat it gives a lean and a size (`adjust_pct`), and the site moves the
 numbers by that size to show **our take**: the expected number, the likely range and every line percentage
 are worked out again from the moved number. So the size matters: it changes what the site shows.
@@ -12,7 +12,7 @@ track record; our take is scored separately against them.
 
 ## Views follow the news
 
-A view is written when a match enters the 48-hour window and redone on match day (kick-off within 24 h, view
+A view is written when a match enters the 4-day window, refreshed when it is 48 h old, and redone on match day (kick-off within 24 h, view
 older than 16 h) with the latest team news, expected lineups and the referee. When a brief carries
 `current_view`, start from it but re-research: keep what still holds, change the lean, size or call where
 the news changed (a key player back or injured, a manager sacked, rotation announced), and say what changed.

@@ -1,13 +1,13 @@
-"""Briefs for the subjective view: posted matches kicking off in the next 48 hours that need one.
+"""Briefs for the subjective view: posted matches kicking off in the next 4 days (96 h) that need one.
 
-  python tools/analyst_briefs.py OUTDIR [--max 80] [--window-hours 48] [--refresh-hours 24] [--stale-hours 16] [--batch 20]
+  python tools/analyst_briefs.py OUTDIR [--max 80] [--window-hours 96] [--refresh-hours 24] [--stale-hours 16] [--batch 20]
 
 Writes OUTDIR/batch_XX.json (one competition per batch, at most --batch matches each) and prints a summary.
-Views are written ONLY for matches kicking off within --window-hours (48 h, model/judgement.py JUDGE_HOURS);
+Views are written ONLY for matches kicking off within --window-hours (96 h, model/judgement.py JUDGE_HOURS);
 matches further out get none. A view moves the site's numbers ("our take"), so it must follow the news. Priority:
   (A) no view yet, or an older view without sizes (adjust_pct), earliest kick-off first
   (B) kick-off within --refresh-hours and the view is older than --stale-hours (team news, referee, lineups)
-  (C) view older than --redo-hours (default 30)
+  (C) view older than --redo-hours (default 48: refreshed about every two days)
 Rules: tools/analyst_rules.md.
 """
 import argparse
@@ -73,7 +73,7 @@ def main():
     ap.add_argument("--window-hours", type=float, default=JUDGE_HOURS)
     ap.add_argument("--refresh-hours", type=float, default=24)
     ap.add_argument("--stale-hours", type=float, default=16)
-    ap.add_argument("--redo-hours", type=float, default=30)
+    ap.add_argument("--redo-hours", type=float, default=48)
     ap.add_argument("--batch", type=int, default=20)
     a = ap.parse_args()
     now = datetime.now(timezone.utc)
@@ -93,7 +93,7 @@ def main():
                 continue
             hours = (ko - now).total_seconds() / 3600
             if hours > a.window_hours:
-                continue  # no subjective view until 48 h before kick-off
+                continue  # no subjective view until JUDGE_HOURS (4 days) before kick-off
             v = views.get(u["id"])
             age = (now - ts(v["written_at"])).total_seconds() / 3600 if v and v.get("written_at") else None
             sized = bool(v) and all(isinstance((v.get(s_) or {}).get("adjust_pct"), (int, float)) for s_ in STATS)

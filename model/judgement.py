@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from .core import STATS, count_probabilities, goal_probabilities
 
-JUDGE_HOURS = 48      # subjective views (and so the take) only for matches kicking off within this many hours
+JUDGE_HOURS = 96      # subjective views (and so the take) only for matches kicking off within this many hours
 MAX_PCT = 25.0        # largest move a judgement may make, either way
 DEFAULT_PCT = 5.0     # size used when an older view gives a lean but no size
 
