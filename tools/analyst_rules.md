@@ -46,7 +46,8 @@ Look for what the numbers can't see, published recently (the last few days; team
 
 Good sources: ESPN, Sky Sports, BBC Sport, The Athletic, the clubs' and competitions' own sites, AS, Marca,
 Relevo, Mundo Deportivo, Kicker, L'Equipe, Gazzetta dello Sport, Record, A Bola, Fanatik, Hurriyet,
-MLSsoccer.com, SoccerNews, Statz.ai. Never use betting sites (no bookmakers, odds or tipster pages).
+MLSsoccer.com, SoccerNews, Statz.ai. Never use betting sites (no bookmakers, odds, tipster or tipping-game pages such as buli-tipphilfe.de):
+the sources are shown as links on the site.
 Cross-check anything important (an injury, a ban, a sacking) with a second source; if only one source had
 it, say so ("one report says ..."). Do not invent facts. If you find nothing for a match, say the view rests
 on form and context and lean "same" where nothing points either way.
