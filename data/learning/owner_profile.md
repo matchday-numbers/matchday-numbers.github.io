@@ -47,6 +47,10 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 - Subjective view window: 4 days (96 h) before kick-off instead of 48 h ("instead of developing a subjective view
   48 hours before a match, I want you to make it 4 days before any match starts. Change the scheduled task and
   everything related to it", 18 Nov 2026). Views refresh when 48 h old and are redone on match day.
+- Subjective views must explain the circumstances, not just say "already counted, no change", and must rest on
+  real research (at least 3 pages from 2+ outlets per match). Said after views got short and mostly "same"
+  ("why does the subjective view has such less of an impact now? why it does not explain any circustances as it
+  used to?" then "do A and B", 18 Nov 2026). Double-counting rule unchanged; loosening sizes (option C) not chosen.
 
 ## Open questions they have not answered yet
 - (none)

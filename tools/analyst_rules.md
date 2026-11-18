@@ -51,8 +51,11 @@ Cross-check anything important (an injury, a ban, a sacking) with a second sourc
 it, say so ("one report says ..."). Do not invent facts. If you find nothing for a match, say the view rests
 on form and context and lean "same" where nothing points either way.
 
-Work efficiently: one search usually covers a team's news for several of its matches, and league-wide
-injury roundups cover many teams at once.
+Research every match properly (owner, 18 Nov 2026): read **at least 3 pages per match, from at least 2
+different outlets**, and at least one of them a preview or team-news page for THIS match (not only a
+league-wide roundup). Roundups are a good start, not the whole job. Look at both teams. If, after a real
+search, fewer than 3 useful pages exist (small leagues), list what you read and say in `overall` that news
+was thin. Take the time this needs; depth matters more than speed.
 
 ## Output (exact format)
 
@@ -88,8 +91,15 @@ injury roundups cover many teams at once.
   (1 + adjust_pct / 100); write it in `call` or `text` so it matches (e.g. 28.2 shots and -12 -> about 24.8).
 - `call`: your judgement call in a few words (a line or a rough number). No percentages or probabilities.
 - `text`: two or three plain sentences. Start from the numbers' expected total, then give the reasons for your
-  lean and its size, naming the players, manager, referee or situation involved.
-- `overall`: two or three sentences with the main context of the match.
+  lean and its size, naming the players, manager, referee or situation involved. **Explain the circumstances
+  even when the size is 0** (owner, 18 Nov 2026): say what is going on that matters for this stat (who is out
+  and what that means for it, the referee and his card record, form, style, motivation) and which of it the
+  numbers already count, e.g. "Without Budimir, Osasuna's main scorer, they rarely score at home; the numbers
+  already take his absence off, about -0.2 goals, so I stay at 2.8". Never just "already counted, no change" or
+  "I found no news the numbers can't see".
+- `overall`: three to five sentences with the main context of the match: league positions and what is at stake,
+  form, key absences and returns on both sides (and whether the numbers count them), the managers' situation,
+  rotation or congestion, the referee if named. A reader should understand the match from it alone.
 - `sources`: the pages you actually read for this match (at least one).
 - English, plain words, no hype. Never write "lock", "sure thing" or "guaranteed", never tell anyone to bet.
 
