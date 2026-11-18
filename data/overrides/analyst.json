@@ -2589,6 +2589,183 @@
     "https://www.voetbalprimeur.nl/nieuws/2147563/nick-marsman-tot-winterstop-niet-inzetbaar-voor-go-ahead-eagles.html"
    ],
    "written_at": "2026-11-18T19:03:31Z"
+  },
+  "401875001": {
+   "overall": "Atalanta (12th, 14 pts, one win in five) host second-placed Inter (28 pts, four wins in five) after the international break, with Sarri's side well short of last season's level and Chivu's Inter chasing the top spot. Inter's attack is thin: Lautaro Martinez is back in group training after a hamstring strain since 13 October and may start, Thuram came home from France duty with fatigue and is day to day, Bonny is out about three more weeks and Esposito is being checked; none of this is in the numbers, which list no missing players. Atalanta expect Raspadori, Kristensen, Bellanova and Gaetano back (maybe not for full minutes), while centre-backs Hien and Kossounou were still not reported fit. Inter host Stuttgart in the Champions League three days later and Chivu plans to share minutes between Lautaro and Thuram. One fixture site listed Calhanoglu as suspended, but the official matchday 12 suspension and booking-warning list (17 Nov) has no Inter or Atalanta player, so I treat him as available; no referee named yet.",
+   "goals": {
+    "lean": "lower",
+    "adjust_pct": -5,
+    "call": "Around 2.9 goals",
+    "text": "The numbers say 3.1 goals, 2.0 of them for Inter. I lean mildly lower to about 2.9: Inter arrive with a patched-up attack (Lautaro just back after five weeks out, Thuram doubtful with fatigue, Bonny out) and Chivu plans to split minutes between his strikers before the Stuttgart game. Atalanta's leaky recent defence (12 conceded in six) is already in the numbers through momentum, so I don't count it again."
+   },
+   "corners": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 9.6 corners",
+    "text": "The numbers say 9.6 corners, with Inter's recent rise in corners (36 in six) and Atalanta conceding many already counted through momentum. Atalanta's wing-backs Bellanova and Kristensen returning should help them push wide at home, while Inter's thinner attack points the other way, so nothing clearly moves it; I stay at 9.6."
+   },
+   "cards": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 3 cards",
+    "text": "The numbers say 3.1 cards and already add for the past meetings (head-to-head +13% on Atalanta's side) and for Atalanta's recent cards against. No referee has been named yet and neither side has anyone on a booking warning, so I find nothing the numbers miss and stay at 3.1."
+   },
+   "shots": {
+    "lean": "lower",
+    "adjust_pct": -3,
+    "call": "Around 28 shots",
+    "text": "The numbers say 28.8 shots, with Inter on 16.3 after a +10% momentum boost for their recent shooting. I trim slightly to about 27.9 because Inter's front line is short of fitness (Lautaro returning, Thuram doubtful, Bonny out) and minutes are likely to be managed before the Champions League; Atalanta getting Raspadori back is a small offset."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "adjust_pct": -4,
+    "call": "Around 9 shots on target",
+    "text": "The numbers say 9.3 shots on target, 5.4 of them Inter's. For the same reason as goals, a rusty Lautaro and a doubtful Thuram with Bonny out, I lean mildly lower to about 8.9; Atalanta conceding plenty lately is already in the numbers."
+   },
+   "sources": [
+    "https://www.ilgiorno.it/sport/domenica-la-sfida-con-la-1e13f2f4",
+    "https://www.sosfanta.com/news/inter-lautaro-martinez-quando-torna-thuram-bonny-condizioni/",
+    "https://www.pazzidifanta.com/news/inter-lautaro-bene-infortunio-tornare-serie-a-italia-francia-460634",
+    "https://www.fantamaster.it/flash-infortunio-thuram-arrivano-novita-il-verdetto-in-vista-di-atalanta-inter-12-giornata/",
+    "https://www.sosfanta.com/news/atalanta-da-raspadori-a-kristensen-e-bellanova-chi-recuperera-per-linter/amp/",
+    "https://www.fantamaster.it/infortunati-atalanta-raspadori-bellanova-rientro-allenamento-gruppo-12-giornata-seriea/",
+    "https://www.fantamaster.it/squalificati-diffidati-12-giornata-seriea-2026-2027-elenco-completo/",
+    "https://www.inter.it/en/news/inter-schedule-tickets-matches-november-december-san-siro",
+    "https://starting11.com/fixtures/atalanta-vs-inter",
+    "https://ontourfootball.com/fixtures/atalanta-vs-inter-2026-11-22"
+   ],
+   "written_at": "2026-11-18T20:40:00Z"
+  },
+  "401876400": {
+   "overall": "Marseille are 4th and have won five Ligue 1 games in a row under Bruno Genesio (2-1 at Lens last time out), while promoted Le Mans are 15th with 8 points and one win in their last six (1-1 with Monaco before the break). Marseille are without left-back Emerson (knee operation) and defender Derek Cornelius (hip, out until the end of the year); Le Mans miss attacking midfielder Adil Bourabaa (ankle surgery) and right-back Djibril Sidibé (broken foot), with Samuel Yohou a doubt after a head knock. None of these absences is on the numbers' missing list, but all have been out for weeks, so recent form already reflects most of them. Marseille host Levski Sofia in the Europa League on Thursday 26 November, so some rotation or game management is possible, and the upper Virage Sud will be closed after an LFP sanction. No referee was named yet.",
+   "goals": {
+    "lean": "lower",
+    "adjust_pct": -4,
+    "call": "Around 3.5 goals",
+    "text": "The numbers say 3.6 goals, 2.6 of them Marseille's, already boosted a little for their 14 goals in the last six. I lean slightly lower to about 3.5: Emerson's absence takes away an attacking left-back, and with Levski Sofia coming on Thursday Genesio may rotate or ease off once ahead. Le Mans' missing creator Bourabaa has been out since October, so that is mostly in their form already."
+   },
+   "corners": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 8 corners",
+    "text": "The numbers say 8.1 corners and already take a little off for both sides' low corner counts lately (Le Mans won 18 in six against 24 expected). Emerson's absence could mean fewer overlaps on the left, but Marseille should still have most of the ball against a side near the bottom, so nothing clearly points either way and I stay at about 8."
+   },
+   "cards": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Under 6.5 cards",
+    "text": "The numbers say 4.1 cards, with more expected from Le Mans, who have picked up 16 cards in their last six and are usually chasing the ball in games like this; the numbers already count that form. No referee has been named yet, and it is not a derby or a heated fixture, so I stay at about 4.1."
+   },
+   "shots": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 26 shots",
+    "text": "The numbers say 26 shots, about 15 for Marseille and 11 for Le Mans. Marseille's winning run and Le Mans' struggles are in the form figures already, and the possible rotation before the Europa League game is too uncertain to size, so I stay at about 26."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 9 shots on target",
+    "text": "The numbers say 9.3 shots on target and already trim Marseille's for their recent 24 in six (30 expected). Gouiri remains Marseille's main scorer and no new absence hits either attack beyond what has been out for weeks, so I stay at about 9."
+   },
+   "sources": [
+    "https://www.footballclubdemarseille.fr/om-actualites/om-six-matchs-trois-semaines-confirmer-redressement.html",
+    "https://www.footballclubdemarseille.fr/om-actualites/om-velodrome-tribune-fermee-reception-le-mans.html",
+    "https://www.lephoceen.fr/infos-om/saison/om-genesio-peut-il-faire-tomber-un-record-historique-de-victoires-239499",
+    "https://www.shango.media/sport-le-mans-coup-dur-a-linfirmerie-avant-daffronter-lom-12055550",
+    "https://starting11.com/fixtures/marseille-vs-le-mans",
+    "https://www.sportsmole.co.uk/football/ligue-1/marseille-vs-le-mans_game_263309.html"
+   ],
+   "written_at": "2026-11-18T20:40:00Z"
+  },
+  "401882803": {
+   "overall": "Getafe (15th, 12 pts) host Atlético Madrid (3rd, 28 pts) on Sunday night, the first league game after the international break. Getafe have taken all their points at the Coliseum but have not scored in six away games; Gudelj is banned (the numbers count it) and Uche (out for the season since August), Juanmi and Zaid Romero are also out. Atlético have lost Lookman to a mild knee sprain picked up with Nigeria (about two weeks, per two reports), which the numbers do not know about, while Cuti Romero is a serious doubt and Pubill has ankle discomfort. Simeone had about 17 internationals away, some back late in the week, and a Champions League game against Viking follows on Tuesday, so some rotation or caution is possible. No referee had been named when this was written.",
+   "goals": {
+    "lean": "lower",
+    "adjust_pct": -5,
+    "call": "Around 2.1 goals, under 3.5",
+    "text": "The numbers say 2.2 goals, already counting Gudelj's ban, recent form and past meetings. I lean a little lower: Atlético lose Lookman, one of their main attacking outlets, which the numbers do not know about, their internationals return late with a Champions League game on Tuesday, and Bordalás's Getafe make games slow and tight at home. So about 2.1 goals."
+   },
+   "corners": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 9 corners",
+    "text": "The numbers say 9.3 corners and already count Getafe's high recent corner count (38 in six games) and past meetings. Getafe play direct and win corners from long balls and crosses at home, while Atlético without Lookman have a bit less pace out wide, but nothing points clearly either way. I stay at about 9.3."
+   },
+   "cards": {
+    "lean": "higher",
+    "adjust_pct": 5,
+    "call": "Around 5.6 cards",
+    "text": "The numbers say 5.3 cards, counting both teams' card form and past meetings, but the game is not flagged as a derby. Getafe against Atlético is a local Madrid game against a Bordalás side built on fouls, duels and time-wasting, and these meetings tend to get heated. With no referee named yet, I lean mildly higher, to about 5.6."
+   },
+   "shots": {
+    "lean": "lower",
+    "adjust_pct": -6,
+    "call": "Around 23 shots",
+    "text": "The numbers say 24.6 shots, and recent form has already pushed both sides up (+13% Getafe, +8% Atlético). Getafe managed only 9 shots at Villarreal last time out and rely on long balls, and Atlético will be without Lookman and are likely to manage the game before Tuesday's Champions League match. I lean lower, to about 23.1."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "adjust_pct": -5,
+    "call": "Around 7 shots on target",
+    "text": "The numbers say 7.4 shots on target. Getafe have not scored away for six games but are more dangerous at home, and Atlético lose some quality up front with Lookman out and Cuti Romero doubtful at the back changes little for this stat. I lean slightly lower, to about 7.0."
+   },
+   "sources": [
+    "https://www.comuniate.com/partido/26/4/13/getafe-atletico",
+    "https://starting11.com/fixtures/getafe-vs-atletico-madrid",
+    "https://www.elgoldigital.com/futbol/atletico-de-madrid/lookman-lesion-esguince-rodilla-atletico-madrid/",
+    "https://www.comuniate.com/noticias/39031/el-atletico-espera-pruebas-para-conocer-el-alcance-de-la-lesion-de-lookman",
+    "https://www.comuniate.com/noticias/38977/cuti-romero-acelera-su-recuperacion-con-el-getafe-en-el-horizonte",
+    "https://www.elgoldigital.com/futbol/atletico-de-madrid/cuti-romero-cesped-getafe-atletico/",
+    "https://www.elgoldigital.com/futbol/villarreal-cf/villarreal-getafe-previa-inigo-perez-bordalas-jornada-12/",
+    "https://www.elgoldigital.com/futbol/villarreal-cf/villarreal-getafe-resultado-buchanan-carlos-romero-jornada-12/",
+    "https://www.comuniate.com/noticias/37108/uche-dice-adios-a-la-temporada"
+   ],
+   "written_at": "2026-11-18T20:40:00Z"
+  },
+  "401883111": {
+   "overall": "Sixth-placed Burgos (24 pts) host 19th-placed Albacete (13 pts) on Sunday night at El Plantío. Burgos, under Sergio Francisco, saw a four-game unbeaten run end with a 3-1 loss at Leganés built on defensive errors; they are without forward Jon Karrikaburu and David González (hamstrings), absences the numbers do not know about. Albacete have been transformed since Joseba Etxeberria replaced Alberto González in October: one point from eight games before, four straight league wins since (latest 1-0 v Celta Fortuna), with a high press and quick counters, though still in the bottom four. Albacete are missing Antonio Puertas, Samu Obeng, Fran Gámez, Higinio Marín, Gyabaa and the suspended José Corpas, with Javi Moreno doubtful; most of those have been out for weeks, so recent form already reflects them. No referee named yet; news on line-ups was thin beyond injury lists.",
+   "goals": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 2.3 goals",
+    "text": "The numbers say 2.3 goals. Albacete's attack is still blunt (striker Soberón has no league goal and missed a penalty last week) but their press has turned them into a team that wins tight games, while Burgos lose a forward in Karrikaburu and leaked three at Leganés. Those pull in opposite directions and the numbers' momentum already counts both sides' recent scoring (+1-3%), so I stay at 2.3."
+   },
+   "corners": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 9.9 corners",
+    "text": "The numbers say 9.9 corners, already raised for Burgos' heavy recent corner count (+6.7% momentum). Albacete under Etxeberria spend long spells defending after scoring and lean on counters, which fits Burgos pushing for corners at home; that is what the numbers already show, so I stay at 9.9."
+   },
+   "cards": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 5 cards",
+    "text": "The numbers say 5.0 cards, already up about 9% each side for recent card counts (Albacete 21 in their last six). Albacete's aggressive press and Burgos' frustration after Leganés point to a lively game, but that is what the momentum figures capture and no referee has been named yet, so I stay at 5.0."
+   },
+   "shots": {
+    "lean": "lower",
+    "adjust_pct": -4,
+    "call": "Around 25 shots",
+    "text": "The numbers say 26.2 shots, with Burgos' side pushed up 23% for a run of high shot counts. I lean slightly lower, to about 25.2: Burgos are without forward Jon Karrikaburu (hamstring), which the numbers do not know, and Albacete's new high press under Etxeberria has made them harder to play through than their season averages suggest."
+   },
+   "shots_on_target": {
+    "lean": "lower",
+    "adjust_pct": -3,
+    "call": "Around 7.8 on target",
+    "text": "The numbers say 8.0 shots on target, Burgos' share already raised about 9% for recent form. For the same reasons as shots, Karrikaburu's absence and Albacete's improved, pressing defence (three clean sheets in four league wins), I trim it mildly to about 7.8."
+   },
+   "sources": [
+    "https://www.elopi23.com/hypermotion-26-27/jornada-15/burgos-vs-albacete/",
+    "https://futboltotal.futbol/partido/burgos-vs-albacete-segunda-division-2026-11-22",
+    "https://starting11.com/fixtures/burgos-vs-albacete",
+    "https://burgosnoticias.com/noticia/2026-11-14-3-1-tres-errores-defensivos-hunden-al-burgos-en-leganes-61862",
+    "https://www.burgosdeporte.com/?p=162322",
+    "https://www.lacerca.com/noticias/albacete/albacete-celta-fortuna-cuarta-victoria-consecutiva-marino-1-837367-1.html",
+    "https://www.vavel.com/es/futbol/2026/11/17/albacete/1279618-quien-te-ha-visto-y-quien-te-ve-alba.html",
+    "https://www.elgoldigital.com/futbol/albacete/etxeberria-albacete-entrenador-estilo-presion-segunda-2026/"
+   ],
+   "written_at": "2026-11-18T20:30:00Z"
   }
  }
 }
