@@ -55,7 +55,8 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 - Views refreshed more often to catch news (20 Nov 2026: "updated the views of the matches more oftenly to find news
   or anything that may determine a stat"; chose option A + extra runs, "go with option 1, apply it on weekends only and
   the other time for weekdays"): refresh every 24 h at 48–96 h before kick-off, every 12 h at 24–48 h, every 6 h in
-  the last 24 h. Analyst runs: daily 9:07, 13:07, 17:07, 19:37, 21:07; weekends also 11:07 and 14:37 (Madrid).
+  the last 24 h. Analyst runs: daily 9:07, 13:07, 17:07, 19:07, 21:07; weekends also 11:07 and 14:07 (Madrid).
+  (They first chose 19:37 and 14:37; moved to :07 because a second task couldn't push — "go with option 2", 20 Nov 2026.)
 
 ## Open questions they have not answered yet
 - (none)

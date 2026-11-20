@@ -94,12 +94,11 @@ briefs with `--redo-hours 0 --batch 10` (one-off; don't edit the saved prompt fo
   owner's new preferences and decisions (date + their words); scheduled runs only read it.**
 
 ## Scheduled tasks (claude.ai, Europe/Madrid)
-- "Matchday Numbers analyst view" (trig_0186ymbqezmJYibpT97Rr3P6): fires 9:07, 11:07, 13:07, 17:07, 21:07 daily; writes/refreshes
-  views (4-day / 96 h window, with sizes) with subagents. "Matchday Numbers analyst view (extra)" (trig_01T5db2x1TgyL4oWpy5iKPvo,
-  created 20 Nov 2026): fires 14:37 and 19:37 daily, same job. Owner's schedule (20 Nov 2026): every day 9:07, 13:07, 17:07,
-  19:37, 21:07; Sat-Sun also 11:07 and 14:37. The scheduler allows one cron per task and runs ≥1 h apart, so both
-  tasks fire a weekday 11:07 / 14:37 slot too and their prompt's step 0 quits at once ("Skipped: weekday-only extra slot").
-  Change both prompts together. It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
+- "Matchday Numbers analyst view" (trig_0186ymbqezmJYibpT97Rr3P6): fires 9:07, 11:07, 13:07, 14:07, 17:07, 19:07, 21:07
+  daily; writes/refreshes views (4-day / 96 h window, with sizes) with subagents. Owner's schedule (20 Nov 2026): every
+  day 9:07, 13:07, 17:07, 19:07, 21:07; Sat-Sun also 11:07 and 14:07. One cron per task, so it also fires weekday
+  11:07 / 14:07 and the prompt's step 0 quits at once ("Skipped: weekday-only extra slot"). (A second task for :37 slots
+  was tried on 20 Nov and deleted: tasks created from a chat session get no repo and can't push.) It was paused once from the app (12 Nov) — check it's enabled if coverage drops.
 - "Matchday Numbers upkeep" (trig_011wZXp3AA8i8evwSxf7ccge): Tue & Fri 8:38; health check, writes
   `data/state/upkeep_last.md`. Early runs quit in <1 min; it works since 12 Nov.
 - The WEEKLY REVIEW runs as step 10 of "Matchday Numbers upkeep": the Tuesday 8:38 run (or any run once

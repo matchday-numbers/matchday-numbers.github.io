@@ -14,7 +14,7 @@ track record; our take is scored separately against them.
 
 A view is written when a match enters the 4-day window and then refreshed more often as kick-off nears (owner,
 20 Nov 2026): every 24 h while the match is 48-96 h away, every 12 h at 24-48 h, and every 6 h in the last 24 h
-(match day: the latest team news, expected lineups and the referee). Extra runs at 19:37 daily and 11:07 and 14:37
+(match day: the latest team news, expected lineups and the referee). Extra runs at 19:07 daily and 11:07 and 14:07
 on weekends catch late news before the main kick-off times. When a brief carries
 `current_view`, start from it but re-research: keep what still holds, change the lean, size or call where
 the news changed (a key player back or injured, a manager sacked, rotation announced), and say what changed.
