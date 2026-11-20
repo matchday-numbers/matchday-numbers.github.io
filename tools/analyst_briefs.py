@@ -1,13 +1,17 @@
 """Briefs for the subjective view: posted matches kicking off in the next 4 days (96 h) that need one.
 
-  python tools/analyst_briefs.py OUTDIR [--max 80] [--window-hours 96] [--refresh-hours 24] [--stale-hours 16] [--batch 20]
+  python tools/analyst_briefs.py OUTDIR [--max 80] [--window-hours 96] [--tiers 24:6,48:12,96:24] [--slack-hours 0.75] [--batch 20]
 
 Writes OUTDIR/batch_XX.json (one competition per batch, at most --batch matches each) and prints a summary.
 Views are written ONLY for matches kicking off within --window-hours (96 h, model/judgement.py JUDGE_HOURS);
-matches further out get none. A view moves the site's numbers ("our take"), so it must follow the news. Priority:
+matches further out get none. A view moves the site's numbers ("our take"), so it must follow the news.
+Refresh is tiered by time to kick-off (owner, 20 Nov 2026; --tiers "KO_HOURS:MAX_AGE,..."): kick-off within 24 h ->
+refresh once the view is 6 h old; 24-48 h -> 12 h old; 48-96 h -> 24 h old. --slack-hours (0.75) is taken off each
+age so a view written a little after a run's start time is still due at the same slot the next time round.
+Priority:
   (A) no view yet, or an older view without sizes (adjust_pct), earliest kick-off first
-  (B) kick-off within --refresh-hours and the view is older than --stale-hours (team news, referee, lineups)
-  (C) view older than --redo-hours (default 48: refreshed about every two days)
+  (B) kick-off within 24 h and the view is due under the tiers (match day: team news, referee, lineups)
+  (C) any other view due under the tiers, or older than --redo-hours when given (--redo-hours 0 forces a full rewrite)
 Rules: tools/analyst_rules.md.
 """
 import argparse
@@ -66,16 +70,26 @@ def our_call(stat, s, usual_comp=None, comp_name="the competition"):
     return out + ")"
 
 
+def due(hours, age, tiers, slack=0.75):
+    """True when a view `age` hours old, for a match `hours` from kick-off, should be refreshed (tiered)."""
+    for ko_hours, max_age in tiers:
+        if hours <= ko_hours:
+            return age + slack >= max_age
+    return age + slack >= tiers[-1][1]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("outdir")
     ap.add_argument("--max", type=int, default=80)
     ap.add_argument("--window-hours", type=float, default=JUDGE_HOURS)
-    ap.add_argument("--refresh-hours", type=float, default=24)
-    ap.add_argument("--stale-hours", type=float, default=16)
-    ap.add_argument("--redo-hours", type=float, default=48)
+    ap.add_argument("--tiers", default="24:6,48:12,96:24",
+                    help="KO_HOURS:MAX_AGE pairs: within KO_HOURS of kick-off, refresh a view MAX_AGE hours old")
+    ap.add_argument("--slack-hours", type=float, default=0.75)
+    ap.add_argument("--redo-hours", type=float, default=None, help="also redo any view at least this old (0 = all)")
     ap.add_argument("--batch", type=int, default=20)
     a = ap.parse_args()
+    tiers = sorted((float(k), float(v)) for k, v in (t.split(":") for t in a.tiers.split(",")))
     now = datetime.now(timezone.utc)
     meta = jload(os.path.join(ROOT, "site", "data", "meta.json"), {})
     season = meta.get("season")
@@ -99,9 +113,9 @@ def main():
             sized = bool(v) and all(isinstance((v.get(s_) or {}).get("adjust_pct"), (int, float)) for s_ in STATS)
             if v is None or not sized or age is None:
                 prio = 0
-            elif hours <= a.refresh_hours and age >= a.stale_hours:
-                prio = 1
-            elif age >= a.redo_hours:
+            elif due(hours, age, tiers, a.slack_hours):
+                prio = 1 if hours <= tiers[0][0] else 2
+            elif a.redo_hours is not None and age >= a.redo_hours:
                 prio = 2
             else:
                 continue
@@ -154,7 +168,7 @@ def main():
                 json.dump({"competition": lg, "written_for": now.isoformat(), "matches": bs[i:i + size]}, f, indent=1, ensure_ascii=False)
             print(f"{path}: {len(bs[i:i + size])} matches")
     print(f"needing a view (kick-off within {a.window_hours:.0f} h): {len(need)} (new or unsized {sum(1 for x in need if x[0] == 0)}, "
-          f"match-day refresh {sum(1 for x in need if x[0] == 1)}, older {sum(1 for x in need if x[0] == 2)}); "
+          f"match-day refresh {sum(1 for x in need if x[0] == 1)}, other refresh {sum(1 for x in need if x[0] == 2)}); "
           f"briefed {len(chosen)} in {n} batches")
 
 if __name__ == "__main__":

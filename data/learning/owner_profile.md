@@ -46,11 +46,16 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
     dropping it again unless a weekly review has new, held evidence against it.
 - Subjective view window: 4 days (96 h) before kick-off instead of 48 h ("instead of developing a subjective view
   48 hours before a match, I want you to make it 4 days before any match starts. Change the scheduled task and
-  everything related to it", 18 Nov 2026). Views refresh when 48 h old and are redone on match day.
+  everything related to it", 18 Nov 2026). Views refresh when 48 h old and are redone on match day. (refresh rule replaced 20 Nov 2026, see below)
 - Subjective views must explain the circumstances, not just say "already counted, no change", and must rest on
   real research (at least 3 pages from 2+ outlets per match). Said after views got short and mostly "same"
   ("why does the subjective view has such less of an impact now? why it does not explain any circustances as it
   used to?" then "do A and B", 18 Nov 2026). Double-counting rule unchanged; loosening sizes (option C) not chosen.
+
+- Views refreshed more often to catch news (20 Nov 2026: "updated the views of the matches more oftenly to find news
+  or anything that may determine a stat"; chose option A + extra runs, "go with option 1, apply it on weekends only and
+  the other time for weekdays"): refresh every 24 h at 48–96 h before kick-off, every 12 h at 24–48 h, every 6 h in
+  the last 24 h. Analyst runs: daily 9:07, 13:07, 17:07, 19:37, 21:07; weekends also 11:07 and 14:37 (Madrid).
 
 ## Open questions they have not answered yet
 - (none)

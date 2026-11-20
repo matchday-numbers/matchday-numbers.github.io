@@ -105,9 +105,9 @@ def coverage(views):
     missing = [i for i in ps if i not in views]
     unsized = [i for i in ps if i in views and not all(isinstance((views[i].get(s) or {}).get("adjust_pct"), (int, float)) for s in STATS)]
     stale = [i for i, ko in ps.items() if i in views and ts(ko) - now <= timedelta(hours=24)
-             and now - ts(views[i].get("written_at") or "2000-01-01T00:00:00+00:00") >= timedelta(hours=16)]
+             and now - ts(views[i].get("written_at") or "2000-01-01T00:00:00+00:00") >= timedelta(hours=6 - 0.75)]  # briefs tier: within 24 h, refresh when 6 h old
     print(f"coverage: {len(ps) - len(missing)} of {len(ps)} posted matches kicking off within {JUDGE_HOURS} h have a subjective view; "
-          f"{len(missing)} missing, {len(unsized)} without sizes, {len(stale)} due a match-day refresh (kick-off within 24 h, view older than 16 h)")
+          f"{len(missing)} missing, {len(unsized)} without sizes, {len(stale)} due a match-day refresh (kick-off within 24 h, view 6+ h old)")
     return missing, stale
 
 
