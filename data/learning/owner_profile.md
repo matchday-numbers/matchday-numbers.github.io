@@ -59,6 +59,8 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
   (They first chose 19:37 and 14:37; moved to :07 because a second task couldn't push — "go with option 2", 20 Nov 2026.)
 
 ## Open questions they have not answered yet
-- (none)
+- Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
+  wait 2-3 days of real usage under the new schedule first ("wait 2-3 to find out how much it does consume and then
+  decide", 20 Nov 2026). A usage report is scheduled for Mon 23 Nov 10:00 Madrid.
 - (answered 18 Nov 2026) Whether to add "how often our 80% takes came true" to the track record page (offered 17 Nov 2026).
 - (answered 18 Nov 2026) Whether to drop the 2x amplification for cards and shots (raised 17 Nov 2026).
