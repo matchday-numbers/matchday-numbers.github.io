@@ -70,6 +70,13 @@ It moves the numbers ("our take", above). Written when a match enters the window
 view ≥16 h old); unsized old views are redone first. Tools: `tools/analyst_rules.md` (rules),
 `tools/analyst_briefs.py OUTDIR --max 80 --batch 20` (who needs a view), `tools/analyst_merge.py FILES` (validate, merge,
 prune; `--coverage` report; `--prune` prune only).
+Quality rules (owner, 18 Nov 2026, after views went short and ~80% "same, 0"): every stat's text and the 3–5 sentence
+`overall` must EXPLAIN the circumstances even at size 0 (who's out, referee, form, stakes, and what the numbers already
+count) — never just "already counted, no change"; research ≥3 pages from ≥2 outlets per match incl. one preview/team-news
+page for that match. Sizes stay small by design (no double counting; owner declined loosening it, "option C").
+Sources show as links on match pages ("Read before writing"), so never tipping/betting pages (buli-tipphilfe.de was
+removed from 5 views on 18 Nov). To force a full rewrite now: fire the analyst task with extra text telling it to run
+briefs with `--redo-hours 0 --batch 10` (one-off; don't edit the saved prompt for that).
 
 ## Self-improvement loop (owner, 17 Nov 2026) — skill `.claude/skills/matchday-self-review/SKILL.md`
 - Weekly: `tools/review_mistakes.py` scores the misses (bias, error vs averages, 80% take hit rate, adjustments and
