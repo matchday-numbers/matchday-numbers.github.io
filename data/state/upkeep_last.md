@@ -1,21 +1,17 @@
-# Upkeep run — 2026-11-19 12:55 UTC (Thursday, scheduled)
+# Upkeep run — Fri 20 Nov 2026, 07:40 UTC (08:40 Madrid)
 
-**Result: all healthy, nothing to fix.**
+**Result: healthy, nothing to fix.**
 
 Checked:
-- Workflows: last 6 `update` runs (incl. publish) succeeded, latest 10:25 UTC; last 5 `tests` runs succeeded.
-- last_run.json (finished 10:27 UTC): no errors; model 13,437 matches / 546 teams / 7,619 referees linked;
-  459 estimates made or updated, 113 scored; team news linked 177. meta.json updated_at 10:25 UTC.
-- All 11 competitions have events and predictions (PL 55, La Liga 42, Serie A 45, Bundesliga 42, Ligue 1 36,
-  Eredivisie 39, Primeira 27, Segunda 47, UCL 36, UEL 36, UECL 54). Cross-check: 0 single, conflicts 2–10 per
-  league (yellow-card counts, as usual).
-- usual.json: all 11 comps, 207–613 games each (content unchanged since 17 Nov, so not in today's commit).
-- Take lines: 400 estimates made this morning, 2,275 stat blocks (numbers + take) — every one has a take_line side
-  at 80%+; every file has `shadow` ("same").
-- Subjective view: 64 of 64 posted matches within 96 h have a sized view. Spot-check Twente–Willem II: take
-  adjust_pct matches the view (goals −3, SOT −2); sizes rest on a suspension the numbers don't see, no double counting.
-- Card bans: 4 upcoming Champions League bans checked; each is the team's next match in that competition.
-- Live site: web fetch refused by the site's robots rules, so not fetched directly; the latest publish job succeeded.
+- update workflow: last 6 runs all succeeded, both jobs (latest run 04:16 UTC: update + publish/deploy-pages OK). tests workflow: last run (18 Nov) passed; no failures since.
+- last_run.json: no errors (incl. usual rates / model 2 shadow); finished 04:17 UTC (<6 h); model 13,436 matches, 546 teams, 7,619 referees linked; 506 estimates made/updated, 114 frozen, 113 scored; team news linked 181.
+- All 11 competitions have events and predictions (PL 59, La Liga 52, Serie A 50, Bundesliga 45, Ligue 1 36, Eredivisie 44, Primeira 36, Segunda 58, UCL 36, UEL 36, UECL 54). Cross-check: 0 "single" anywhere; conflicts 2–10 per league, almost all yellow-card counts (normal level, no jump).
+- usual.json: covers all 11 comps, each 207–613 games. Unchanged in git since 17 Nov because no new games finished in the international break (counts match last_run).
+- meta.json updated_at 04:16 UTC.
+- Take lines: every stat of all 506 upcoming estimates (numbers and take) has a take_line with a side ≥80%; every file has "shadow".
+- Subjective view coverage: 68 of 68 posted matches within 96 h have sized views; 4 due a match-day refresh (the analyst task handles that).
+- Spot-check Elversberg–Freiburg (21 Nov): take matches the view (all 0%); view explains missing defenders as already counted — no double counting.
+- Card bans: Mouriño's yellow-card ban sits on his team's next Champions League match (25 Nov); no earlier unplayed CL fixture — next-fixture rule OK.
+- Weekly review: not due (last review 17 Nov, 3 days ago).
 
-Fixed: nothing needed.
-Weekly review: not due (last review 17 Nov, 2 days ago).
+Could not check: the live site JSON (home.json / usual.json) — this run's network couldn't reach matchday-numbers.github.io. The deploy job succeeded at 04:18 UTC, so the site should be current.
