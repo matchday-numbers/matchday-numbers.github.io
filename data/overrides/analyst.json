@@ -239,44 +239,46 @@
    "written_at": "2026-11-21T08:15:00Z"
   },
   "401884729": {
-   "overall": "Schalke (17th, 6 points, one win in nine) host Stuttgart (8th, 12 points, two league wins in a row) at 18:30; Schalke have scored only five league goals and none in four home games, though they have conceded just 11. Miron Muslic gets striker Moussa Sylla and Gantenbein back in full training (Bulinews), while top scorer Robin Gosens returned to partial training after his knee knock and a decision on him was due Friday (Flashscore); Becker and Woeber are out and counted. Stuttgart are without midfield organiser Angelo Stiller (Stuttgarter Zeitung, 19 Nov) and Jaquez, both counted for goals, with Demirovic (five goals) leading the line. Sebastian Hoeness wants high intensity; Daniel Siebert referees, and his slightly higher card record is already added.",
+   "overall": "Schalke (17th, 6 points, seven games without a win in all competitions) host Stuttgart (8th, 12 points, two league wins in a row) at 18:30 in front of about 60,000; Schalke have still not scored a home goal this season, though they have conceded just 11. Moussa Sylla is back in the squad for the first time since matchday 5 and may start, with Gantenbein and Bachmann also available (90min, Sky, Flashscore), while top scorer Robin Gosens, back in partial training after his knee knock, is at best a bench option; Becker and Woeber are out and already counted. Stuttgart are still without Angelo Stiller (adductor) and Luca Jaquez (rib), both on the numbers' list, while Josha Vagnoman is back in team training and Leo Sauer trained fully on Thursday; Stuttgart play at Inter in the Champions League on Wednesday. Sebastian Hoeness expects a passionate Schalke and wants high intensity and runs in behind; Daniel Siebert referees, and his slightly higher card record is already added.",
    "goals": {
     "lean": "lower",
-    "adjust_pct": -3,
-    "call": "Around 2.0 goals",
-    "text": "The numbers say 2.1 goals and already take off for Woeber at Schalke and Stiller and Vagnoman at Stuttgart. What they can't see is that Gosens, Schalke's top scorer, is at best short of full fitness for a side without a home goal in four games, with Sylla only just back in training, so I trim 3%, to about 2.0."
+    "adjust_pct": -2,
+    "call": "Around 2.1 goals",
+    "text": "The numbers say 2.1 goals and already take off for Woeber at Schalke and for Stiller and Vagnoman at Stuttgart. Gosens, Schalke's top scorer, is not expected to start, which the numbers can't see, but Sylla's return up front and Vagnoman being back in training soften that, so I trim only 2%, to about 2.06."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10.5 corners",
-    "text": "The numbers say 10.5 corners, with Stuttgart expected to win about 6 of them. Schalke defend deep and counter, which hands visitors corners, and Stuttgart's wing-backs push play wide, but both habits are already in the teams' records, so I stay at 10.5."
+    "text": "The numbers say 10.5 corners, with Stuttgart expected to win about 6 of them. Schalke defend deep and look to counter, which hands visitors corners, and Hoeness wants his side to run in behind and down the wings, but both habits are already in the teams' records, so I stay at 10.5."
    },
    "cards": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 3.6 cards",
-    "text": "The numbers say 3.6 cards and already add about 8% for referee Daniel Siebert (4.1 a game) plus a little for Schalke's recent games. A physical Schalke in front of a full house is how they play every home game and it is in their record, so I stay at 3.6."
+    "text": "The numbers say 3.6 cards and already add about 8% for referee Daniel Siebert (4.1 a game) plus a little for Schalke's recent games. Hoeness expects a physical, passionate home side in front of 60,000, but that is how Schalke play every home game and it is in their record, so I stay at 3.6."
    },
    "shots": {
     "lean": "lower",
     "adjust_pct": -2,
     "call": "About 27.3 shots",
-    "text": "The numbers say 27.9 shots. Schalke's attack produces few shots and may lack a fully fit Gosens, and Stuttgart still miss their main midfield passer Stiller; the numbers count Stiller only for goals, not shot volume, so I trim 2%, to about 27.3."
+    "text": "The numbers say 27.9 shots. Schalke's attack produces few shots and will likely start without Gosens, and Stuttgart still miss their main midfield passer Stiller, whom the numbers count only for goals, not shot volume; Sylla's return gives Schalke a target up front, so the trim stays small, 2%, to about 27.3."
    },
    "shots_on_target": {
     "lean": "lower",
-    "adjust_pct": -3,
-    "call": "About 9.3 shots on target",
-    "text": "The numbers say 9.6 shots on target and already cut Schalke's for their poor recent accuracy (13 on target in six). Gosens doubtful and Stiller out make both build-ups a bit poorer, and Sylla is only a bench option after weeks out, so I trim 3%, to about 9.3."
+    "adjust_pct": -2,
+    "call": "About 9.4 shots on target",
+    "text": "The numbers say 9.6 shots on target and already cut Schalke's for their poor recent accuracy (13 on target in six). Gosens unlikely to start and Stiller out make both build-ups a bit poorer, while Sylla's comeback gives Schalke a finisher back, so I trim 2%, to about 9.4."
    },
    "sources": [
-    "https://bulinews.com/schalke-deliver-positive-update-fitness-sylla-gosens-and-gantenbein",
+    "https://www.90min.de/sylla-gosens-und-co-auf-welche-ruckkehrer-kann-schalke-gegen-stuttgart-setzen",
+    "https://sport.sky.de/fussball/artikel/robin-gosens-vor-schalke-comeback-gegen-stuttgart/13614046/34942",
     "https://www.flashscore.de/news/entwarnung-robin-gosens-ist-fur-schalke-bereits-wieder-eine-option/KMdJrcw3/",
-    "https://www.stuttgarter-zeitung.de/sport/vfb-stuttgart/vfb-stuttgart-beim-fc-schalke-04-neuer-wirbel-um-die-zukunft-von-angelo-stiller-79719686.html",
-    "https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/10/fc-schalke-04-vs-vfb-stuttgart/liveticker"
+    "https://schalketotal.de/2026/11/19/werden-eine-hohe-intensitaet-brauchen-vfb-coach-hoeness-warnt-vor-schalker-wucht/",
+    "https://www.wochenblatt-reporter.de/c-sport/stiller-ausfall-beim-vfb-stuttgart-schalke-spiel-kommt-zu-frueh_a946112",
+    "https://www.sportschau.de/live-und-ergebnisse/fussball/deutschland-bundesliga/ma12193804/fc-schalke-04_vfb-stuttgart/info"
    ],
-   "written_at": "2026-11-21T08:15:00Z"
+   "written_at": "2026-11-21T16:11:58Z"
   },
   "401884733": {
    "overall": "Two struggling sides meet at the WWK Arena: Augsburg (14th, 9 points) are seven games without a win under Manuel Baum after a 5-2 loss at Leipzig, and Mainz (12th, 10 points) have lost four competitive games in a row, including a cup exit at Bochum. The Bundesliga's preview lists Augsburg without Banks, Brackelmann (ill), Massengo, Matsima and Mounie, and Mainz without Kohr and Silas; the numbers now count all of these for goals, including about +6% on Mainz's goals for each missing Augsburg defender. Urs Fischer calls Augsburg compact, quick on the break and dangerous at set pieces, while Mainz's Tietz leads the attack. Martin Petersen referees; his high card record (4.5 a game, +14%) is already in the numbers, as is both sides' leaky recent form.",
@@ -477,44 +479,45 @@
    "written_at": "2026-11-21T08:15:00Z"
   },
   "401882301": {
-   "overall": "Castellón (2nd, 30 points, unbeaten at home, only 5 goals conceded in 13 games) can go top with a win over Eldense (16th), who ended a three-game losing run by beating Sabadell. Castellón's top scorer Israel Suero (6 of their 24 goals) is out after getting hurt in training before the Valladolid game, which two outlets report and the numbers don't count; Fran Castillo and Rodrigo Rêgo are also injured besides Brignani, while Matías Orozco is back from Colombia duty. Eldense lose captain Jesús Clemente (dislocated shoulder, several weeks) and Fidel Chaves (muscle problem), neither counted by the numbers; Javi Calleja plans to press man-to-man and contest possession. It is a regional derby with a tribute to Jesús de Miguel, and referee Pablo Morales Moreno is slightly below average on cards.",
+   "overall": "Castellón (2nd, 30 points, unbeaten at home, only 5 goals conceded in 13 games) can go top with a win over Eldense (16th), who ended a three-game losing run by beating Sabadell. Castellón's top scorer Israel Suero (6 of their 24 goals) is out with a physical problem, confirmed by Pablo Hernández on Friday and not counted by the numbers; Fran Castillo and Rodrigo Rêgo are also out besides Brignani, and today's Castellón Plaza preview says a virus has hit several players, with the coach deciding on them at the last minute, while Matías Orozco is back from Colombia duty. Eldense lose captain Jesús Clemente (dislocated shoulder) and Fidel Chaves (muscle problem), neither counted by the numbers, while Guirao is fit again; Javi Calleja plans to press man-to-man, contest possession and take risks. It is a regional match with a tribute to Jesús de Miguel, and referee Pablo Morales Moreno is slightly below average on cards.",
    "goals": {
     "lean": "lower",
-    "adjust_pct": -7,
+    "adjust_pct": -8,
     "call": "Around 2.6 goals",
-    "text": "The numbers say 2.8 goals, 2.0 of them for Castellón. I lean lower to about 2.6 because Israel Suero, scorer of a quarter of Castellón's league goals, is injured and the numbers don't know it; Eldense are also without Fidel Chaves, and Castellón's defence has conceded only 5 in 13."
+    "text": "The numbers say 2.8 goals, 2.0 of them for Castellón. I lean lower because Israel Suero, scorer of a quarter of Castellón's league goals, is out and the numbers don't know it, and today's preview adds a virus in the Castellón squad; Eldense are also without Fidel Chaves and Castellón's defence has conceded only 5 in 13, so I go 8% lower, to about 2.6 (a point more than before because of the virus)."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 9.5 corners",
-    "text": "The numbers say 9.5 corners and already trim Eldense for 19 corners in their last six. Castellón's possession game should still pin Eldense back without Suero, so I stay at 9.5."
+    "text": "The numbers say 9.5 corners and already trim Eldense for 19 corners in their last six. Castellón are one of the sides that keep the ball most and should still pin Eldense back even without Suero, while Eldense's plan to contest possession cuts the other way, so I stay at 9.5."
    },
    "cards": {
     "lean": "higher",
     "adjust_pct": 3,
     "call": "Around 5.5 cards",
-    "text": "The numbers say 5.3 cards: they add a lot for Eldense's recent cards (20 in six) and take a little off for referee Pablo Morales Moreno (4.6 a game in 7 games). I lean slightly higher to about 5.5 because it is billed as a regional derby, which the numbers do not flag, and Calleja wants man-to-man pressing all over the pitch, which tends to bring fouls."
+    "text": "The numbers say 5.3 cards: they add a lot for Eldense's recent cards (20 in six) and take a little off for referee Pablo Morales Moreno (4.6 a game in 7 games). I lean slightly higher to about 5.5 because it is a regional match the numbers do not flag as a derby and Calleja wants aggressive man-to-man pressing all over the pitch, which tends to bring fouls."
    },
    "shots": {
     "lean": "lower",
-    "adjust_pct": -3,
-    "call": "About 23.8 shots",
-    "text": "The numbers say 24.5 shots and already trim Castellón for a quieter recent spell. Without Suero Castellón lose their most dangerous finisher and Eldense will try to slow the game by contesting the ball, so I trim it slightly to about 23.8."
+    "adjust_pct": -4,
+    "call": "About 23.6 shots",
+    "text": "The numbers say 24.6 shots and already trim Castellón for a quieter recent spell. Without Suero, and with a virus going through the squad, Castellón lose some of their attacking edge, and Eldense will try to slow the game by contesting the ball, so I trim 4%, to about 23.6."
    },
    "shots_on_target": {
     "lean": "lower",
-    "adjust_pct": -5,
-    "call": "About 8.3 on target",
-    "text": "The numbers say 8.7 shots on target. Suero's absence matters most here, since he is the player who turns Castellón's possession into efforts on goal, so I lower it to about 8.3."
+    "adjust_pct": -6,
+    "call": "About 8.2 on target",
+    "text": "The numbers say 8.7 shots on target. Suero's absence matters most here, since he is the player who turns Castellón's possession into efforts on goal, and the reported virus may weaken their attack further, so I lower it 6%, to about 8.2."
    },
    "sources": [
-    "https://alicanteplaza.es/alicanteplaza/deportesalicante/el-cd-eldense-busca-dar-la-campanada-en-castalia-y-evitar-el-liderato-del-cd-castellon",
+    "https://castellonplaza.com/castellonplaza/deportes4966/el-castellon-se-reencuentra-con-su-aficion-en-busca-de-una-nueva-victoria",
+    "https://castellonplaza.com/castellonplaza/deportes4966/pablo-hernandez-va-a-ser-una-tarde-especial-por-los-homenajes-a-jesus-de-miguel",
     "https://alicanteplaza.es/alicanteplaza/deportesalicante/calleja-quiere-que-el-cd-eldense-sea-el-primero-en-ganar-en-castalia-vamos-sin-complejos-y-convencidos-de-que-podemos-ganar",
-    "https://officialpress.es/pablo-hernandez-dedica-a-jesus-de-miguel-la-victoria-del-castellon-ante-el-valladolid-hemos-pasado-momentos-muy-duros/",
+    "https://alicanteplaza.es/alicanteplaza/deportesalicante/se-abre-el-debate-respecto-a-la-zaga-del-cd-eldense",
     "https://www.laliga.com/es-CO/partido/temporada-2026-2027-laliga-hypermotion-cd-castellon-cd-eldense-15"
    ],
-   "written_at": "2026-11-21T08:15:00Z"
+   "written_at": "2026-11-21T16:11:58Z"
   },
   "401883107": {
    "overall": "Tenerife (13th, 18 points, a game in hand) host Mallorca (7th, one point off the play-offs) in the second home game since the death of former player Jesús de Miguel, whom Mallorca honoured at the stadium on Friday. Both sides are tired: Tenerife play their third game in six days after beating Ceuta and winning 2-5 at Badajoz in the cup, and Álvaro Cervera has called fitness a main worry; Mallorca needed extra time to beat Alcoyano in the cup and had two days to recover. Mallorca are without Morlanes, Antoniu Roca, David López, Antonio Sánchez and others (the listed ones are in the numbers), with Alberto Moreno and Puigmal doubts, while Raíllo, Valjent, Cerdà, Dani Luna and the returning internationals are available. Mallorca are in their worst spell (five games without a clean sheet) and their sporting director was dismissed this week; referee Juan Gordillo Escamilla shows many cards and the numbers already add for him.",
@@ -1159,7 +1162,7 @@
    "written_at": "2026-11-21T08:45:00Z"
   },
   "401882797": {
-   "overall": "The Seville derby: Sevilla (6th, 18 pts, one win in five) host Betis (4th, 26 pts) at the Pizjuán at 18:30 on Saturday, with Betis away in Europe on Tuesday. Sevilla's 24-man squad has Peque and Fofana back, but Alfon, Carmona (both in the numbers), Marcão and Miguel Sierra are out, and García Plaza has said he will likely swap a striker for a third midfielder. Betis' squad has Cucho Hernández back from injury, Riquelme and Bellerín included and Bernal available after a four-match ban, while Ceballos and Morante are out (in the numbers). José María Sánchez Martínez referees, as the numbers assumed, and the numbers already add a large derby boost to cards.",
+   "overall": "The Seville derby: Sevilla (6th, 18 pts, one win in five) host Betis (4th, 26 pts) at the Pizjuán at 18:30 on Saturday, with Betis away in Europe on Tuesday. Sevilla's 24-man squad has Peque and Fofana back, but Alfon, Carmona (both in the numbers), Marcão and Miguel Sierra are out, and García Plaza has said he will likely swap a striker for a third midfielder. Betis' squad has Cucho Hernández back from injury, Riquelme and Bellerín included and Bernal available after a four-match ban, while Ceballos and Morante are out (in the numbers). José María Sánchez Martínez referees, as the numbers assumed, and the numbers already add a large derby boost to cards. On match day the clubs' squad lists still stand: Peque, Fofana and Rubén Vargas are in Sevilla's 24 and Cucho and Bernal in Betis' 23; one English preview listing Peque as injured and Bernal as banned is out of date against those lists, so the view is unchanged.",
    "goals": {
     "lean": "same",
     "adjust_pct": 0,
@@ -1190,14 +1193,14 @@
     "call": "Around 9 shots on target",
     "text": "The numbers say 9.2 shots on target and already add Betis' good recent accuracy. A more cautious Sevilla shape pulls down a little, but Cucho and Riquelme, who scored three in his last two games, are both in Betis' squad; these offset, so I stay at 9.2."
    },
+   "written_at": "2026-11-21T16:11:43Z",
    "sources": [
-    "https://www.eldesmarque.com/futbol/liga-1a-division/20261120/convocatoria-betis-derbi-novedades-sevilla-bajas_18_020770047.html",
     "https://www.futbolfantasy.com/laliga/noticias/155146-toscano-kpebane-y-scuri-completan-la-lista-del-sevilla-para-el-derbi",
-    "https://www.futbolfantasy.com/laliga/noticias/155019-alineaciones-probables-y-previa-fantasy-de-sevilla-betis",
-    "https://www.comuniate.com/noticias/39242/luis-garcia-plaza-apunta-a-un-cambio-de-sistema-en-el-derbi-y-confirma-las-bajas-de-alfon-carmona-y-miguel-sierra",
+    "https://www.eldesmarque.com/futbol/liga-1a-division/20261120/convocatoria-betis-derbi-novedades-sevilla-bajas_18_020770047.html",
+    "https://www.comuniate.com/noticias/39020/sevilla-betis-previa-alineaciones-probables-y-consejos-fantasy-jornada-13-de-laliga",
+    "https://www.sportsmole.co.uk/football/sevilla/seville-derby/preview/sevilla-vs-betis-prediction-team-news-lineups_609397.html",
     "https://www.eldesmarque.com/futbol/liga-1a-division/20261120/sevilla-fc-designacion-arbitral-derbi-derrotas-sanchez-martinez_18_020761951.html"
-   ],
-   "written_at": "2026-11-21T08:45:00Z"
+   ]
   },
   "401882798": {
    "overall": "Real Madrid (2nd, 30 pts, eight straight wins in all competitions) host Celta (11th, 13 pts, no league win since mid-October, with 0-0s against Betis and Levante) on Saturday night, three points behind Barcelona. Vinícius is back from his ban and Mbappé, who has scored in seven straight club games, is fit; Rodrygo and Asencio are out (Rodrygo in the numbers) and Tchouaméni is listed as a doubt after adductor discomfort with France. Celta are without Borja Iglesias, Starfelt and Miguel Román, which the numbers don't know, and Ilaix Moriba is not fully fit; they play in the Europa League on Thursday. Adrián Cordero Vega referees at the league average of 4.7 cards a game, already in the numbers.",
@@ -1605,6 +1608,7 @@
    "written_at": "2026-11-21T08:55:00Z"
   },
   "401879232": {
+   "overall": "Leaders Arsenal (27 points, five straight league wins and four straight clean sheets) visit 12th-placed Newcastle, who drew 1-1 at Fulham before the break and lost their last two home league games 1-0 without scoring, to Villa and Everton. Arteta has Zubimendi out with a hamstring injury from Spain duty, Saka (quad) still weeks away and Max Dowman serving the last game of his ban, all of which the numbers count; Saliba is close but his minutes are being built up and Konsa faced a late fitness check. Newcastle are without Joelinton and goalkeeper Jaouen (counted), while Ramsey is back from his ban and Nico González, Willock and Fernández-Pardo are over illness. Referee Chris Kavanagh (4.5 cards a game) is already in the numbers. Match-day previews add nothing new: Kavanagh is confirmed, both sides' expected line-ups are close to full strength apart from the listed absences, and Arsenal's Champions League game midweek has not led to any announced rotation.",
    "goals": {
     "lean": "same",
     "adjust_pct": 0,
@@ -1635,14 +1639,13 @@
     "call": "Around 8 on target",
     "text": "The numbers say 7.8 shots on target, already lowered for Newcastle's poor recent accuracy (21 on target in six). Saka's absence is counted and the only new forward news is Fernandez-Pardo being available again after a virus, which is too small to move it, so I stay at 7.8."
    },
-   "overall": "Leaders Arsenal (27 points, five straight league wins and four straight clean sheets) visit 12th-placed Newcastle, who drew 1-1 at Fulham before the break and lost their last two home league games 1-0 without scoring, to Villa and Everton. Arteta has Zubimendi out with a hamstring injury from Spain duty, Saka (quad) still weeks away and Max Dowman serving the last game of his ban, all of which the numbers count; Saliba is close but his minutes are being built up and Konsa faced a late fitness check. Newcastle are without Joelinton and goalkeeper Jaouen (counted), while Ramsey is back from his ban and Nico González, Willock and Fernández-Pardo are over illness. Referee Chris Kavanagh (4.5 cards a game) is already in the numbers.",
+   "written_at": "2026-11-21T16:11:43Z",
    "sources": [
     "https://www.sportsmole.co.uk/football/arsenal/preview/newcastle-vs-arsenal-prediction-team-news-lineups_609363.html",
-    "https://www.vavel.com/en/football/2026/11/19/arsenal/1279812-newcastle-united-vs-arsenal-can-the-gunners-dominate.html",
-    "https://www.fantasyfootballscout.co.uk/2026/11/19/fpl-gameweek-11-team-news-thursdays-live-injury-updates-3",
+    "https://khelnow.com/football/newcastle-united-vs-arsenal-preview-premier-league-202611",
+    "https://starting11.com/fixtures/newcastle-vs-arsenal-20261121",
     "https://fantasyfootballscout.co.uk/2026/11/19/fpl-gameweek-11-early-team-news-injury-latest-on-all-20-teams"
-   ],
-   "written_at": "2026-11-21T08:55:00Z"
+   ]
   },
   "401879234": {
    "goals": {
@@ -1804,12 +1807,12 @@
    "written_at": "2026-11-21T08:15:00Z"
   },
   "401874967": {
-   "overall": "Parma (16th, 8 points, one point above the bottom three and beaten at Bologna after Ndiaye's red card) host Roma (3rd, 27 points, unbeaten in the league and Serie A's top scorers with 31). Gilardino's defence is in an emergency: Ndiaye is suspended and Diego Carlos has an adductor strain (both on the numbers' list), but Drobnic is also short of fitness, Valenti is out of the squad and Bernabe is a big doubt, which leaves Delprato, Troilo and Carboni as the only fit centre-backs or forces a back four that failed against Bologna. Up front Parma lose Romero until January (counted), leaving Lontani with Toure or Elphege, neither of whom has scored. Gasperini has Dybala and Svilar back, with only Pellegrini and Rensch out (counted) and Gollini a doubt; Malen has eight league goals. Referee Simone Sozza (4.2 cards a game) is already in the numbers.",
+   "overall": "Parma (16th, 8 points, one point above the bottom three and beaten at Bologna after Ndiaye's red card) host Roma (3rd, 27 points, unbeaten in the league and Serie A's top scorers with 31). Gilardino's defence is in an emergency: Ndiaye is suspended and Diego Carlos has an adductor strain (both on the numbers' list), but Drobnic is also short of fitness, Valenti is out of the squad and Bernabe is a big doubt, which leaves Delprato, Troilo and Carboni as the only fit centre-backs or forces a back four that failed against Bologna. Up front Parma lose Romero until January (counted), leaving Lontani with Toure or Elphege, neither of whom has scored. Gasperini has Dybala and Svilar back, with only Pellegrini and Rensch out (counted) and Gollini a doubt; Malen has eight league goals. Referee Simone Sozza (4.2 cards a game) is already in the numbers. Match-day check: the latest Italian previews still list the same absences, with Drobnic left out of Parma's squad and Dybala expected to start for Roma alongside Malen, so the view is unchanged.",
    "goals": {
     "lean": "higher",
     "adjust_pct": 3,
     "call": "Around 2.6 goals",
-    "text": "The numbers say 2.5 goals and already take Romero off Parma (-14%) and lift Roma for their scoring run; Ndiaye and Diego Carlos are on their list. What they can't see is how thin the rest is: Drobnic not fully fit, Valenti out and a possible switch to an untested back four, against a Roma attack getting Dybala back, so a mild lean up to about 2.6."
+    "text": "The numbers say 2.5 goals and already take Romero off Parma (-14%) and lift Roma for their scoring run; Ndiaye and Diego Carlos are on their list. What they can't see is how thin the rest is: Drobnic left out of the squad, Valenti out and a possible switch to an untested back four, against a Roma attack getting Dybala back, so a mild lean up to about 2.6."
    },
    "corners": {
     "lean": "same",
@@ -1835,12 +1838,13 @@
     "call": "Around 9.6 on target",
     "text": "The numbers say 9.3 shots on target and already lift Roma for their recent accuracy (+13%). Dybala adds finishing quality the recent games lacked, against a Parma back line short of fit centre-backs beyond the two the numbers know about; a small nudge to about 9.6."
    },
+   "written_at": "2026-11-21T16:11:43Z",
    "sources": [
+    "https://www.pazzidifanta.com/news/parma-roma-probabili-formazioni-dybala-panchina-460757",
     "https://www.sportsmole.co.uk/football/parma/preview/parma-vs-roma-prediction-team-news-lineups_609422.html",
     "https://www.tuttomercatoweb.com/serie-a/calcio-parma-ospita-roma-emergenza-difesa-gilardino-2295448",
     "https://www.diretta.it/news/parma-difesa-da-reinventare-contro-la-roma-gilardino-valuta-carboni-e-il-cambio-di-modulo/tW9uEfie/"
-   ],
-   "written_at": "2026-11-21T08:15:00Z"
+   ]
   },
   "401875067": {
    "overall": "Napoli (10th, 15 points, one win in five and only five wins in all competitions since Allegri replaced Conte) host Torino (11th, 14 points) three days before a Champions League game against Manchester City. Meret is out, so Milinkovic-Savic starts in goal, and Lobotka, Di Lorenzo, Badiashile, Alisson Santos and Buongiorno are missing (most counted); Neres is back for the bench. What changed: two previews from different outlets now expect De Bruyne, Napoli's top scorer, to start on the bench with Gilmour alongside McTominay, so he can be fresh for City. Torino under Abate get Mandragora back, while Vlasic's thigh strain makes Casadei favourite to start; Adams and Simeone lead the line. Referee Antonio Rapuano (5.1 cards a game) is already in the numbers.",
@@ -2081,12 +2085,12 @@
    "written_at": "2026-11-21T08:17:40Z"
   },
   "401875544": {
-   "overall": "Struggling Utrecht (14th, 12 pts) host promoted Cambuur (10th, 15 pts), who went seven unbeaten before a 5-2 home loss to PSV before the break. Utrecht lost their last two (Telstar, NEC), have conceded 34 league goals in 12 games, and coach Anthony Correia is under heavy pressure with fan banners at the training ground; he says the plan stays but the spacing between the lines must improve. Utrecht still miss Jonathans and Ohio (long term) and Jensen and Paredes, with Engwanda doubtful, as the numbers already assume. Cambuur's main threat is Utrecht loanee Rafik El Arguioui (six goals, three assists); they miss Amofa, Visser and Westerhof, Asselman is a big doubt, and Sports Mole expects Jansen in goal instead of Meijster. Referee Allard Lindhout (3.2 cards a game) is already counted.",
+   "overall": "Struggling Utrecht (14th, 12 pts) host promoted Cambuur (10th, 15 pts), who went seven unbeaten before a 5-2 home loss to PSV before the break. Utrecht lost their last two league games (Telstar, NEC), have conceded 34 goals in 12 games, and coach Anthony Correia is under heavy pressure with fan banners at the training ground; he says the plan stays but the gaps between the lines must shrink. Jonathans and Ohio are out long term; Correia said today that Engwanda, Paredes and Jensen are back in the group but not yet match-fit, so at most they could come off the bench, while the numbers count them as out. Cambuur's main threat is Utrecht loanee Rafik El Arguioui; they miss Amofa, Visser and Westerhof, Asselman is still unlikely, and Sports Mole expects Jansen in goal. Referee Allard Lindhout (3.2 cards a game) is already counted.",
    "goals": {
     "lean": "higher",
     "adjust_pct": 3,
     "call": "Around 4.2 goals",
-    "text": "The numbers say 4.1 goals, already counting Cambuur's scoring run (16 in six) and Utrecht's leaky defence (15 conceded in six). Correia himself points to poor spacing behind the midfield, El Arguioui is in form against his parent club, and Cambuur are expected to use their reserve keeper, which the numbers give no goal effect; a mild +3% to about 4.2."
+    "text": "The numbers say 4.1 goals, already counting Cambuur's scoring run (16 in six) and Utrecht's leaky defence (15 conceded in six). Correia himself points to the gaps behind his midfield, El Arguioui is in form against his parent club, and Cambuur are expected to use their reserve keeper Jansen, which the numbers give no goal effect; a mild +3% to about 4.2."
    },
    "corners": {
     "lean": "same",
@@ -2104,34 +2108,35 @@
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 29.1 shots",
-    "text": "The numbers say 29.1 shots, with Utrecht expected to take 17.5. Attackers Jonathans, Ohio, Paredes and Jensen are all still out, as the numbers assume, and those absences have lasted for weeks so they are already in Utrecht's recent shot counts; I stay at 29.1."
+    "text": "The numbers say 29.1 shots, with Utrecht expected to take 17.5. Jonathans and Ohio are out long term, and Paredes and Jensen are back in training but not match-fit per Correia, so at most a late cameo; those absences have lasted weeks and are already in Utrecht's recent shot counts, so I stay at 29.1."
    },
    "shots_on_target": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10.4 shots on target",
-    "text": "The numbers say 10.4 shots on target, already trimming Utrecht for weaker recent accuracy (-6%) and lifting Cambuur (+8%) on El Arguioui's good run. The latest team news matches what the numbers expected on both sides, so I stay at 10.4."
+    "text": "The numbers say 10.4 shots on target, already trimming Utrecht for weaker recent accuracy (-6%) and lifting Cambuur (+8%) on El Arguioui's good run. Today's team news matches what the numbers expected on both sides, apart from Utrecht's three returning attackers who are not match-fit yet, so I stay at 10.4."
    },
    "sources": [
     "https://www.sportsmole.co.uk/football/fc-utrecht/preview/utrecht-vs-cambuur-prediction-team-news-lineups_609395.html",
-    "https://www.utrechtfans.nl/correia-duidelijk-het-is-aan-ons-om-hem-zaterdag-te-neutraliseren/",
-    "https://www.voetbalprimeur.nl/nieuws/2160904/correia-trekt-strijdplan-niet-in-twijfel-bij-fc-utrecht.html"
+    "https://www.utrechtfans.nl/correia-geeft-blessure-update-we-moeten-heel-voorzichtig-zijn/",
+    "https://www.voetbalprimeur.nl/nieuws/2160904/correia-trekt-strijdplan-niet-in-twijfel-bij-fc-utrecht.html",
+    "https://www.espn.com/soccer/match/_/gameId/401875544"
    ],
-   "written_at": "2026-11-21T08:17:40Z"
+   "written_at": "2026-11-21T16:20:00Z"
   },
   "401875543": {
-   "overall": "Second-placed Feyenoord (25 pts, one behind PSV) host Excelsior (15th, 11 pts), who have lost five league games in a row and failed to score in their last four. Feyenoord are winless in five in all competitions after a 5-3 loss at Heerenveen, so Giovanni van Bronckhorst needs a response. St. Juste is out longer (counted) and Zinhagel has a hamstring injury; Anis Hadj Moussa is the big doubt, with reports split between an ankle sprain and a dispute in the Algeria camp, and Van Bronckhorst does not want to risk him, so 17-year-old Jerayno Schaken could make his first start. Excelsior's Nesto Groen is banned (counted) and Feyenoord loanees Sliti and Plug should play. The numbers add a big derby boost for cards, but this is a friendly city derby: Feyenoord are holding a 'Rotterdam Day', opening the sector barriers and letting Excelsior fans mix with home fans; referee Robin Hensgens is average.",
+   "overall": "Second-placed Feyenoord (25 pts, one behind PSV) host Excelsior (15th, 11 pts), who have lost five league games in a row, including 9-0 at Twente, and failed to score in their last four. Feyenoord are winless in five in all competitions after a 5-3 loss at Heerenveen, so Giovanni van Bronckhorst needs a response, with a Champions League game against Porto on Tuesday. Anis Hadj Moussa came back from Algeria with an ankle injury and is not expected to start; 17-year-old Jerayno Schaken should take his place on the right in an otherwise unchanged side (Ernst; Read, Watanabe, Marmol, Lopez; Vanhoutte, Targhalline, Zechiel; Schaken, Ferri, Valente). The numbers already count Hadj Moussa, St. Juste and Excelsior's banned Nesto Groen as out. They add a big derby boost for cards, but this is a friendly city derby with a 'Rotterdam Day' and mixed fan sections; referee Robin Hensgens is average.",
    "goals": {
     "lean": "same",
     "adjust_pct": 0,
-    "call": "Around 3.9 goals",
-    "text": "The numbers say 3.9 goals, already counting Excelsior's collapse (22 conceded in six), St. Juste's absence and Groen's ban. Feyenoord's patched defence has conceded in five straight games, but they may lose their most dangerous winger Hadj Moussa to a teenager making his first start, and Excelsior have not scored in four league games; those pull both ways, so I drop yesterday's small lean and stay at 3.9."
+    "call": "Around 3.5 goals",
+    "text": "The numbers say 3.5 goals, already counting Hadj Moussa's absence (-14% on Feyenoord's goals), St. Juste's, Groen's ban and Excelsior's collapse (22 conceded in six). Two reports today confirm Hadj Moussa is rested for Porto and Schaken starts, exactly what the numbers assume, and Excelsior have not scored in four league games while Feyenoord's defence has leaked in five straight; those pull both ways, so I stay at 3.5."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10.1 corners",
-    "text": "The numbers say 10.1 corners, with Feyenoord taking most of them (6.8) and Excelsior's drop in corners already in the momentum adjustment. Without Hadj Moussa Feyenoord still have Valente and Schaken or Nelson wide, and they will have most of the ball either way, so I stay at 10.1."
+    "text": "The numbers say 10.1 corners, with Feyenoord taking most of them (6.8) and Excelsior's drop in corners already in the momentum adjustment. Without Hadj Moussa, Feyenoord still have Schaken and Valente wide and full-backs Read and Lopez pushing on, and they will have most of the ball either way, so I stay at 10.1."
    },
    "cards": {
     "lean": "lower",
@@ -2143,20 +2148,20 @@
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 28.3 shots",
-    "text": "The numbers say 28.3 shots, with Feyenoord on 19.2 and Excelsior on just 9.1 after a dismal run (45 shots in six, already counted). Feyenoord need a win and will dominate the ball, which is already the numbers' expectation, so I stay at 28.3."
+    "text": "The numbers say 28.3 shots, with Feyenoord on 19.2 and Excelsior on just 9.1 after a dismal run (45 shots in six, already counted). Feyenoord need a win and are expected to field their usual side apart from Schaken for Hadj Moussa, despite Porto on Tuesday, which is already the numbers' picture, so I stay at 28.3."
    },
    "shots_on_target": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10.9 shots on target",
-    "text": "The numbers say 10.9 shots on target, already including Excelsior giving up many on-target shots and barely hitting the target themselves (9 in six). Groen is banned and Sliti should play, so Excelsior's threat stays small, as the numbers already assume; I stay at 10.9."
+    "text": "The numbers say 10.9 shots on target, already including Excelsior giving up many on-target shots and barely hitting the target themselves (9 in six). Groen is banned and Feyenoord loanee Sliti should play, so Excelsior's threat stays small, as the numbers already assume; I stay at 10.9."
    },
    "sources": [
-    "https://www.voetbalprimeur.nl/nieuws/2161036/vermoedelijke-opstelling-feyenoord-tegen-excelsior.html",
-    "https://1908.nl/artikelen/matchday-feyenoord-jaagt-op-ommekeer-tijdens-bijzondere-rotterdamse-stadsderby",
-    "https://www.soccernews.nl/news/vermoedelijke-opstelling-feyenoord-tegen-excelsior-wel-of-geen-hadj-moussa/"
+    "https://www.voetbalnieuws.nl/nieuws/2160998/de-vermoedelijke-opstelling-van-feyenoord-voor-het-duel-met-excelsior-vn.html",
+    "https://nl.headtopics.com/news/feyenoord-tegen-excelsior-hadj-moussa-start-niet-vanwege-90034725",
+    "https://www.espn.com/soccer/match/_/gameId/401875543"
    ],
-   "written_at": "2026-11-21T08:17:40Z"
+   "written_at": "2026-11-21T16:20:00Z"
   },
   "401875546": {
    "overall": "The Derby of the North: Groningen (9th, four league games without a win) host in-form Heerenveen (6th), who have won four in a row, the last a 5-3 comeback against Feyenoord. Coach Dick Lukkien is recovering from a hip operation, so assistant Casper Goedkoop leads Groningen (NOS). Keeper Etienne Vaessen and Hans Hateboer are banned (counted), and with second keeper Rijk Janse also out, third-choice Lovro Stubljar is expected in goal; David van der Werff and Wouter Prins return in RTV Noord's expected line-up. Heerenveen coach Veldman says only Hristiyan Petrov (knock from Bulgaria duty) is out, with competition for places in midfield. The bans, the derby boost and referee Alex Bos' slightly above-average card rate are already in the numbers.",
