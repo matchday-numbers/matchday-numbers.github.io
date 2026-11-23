@@ -2585,110 +2585,115 @@
    "written_at": "2026-11-22T16:10:08Z"
   },
   "401883110": {
-   "overall": "Bottom against top at the Alfonso Murube on Monday night: Ceuta are last with 5 points from 14 games (10 scored, 32 conceded) and have lost their last five, while Almería lead Segunda with 32 points (26 scored, 11 conceded). Sergio Lobera is in his first home game in charge after a 2-0 loss at Tenerife, and the club is giving season-ticket holders free tickets to fill the ground; Jordi Escobar (four goals) faces the club that signed him at 18. Almería coach Xavi García Pimienta warned that Ceuta keep the ball and play with intensity at home and that looking only at the table can mislead. Almería were last reported without captain Jorge Pulido (ankle) and Rodrigo Ely as well as Melamed (only Melamed is in the numbers); I found no fresh club update on Monday morning, so that rests on Sunday's report. Referee Eder Mallo Fernández (5.5 cards a game, near the league average) is already counted.",
+   "overall": "Bottom against top at the Alfonso Murube on Monday night (20:30 Spanish time): Ceuta are last with 5 points from 14 games (10 scored, 32 conceded) and have lost five in a row, while Almería have 32 points, 26 scored and 11 conceded, and are twelve games unbeaten in league and cup; Castellón's weekend win means they need to win here to go back top. Sergio Lobera, in his first full week and first home game in charge after a 2-0 loss at Tenerife, calls it a chance for a turning point, wants the Murube full (season-ticket holders get free tickets) and mentioned absences without naming anyone. Almería's squad list confirms captain Jorge Pulido is a late absence with an ankle problem, alongside Rodrigo Ely and Nico Melamed; only Melamed is in the numbers (about -6% on their goals), while Marcos Luna, Stefan Dzodic (back from a ban) and Brian Cipenga (back from international duty) return. Referee Eder Mallo Fernández, confirmed with Rubén Ávalos on VAR, gives about 5.5 cards a game, near the league average, and that record is already counted.",
    "goals": {
-    "lean": "same",
-    "adjust_pct": 0,
-    "call": "Around 3.2 goals",
-    "text": "The numbers say 3.2 goals, with Ceuta's share helped a little by last season's 3-2 home win in this fixture (+7.5% head-to-head from two meetings) and Melamed's absence taking about 6% off Almería. Ceuta create very little, but Almería reportedly line up without centre-back and captain Pulido, a starter the numbers don't weigh, which gives Escobar and Ceuta's attack a bit more hope; the two balance, so I stay at 3.2."
+    "lean": "higher",
+    "adjust_pct": 3,
+    "call": "Around 3.3 goals",
+    "text": "The numbers say 3.2 goals, already taking about 6% off Almería for Melamed and adding a little to Ceuta from last season's 3-2 home win in this fixture. What they don't see is now confirmed: Almería lose centre-back and captain Pulido late (Ely is also out), which should help Ceuta's thin attack led by Jordi Escobar, while Almería get Dzodic and Cipenga back and must win to retake top spot. Both sides point slightly up, so a mild +3%, about 3.3 goals."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10 corners",
-    "text": "The numbers say 9.8 corners, 6.1 of them Ceuta's, already including their recent run of corners (44 in six, +11% momentum). García Pimienta expects Ceuta to keep the ball at home, which fits Lobera's possession game with high full-backs and that pattern; nothing in the news changes how many corners come, so 9.8."
+    "text": "The numbers say 9.8 corners, 6.1 of them Ceuta's, already including their recent run of 44 corners in six games (+11% momentum). García Pimienta expects Ceuta to want the ball at home, which fits Lobera's possession style with high full-backs, and Almería with Cipenga back have more width on the break; none of this changes the corner count beyond what the numbers already see, so 9.8."
    },
    "cards": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 6 cards",
-    "text": "The numbers say 6.1 cards, already counting Ceuta's heavy recent booking (+12% momentum) and referee Eder Mallo Fernández, whose 5.5 cards a game is close to the league average (+2.5%). A desperate home side in front of a full ground may foul to stop Almería's counters, but that is the pattern the numbers already see, so I stay at 6.1."
+    "text": "The numbers say 6.1 cards, already counting Ceuta's heavy recent booking (+12% momentum) and referee Eder Mallo Fernández, whose 5.5 cards a game is close to the league average (+2.5%). A desperate home side in front of a full ground may foul to stop Almería's counters, but that is the pattern the numbers already see and there is no derby or other edge here, so I stay at 6.1."
    },
    "shots": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 31 shots",
-    "text": "The numbers say 31.5 shots, with Ceuta's recent volume adding about 31% to their side and Almería's quieter attacking run taking about 7% off theirs. Lobera's side keeps the ball and shoots from range while Almería need few chances; a reshuffled Almería back line may let Ceuta shoot a touch more, but that is within what the numbers already give them, so 31.5."
+    "text": "The numbers say 31.5 shots, with Ceuta's recent volume adding about 31% to their side and Almería's quieter attacking run taking about 7% off theirs. Lobera wants balance rather than all-out attack, and Almería without Pulido may concede a few more efforts but need few chances themselves; that sits within what the numbers already give, so 31.5."
    },
    "shots_on_target": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10 on target",
-    "text": "The numbers say 10.3 shots on target. Ceuta hit the target only twice at Tenerife despite most of the ball, which argues lower, but Almería's back line without Pulido should make clean shots a little easier for them; those offset, so I stay at 10.3, with Almería's own accuracy already in the numbers."
+    "text": "The numbers say 10.3 shots on target. Ceuta hit the target only twice at Tenerife despite most of the ball and Lobera admits they score too little, which argues lower, but a reshuffled Almería back line without Pulido and Ely should make clean shots a little easier for them; those offset, so I stay at 10.3."
    },
    "sources": [
-    "https://elfarodeceuta.es/deportes/garcia-pimienta-mire-solamente-clasificacion-puede-llegar-confundirse/",
+    "https://www.lavozdealmeria.com/ud-almeria/712174/baja-ultima-hora-almeria-ceuta.html",
+    "https://www.lavozdealmeria.com/ud-almeria/711841/almeria-debe-cumplir-guion-ceuta-volver-lider.html",
+    "https://elfarodeceuta.es/actualidad/horario-donde-ver-ceuta-almeria-murube/",
+    "https://elfarodeceuta.es/actualidad/lobera-no-puede-haber-mejor-punto-inflexion-ganandole-lider-casa/",
+    "https://elpueblodeceuta.es/sec/deportes/lobera-debemos-hacernos-fuerte-murube_1_1200266.html",
     "https://elfarodeceuta.es/deportes/jordi-escobar-se-cruza-almeria-equipo-aposto-talento/",
-    "https://elfarodeceuta.es/deportes/",
-    "https://www.laliga.com/es-BR/partido/temporada-2026-2027-laliga-hypermotion-ad-ceuta-fc-ud-almeria-15"
+    "https://www.laliga.com/es-US/partido/temporada-2026-2027-laliga-hypermotion-ad-ceuta-fc-ud-almeria-15"
    ],
-   "written_at": "2026-11-23T08:15:00Z"
+   "written_at": "2026-11-23T16:40:00Z"
   },
   "401875009": {
-   "overall": "Two struggling sides meet on Monday night: Monza are 18th with 7 points after losing four of five, and Paolo Vanoli's Fiorentina are 15th with 9 points after three games unbeaten. Ivan Juric is banned from the bench (counted as a missing name, but a touchline ban changes little on the pitch), so his assistant leads Monza, and one earlier local report said another defeat could put Juric's job at risk. Monza have Pessina and Ziolkowski back in the group and Birindelli and Robinson training normally, while Folorunsho (counted) works apart and Maye is day to day; Varela leads the line in Juric's 3-4-2-1. Fiorentina have Atta close to a return after two months, Ndour recovered and Gnonto back competing with Njie, with Pongracic and Parisi (both counted) still out. Referee Daniele Doveri is one of Serie A's most lenient (2.7 cards a game), which the numbers already count.",
+   "overall": "Two struggling sides meet on Monday night: Monza are 18th with 7 points after four straight defeats, and Paolo Vanoli's Fiorentina are 15th with 9 points, unbeaten in three and scoring in ten straight games. Ivan Juric is banned and watches from the stands, so assistant Matteo Paro leads Monza; Juric asked for 'rage' against Fiorentina, and local press frame the game as one that could decide his future. Captain Pessina is back in the squad after three months out but will probably start on the bench, while Folorunsho (counted), Maye and Ngonge are out; Varela (9 goals in 10 games) leads the line. Fiorentina have Atta back in the squad for gradual minutes, Ndour recovered and Njie a late doubt with a thigh problem (Gnonto ready to start), with Pongracic and Parisi (both counted) out. Referee Daniele Doveri is one of Serie A's most lenient (2.7 cards a game), which the numbers already count.",
    "goals": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 3.1 goals",
-    "text": "The numbers say 3.1 goals, already adding a little for both sides' recent scoring and leaky defending and taking about 4% off Fiorentina for Pongracic. Fiorentina are close to full strength with Ndour, Gnonto and possibly Atta back, while Monza keep their main scorer Varela and get Pessina back; nothing moves the total, so about 3.1."
+    "text": "The numbers say 3.1 goals, already adding a little for both sides' recent scoring and leaky defending and taking about 4% off Fiorentina for Pongracic. Monza miss Ngonge and Maye, who are not in the numbers' list, but they have been out for weeks so recent form already reflects it, and top scorer Varela starts; Fiorentina have scored in ten straight games and get Atta and Ndour back. Nothing moves the total, so about 3.1."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 8.5 corners",
-    "text": "The numbers say 8.5 corners, already nudging up for Fiorentina's recent corner count (32 in six). Monza's wing-back 3-4-2-1 with Birindelli or Touré and Mangas, and Fiorentina's 4-2-3-1 with Mastantuono and Njie or Gnonto wide, are both sides' usual shapes, so I stay at about 8.5."
+    "text": "The numbers say 8.5 corners, already nudging up for Fiorentina's recent corner count (32 in six). Monza's 3-4-2-1 with Birindelli and Mangas as wing-backs and Fiorentina's 4-2-3-1 with Mastantuono and Njie or Gnonto wide are both sides' usual shapes, so I stay at about 8.5."
    },
    "cards": {
     "lean": "higher",
     "adjust_pct": 4,
     "call": "Around 3.4 cards",
-    "text": "The numbers say 3.3 cards, already cut by about 29% for Doveri's lenient record, which I don't size again. This is a relegation scrap between sides two points apart, with Juric banned from the touchline and his position reportedly under pressure; games like that tend to bring more fouls than a usual Doveri match, so a mild lean up to about 3.4."
+    "text": "The numbers say 3.3 cards, already cut by about 29% for Doveri's lenient record, which I don't size again. This is a relegation scrap between sides two points apart, with Juric banned, his job reportedly on the line and him publicly asking his players for 'rage'; that tends to bring more fouls than a usual Doveri match, so a mild lean up to about 3.4."
    },
    "shots": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 29 shots",
-    "text": "The numbers say 28.8 shots, already raised for both sides' recent shooting (+9% Monza, +14% Fiorentina). Fiorentina's returns and Monza's need to attack at home keep the volume up, but that is what the numbers already see, so about 28.8."
+    "text": "The numbers say 28.8 shots, already raised for both sides' recent shooting (+9% Monza, +14% Fiorentina). Monza need to attack at home and Fiorentina are close to full strength, but that is the picture the numbers already have, so about 28.8."
    },
    "shots_on_target": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10 on target",
-    "text": "The numbers say 10.0 shots on target, already lifted around 10% for each side's recent accuracy. Varela leads Monza's line and Pellegrino Fiorentina's, with Mastantuono and Gonçalves behind him; that is the picture the numbers already have, so about 10."
+    "text": "The numbers say 10.0 shots on target, already lifted around 10% for each side's recent accuracy. Varela leads Monza's line with Mota and Robinson behind him, and Pellegrino leads Fiorentina's with Mastantuono and Gonçalves; nothing in the team news changes that, so about 10."
    },
    "sources": [
-    "https://www.fantamaster.it/probabili-formazioni-monza-fiorentina-12-giornata-seriea-2026-2027/",
-    "https://www.fantacalcio.it/news/calcio-italia/19_11_2026/monza-birindelli-e-robinson-in-gruppo-il-report-500877",
+    "https://www.ilgiorno.it/sport/allu-power-stadium-ore-2045-juric-b54d6c5e",
+    "https://www.firenzeviola.it/avversari/monza-convocati-juric-gara-fiorentina-pessina-ok-489616",
+    "https://calciodangolo.com/monza-fiorentina-anteprima-probabili-formazioni-consigli-fantacalcio/",
+    "https://sports.yahoo.com/articles/preview-monza-vs-fiorentina-team-031000005.html",
     "https://www.tuttomercatoweb.com/serie-a/fiorentina-atta-convocazione-monza-sale-fiducia-francese-2295222",
-    "https://www.fantamaster.it/infortunio-atta-fiorentina-condizioni-ndour-monza-12-giornata-seriea/"
+    "https://www.fantamaster.it/probabili-formazioni-monza-fiorentina-12-giornata-seriea-2026-2027/"
    ],
-   "written_at": "2026-11-23T08:15:00Z"
+   "written_at": "2026-11-23T16:40:00Z"
   },
   "401879237": {
-   "overall": "Brentford (10th, 14 points, beaten 2-0 at Brighton last time) host Everton (7th, 16 points, three straight wins in all competitions) on Monday night, two points apart. Brentford are badly hit: Igor Thiago starts a three-match ban after his appeal failed (counted), Nathan Collins (knee, hurt with Ireland) and Aaron Hickey (hamstring, hurt with Scotland) are out for weeks, Rico Henry and Kaye Furo are sidelined, and Dasilva and Milambo were due to play for the B team on Sunday; Fábio Carvalho has a chance of making the squad and Callum Wilson is expected to lead the line. Everton report no injuries or suspensions, with Thierno Barry up front in Moyes' usual 4-2-3-1. Referee Craig Pawson (26 yellows and one red in six league games this season; 3.7 cards a game in his record) is already counted.",
+   "overall": "Brentford (10th, 14 points, beaten 2-0 at Brighton before the break) host Everton (7th, 16 points, three straight wins in all competitions including 1-0 at Newcastle and a home win over Coventry) on Monday night, two points apart. Brentford are badly hit: Igor Thiago serves a ban after his red card at Brighton (the numbers count it, about -12.5% on their goals), Nathan Collins (knee) and Aaron Hickey (hamstring) are out for weeks, Rico Henry and Kaye Furo are sidelined, Dasilva and Milambo were only due a B-team run-out on Sunday, and Fabio Carvalho may make the squad; Callum Wilson is expected to lead the line. Everton report no new injuries, Moyes saying no one is ruled out, and are expected in their usual 4-2-3-1 with Thierno Barry (six league goals, the league's top xG) up front; Moyes becomes Everton's outright record holder for games managed tonight. Match-day checks found no change from this morning, and referee Craig Pawson (26 yellows and one red in six league games; 3.7 cards a game on record) is already counted, so the view stays as it was.",
    "goals": {
     "lean": "higher",
     "adjust_pct": 4,
     "call": "Around 2.5 goals",
-    "text": "The numbers say 2.4 goals, already taking about 12.5% off Brentford for Thiago's ban. The numbers count missing players only by their goals and assists, so they barely feel the loss of two first-choice defenders, Collins and Hickey, which helps Barry and an Everton side with a full squad; Wilson starting and Carvalho's possible return also soften Brentford's attacking loss. Brentford's solid home record keeps this mild: about 2.5."
+    "text": "The numbers say 2.4 goals, already taking about 12.5% off Brentford for Thiago's ban. They count missing players only by goals and assists, so they barely feel the loss of first-choice defenders Collins and Hickey, which helps Barry, the league's top chance-getter and strong in the air against a Brentford back line that relies on aerial duels. Wilson starting and Carvalho's possible return soften Brentford's attacking loss, so I keep it mild: about 2.5."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10 corners",
-    "text": "The numbers say 10 corners, already counting Brentford's low recent corner count (21 in six) and Everton's slightly higher one. Brentford cross a lot from wide with a stand-in on the left for Hickey, and Everton's 4-2-3-1 is their usual shape, so I stay at 10."
+    "text": "The numbers say 10 corners, already counting Brentford's low recent corner count (21 in six) and Everton's slightly higher one. Brentford still play wide and cross a lot, with a stand-in on the left for Hickey, and Everton line up in their usual 4-2-3-1, so nothing on match day points away from 10."
    },
    "cards": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 3 cards",
-    "text": "The numbers say 3.2 cards, already lowered for referee Craig Pawson's record and calm past meetings. Everton have no suspensions or injuries and there is no needle between the sides beyond a tight table, so I stay at 3.2."
+    "text": "The numbers say 3.2 cards, already lowered about 10% for referee Craig Pawson's record and for calm past meetings. Everton have no suspensions and Moyes reports a fit squad, the table gap is two points and there is no rivalry between these clubs, so I stay at 3.2."
    },
    "shots": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 27 to 28 shots",
-    "text": "The numbers say 27.6 shots, already raising Everton for their recent volume (81 shots in six). Brentford lose Thiago's shooting but Wilson starts up front, while a weakened Brentford back line should let Everton shoot a little more; the two balance, so 27.6."
+    "text": "The numbers say 27.6 shots, already raising Everton for their recent volume (81 shots in six). Brentford lose Thiago's shooting but Wilson starts, while a weakened Brentford defence should let Everton's midfield trio of Armstrong, Garner and Dewsbury-Hall push on; the two roughly balance, so 27.6."
    },
    "shots_on_target": {
     "lean": "same",
@@ -2698,51 +2703,50 @@
    },
    "sources": [
     "https://www.brentfordfc.com/en/news/match-previews-brentford-v-everton-premier-league-23-11-2026",
-    "https://readeverton.com/everton-brentford-igor-thiago-suspension-nathan-collins-injury/",
-    "https://britbrief.co.uk/sports/football/brentford-hit-by-hickey-and-collins-injury-blows.html"
+    "https://starting11.com/fixtures/brentford-vs-everton-20261123",
+    "https://readeverton.com/everton-news-5-november-2026/"
    ],
-   "written_at": "2026-11-23T08:15:00Z"
+   "written_at": "2026-11-23T16:25:00Z"
   },
   "401882802": {
-   "overall": "A Monday-night Valencian relegation derby: Levante (18th, 11 points) host Elche (19th, 10 points), and the winner climbs out of the drop zone. Luís Castro has the whole squad available, with Manu Sánchez back from a hamstring injury and Axel Tape back from France U20 duty. Martín Anselmi's Elche miss Marc Aguado, Yago and Adam Boayar (only Houary is in the numbers), while Revivo trained normally, Cepeda is back from Chile and Lemar may only travel if ready to start; Elche have lost their last two without scoring and blanked in four of their last five league games, and have not won at Levante since 1993. Referee Francisco José Hernández Maeso (4.2 cards a game) is counted, but the numbers do not flag the derby or the relegation stakes.",
+   "overall": "A Monday-night Valencian relegation derby: Levante (18th, 11 points) host Elche (19th, 10 points), so the winner climbs past the other and possibly out of the drop zone. Luís Castro has the whole Levante squad available, with Manu Sánchez back from a hamstring injury and only Nakoha listed as a doubt. Martín Anselmi's Elche miss playmaker Marc Aguado (ankle), Adam Boayar and Yago, none of whom the numbers list (they only take off Ali Houary), while Villar, Sangaré and Lemar are back in training, Revivo was a midweek doubt and Cepeda returned late from Chile; Elche have lost their last two without scoring. Referee Francisco José Hernández Maeso (4.2 cards a game) is already counted, but the numbers do not flag the derby or the relegation stakes; no confirmed lineups yet at this refresh, so the view from this morning holds with the card lean trimmed slightly.",
    "goals": {
     "lean": "lower",
     "adjust_pct": -3,
     "call": "About 2.8 goals",
-    "text": "The numbers say 2.9 goals, high for two bottom-three sides, and their momentum only trims Elche by about 1% despite four blanks in five league games. Elche still miss playmaker Marc Aguado, whom the numbers don't list, Anselmi admits his side waste their chances, and a tense six-pointer where neither can afford to lose tends to be cagey; a mild lean down to about 2.8."
+    "text": "The numbers say 2.9 goals, high for two bottom-three sides, and their momentum trims Elche only slightly even though they have failed to score in their last two. Elche are without Marc Aguado, who runs their midfield and is not in the numbers, and a six-pointer between sides a point apart tends to be cautious; a mild lean down to about 2.8."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 9 corners",
-    "text": "The numbers say 8.9 corners, 4.9 of them Levante's. Anselmi expects Levante to take the initiative at home and Elche's possession game with crosses already shows in their 31 corners in six games; the team news does not change that, so I keep 8.9."
+    "text": "The numbers say 8.9 corners, 4.9 of them Levante's, and already count Elche's recent 31 corners in six games. Levante should take the initiative at home with Manu Sánchez back on the left, while Elche keep the ball and cross; nothing in the team news shifts that, so I stay at 8.9."
    },
    "cards": {
     "lean": "higher",
-    "adjust_pct": 7,
-    "call": "About 4.2 cards",
-    "text": "The numbers say 3.9 cards, including referee Hernández Maeso (about -12% for his 4.2 a game), which I don't size again, and Levante's light recent booking count. This is a regional derby and a direct relegation fight between sides a point apart, which the numbers do not flag, and Elche's players call it a must-win; such games usually bring more fouls and bookings, so a moderate lean up to about 4.2."
+    "adjust_pct": 6,
+    "call": "About 4.1 cards",
+    "text": "The numbers say 3.9 cards, already including referee Hernández Maeso (about -12% for his 4.2 a game) and Levante's light recent booking count, which I don't size again. What they don't flag is that this is a regional derby and a direct relegation fight between sides a point apart, which usually brings more fouls and bookings; a moderate lean up to about 4.1, a touch below this morning's view because cards takes have run hot lately."
    },
    "shots": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 29 to 30 shots",
-    "text": "The numbers say 29.5 shots and already add for both sides' recent shooting (Levante conceded 103 in six). Anselmi expects Levante to press and attack at home and Elche keep the ball, but a nervy six-pointer could slow it; nothing points clearly either way, so 29.5."
+    "text": "The numbers say 29.5 shots and already add for both sides' recent shooting, with Levante conceding 103 in their last six. Levante with Iván Romero and Etta Eyong should press at home, but a nervy six-pointer could slow the game; nothing points clearly either way, so 29.5."
    },
    "shots_on_target": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 9 shots on target",
-    "text": "The numbers say 8.9 shots on target. Levante have a full squad with Iván Romero and Etta Eyong up front, and Elche's poor finishing lately is about conversion more than shots on target; that is close to the picture the numbers have, so 8.9."
+    "text": "The numbers say 8.9 shots on target. Levante have a full squad, and Elche's recent blanks are more about finishing than about getting shots on target, which the numbers' momentum already reflects; without Aguado their supply may dip a little, but not enough to move, so 8.9."
    },
    "sources": [
     "https://www.comuniate.com/noticias/39203/levante-elche-previa-alineaciones-probables-y-consejos-fantasy-jornada-13-de-laliga",
     "https://www.comuniate.com/noticias/39224/el-elche-recupera-efectivos-pero-mantiene-la-duda-de-revivo",
-    "https://www.comuniate.com/noticias/39062/manu-sanchez-vuelve-al-grupo-y-apunta-al-elche",
-    "https://alicanteplaza.es/alicanteplaza/deportesalicante/el-anselmi-mas-agrio-antes-del-levante-ud-elche-cf",
-    "https://alicanteplaza.es/alicanteplaza/deportesalicante/neto-sobre-el-levante-ud-elche-cf-los-paridos-contra-rivales-directos-hay-que-ganarlos"
+    "https://www.comuniate.com/noticias/38999/el-elche-recupera-efectivos-antes-del-duelo-clave-ante-el-levante",
+    "https://starting11.com/es/fixtures/levante-vs-elche"
    ],
-   "written_at": "2026-11-23T08:15:00Z"
+   "written_at": "2026-11-23T16:30:00Z"
   },
   "401915380": {
    "overall": "Bodø/Glimt are 25th of 36 with 4 points, so this home game on the Aspmyra artificial pitch is close to a must-win for the play-off places; LASK are 16th with 6 points and arrive on five straight wins, including 4-0 against Slovan Bratislava in Europe and 2-1 over Hartberg on Saturday. Bodø have lost only one of their last 15 home games but have struggled to score in this competition; Håkon Evjen (new knee ligament damage) and August Mikkelsen are out and already counted, and Isak Sjong is listed as a doubt, which the numbers do not know. LASK's vice-captain and centre-back Andrés Andrade has an ankle ligament injury confirmed by MRI on Sunday with no return date (Sky Sport Austria, Laola1), so he is very unlikely to play; one English preview written earlier still lists him. Defenders Freckleton and Elfadli missed Saturday after international duty (tiredness and illness) and could return, while Bello and Harakaté are out and counted. No referee had been published on UEFA's match page when I checked; my only size stays on goals.",
@@ -3479,45 +3483,45 @@
    "written_at": "2026-11-22T20:45:00Z"
   },
   "401915816": {
-   "overall": "Kairat (27th of 36, two points from three games) host Mjällby (9th, seven points) in Almaty on matchday 4, needing a win to climb out of the elimination places after a 1-1 draw at Atalanta. Kairat's domestic season ended about two weeks before this match, they are run by interim coach Zhora Harutyunyan with no permanent manager, and a former Kairat defender told local media the squad is short of match sharpness and in a poor frame of mind; their poor recent shooting and leaky defence (14 conceded in six) are already in the numbers. Mjällby are still in season and fresher, mid-table in the Allsvenskan with one league round left, but forward Jacob Bergström went off with a thigh strain in the 1-1 draw with Malmö on 21 November and is a doubt; Dalsgaard and Stavitski (in the numbers) are out. Specific team news for Kairat was thin and no referee is named yet, so the view rests mainly on the rest-versus-rhythm contrast and will be refreshed nearer kick-off.",
+   "overall": "Kairat (27th of 36, two points from three games) host Mjällby (9th, seven points) in Almaty on matchday 4 and need a win to climb out of the elimination places after a 1-1 draw at Atalanta, their only point-winning European display under interim coach Zhora Harutyunyan, who took over when Rafael Urazbakhtin left in late October. Kairat's domestic season is over, so they come in with about three weeks without a competitive game, and their weak recent shooting and leaky defence (14 conceded in six, including 1-5 at home to Panathinaikos) are already in the numbers. Mjällby are fresher and still playing league football: they drew 1-1 with Malmö on 21 November, but forward Jacob Bergström was replaced after 41 minutes of that game, reported yesterday as a thigh strain and still unconfirmed for this trip, while Dalsgaard and Stavitski (already in the numbers) stay out. One preview expects Mjällby to rotate with a league game three days later; no referee is named yet and specific Kairat team news remains thin, so the view leans only slightly lower on shooting and will be refreshed nearer kick-off.",
    "goals": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 2.2 goals",
-    "text": "The numbers say 2.2 goals, already trimming Kairat for scoring only 3 in their last six. Kairat's long break could blunt their attack but also loosen a defence that shipped five at home to Panathinaikos, and Bergström's doubt for Mjällby points slightly down, so with these pulling both ways I stay at 2.2."
+    "text": "The numbers say 2.2 goals and already trim Kairat for scoring only 3 in their last six. Kairat's long break could blunt their attack but also loosen a defence that let in five at home to Panathinaikos, while a missing Bergström or a rotated Mjällby side points slightly down, so with these pulling both ways I stay at 2.2."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 8.7 corners",
-    "text": "The numbers say 8.7 corners, already cutting Kairat for winning just 12 in their last six. Mjällby, as the fresher side still in season, may have more of the ball than usual for an away team, which the near-even split (4.4 to 4.3) already reflects, so I stay at 8.7."
+    "text": "The numbers say 8.7 corners, already cutting Kairat for winning only 12 in their last six and lifting Mjällby a little for their recent 17 in three. Kairat will want to push at home, but Mjällby as the fresher, in-season side can keep the ball, which the near-even split (4.4 to 4.3) already shows, so I stay at 8.7."
    },
    "cards": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 4.5 cards",
-    "text": "The numbers say 4.5 cards, with Mjällby's quiet disciplinary record taking a little off. No referee has been named yet and neither side has a rivalry or bad-tempered history here; a Kairat side under pressure to win at home could commit more fouls, but that is a hunch, so I stay at 4.5 until the referee is known."
+    "text": "The numbers say 4.5 cards, with Mjällby's tidy recent record taking a little off. No referee has been named and there is no rivalry or bad-tempered history between the clubs; a Kairat side that must win could foul more if they fall behind, but that is a hunch, so I stay at 4.5 until the referee is known."
    },
    "shots": {
     "lean": "lower",
     "adjust_pct": -3,
-    "call": "About 24.2 shots",
-    "text": "The numbers say 24.9 shots and already take about 7% off Kairat for their low recent shooting. I trim a little more, to about 24.2, because Kairat come in with no competitive game for around three weeks and no permanent coach, and Mjällby may be without Bergström, one of their forwards; the numbers can't see either."
+    "call": "About 24.1 shots",
+    "text": "The numbers say 24.8 shots and already take about 7% off Kairat for their low recent shooting. I trim a little more, to about 24.1, because Kairat have had no competitive game for around three weeks under an interim coach, and Mjällby may be without Bergström (off after 41 minutes against Malmö) and could rotate before a league game; the numbers can't see either."
    },
    "shots_on_target": {
     "lean": "lower",
     "adjust_pct": -3,
     "call": "About 8.1 on target",
-    "text": "The numbers say 8.3 shots on target, already cutting Kairat by about 10% for only 14 on target in six and lifting Mjällby for their accurate recent shooting. Kairat's lack of match rhythm since their league season ended and Bergström's doubt point a little lower, so I go to about 8.1."
+    "text": "The numbers say 8.3 shots on target, already cutting Kairat by about 10% for only 14 on target in six and lifting Mjällby for their accurate recent shooting. Kairat's lack of match rhythm since their league season ended and the doubt over Bergström, Mjällby's main aerial threat, point a little lower, so I go to about 8.1."
    },
    "sources": [
-    "https://airpress.kz/sport/vorotnikov-problemy-kajrata-melbyu/",
-    "https://bollsvenskan.se/bergstrom-ut-med-baksida-mot-mff-forsta-skadan-pa-tva-ar-osaker-till-kairat/",
-    "https://www.sports.kz/news/dvumya-golami-obernulsya-match-melbyu-pered-vstrechey-s-kayratom-v-lige-konferentsiy",
-    "https://kz.kursiv.media/2026-11-06/mlts-liga-konferenczij-2026-lidiruet-kvartet-kajrat-ostalsya-v-zone-vyleta/",
-    "https://sportarena.kz/football/1065485-zhora-arutyunyan-podelilsya-emotsiyami-posle-nichey-s-atalantoy-v-lige-konferentsiy.html"
+    "https://starting11.com/fixtures/kairat-almaty-vs-mjallby-aif",
+    "https://www.skysports.com/football/kairat-almaty-vs-mjallby-aif/577952",
+    "https://ontourfootball.com/fixtures/kairat-almaty-vs-mjallby-aif-2026-11-26",
+    "https://africa.espn.com/football/match/_/gameId/401842886/malmo-ff-mjallby-aif",
+    "https://www.zakon.kz/sport/6537702-vremennyy-rulevoy-kayrata-otsenil-sensatsiyu-protiv-atalanty.html"
    ],
-   "written_at": "2026-11-22T16:11:18Z"
+   "written_at": "2026-11-23T16:40:00Z"
   },
   "401915815": {
    "overall": "Ajax (11th of 36, 6 points) host FC Thun (19th, 3 points), and the numbers make Ajax big favourites after their 6-1 win at Midtjylland earlier in the league phase. Thun are struggling at home: 9th of 12 in the Swiss Super League, and they lost the Bern derby 2-3 at Young Boys on Saturday. Ajax travel to Feyenoord for De Klassieker on Sunday 29 November, three days after this game, so some changes to the Ajax side are likely, and a team-news site also expects Thun to rotate before their own league game. Striker Kasper Dolberg has been out with a torn cruciate ligament since early October, which the recent form the numbers use already reflects; no referee is named yet. I take a little off the goal and shot numbers for the expected Ajax rotation and leave the rest alone.",
