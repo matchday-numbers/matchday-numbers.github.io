@@ -1,12 +1,13 @@
 """Briefs for the subjective view: posted matches kicking off in the next 4 days (96 h) that need one.
 
-  python tools/analyst_briefs.py OUTDIR [--max 80] [--window-hours 96] [--tiers 24:6,48:12,96:24] [--slack-hours 0.75] [--batch 20]
+  python tools/analyst_briefs.py OUTDIR [--max 80] [--window-hours 96] [--tiers 6:3,24:6,48:12,96:24] [--slack-hours 0.75] [--batch 20]
 
 Writes OUTDIR/batch_XX.json (one competition per batch, at most --batch matches each) and prints a summary.
 Views are written ONLY for matches kicking off within --window-hours (96 h, model/judgement.py JUDGE_HOURS);
 matches further out get none. A view moves the site's numbers ("our take"), so it must follow the news.
-Refresh is tiered by time to kick-off (owner, 20 Nov 2026; --tiers "KO_HOURS:MAX_AGE,..."): kick-off within 24 h ->
-refresh once the view is 6 h old; 24-48 h -> 12 h old; 48-96 h -> 24 h old. --slack-hours (0.75) is taken off each
+Refresh is tiered by time to kick-off (owner, 20 Nov 2026; --tiers "KO_HOURS:MAX_AGE,..."): kick-off within 6 h ->
+refresh once the view is 3 h old (owner, 23 Nov 2026: so the weekend 11:07/13:07/14:07 runs catch late news);
+within 24 h -> 6 h old; 24-48 h -> 12 h old; 48-96 h -> 24 h old. --slack-hours (0.75) is taken off each
 age so a view written a little after a run's start time is still due at the same slot the next time round.
 Priority:
   (A) no view yet, or an older view without sizes (adjust_pct), earliest kick-off first
@@ -83,7 +84,7 @@ def main():
     ap.add_argument("outdir")
     ap.add_argument("--max", type=int, default=80)
     ap.add_argument("--window-hours", type=float, default=JUDGE_HOURS)
-    ap.add_argument("--tiers", default="24:6,48:12,96:24",
+    ap.add_argument("--tiers", default="6:3,24:6,48:12,96:24",
                     help="KO_HOURS:MAX_AGE pairs: within KO_HOURS of kick-off, refresh a view MAX_AGE hours old")
     ap.add_argument("--slack-hours", type=float, default=0.75)
     ap.add_argument("--redo-hours", type=float, default=None, help="also redo any view at least this old (0 = all)")
@@ -114,7 +115,7 @@ def main():
             if v is None or not sized or age is None:
                 prio = 0
             elif due(hours, age, tiers, a.slack_hours):
-                prio = 1 if hours <= tiers[0][0] else 2
+                prio = 1 if hours <= 24 else 2
             elif a.redo_hours is not None and age >= a.redo_hours:
                 prio = 2
             else:

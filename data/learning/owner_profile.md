@@ -58,8 +58,12 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
   the last 24 h. Analyst runs: daily 9:07, 13:07, 17:07, 19:07, 21:07; weekends also 11:07 and 14:07 (Madrid).
   (They first chose 19:37 and 14:37; moved to :07 because a second task couldn't push — "go with option 2", 20 Nov 2026.)
 
+- 23 Nov 2026, after the first usage check (~$130 API-equivalent Fri-Sun, ~$300/week): "do the weekend fix and keep
+  opus" -> views are also refreshed every 3 h in the last 6 h before kick-off; research subagents stay on Opus. They
+  think they are on an Enterprise plan.
+
 ## Open questions they have not answered yet
-- Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
+- (answered 23 Nov 2026: keep Opus) Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
   wait 2-3 days of real usage under the new schedule first ("wait 2-3 to find out how much it does consume and then
   decide", 20 Nov 2026). A usage report is scheduled for Mon 23 Nov 10:00 Madrid.
 - (answered 18 Nov 2026) Whether to add "how often our 80% takes came true" to the track record page (offered 17 Nov 2026).
