@@ -113,6 +113,9 @@ briefs with `--redo-hours 0 --batch 10` (one-off; don't edit the saved prompt fo
   Weekly review (scheduled)" (owner's choice, 17 Nov 2026). Separate weekly tasks created from a session (Monday,
   17 Nov) got no repo when run (fresh session, "no-git-repo") and were deleted: a task that needs the repo must be
   created in the claude.ai routines UI with the repo attached, or live inside the upkeep task.
+- Upkeep step 3 also checks "Our calls" (estimate files have `calls`, site/data/calls.json is fresh) since 23 Nov 2026;
+  the analyst task needed no change. Editing a routine's prompt with RemoteTrigger `update` replaces all of
+  `job_config.ccr`: always resend the full `session_context` (sources = the repo, model, tools), then `get` to check.
 - Scheduled runs see the repo under its old name and use mcp__github__ tools (owner lucasfrancofedez08-cmd, repo football-stats).
 
 ## Other workflows / tools
