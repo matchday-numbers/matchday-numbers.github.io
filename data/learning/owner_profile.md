@@ -60,7 +60,7 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 
 - 23 Nov 2026, after the first usage check (~$130 API-equivalent Fri-Sun, ~$300/week): "do the weekend fix and keep
   opus" -> views are also refreshed every 3 h in the last 6 h before kick-off; research subagents stay on Opus. They
-  think they are on an Enterprise plan.
+  are on an Enterprise plan (CUNEF) and confirmed the organisation is fine with this usage (23 Nov 2026).
 
 ## Open questions they have not answered yet
 - (answered 23 Nov 2026: keep Opus) Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
