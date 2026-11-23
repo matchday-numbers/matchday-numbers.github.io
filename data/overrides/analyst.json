@@ -5041,6 +5041,46 @@
     "https://futboltotal.futbol/partido/levante-vs-racing-santander-la-liga-2026-11-29"
    ],
    "written_at": "2026-11-23T20:15:00Z"
+  },
+  "401885389": {
+   "overall": "A Madeira derby between two sides near the bottom: Marítimo are 15th with 8 points from 10 games (2 wins, 9 scored, 21 conceded, one point from their last five) and Nacional 13th with 10 points from 11. Marítimo coach Mitchell van der Gaag played 120 minutes in the Taça on 21 November (0-0 with Chaves, won on penalties) and has two defensive doubts, Paulo Henrique and Rafael Fernandes, with Yellu Santiago also out; Nacional, under João Henriques since 25 October (two wins in three), are still without Ulisses, Léo Santos, Liziero and Filipe Soares, with right-back Wesley Gasolina back in conditioned training. None of these absences is in the numbers, which list nobody missing for either side, and the numbers also do not treat this as a derby. Marítimo expect about 10,000 at the Barreiros, the derby is traditionally a full house, and one report says Nacional have not won there in the league for 14 years. No referee is named yet.",
+   "goals": {
+    "lean": "lower",
+    "adjust_pct": -4,
+    "call": "Around 2.6 goals",
+    "text": "The numbers say 2.7 goals. I lean slightly lower, to about 2.6: Marítimo have scored only 9 in 10 league games and Nacional's two recent league wins were both 1-0, while Nacional are missing four players (Ulisses, Léo Santos, Liziero, Filipe Soares) the numbers don't know about, and a tense relegation-zone derby tends to be cagey. It is a mild lean because Marítimo's leaky defence (21 conceded, a 0-5 at Guimarães) and their own doubts at the back, Paulo Henrique and Rafael Fernandes, point the other way."
+   },
+   "corners": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 8 to 9 corners",
+    "text": "The numbers say 8.4 corners and already add a little for Marítimo's recent corner count (+2.6%) and take a little off Nacional's (-2.0%). Marítimo at home with a big crowd should push forward, but Nacional's absences are mostly central players rather than wide ones, so nothing I found clearly moves corners either way; I stay at 8.4."
+   },
+   "cards": {
+    "lean": "higher",
+    "adjust_pct": 10,
+    "call": "Around 4.8 cards",
+    "text": "The numbers say 4.4 cards, already taking 7.8% off because Nacional have been booked less than usual lately, and they do not treat this game as a derby. It is the Madeira derby, both clubs are fighting near the bottom and about 10,000 are expected at the Barreiros; the Record preview calls it a tradition that fills the stadium, so I lean higher by 10% to about 4.8. The referee is not named yet, so this does not rest on him."
+   },
+   "shots": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 25 shots",
+    "text": "The numbers say 25.5 shots and already cut Nacional's side by 7.8% for their low recent shot count. Marítimo should have more of the ball at home, and Nacional's missing midfielders (Liziero, Filipe Soares) could make them sit deeper, which pulls in both directions, so I stay at 25.5."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 9 to 10 on target",
+    "text": "The numbers say 9.7 shots on target, already adding 4.2% to Marítimo because Nacional have conceded plenty on target lately. Marítimo's finishing has been poor (9 goals in 10) and Nacional are without some attacking options, but the numbers' ratings already reflect both sides' quality, so I stay at 9.7."
+   },
+   "sources": [
+    "https://www.record.pt/futebol/futebol-nacional/liga-betclic/maritimo/detalhe/derbi-deve-ter-casa-cheia",
+    "https://www.record.pt/futebol/futebol-nacional/liga-betclic/nacional/detalhe/gasolina-acelera-com-bola",
+    "https://www.abola.pt/noticias/nacional-triunfo-frente-a-ad-machico-em-ensaio-para-o-derbi-2026112019530751167",
+    "https://www.abola.pt/futebol/jogo/vitoria-de-guimaraes-maritimo-11216330/liveblog"
+   ],
+   "written_at": "2026-11-23T20:40:00Z"
   }
  }
 }
