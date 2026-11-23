@@ -138,7 +138,7 @@ function fixtureGroups(list, showComp = false) {
 function resultItem(r) {
   const [a, b] = r.score;
   return `<li><a href="#/match/${h(r.id)}">
-    <span class="r-when">${h(day(r.kickoff || r.date))}${r.has_prediction ? `<br><span class="tag">vs estimate</span>` : ""}</span>
+    <span class="r-when">${h(day(r.kickoff || r.date))}${r.calls ? `<br>${callScore(r.calls[0], r.calls[1])}` : r.has_prediction ? `<br><span class="tag">vs estimate</span>` : ""}</span>
     <span><span class="r-t ${a > b ? "w" : a < b ? "l" : ""}">${disc(r.home, "xs")}${h(r.home.name)}</span><span class="r-t ${b > a ? "w" : b < a ? "l" : ""}">${disc(r.away, "xs")}${h(r.away.name)}</span></span>
     <span class="r-s">${a}<br>${b}</span></a></li>`;
 }
@@ -578,7 +578,10 @@ async function renderMatch(id) {
     .sort((a, b) => (a.min ?? 0) - (b.min ?? 0));
   if (events.length) body += `<section class="section"><h2>Goals and cards</h2><ul class="timeline">${events.map(e => `<li class="${e.team === m.away.name ? "away" : ""}"><span class="min">${e.min ?? ""}'</span><span>${e.html}</span></li>`).join("")}</ul></section>`;
   if (m.prediction && m.prediction.result) {
-    const P = m.prediction.prediction, R = m.prediction.result, g = R.goals || {};
+    const P = m.prediction.prediction, R = m.prediction.result, g = R.goals || {}, RC = m.prediction.result_calls;
+    if (RC && RC.n) body += `<section class="section"><h2>Our calls: ${RC.hits} of ${RC.n} came true</h2>
+      <p class="small">One call per stat, frozen at kick-off${RC.view ? ", with the subjective view" : ""}: an over or under line with at least an 80% chance.${RC.reconstructed ? " Worked out afterwards from the frozen estimate (it was made before calls were recorded)." : ""} <a href="#/calls">All matches</a>.</p>
+      <div class="c-chips big">${callChips(RC.stats)}</div></section>`;
     body += `<section class="section"><h2>Estimate vs result</h2>
       <p>Before kick-off the model gave ${h(m.home.short)} ${pct(P.stats.goals.home_win)}, draw ${pct(P.stats.goals.draw)}, ${h(m.away.short)} ${pct(P.stats.goals.away_win)}.
       The actual result had a ${pct(g.p_outcome)} chance. ${g.pick_correct ? "The most likely outcome happened." : "The most likely outcome did not happen."}
@@ -704,17 +707,95 @@ function statTable(rows, base) {
     }).join("")}</tbody></table></div>`;
 }
 const heat = v => (v == null ? "" : v >= 4 ? "h3" : v >= 1.5 ? "h2" : v >= 0 ? "h1" : "h0");
+/* ---------------------------------------------------------------- our calls, match by match (owner, 23 Nov 2026) */
+// One call per stat (the highlighted over/under line with 80%+ chance, our take), frozen at kick-off and scored
+// together per match. Data: pipeline/predictions.py score_calls / calls_record, site/data/calls.json.
+const CSTAT = { goals: "Goals", corners: "Corners", cards: "Cards", shots: "Shots", shots_on_target: "On target" };
+function callChip(st, c) {
+  const res = c.void ? "void" : c.hit ? "hit" : "miss";
+  const tip = c.void ? "Left out: the sources disagree on this stat" : `${pct(c.p)} chance before kick-off; actual ${c.actual}`;
+  return `<span class="cchip ${res}" title="${h(tip)}">${h(CSTAT[st])} ${c.side === "over" ? "over" : "under"} ${h(c.line)}${c.void ? "" : c.hit ? " ✓" : " ✗"}</span>`;
+}
+const callChips = stats => Object.keys(CSTAT).filter(k => stats[k]).map(k => callChip(k, stats[k])).join("");
+const callScore = (hits, n) => `<span class="cscore ${hits === n ? "all" : n - hits >= 2 ? "low" : ""}" title="${hits} of ${n} calls came true">${hits}/${n}</span>`;
+function callRow(r, T) {
+  const ht = T[r.home] || { name: r.home }, at = T[r.away] || { name: r.away }, sc = r.score || ["–", "–"];
+  return `<li><a href="#/match/${h(r.id)}">
+    <span class="c-top"><span class="ltag">${h(LSHORT[r.comp] || r.comp)}</span><span class="c-teams">${disc(ht, "xs")}${h(ht.short || ht.name)} <b>${sc[0]}–${sc[1]}</b> ${h(at.short || at.name)}${disc(at, "xs")}</span>${r.view ? `<span class="tag" title="A subjective view moved the numbers">view</span>` : ""}${callScore(r.hits, r.n)}</span>
+    <span class="c-chips">${callChips(r.stats)}</span></a></li>`;
+}
+const rateOf = a => `<b>${pct(a.hit_rate)}</b>`;
+function callsSummary(C) {
+  const d = C.distribution || {};
+  let all = 0, one = 0, more = 0;
+  for (const [k, v] of Object.entries(d)) { const [x, n] = k.split("/").map(Number); if (x === n) all += v; else if (n - x === 1) one += v; else more += v; }
+  const tot = all + one + more || 1;
+  const row = (label, a) => (a && a.calls ? `<tr><td>${label}</td>${a.matches == null ? "" : `<td class="n">${a.matches}</td>`}<td class="n">${a.hits} of ${a.calls}</td><td class="n ${a.hit_rate >= a.claimed - 0.03 ? "up" : a.hit_rate < a.claimed - 0.08 ? "down" : ""}">${pct(a.hit_rate)}</td><td class="n">${pct(a.claimed)}</td></tr>` : "");
+  const thead = (first, m = true) => `<thead><tr><th>${first}</th>${m ? `<th class="n">Matches</th>` : ""}<th class="n">Calls right</th><th class="n">Came true</th><th class="n">Chance given</th></tr></thead>`;
+  const R = C.recent || {};
+  return `<div class="factrow">
+      <div class="fact"><b>${pct(C.hit_rate)}</b>of our calls came true (${C.hits} of ${C.calls}). We gave them ${pct(C.claimed)} on average.</div>
+      <div class="fact"><b>${pct(C.all_right_rate)}</b>of matches had every call right (${C.all_right} of ${C.matches}).</div>
+      <div class="fact"><b>${R.calls ? pct(R.hit_rate) : "–"}</b>${R.calls ? `came true in the last ${C.days} days (${R.hits} of ${R.calls} calls, ${R.matches} matches).` : `No calls scored in the last ${C.days} days.`}</div>
+    </div>
+    <div class="cdist" role="img" aria-label="Matches by how many calls came true">
+      <span class="cd-all" style="width:${all / tot * 100}%"></span><span class="cd-one" style="width:${one / tot * 100}%"></span><span class="cd-more" style="width:${more / tot * 100}%"></span></div>
+    <div class="legend"><span><i style="background:var(--pitch)"></i>All right: ${all}</span><span><i style="background:var(--amber)"></i>One wrong: ${one}</span><span><i style="background:var(--red)"></i>Two or more wrong: ${more}</span></div>
+    <details><summary>By stat, competition and subjective view</summary>
+      <div class="tscroll"><table>${thead("Stat", false)}<tbody>${Object.keys(CSTAT).map(k => row(STAT[k], C.by_stat[k] && { ...C.by_stat[k], matches: null })).join("")}</tbody></table></div>
+      <div class="tscroll" style="margin-top:12px"><table>${thead("Competition")}<tbody>${Object.keys(LEAGUES).map(k => row(h(LEAGUES[k]), C.by_comp[k])).join("")}</tbody></table></div>
+      <div class="tscroll" style="margin-top:12px"><table>${thead("Matches")}<tbody>${row("With a subjective view", C.by_view.view)}${row("Numbers only", C.by_view.numbers)}</tbody></table></div>
+      <p class="sub small">"Came true" should sit close to "Chance given": calls at 85% should come true about 85% of the time. Matches with a subjective view are the ones in the last 4 days before kick-off, so the two groups aren't the same kind of match.</p>
+    </details>`;
+}
+function callsSection(C, rows) {
+  if (!C || !C.matches) return `<section><h2>Our calls, match by match</h2><p class="empty">None scored yet. Every match gets one call per stat, frozen at kick-off and scored here after the final whistle.</p></section>`;
+  return `<section><h2>Our calls, match by match</h2>
+    <p class="small" style="max-width:70ch">For every match we highlight one call per stat: an over or under line with at least an 80% chance (our take). Here they're scored together, match by match, so you can see at a glance how a matchday went.</p>
+    ${callsSummary(C)}
+    ${rows && rows.matches.length ? `<h3 style="margin-top:22px">Latest matches</h3><ul class="calls">${rows.matches.slice(0, 8).map(r => callRow(r, rows.teams)).join("")}</ul>
+      <p><a class="btn" href="#/calls">Every match, with filters</a></p>` : ""}</section>`;
+}
+async function renderCalls() {
+  const D = await get("calls.json");
+  title("Our calls");
+  setNav("accuracy");
+  const st = { comp: "", view: "", shown: 60 };
+  const comps = Object.keys(LEAGUES).filter(k => D.matches.some(r => r.comp === k));
+  app.innerHTML = `<section class="hero turf"><div class="wrap"><h1>Our calls, match by match</h1>
+    <p class="sub" style="margin-top:8px;max-width:64ch">One call per stat for every match (an over or under line with at least an 80% chance), frozen at kick-off and scored together. Misses included.</p></div></section>
+    ${wrap(`${BANNER}<div class="cfilters">
+      <label>Competition <select data-f="comp"><option value="">All</option>${comps.map(k => `<option value="${k}">${h(LEAGUES[k])}</option>`).join("")}</select></label>
+      <label>Matches <select data-f="view"><option value="">All</option><option value="view">With a subjective view</option><option value="numbers">Numbers only</option></select></label>
+    </div><p class="small" data-sum></p><div data-list></div>
+    <p class="sub small">Calls for matches before 23 Nov 2026 were worked out afterwards from the estimate frozen at kick-off, with the same rule the site used to highlight them. <a href="#/accuracy">Back to the track record</a>.</p>`)}`;
+  const draw = () => {
+    const rs = D.matches.filter(r => (!st.comp || r.comp === st.comp) && (!st.view || (st.view === "view") === !!r.view));
+    const calls = rs.reduce((a, r) => a + r.n, 0), hits = rs.reduce((a, r) => a + r.hits, 0), all = rs.filter(r => r.hits === r.n).length;
+    app.querySelector("[data-sum]").innerHTML = rs.length ? `${rs.length} ${rs.length === 1 ? "match" : "matches"}: <b>${pct(hits / calls)}</b> of calls came true (${hits} of ${calls}); every call right in ${all} (${pct(all / rs.length)}).` : "No matches for this filter.";
+    const groups = {};
+    rs.slice(0, st.shown).forEach(r => { (groups[longDay(r.kickoff)] = groups[longDay(r.kickoff)] || []).push(r); });
+    app.querySelector("[data-list]").innerHTML = Object.entries(groups).map(([d, xs]) => {
+      const c = xs.reduce((a, r) => a + r.n, 0), k = xs.reduce((a, r) => a + r.hits, 0);
+      return `<div class="day">${h(d)} <span class="sub">· ${k} of ${c} right</span></div><ul class="calls">${xs.map(r => callRow(r, D.teams)).join("")}</ul>`;
+    }).join("") + (rs.length > st.shown ? `<p><button class="btn" data-more type="button">Show more (${rs.length - st.shown} left)</button></p>` : "");
+    const more = app.querySelector("[data-more]");
+    if (more) more.onclick = () => { st.shown += 60; draw(); };
+  };
+  app.querySelectorAll("[data-f]").forEach(el => { el.onchange = () => { st[el.dataset.f] = el.value; st.shown = 60; draw(); }; });
+  draw();
+}
 async function renderAccuracy() {
-  const acc = await get("accuracy.json");
+  const [acc, calls] = await Promise.all([get("accuracy.json"), get("calls.json").catch(() => null)]);
   title("Track record");
   setNav("accuracy");
   const live = acc.live, bt = acc.backtest;
-  let body = "";
+  let body = callsSection(acc.calls, calls);
   if (!live.matches) {
-    body += `<section><h2>Live estimates</h2><p class="empty">None scored yet. Estimates are frozen at kick-off and appear here after the final whistle.</p></section>`;
+    body += `<section class="section"><h2>Live estimates</h2><p class="empty">None scored yet. Estimates are frozen at kick-off and appear here after the final whistle.</p></section>`;
   } else {
     const all = live.by_league.all;
-    body += `<section><h2>Live estimates: ${live.matches} matches</h2>`;
+    body += `<section class="section"><h2>Live estimates: ${live.matches} matches</h2>`;
     if (all.goals) body += `<p>Most likely result (win/draw/loss) came true in <b>${pct(all.goals.pick_rate)}</b> of matches. Brier score ${fx(all.goals.brier_1x2, 3)} vs ${fx(all.goals.baseline_brier_1x2, 3)} for league averages (lower is better). Exact score right: ${pct(all.goals.score_rate)}.</p>`;
     const err = {}, berr = {};
     Object.entries(all).forEach(([s, v]) => { err[s] = v.mae; berr[s] = v.baseline_mae; });
@@ -978,6 +1059,7 @@ async function route() {
     else if (parts[0] === "team" && parts[1]) await renderTeam(parts[1]);
     else if (parts[0] === "teams") await renderTeams();
     else if (parts[0] === "accuracy") await renderAccuracy();
+    else if (parts[0] === "calls") await renderCalls();
     else if (parts[0] === "about") renderAbout();
     else if (parts[0] === "search") await renderSearch(decodeURIComponent(parts.slice(1).join("/")));
     else if (parts[0] === "league") {

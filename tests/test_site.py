@@ -25,7 +25,7 @@ def server():
 
 def routes():
     data = os.path.join(SITE, "data")
-    out = ["#/", "#/teams", "#/accuracy", "#/about", "#/search/madrid"]
+    out = ["#/", "#/teams", "#/accuracy", "#/calls", "#/about", "#/search/madrid"]
     meta = json.load(open(os.path.join(data, "meta.json")))
     for lg in meta["leagues"]:
         out.append(f"#/league/{lg['key']}")

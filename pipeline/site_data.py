@@ -9,7 +9,7 @@ import unicodedata
 from datetime import timedelta
 
 from model.judgement import merged
-from pipeline.predictions import aggregate, rnd, take_record
+from pipeline.predictions import aggregate, calls_record, rnd, take_record
 from pipeline.sources import DOMESTIC, EUROPE, LEAGUES, PREDICTED
 
 STATS = [("goals", "hg", "ag"), ("corners", "hc", "ac"), ("cards", "hcards", "acards"),
@@ -169,6 +169,11 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
                 "team_news": p["prediction"].get("basis", {}).get("team_news", False), "made_at": p["made_at"],
                 "judged": bool((p["prediction"].get("take") or {}).get("applied"))}
 
+    def calls_tally(p):
+        """[calls right, calls] for a scored match (our calls, owner 23 Nov 2026), else None."""
+        rc = (p or {}).get("result_calls")
+        return [rc["hits"], rc["n"]] if rc and rc.get("n") else None
+
     def league_scorers(lg):
         out = []
         for key, players in squad.get(lg, {}).items():
@@ -201,7 +206,7 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
             recent.append({"id": m.get("espn_id"), "date": m["date"], "kickoff": m.get("kickoff"), "comp": lg,
                            "home": tid(lg, m["home"]), "away": tid(lg, m["away"]), "score": [m["hg"], m["ag"]],
                            "verified": all(v == "verified" for v in m.get("checks", {}).values()),
-                           "has_prediction": m.get("espn_id") in preds})
+                           "has_prediction": m.get("espn_id") in preds, "calls": calls_tally(preds.get(m.get("espn_id")))})
         rep = reports.get(lg, {})
         dump(os.path.join(out, f"league-{lg}.json"), {
             "key": lg, "name": LEAGUES[lg]["name"], "season": season, "table": table(lg),
@@ -365,9 +370,25 @@ def write(root, season, now, matches, events, summaries, fd, team_map, espn_team
                        "score": g.get("actual"), "p_outcome": g.get("p_outcome"), "pick_correct": g.get("pick_correct"),
                        "goals": [p["prediction"]["stats"]["goals"]["total"], g.get("actual_total")],
                        "corners": [p["prediction"]["stats"]["corners"]["total"], r.get("corners", {}).get("actual_total")],
-                       "cards": [p["prediction"]["stats"]["cards"]["total"], r.get("cards", {}).get("actual_total")]})
+                       "cards": [p["prediction"]["stats"]["cards"]["total"], r.get("cards", {}).get("actual_total")],
+                       "calls": calls_tally(p)})
     dump(os.path.join(out, "accuracy.json"), {"live": aggregate(scored), "take": take_record(scored), "recent": recent, "backtest": bt,
-                                              "updated_at": now.isoformat()})
+                                              "calls": calls_record(scored, now.isoformat()), "updated_at": now.isoformat()})
+    # our calls, match by match (owner, 23 Nov 2026): every scored match, newest first, for the "Our calls" page
+    # (teams once in "teams", rows name them by slug, so the file stays small over a season)
+    call_rows, call_teams = [], {}
+    for p in sorted(scored, key=lambda p: p["kickoff"], reverse=True):
+        rc = p.get("result_calls")
+        if not rc or not rc.get("n"):
+            continue
+        lg = p["league"]
+        ht, at = tid(lg, p["home"]), tid(lg, p["away"])
+        call_teams[ht["slug"]], call_teams[at["slug"]] = ht, at
+        call_rows.append({"id": p["id"], "kickoff": p["kickoff"], "comp": lg, "home": ht["slug"],
+                          "away": at["slug"], "score": (p["result"].get("goals") or {}).get("actual"),
+                          "view": rc.get("view", False), "hits": rc["hits"], "n": rc["n"],
+                          "stats": rc["stats"], **({"reconstructed": True} if rc.get("reconstructed") else {})})
+    dump(os.path.join(out, "calls.json"), {"matches": call_rows, "teams": call_teams, "updated_at": now.isoformat()})
 
     # ---------------------------------------------------------------- meta
     last_fd = {lg: max((m["date"] for m in fd[lg]), default=None) for lg in DOMESTIC}

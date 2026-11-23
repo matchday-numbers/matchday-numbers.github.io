@@ -444,3 +444,26 @@ td.up { color: var(--pitch); } td.down { color: var(--red); }
 .jcalls { list-style: none; margin: 12px 0 4px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
 .jcalls li { border: 1px solid var(--line); border-radius: var(--r); padding: 8px 10px; font-size: .9rem; line-height: 1.35; }
 .jcalls .lab { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+
+/* our calls, match by match (23 Nov 2026) */
+.cchip { display: inline-block; font-size: .78rem; padding: 2px 9px; border-radius: 999px; font-weight: 650; white-space: nowrap; }
+.cchip.hit { background: var(--pitch-soft); color: var(--pitch); }
+.cchip.miss { background: var(--red-soft); color: var(--red); }
+.cchip.void { background: var(--bar-bg); color: var(--muted); text-decoration: line-through; }
+.c-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.c-chips.big .cchip { font-size: .9rem; padding: 4px 12px; }
+.cscore { display: inline-block; font-stretch: var(--narrow); font-weight: 800; font-size: .95rem; padding: 1px 8px; border-radius: 6px; background: var(--amber-soft); color: var(--amber); white-space: nowrap; }
+.cscore.all { background: var(--pitch-soft); color: var(--pitch); }
+.cscore.low { background: var(--red-soft); color: var(--red); }
+.calls { list-style: none; margin: 0; padding: 0; }
+.calls li { border-bottom: 1px solid var(--line); }
+.calls a { display: grid; gap: 8px; padding: 10px 2px; color: var(--ink); text-decoration: none; }
+.calls a:hover { background: var(--paper); }
+.c-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.c-teams { display: inline-flex; align-items: center; gap: 6px; flex: 1 1 auto; min-width: 0; }
+.c-top .cscore { margin-left: auto; }
+.cdist { display: flex; height: 14px; border-radius: 7px; overflow: hidden; background: var(--bar-bg); margin-top: 14px; }
+.cdist .cd-all { background: var(--pitch); } .cdist .cd-one { background: var(--amber); } .cdist .cd-more { background: var(--red); }
+.cfilters { display: flex; gap: 16px; flex-wrap: wrap; margin: 18px 0 6px; font-size: .9rem; }
+.cfilters select { margin-left: 6px; font: inherit; padding: 4px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); }
+.legend { flex-wrap: wrap; row-gap: 4px; }

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import math
 
+from model import usual
 from model.core import STATS, count_probabilities, goal_probabilities, league_means
 
 ROUND = 3
@@ -131,6 +132,110 @@ def take_record(scored):
             a["brier_1x2_numbers"] /= k
             a["brier_1x2_take"] /= k
     return rnd({"matches": n, "by_stat": out})
+
+
+def public_stats(pred):
+    """What the site shows for each stat: our take (numbers moved by the subjective view) when there is one."""
+    P = pred.get("prediction") or {}
+    T = P.get("take") or {}
+    return {k: {**v, **(T.get(k) or {})} for k, v in (P.get("stats") or {}).items()}
+
+
+def match_calls(pred, comp_usual=None):
+    """Our calls for one match (owner, 23 Nov 2026): the highlighted over/under line of every stat, as one group.
+    Stored in the estimate file on every run until kick-off, so it is frozen with the estimate."""
+    applied = bool(((pred.get("prediction") or {}).get("take") or {}).get("applied"))
+    return rnd({"view": applied, "stats": usual.calls(public_stats(pred), comp_usual)})
+
+
+def score_calls(pred, match, comp_usual=None, previous=None):
+    """Scores our calls for a match together: each stat's call came true or not, and how many of them did.
+    Uses the calls frozen at kick-off (pred["calls"]); estimates made before 23 Nov 2026 have none, so their calls
+    are worked out once with the same rule (reconstructed: True) and kept from then on (previous = result_calls).
+    A stat the sources disagree on (or missing) is void and not counted."""
+    frozen = pred.get("calls")
+    if frozen:
+        picks, view, recon = frozen.get("stats") or {}, frozen.get("view", False), False
+    elif previous and previous.get("reconstructed"):
+        picks = {k: {kk: v[kk] for kk in ("side", "line", "p") if kk in v} for k, v in (previous.get("stats") or {}).items()}
+        view, recon = previous.get("view", False), True
+    else:
+        mc = match_calls(pred, comp_usual)
+        picks, view, recon = mc["stats"], mc["view"], True
+    out, hits, n = {}, 0, 0
+    for st, (hk, ak) in STAT_KEYS.items():
+        c = picks.get(st)
+        if not c:
+            continue
+        row = {"side": c["side"], "line": c["line"], "p": c["p"]}
+        if match.get(hk) is None or match.get(ak) is None:
+            row["void"] = True
+        else:
+            tot = match[hk] + match[ak]
+            row["actual"] = tot
+            row["hit"] = tot > float(c["line"]) if c["side"] == "over" else tot < float(c["line"])
+            n += 1
+            hits += int(row["hit"])
+        out[st] = row
+    res = {"view": view, "n": n, "hits": hits, "stats": out}
+    if recon:
+        res["reconstructed"] = True
+    return rnd(res)
+
+
+def calls_record(scored, now_iso=None, days=7):
+    """Our calls, match by match, summed up: how many came true, how often every call in a match came true, and the
+    same split by stat, competition and whether a subjective view moved the numbers. Also the last `days` days."""
+    def blank():
+        return {"matches": 0, "calls": 0, "hits": 0, "p_sum": 0.0, "all_right": 0}
+
+    tot, recent, by_stat, by_comp, by_view, dist = blank(), blank(), {}, {}, {"view": blank(), "numbers": blank()}, {}
+    cutoff = None
+    if now_iso:
+        from datetime import datetime, timedelta
+        cutoff = (datetime.fromisoformat(now_iso.replace("Z", "+00:00")) - timedelta(days=days)).isoformat()[:16]
+
+    def add(a, rc):
+        a["matches"] += 1
+        a["calls"] += rc["n"]
+        a["hits"] += rc["hits"]
+        a["p_sum"] += sum(v["p"] for v in rc["stats"].values() if not v.get("void"))
+        a["all_right"] += int(rc["hits"] == rc["n"])
+
+    for pred in scored:
+        rc = pred.get("result_calls")
+        if not rc or not rc.get("n"):
+            continue
+        add(tot, rc)
+        if cutoff and pred["kickoff"][:16] >= cutoff:
+            add(recent, rc)
+        add(by_comp.setdefault(pred["league"], blank()), rc)
+        add(by_view["view" if rc.get("view") else "numbers"], rc)
+        k = f'{rc["hits"]}/{rc["n"]}'
+        dist[k] = dist.get(k, 0) + 1
+        for st, v in rc["stats"].items():
+            if v.get("void"):
+                continue
+            b = by_stat.setdefault(st, {"calls": 0, "hits": 0, "p_sum": 0.0})
+            b["calls"] += 1
+            b["hits"] += int(v["hit"])
+            b["p_sum"] += v["p"]
+
+    def fin(a):
+        c = a.pop("calls") if "calls" in a else 0
+        out = {**a, "calls": c}
+        ps = out.pop("p_sum")
+        out["hit_rate"] = out["hits"] / c if c else None
+        out["claimed"] = ps / c if c else None
+        if "matches" in out:
+            out["all_right_rate"] = out["all_right"] / out["matches"] if out["matches"] else None
+        return out
+
+    return rnd({"days": days, **fin(tot), "recent": fin(recent),
+                "by_stat": {k: fin(v) for k, v in by_stat.items()},
+                "by_comp": {k: fin(v) for k, v in by_comp.items()},
+                "by_view": {k: fin(v) for k, v in by_view.items()},
+                "distribution": dist})
 
 
 def aggregate(scored):

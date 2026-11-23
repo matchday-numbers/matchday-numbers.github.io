@@ -7,7 +7,7 @@ Fewer than MIN_GAMES games with a stat -> no usual rates for it.
 """
 from __future__ import annotations
 
-from .core import STATS
+from .core import STATS, TAKE_P
 
 MIN_GAMES = 100
 
@@ -66,3 +66,29 @@ def pick_take(cands, h=None):
         r = rate(h, x["line"])
         return x["p"] - (r if x["side"] == "over" else 1 - r)
     return max(c, key=lambda x: (round(edge(x), 9), x["side"] == "over"))
+
+
+def candidates(s):
+    """Take candidates for one stat (model/core.py take_line); estimates made before take lines existed: the same
+    rule over the shown lines only (app.js takeCands mirrors this)."""
+    if s.get("take_line"):
+        return s["take_line"]
+    out = {"over": None, "under": None}
+    for line, p in (s.get("over_show") or s.get("over") or {}).items():
+        for side, q in (("over", p), ("under", 1 - p)):
+            if q >= TAKE_P - 1e-9 and (not out[side] or q < out[side]["p"] - 1e-9):
+                out[side] = {"line": line, "p": q, "shown": True}
+    return out
+
+
+def calls(stats, comp_usual=None):
+    """The highlighted call of every stat in one match (what the site shows): {stat: {"side", "line", "p", "shown"}}.
+    stats = our take (numbers moved by the view) when there is one, else the numbers; comp_usual = usual.json[comp]."""
+    out = {}
+    for st, s in (stats or {}).items():
+        if st not in STATS or not isinstance(s, dict):
+            continue
+        c = pick_take(candidates(s), (comp_usual or {}).get(st))
+        if c:
+            out[st] = {k: c[k] for k in ("side", "line", "p", "shown") if k in c}
+    return out

@@ -41,7 +41,7 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
   = uncertain yet, make sure you compare model 2 and 3", 17 Nov 2026).
 
 - Said no to both open questions ("Don't add any of the open questions", 18 Nov 2026):
-  - No "how often our 80% takes came true" on the track record page.
+  - No "how often our 80% takes came true" on the track record page. (replaced 23 Nov 2026, see "Our calls" below)
   - Keep the 2x amplification for cards and shots too (owner adj_strength 2.05 for every stat). Don't propose
     dropping it again unless a weekly review has new, held evidence against it.
 - Subjective view window: 4 days (96 h) before kick-off instead of 48 h ("instead of developing a subjective view
@@ -61,6 +61,13 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
 - 23 Nov 2026, after the first usage check (~$130 API-equivalent Fri-Sun, ~$300/week): "do the weekend fix and keep
   opus" -> views are also refreshed every 3 h in the last 6 h before kick-off; research subagents stay on Opus. They
   are on an Enterprise plan (CUNEF) and confirmed the organisation is fine with this usage (23 Nov 2026).
+
+- Our calls, match by match (23 Nov 2026): "create another section in where you record you take as a group for that
+  exact match. This way i can measure more easily and faster how eficent are you takes for every match. don't make one
+  for each stat, make one reuniting all stats for each match ... you decide what's best". Built as the first section of
+  the Track record page + an "Our calls" page (#/calls) + a "X of N" box on finished match pages and badges in results.
+  This replaces the 18 Nov "no take hit rate on the track record" line: they now want the takes measured.
+- Session cleanup is theirs to delegate ("do whatever is best or consider with the files", 23 Nov 2026).
 
 ## Open questions they have not answered yet
 - (answered 23 Nov 2026: keep Opus) Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to

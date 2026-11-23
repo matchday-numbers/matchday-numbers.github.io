@@ -327,6 +327,39 @@ def test_take_is_scored_separately():
     assert score_take({"prediction": {"stats": st}, "baseline": base}, match) is None
 
 
+def test_match_calls_are_frozen_and_scored_together():
+    """Our calls (owner, 23 Nov 2026): one highlighted line per stat, stored with the estimate, scored as a group."""
+    from pipeline.predictions import calls_record, match_calls, score_calls
+    st = _stats()
+    pred = {"id": "1", "league": "la-liga", "kickoff": "2026-11-22T20:00Z", "prediction": {"stats": st}}
+    mc = match_calls(pred)
+    assert mc["view"] is False and mc["stats"]
+    for c in mc["stats"].values():
+        assert c["side"] in ("over", "under") and c["p"] >= 0.8 - 1e-9
+    match = {"hg": 0, "ag": 1, "hc": 3, "ac": 4, "hcards": 1, "acards": 2, "hs": 9, "as": 8}  # shots on target missing
+    frozen = score_calls({**pred, "calls": mc}, match)
+    assert "reconstructed" not in frozen
+    if "shots_on_target" in mc["stats"]:
+        assert frozen["stats"]["shots_on_target"].get("void")
+    assert frozen["n"] == sum(1 for v in frozen["stats"].values() if not v.get("void"))
+    assert frozen["hits"] == sum(1 for v in frozen["stats"].values() if v.get("hit"))
+    for k, v in frozen["stats"].items():
+        if not v.get("void"):
+            line = float(v["line"])
+            assert v["hit"] == (v["actual"] > line if v["side"] == "over" else v["actual"] < line)
+    # an estimate made before calls were stored: worked out once, then kept even if the rule's inputs change
+    recon = score_calls(pred, match)
+    assert recon["reconstructed"] and recon["stats"].keys() == frozen["stats"].keys()
+    moved = {**pred, "prediction": {"stats": {k: {**v, "take_line": None, "over_show": {"0.5": 0.5}}
+                                              for k, v in st.items()}}}
+    assert score_calls(moved, match, previous=recon)["stats"] == recon["stats"]
+    rec = calls_record([{**pred, "result_calls": frozen}, {**pred, "league": "serie-a", "result_calls": recon}],
+                       "2026-11-23T12:00Z")
+    assert rec["matches"] == 2 and rec["calls"] == 2 * frozen["n"] and rec["recent"]["matches"] == 2
+    assert rec["hit_rate"] == round(frozen["hits"] / frozen["n"], 3) and set(rec["by_comp"]) == {"la-liga", "serie-a"}
+    assert sum(rec["distribution"].values()) == 2
+
+
 def test_analyst_view_validation_requires_sizes_that_agree_with_the_lean():
     sys.path.insert(0, os.path.join(ROOT, "tools"))
     import analyst_merge as am

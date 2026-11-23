@@ -367,6 +367,8 @@ def main():
         except Exception as ex:  # nothing new is published, frozen estimates stay as they are
             log["errors"].append(f"estimate engine: {ex!r}")
             traceback.print_exc()
+    # last published rates; replaced below when the engine ran (used for our calls, frozen with each estimate)
+    usual_rates = jload(os.path.join(ROOT, "site", "data", "usual.json"), {}) or {}
     if rec:
         # what usually happens in each competition (last season + this one, model/usual.py): shown next to every
         # line and to the take, so readers can tell an 80% take from what happens anyway
@@ -444,7 +446,10 @@ def main():
                 info["analyst_view"] = analyst.get(e["espn_id"]) if ko - now <= timedelta(hours=JUDGE_HOURS) else None
                 labels = {"home": e["home"]["name"], "away": e["away"]["name"]}
                 try:
-                    jsave(path, engine.make(rec, lg, e, hf, af, info, labels, now.isoformat(), version))
+                    est = engine.make(rec, lg, e, hf, af, info, labels, now.isoformat(), version)
+                    # our calls for the match as one group (the highlighted line of every stat), frozen at kick-off
+                    est["calls"] = predictions.match_calls(est, usual_rates.get(lg))
+                    jsave(path, est)
                     made += 1
                 except Exception as ex:  # one bad fixture must not stop the run
                     log["errors"].append(f"estimate {lg} {e['espn_id']}: {ex!r}")
@@ -490,10 +495,12 @@ def main():
         if m and ko <= now:
             res = predictions.score(p, m)
             take = predictions.score_take(p, m)
-            if p.get("result") != res or p.get("result_take") != take:
+            calls = predictions.score_calls(p, m, usual_rates.get(p["league"]), p.get("result_calls"))
+            if p.get("result") != res or p.get("result_take") != take or p.get("result_calls") != calls:
                 p["result"] = res
                 if take:
                     p["result_take"] = take
+                p["result_calls"] = calls
                 p["scored_at"] = now.isoformat()
                 jsave(path, p)
         if p.get("result"):

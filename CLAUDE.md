@@ -54,6 +54,13 @@ excluded from the model. State per season in `data/state/<YYZZ>/` (season Jul–
   Briefs carry the same call as `site_call`. Then
   plus "Numbers alone X, judgement ±Y%". "Why" = reasoning, base, adjustments, subjective view (+ size, numbers alone).
   Track record scores the numbers; the take is scored separately (`result_take`, `accuracy.json` "take").
+- **Our calls, match by match** (owner, 23 Nov 2026): every match's highlighted take lines (one per stat) as ONE group.
+  run.py stores them in each estimate as `calls` (`predictions.match_calls`, `usual.calls`; frozen at kick-off) and
+  scores them together as `result_calls` (`score_calls`: hits/n, a stat the sources disagree on is void). Estimates
+  made before 23 Nov have no `calls`: worked out once at scoring (`reconstructed`, kept from then on). Site: first
+  section of Track record (`accuracy.json` "calls" = `calls_record`: hit rate vs chance given, all-right matches,
+  last 7 days, by stat/comp/view), page `#/calls` (`site/data/calls.json`, filters), "Our calls: X of N" box on
+  finished match pages, X/N badge in results lists.
 - Backtest `python -m backtest.recipe` (tune 2024-25, test 2025-26; `RECIPE_TEST_ONLY=1` re-tests). Results in
   `backtest/results_recipe.json` (re-tested 15 Nov 2026 on the 11 comps, 3,357 matches). All beat the plain average on
   1X2 and goals (Segunda only ~1.6%); corners ≈ average. Rule: a comp stays in PREDICTED only if it beats the average on 1X2 and goals.
