@@ -4961,6 +4961,47 @@
     "https://www.record.pt/futebol/futebol-nacional/liga-betclic/moreirense/detalhe/parsemain-sobe-de-nivel-e-ja-trabalha-no-relvado"
    ],
    "written_at": "2026-11-24T17:30:00Z"
+  },
+  "401876394": {
+   "overall": "Angers are 17th with 8 points from 11 games and in a bad run under Stéphane Gilli: one draw and four defeats in the last five league games, 2 goals scored and 13 conceded, most recently 4-0 at Paris FC. Lens are 11th with 14 points and leak goals too (a 9-1 Champions League defeat to Como, 1-1 at home to Toulouse last Saturday), and they play at RB Leipzig in the Champions League tonight, four days before this game; that result was not yet known when this was written. The numbers already take off Édouard, Aguilar, Cuisance and Nawrocki for Lens and Diatta for Angers; one team-news page also listed Ivanović and Bulatović as out, but French previews of tonight's Leipzig game have both back in Lens' squad, so I don't move anything for them. No referee is named yet, and Lens have won the last six meetings, the latest 5-1 in March. News on this match was thin, so every stat stays with the numbers for now; a later refresh should check Lens' fitness after Leipzig.",
+   "goals": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 2.5 goals",
+    "text": "The numbers say 2.5 goals, with Lens expected to score 1.5 and Angers 0.9; they already take off Édouard, Aguilar and Cuisance and add a little for Angers' leaky recent defence (18 conceded in 6). Reports of Ivanović being out clash with previews of tonight's Leipzig game that have him back, so I don't trim for it. Angers have scored just 2 in their last five, which the numbers already know, so I stay at about 2.5."
+   },
+   "corners": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 10 corners",
+    "text": "The numbers say 9.9 corners, 5.3 for Lens and 4.6 for Angers. Lens' wing-back system with Udol and Abdulhamid pushes high and Angers have been pinned back in recent defeats, but that pattern is already in the recent corner counts the numbers use. I found nothing new on style or lineups that points either way, so I stay at about 9.9."
+   },
+   "cards": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 3 cards",
+    "text": "The numbers say 3.1 cards, already lowered because both sides have picked up few cards lately and past meetings were calm. No referee has been named yet, so his record can't be checked; Angers' relegation worry could add some edge at home, but there is no report of a needle in this fixture. I stay at about 3.1."
+   },
+   "shots": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 26 shots",
+    "text": "The numbers say 26.3 shots, 15.8 for Lens and 10.5 for Angers, and they already count Angers conceding many shots lately (105 in 6). Four days after a trip to Leipzig there could be some Lens rotation, but nothing is confirmed. I stay at about 26."
+   },
+   "shots_on_target": {
+    "lean": "same",
+    "adjust_pct": 0,
+    "call": "Around 10 on target",
+    "text": "The numbers say 9.8 shots on target, 5.8 for Lens and 4.0 for Angers, already without Édouard. Lens' forward line looks close to full strength in previews of the Leipzig game, and Angers' weak attack is already in the numbers, so I stay at about 9.8."
+   },
+   "sources": [
+    "https://www.espn.co.uk/football/match/_/gameId/401876394/lens-angers",
+    "https://statz.ai/h2h/angers-vs-lens/19715538",
+    "https://www.maxifoot.fr/club/angers.202-2027.htm",
+    "https://news.maxifoot.fr/ligue-champions/leipzig-lens-les-compos-probables-foot-468232.htm",
+    "https://www.lensois.com/leipzig-rc-lens-les-compos-probables/"
+   ],
+   "written_at": "2026-11-24T16:45:00Z"
   }
  }
 }
