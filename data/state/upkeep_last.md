@@ -1,17 +1,25 @@
-# Upkeep run — Fri 20 Nov 2026, 07:40 UTC (08:40 Madrid)
+# Upkeep run — 2026-11-24 08:38–08:55 Madrid (Tuesday, weekly review day)
 
-**Result: healthy, nothing to fix.**
+**Checked**
+- update workflow: last 4 runs green (latest 04:21 UTC, update + publish). One failure on 23 Nov 20:19 UTC: a push race
+  with the analyst commit ("cannot lock ref"), so it was transient. The next runs were fine.
+- tests workflow: run 31 failed on 23 Nov (#/calls 404 because calls.json didn't exist until the first data run
+  after the "Our calls" commit). Re-run 32 passed. Local `pytest`: 27 passed.
+- last_run.json: no errors; finished 04:23 UTC; 13,524 matches, 7,687 referees linked; 439 estimates made or updated,
+  182 frozen. All 11 comps have events, 0 "single" checks, normal conflict counts (yellow cards); predictions 27–54 each.
+  usual: all 11 comps, 207–624 games. usual.json and calls.json are in the latest data commit (calls.json: 175
+  matches, latest finished 23 Nov 20:00 UTC, each with hits/n).
+- Live site: web fetch was blocked in this run (permission timeout), so home.json/usual.json weren't fetched live.
+  The publish job of the 04:21 UTC run succeeded.
+- Take lines and shadow: all 439 upcoming estimates updated in the last 6 h have a take_line ≥ 0.80 for every stat
+  (numbers and take), shadow "same" and a top-level `calls`.
+- Subjective views: 62 of 62 posted matches within 96 h have a sized view (9 due a match-day refresh). Spot check
+  Lyon–Lillestrøm (EL, 26 Nov): take adjust_pct matches the view (goals −2, shots −3, SoT −3). No double counting:
+  the view says Openda/Sulc are already counted and sizes only rotation before Monaco.
+- Card bans: Hoffenheim–Augsburg (29 Nov) lists Kabak "sent off last match". There's no earlier unplayed Hoffenheim
+  Bundesliga fixture, so the next-fixture rule holds.
 
-Checked:
-- update workflow: last 6 runs all succeeded, both jobs (latest run 04:16 UTC: update + publish/deploy-pages OK). tests workflow: last run (18 Nov) passed; no failures since.
-- last_run.json: no errors (incl. usual rates / model 2 shadow); finished 04:17 UTC (<6 h); model 13,436 matches, 546 teams, 7,619 referees linked; 506 estimates made/updated, 114 frozen, 113 scored; team news linked 181.
-- All 11 competitions have events and predictions (PL 59, La Liga 52, Serie A 50, Bundesliga 45, Ligue 1 36, Eredivisie 44, Primeira 36, Segunda 58, UCL 36, UEL 36, UECL 54). Cross-check: 0 "single" anywhere; conflicts 2–10 per league, almost all yellow-card counts (normal level, no jump).
-- usual.json: covers all 11 comps, each 207–613 games. Unchanged in git since 17 Nov because no new games finished in the international break (counts match last_run).
-- meta.json updated_at 04:16 UTC.
-- Take lines: every stat of all 506 upcoming estimates (numbers and take) has a take_line with a side ≥80%; every file has "shadow".
-- Subjective view coverage: 68 of 68 posted matches within 96 h have sized views; 4 due a match-day refresh (the analyst task handles that).
-- Spot-check Elversberg–Freiburg (21 Nov): take matches the view (all 0%); view explains missing defenders as already counted — no double counting.
-- Card bans: Mouriño's yellow-card ban sits on his team's next Champions League match (25 Nov); no earlier unplayed CL fixture — next-fixture rule OK.
-- Weekly review: not due (last review 17 Nov, 3 days ago).
+**Fixed**: nothing needed.
 
-Could not check: the live site JSON (home.json / usual.json) — this run's network couldn't reach matchday-numbers.github.io. The deploy job succeeded at 04:18 UTC, so the site should be current.
+**Weekly review**: Model 2 vs 3 identical. Held: corners 80% takes overconfident (74% of 91); missing players help
+goals. No change (the spread refit already failed the gate on 17 Nov). Watching: cards adjustments (form/referee).

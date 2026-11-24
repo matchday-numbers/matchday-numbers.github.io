@@ -1,23 +1,37 @@
-# Weekly review — 17 Nov 2026 (first review)
+# Weekly review, 24 Nov 2026
 
-**Checked:** 113 scored matches (5–16 Nov), about 90 checks on the numbers, the 80% takes, the adjustments and the
-subjective views.
+## Model 2 vs model 3 (live)
+| Stat | Verdict |
+|---|---|
+| goals | identical (no change yet) |
+| corners | identical (no change yet) |
+| cards | identical (no change yet) |
+| shots | identical (no change yet) |
+| shots on target | identical (no change yet) |
 
-**Changed this week: nothing.** This is the first review, so no finding could hold across two reviews yet. A
-pattern has to show up twice before the site changes because of it, and any change must also beat the current
-settings on last season's matches (backtest).
+68 scored matches carry the shadow; both models are the same because no setting has changed since 17 Nov.
 
-**The clearest weak spot (watching):** cards. The 80% takes on cards came true 65% of the time (31 matches), not
-the ~84% they were given. Corners point the same way (70% of 23). If cards still look like this next Monday,
-the first thing to test is a wider spread for cards (`nb_alpha`, fitted before the 2x amplification). That's a
-setting you didn't choose, so it gets tried first; your 2x setting is only touched if you agree.
+## What was checked
+181 scored matches (5 to 23 Nov), about 90 checks: bias, error, how often the 80% takes came true, the adjustments
+and the subjective views.
 
-**Honest hit rates of the 80% takes:** shots on target 80% of 61 (on target), cards 65% of 31, corners 70% of 23.
+## What held (a pattern seen two weeks running)
+- **Corners takes are overconfident.** Our 80%+ corners lines came true 74% of 91 times, though we gave them 83% on
+  average. The misses are on both overs and unders, so the problem is how wide the range is, not a lean one way.
+  The obvious fix (re-fitting the corners spread) was tested last week on a full past season and made things
+  slightly worse there, and re-running it on the same seasons would give the same answer. **No change this week.**
+  I'll test it again once this season's games can go into the test.
+- **Missing players help the goals numbers** (closer by 0.02 goals per match, 126 matches). That's the adjustment
+  doing its job, so nothing to fix.
 
-**Subjective views (lean right vs the numbers alone):** goals 55% of 47, cards 61% of 23, corners 64% of 14, shots
-on target 42% of 48. None is far enough from a coin flip yet to be a lesson.
+## Changed
+Nothing. Only one change a week is allowed, and none passed the test.
 
-**Also watching:** La Liga goals came in 1.1 below the estimate (10 matches), Premier League corners 1.6 below (10),
-Conference League goals 0.6 below (18). Too few matches to mean anything yet.
+## Watching
+- Cards: this week the adjustments (form and referee) made cards estimates slightly worse than the base alone
+  (119 matches). This is the first week it's shown up. If it holds next week I'll test the size settings for those
+  adjustments, without touching your 2x.
+- Cards takes: 77% came true vs 84% given (was worse last week).
+- Subjective view on shots: right on the lean 23 of 60 times.
 
-**Waiting for you:** nothing. (18 Nov 2026: you said no to showing "how often our 80% takes came true" on the track record page, and to dropping the 2x for cards and shots.)
+Honest hit rates: 80% takes came true goals 85%, shots 83%, shots on target 84%, cards 77%, corners 74%.
