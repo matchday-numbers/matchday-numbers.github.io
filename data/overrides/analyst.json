@@ -2588,30 +2588,30 @@
    "written_at": "2026-11-23T16:30:00Z"
   },
   "401915380": {
-   "overall": "Bodø/Glimt are 25th of 36 with 4 points, both earned at home (1-0 against Dortmund, 0-0 against Lille), so this game on the Aspmyra artificial pitch is close to a must-win for the play-off places; they lead the Norwegian league, have won 14 of their last 15 league games and have not conceded in three. LASK are 16th with 6 points and arrive on five straight league wins, the last a 2-1 over Hartberg on Saturday, where centre-back Andrés Andrade hurt his ankle: ORF, Sky Sport Austria, laola1 and oe24 all confirm on match day that he is out, which the numbers do not know, and ORF expects Daniel Elfadli to replace him in a back three. Florian Flecker (calf), one of LASK's joint top scorers in this competition, was listed out by UEFA and is not in ORF's predicted XI (Usor and Kalajdzic up front); Bello is out and counted. For Bodø, Evjen and Mikkelsen are out and counted and no new absences are reported. Expect near-freezing temperatures under floodlights, around 400 travelling LASK fans, and Turkish referee Halil Umut Meler, whose higher card rate is already counted.",
+   "overall": "Bodø/Glimt are 25th of 36 with 4 points, both earned at home (1-0 against Dortmund, 0-0 against Lille), so this game on the Aspmyra artificial pitch is close to a must-win for the play-off places; they lead the Norwegian league and have won 14 of their last 15 league games. LASK are 16th with 6 points and arrive on five straight league wins, but vice-captain Andrés Andrade hurt his ankle against Hartberg on Saturday and is out; Flashscore and weekend.at confirm it on match day, the numbers do not know it, and Daniel Elfadli or Miguel Freckleton are named to replace him in a back three. Florian Flecker (calf), one of LASK's joint top Champions League scorers, is also out per UEFA's predicted line-ups and is not counted; Bello is out and counted. For Bodø, Evjen (knee) and Mikkelsen (groin) are out and counted, and UEFA lists no doubts; the expected XI is unchanged from this morning. Turkish referee Halil Umut Meler, whose higher card rate is already counted, is in charge on a cold night under floodlights, and Kühbauer will settle his line-up shortly before kick-off.",
    "goals": {
     "lean": "lower",
     "adjust_pct": -4,
     "call": "Around 3.7 goals",
-    "text": "The numbers say 3.9 goals (2.7 Bodø, 1.1 LASK), already counting LASK's hot scoring run (+2.8%) and Evjen, Mikkelsen and Bello. Match-day news holds: Flecker, one of LASK's main Champions League scorers, is missing from the expected XI, which outweighs the boost Bodø get from Andrade's absence, and Bodø's two home games in this competition produced one goal in total. I keep -4%, about 3.7 goals."
+    "text": "The numbers say 3.9 goals (2.7 Bodø, 1.1 LASK), already counting LASK's hot scoring run (+2.8%) and Evjen, Mikkelsen and Bello. Match-day news has not changed: Flecker, one of LASK's main Champions League scorers, is still missing from every predicted XI (Usor and Kalajdžić up front, maybe Adeniran), which outweighs the boost Bodø get from Andrade's absence, and Bodø's two home games in this competition produced one goal in total. I keep -4%, about 3.7 goals."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 10 corners",
-    "text": "The numbers say 10.4 corners, 5.9 of them for Bodø as the side expected to have the ball, with both teams' recent corner counts (+0.8% and -1.0%) already in. ORF expects LASK's wing-backs Jørgensen and Dibango in their usual roles and Bodø to attack down the flanks with Blomberg and Hauge, which is what the numbers expect, so I stay at 10.4."
+    "text": "The numbers say 10.4 corners, 5.9 of them for Bodø as the side expected to have the ball, with both teams' recent corner counts (+0.8% and -1.0%) already in. LASK's 3-5-2 with wing-backs Jørgensen and Dibango and Bodø's wide attack through Blomberg and Hauge are both confirmed in today's predicted line-ups, which is what the numbers expect, so I stay at 10.4."
    },
    "cards": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Under 5.5 cards",
-    "text": "The numbers say 3.6 cards, already adding referee Halil Umut Meler's 4.5 cards a game (+7.5%) and taking off LASK's low recent card count (-6.6%) and Bodø's (-2.1%). There is no rivalry here; a reshuffled LASK back three without Andrade on a fast artificial pitch might be stretched a little, but that is a normal away-team picture, so I stay at 3.6."
+    "text": "The numbers say 3.6 cards, already adding referee Halil Umut Meler's 4.5 cards a game (+7.5%) and taking off LASK's low recent card count (-6.6%) and Bodø's (-2.1%). There is no rivalry; a reshuffled LASK back three without Andrade on a fast artificial pitch, which Kühbauer calls an extra challenge, may be stretched a little, but that is a normal away-team picture, so I stay at 3.6."
    },
    "shots": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 27 shots",
-    "text": "The numbers say 27 shots (14.4 Bodø, 12.5 LASK), already trimmed for Bodø's quieter recent shooting (-3.9%). Bodø need the win and will push, while Kühbauer says LASK travel to win and will still bring Usor and Kalajdzic forward without Flecker; these pull both ways, so I stay at 27."
+    "text": "The numbers say 27 shots (14.4 Bodø, 12.5 LASK), already trimmed for Bodø's quieter recent shooting (-3.9%). Bodø need the win and will push, while Kühbauer says LASK want to take something home and will still play two strikers without Flecker; these pull both ways, so I stay at 27."
    },
    "shots_on_target": {
     "lean": "same",
@@ -2620,26 +2620,26 @@
     "text": "The numbers say 10.5 shots on target, already counting LASK's sharp recent finishing (+3.9%) and Bodø's slight dip (-2.0%). The LASK absences (Andrade at the back, Flecker up front) roughly cancel for shots on target, and I have put the net effect into goals rather than counting it twice, so I stay at 10.5."
    },
    "sources": [
-    "https://sport.orf.at/stories/3165327",
-    "https://www.skysportaustria.at/lask-auf-kunstrasen-bei-bodoe-glimt-gefordert/",
-    "https://www.laola1.at/de/red/fussball/champions-league/news/kuehbauer-vor-bodoe--fahren-hin--um-gutes-ergebnis-zu-erzielen-/",
-    "https://www.oe24.at/a/lask-vor-frost-fight-kuehbauer-will-bod-aergern-900135694"
+    "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/",
+    "https://www.weekend.at/sport/bodo-glimt-lask-moegliche-aufstellung",
+    "https://www.flashscore.de/news/fussball-champions-league-lask-will-auch-am-polarkreis-punkten/rZKVMO7t/",
+    "https://www.uefa.com/uefachampionsleague/match/2049629--bodo-glimt-vs-lask/lineups/"
    ],
-   "written_at": "2026-11-24T08:11:54Z"
+   "written_at": "2026-11-24T12:10:47Z"
   },
   "401915300": {
-   "overall": "Galatasaray are 18th of 36 with 6 points and Aston Villa 6th with 9, so both have plenty at stake: Okan Buruk's side want to climb into the top 24 at home, Villa want a top-8 place, though Emery says they are not favourites. Victor Osimhen, Rafael Leão and Roland Sallai are out and the numbers count all three on goals; Ismail Jakobs was a doubt, and the expected attack is Barış Alper Yılmaz with Sané, Batrakov and Yunus Akgün, so Galatasaray have no recognised centre-forward. Villa drew 0-0 with Sunderland; Matty Cash (concussion), Matteo Ruggeri and Amadou Onana are out and counted, Victor Lindelöf was a doubt after illness and Wan-Bissaka is back. The RAMS Park pitch has needed repairs (Galatasaray's last home league game was moved and Villa were not allowed to train on it); Emery says it is no excuse and the plan does not change. German referee Daniel Siebert, average on cards, is in charge; match-day checks found no new absences.",
+   "overall": "Galatasaray are 18th of 36 with 6 points and Aston Villa 6th with 9; Galatasaray have won their last two Champions League games (Lille, Stuttgart) and want a top-24 place, while Villa lost 3-0 at Barcelona last time and Emery admits a top-8 finish is out of their hands. Osimhen, Leão and Sallai are out and the numbers count all three on goals; Fotomaç says Osimhen, back from knee surgery on 7 November, could at most make the bench, and Fanatik still lists him out. Galatasaray have no recognised centre-forward: today's Turkish predicted XIs have Barış Alper Yılmaz, Yunus Akgün and Batrakov in attack with Lemina beside Torreira, and Jakobs trained and may play. Villa are without Cash, Ruggeri and Onana (all counted); Lindelöf is a doubt with illness, so Harwood-Bellis is expected alongside Pau Torres. Villa could not train on the repaired RAMS Park pitch; German referee Daniel Siebert, average on cards, is in charge.",
    "goals": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 3 goals",
-    "text": "The numbers say 3.0 goals (1.1 Galatasaray, 1.8 Villa) and already take off Osimhen (-10%), Sallai and Leão (-5% each) from Galatasaray's goals, plus Cash for Villa. The striker-less plan is just the other side of Osimhen's absence, and nothing new has come out on match day, so I stay at 3.0."
+    "text": "The numbers say 3.0 goals (1.1 Galatasaray, 1.8 Villa) and already take off Osimhen (-10%), Sallai and Leão (-5% each) from Galatasaray's goals, plus Cash for Villa. The striker-less plan is just the other side of Osimhen's absence; one report says he might sit on the bench, but at most for a late cameo, so nothing new moves the total and I stay at 3.0."
    },
    "corners": {
     "lean": "same",
     "adjust_pct": 0,
     "call": "Around 9 corners",
-    "text": "The numbers say 8.8 corners, already counting Galatasaray's slight rise in corners won (+2.9%) and Villa's dip (-3.4%). Villa keep the ball and push wide with Maatsen and the returning Wan-Bissaka, while Galatasaray lose width without Leão and Sallai but still have Sané and Yunus Akgün on the flanks; these pull in opposite directions, so I stay at 8.8."
+    "text": "The numbers say 8.8 corners, already counting Galatasaray's slight rise in corners won (+2.9%) and Villa's dip (-3.4%). Villa keep the ball and push wide with Maatsen and Wan-Bissaka, while Galatasaray lose width without Leão and Sallai and, in today's Turkish line-ups, play Lemina in a more solid midfield; these pull in opposite directions, so I stay at 8.8."
    },
    "cards": {
     "lean": "same",
@@ -2651,21 +2651,23 @@
     "lean": "lower",
     "adjust_pct": -4,
     "call": "Around 25.5 shots",
-    "text": "The numbers say 26.6 shots (12.8 Galatasaray, 13.7 Villa); they take the missing forwards off goals but not off shots. With Osimhen, Sallai and Leão all out and Barış Alper Yılmaz expected up front instead of a centre-forward, Galatasaray lose their main shot-takers, and a repaired pitch may slow the game; I keep the trim, to about 25.5."
+    "text": "The numbers say 26.6 shots (12.8 Galatasaray, 13.7 Villa); they take the missing forwards off goals but not off shots. With Osimhen, Sallai and Leão all out, no centre-forward in the predicted XI and Lemina added as a second holding midfielder, Galatasaray lose their main shot-takers, and a repaired pitch may slow the game; I keep the trim, to about 25.5."
    },
    "shots_on_target": {
     "lean": "lower",
     "adjust_pct": -6,
     "call": "Around 9.7 on target",
-    "text": "The numbers say 10.3 shots on target, already counting Villa's sharper recent finishing (+5.9%) and Galatasaray's slight dip (-0.8%), but not the forwards Galatasaray are missing. Osimhen is the player who turns their chances into efforts on target and he is out, so I keep my lean lower, to about 9.7."
+    "text": "The numbers say 10.3 shots on target, already counting Villa's sharper recent finishing (+5.9%) and Galatasaray's slight dip (-0.8%), but not the forwards Galatasaray are missing. Osimhen is the player who turns their chances into efforts on target and he will not start, so I keep my lean lower, to about 9.7."
    },
    "sources": [
-    "https://www.espn.com/soccer/story/_/id/50572850/aston-villa-unai-emery-galatasaray-champions-league",
-    "https://www.avfc.co.uk/news/2026/november/23/prematch-emery-previews-gala-meeting/",
-    "https://www.sportsmole.co.uk/football/galatasaray/champions-league/preview/galatasaray-vs-aston-villa-prediction-team-news-lineups_609642.html",
-    "https://www.goal.com/en/news/unai-emery-galatasaray-aston-villa-champions-league-istanbul/blt67a469d9b3983592"
+    "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/",
+    "https://www.fanatik.com.tr/galatasaray/live-galatasaray-aston-villa-maci-ne-zaman-saat-kacta-hangi-kanalda-muhtemel-11ler-2645597",
+    "https://www.fotomac.com.tr/galatasaray/2026/11/23/osimhen-aston-villa-macinda-oynayacak-mi-kadroda-var-mi-iste-sakatlik-bilgisi",
+    "https://www.ahaber.com.tr/spor/galatasaray/2026/11/24/galatasarayin-aston-villa-maci-muhtemel-11i",
+    "https://premierleaguenewsnow.com/2026/11/24/galatasaray-aston-villa-preview-team-news-emery/",
+    "https://www.uefa.com/uefachampionsleague/match/2049631--galatasaray-vs-aston-villa/matchinfo/"
    ],
-   "written_at": "2026-11-24T08:11:54Z"
+   "written_at": "2026-11-24T12:10:47Z"
   },
   "401915295": {
    "overall": "Arsenal are 3rd in the league phase on 10 points and top of the Premier League despite Saturday's 2-2 draw at Newcastle; Dortmund are 12th on 9 points and top of the Bundesliga after a 1-0 win at Gladbach. David Raya is out with the shoulder he hurt at Newcastle (no surgery needed), so Kepa starts in goal, and Zubimendi (hamstring) and Saka (until late December) are also out; the numbers count Saka (about -10% on Arsenal's goals) but not Raya or Zubimendi. For Dortmund, Emre Can, Inácio, Konstantelias, Lerma and Kaba are out; Serhou Guirassy and Carney Chukwuemeka travelled and are available, but match-day previews (Sports Mole, ESPN, UEFA's projected XI) expect Fábio Silva to start up front with Guirassy on the bench. Kovac expects an open game. Italian referee Maurizio Mariani, slightly below average on cards, is already in the numbers.",
