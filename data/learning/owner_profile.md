@@ -69,6 +69,10 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
   This replaces the 18 Nov "no take hit rate on the track record" line: they now want the takes measured.
 - Session cleanup is theirs to delegate ("do whatever is best or consider with the files", 23 Nov 2026).
 
+- Sources with a pick (25 Nov 2026): asked whether dropped starting11 pages held useful info; on the proposal to judge
+  sites as a whole (drop only sites whose main purpose is betting; keep news previews that end with a predicted score,
+  ignoring the pick) they said "write it like that better". Now in tools/analyst_rules.md.
+
 ## Open questions they have not answered yet
 - (answered 23 Nov 2026: keep Opus) Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
   wait 2-3 days of real usage under the new schedule first ("wait 2-3 to find out how much it does consume and then

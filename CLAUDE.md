@@ -82,7 +82,7 @@ Quality rules (owner, 18 Nov 2026, after views went short and ~80% "same, 0"): e
 `overall` must EXPLAIN the circumstances even at size 0 (who's out, referee, form, stakes, and what the numbers already
 count) — never just "already counted, no change"; research ≥3 pages from ≥2 outlets per match incl. one preview/team-news
 page for that match. Sizes stay small by design (no double counting; owner declined loosening it, "option C").
-Sources show as links on match pages ("Read before writing"), so never tipping/betting pages (buli-tipphilfe.de was
+Sources show as links on match pages ("Read before writing"), so never sites whose main purpose is betting; news pages that end with a predicted score are fine, pick ignored (owner, 25 Nov 2026) (buli-tipphilfe.de was
 removed from 5 views on 18 Nov). To force a full rewrite now: fire the analyst task with extra text telling it to run
 briefs with `--redo-hours 0 --batch 10` (one-off; don't edit the saved prompt for that).
 
