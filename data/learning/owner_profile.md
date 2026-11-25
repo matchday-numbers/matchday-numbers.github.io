@@ -73,6 +73,10 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
   sites as a whole (drop only sites whose main purpose is betting; keep news previews that end with a predicted score,
   ignoring the pick) they said "write it like that better". Now in tools/analyst_rules.md.
 
+- Fewer analyst runs to cut usage (25 Nov 2026: "shorten up the schedules each day because my limit usage is increasing
+  highly especially because of the analyst agents ... like twice every day and 2-3 on weekends"): weekdays 9:07 and
+  17:07, Saturday-Sunday 9:07, 14:07 and 17:07 (Madrid). Replaces the 20 Nov 7-slot schedule; refresh tiers unchanged.
+
 ## Open questions they have not answered yet
 - (answered 23 Nov 2026: keep Opus) Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
   wait 2-3 days of real usage under the new schedule first ("wait 2-3 to find out how much it does consume and then
