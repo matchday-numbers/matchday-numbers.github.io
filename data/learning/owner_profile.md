@@ -77,6 +77,10 @@ replaces an older line, mark the old line "(replaced <date>)" instead of deletin
   highly especially because of the analyst agents ... like twice every day and 2-3 on weekends"): weekdays 9:07 and
   17:07, Saturday-Sunday 9:07, 14:07 and 17:07 (Madrid). Replaces the 20 Nov 7-slot schedule; refresh tiers unchanged.
 
+- Research on Sonnet, views on Opus (26 Nov 2026: "change the subagents investigating and going through all
+  information and put them as sonnet instead of opus but leaving the final view to an opus agent"). Replaces the
+  23 Nov "keep opus" for research. In tools/analyst_rules.md ("Who does what").
+
 ## Open questions they have not answered yet
 - (answered 23 Nov 2026: keep Opus) Whether to run the analyst task's research subagents on Sonnet 5.5 instead of Opus to save usage: they chose to
   wait 2-3 days of real usage under the new schedule first ("wait 2-3 to find out how much it does consume and then

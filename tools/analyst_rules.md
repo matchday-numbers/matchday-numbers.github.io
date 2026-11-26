@@ -14,8 +14,8 @@ track record; our take is scored separately against them.
 
 A view is written when a match enters the 4-day window and then refreshed more often as kick-off nears (owner,
 20 Nov 2026): every 24 h while the match is 48-96 h away, every 12 h at 24-48 h, and every 6 h in the last 24 h and every 3 h in the last 6 h
-(match day: the latest team news, expected lineups and the referee). Extra runs at 19:07 daily and 11:07 and 14:07
-on weekends catch late news before the main kick-off times. When a brief carries
+(match day: the latest team news, expected lineups and the referee). Runs (25 Nov 2026): weekdays 9:07 and 17:07,
+Saturday-Sunday also 14:07 (Madrid). When a brief carries
 `current_view`, start from it but re-research: keep what still holds, change the lean, size or call where
 the news changed (a key player back or injured, a manager sacked, rotation announced), and say what changed.
 A brief with `current_view_needs_sizes: true` is an older view without sizes: redo it with sizes.
@@ -62,6 +62,28 @@ different outlets**, and at least one of them a preview or team-news page for TH
 league-wide roundup). Roundups are a good start, not the whole job. Look at both teams. If, after a real
 search, fewer than 3 useful pages exist (small leagues), list what you read and say in `overall` that news
 was thin. Take the time this needs; depth matters more than speed.
+
+## Who does what: Sonnet researches, Opus writes (owner, 26 Nov 2026)
+
+This section overrides the scheduled task's step 3 on how subagents are used (it is there to cut usage). The research
+and the writing are split:
+
+1. **Research = Sonnet subagents.** Split each batch file into groups of at most 5 matches and give each group to a
+   subagent started with the Agent tool's `model: "sonnet"` (run them in parallel). Each one reads this file's
+   "Research" section and the briefs of its matches, does the research (web search/fetch, at least 3 pages from 2+
+   outlets per match, one a preview/team-news page for that match, both teams, cross-check), and writes FACTS ONLY to
+   `/tmp/research/<batch>_<group>.md`: per match the injuries/bans/lineups found (and how they differ from the brief's
+   missing players and `already_counted`), rotation, manager, motivation, tactics, referee, weather, what changed since
+   `current_view` if any, and every source as title + URL + outlet + date. No leans, no sizes, no views. It replies with
+   one line: the file path and the matches done.
+2. **View = Opus.** When a batch's research files exist, give the batch to ONE subagent started with `model: "opus"`
+   (batches in parallel). It reads this whole file, the "For the subjective view" section of
+   `data/learning/lessons.md`, the batch's briefs and the research notes, and writes the views (leans, `adjust_pct`,
+   calls, texts, `overall`, sources from the notes) to `/tmp/views/out_<batch>.json`, checked with
+   `python tools/analyst_merge.py --check <file>`. It may do a quick extra search only to settle a gap or a conflict
+   in the notes. All judgement (no double counting, sizes, wording) is the Opus writer's job.
+3. Then step 4 (merge) as usual. If a Sonnet researcher fails or returns empty notes for a match, the Opus writer
+   researches that match itself rather than skipping it.
 
 ## Output (exact format)
 

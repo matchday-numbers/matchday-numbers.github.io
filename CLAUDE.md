@@ -76,7 +76,8 @@ Without a view a stat's verdict line is labelled "The numbers:", with one "Our t
 It moves the numbers ("our take", above). Written when a match enters the window, then refreshed on a tiered rule (owner,
 20 Nov 2026; briefs `--tiers 6:3,24:6,48:12,96:24`, 45 min slack): every 24 h at 48–96 h before kick-off, every 12 h at 24–48 h,
 every 6 h in the last 24 h, every 3 h in the last 6 h (added 23 Nov: without it the weekend 11:07/13:07/14:07 runs found nothing due) (was: once at 48 h + match day at 16 h); unsized old views are redone first. Tools: `tools/analyst_rules.md` (rules),
-`tools/analyst_briefs.py OUTDIR --max 80 --batch 20` (who needs a view), `tools/analyst_merge.py FILES` (validate, merge,
+`tools/analyst_briefs.py OUTDIR --max 80 --batch 20` (who needs a view; since 26 Nov Sonnet subagents research, one Opus
+  subagent per batch writes the views — section "Who does what" in analyst_rules.md, not in the routine prompt), `tools/analyst_merge.py FILES` (validate, merge,
 prune; `--coverage` report; `--prune` prune only).
 Quality rules (owner, 18 Nov 2026, after views went short and ~80% "same, 0"): every stat's text and the 3–5 sentence
 `overall` must EXPLAIN the circumstances even at size 0 (who's out, referee, form, stakes, and what the numbers already
